@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Inter, Radio_Canada } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+export const radioCanada = Radio_Canada({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +11,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html data-theme="customTheme" lang="en">
+      <body className={inter.className + " max-w-[1440px] mx-auto"}>
+        {children}
+      </body>
+      {/* <body className={radioCanada.className}>{children}</body> */}
     </html>
   );
 }
