@@ -2,6 +2,7 @@ import { radioCanada } from "@/app/layout";
 import React from "react";
 import logo from "@/assets/logo2.png";
 import Image from "next/image";
+import { Facebook, Instagram, Twitter } from "react-feather";
 
 const MainNavbar = () => {
   const links = [
@@ -16,10 +17,7 @@ const MainNavbar = () => {
   const linkTags = (
     <>
       {links.map((link, index) => (
-        <li
-          key={index}
-          className="text-base xl:text-lg text-primary font-[500]"
-        >
+        <li key={index} className="text-base text-primary font-[500]">
           <a href={link.url}>{link.text}</a>
         </li>
       ))}
@@ -65,7 +63,11 @@ const MainNavbar = () => {
           <ul className="px-1 menu menu-horizontal">{linkTags}</ul>
         </div>
         <div className="lg:w-1/4 navbar-end">
-          <a className="btn">Button</a>
+          <div className="flex items-center gap-2 lg:gap-4">
+            <Facebook size={18} />
+            <Twitter size={18} />
+            <Instagram size={18} />
+          </div>
         </div>
       </div>
     </div>

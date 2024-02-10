@@ -1,5 +1,5 @@
 import React from "react";
-import { Phone, Search, Users } from "react-feather";
+import { Phone, Search, User, Users } from "react-feather";
 
 const TopNavbar = () => {
   return (
@@ -22,7 +22,10 @@ const TopNavbar = () => {
             <Users color="#FDE428" size={18} />
             Join Our Team
           </p>
-          <p>Login</p>
+          <p className="flex items-center gap-1">
+            <User color="#FDE428" size={18} />
+            Login
+          </p>
           <span>|</span>
           <p>Register</p>
         </div>
