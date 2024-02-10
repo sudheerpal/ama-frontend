@@ -1,5 +1,7 @@
 import { radioCanada } from "@/app/layout";
 import React from "react";
+import logo from "@/assets/logo2.png";
+import Image from "next/image";
 
 const MainNavbar = () => {
   const links = [
@@ -14,7 +16,10 @@ const MainNavbar = () => {
   const linkTags = (
     <>
       {links.map((link, index) => (
-        <li key={index} className="text-lg text-primary font-[500]">
+        <li
+          key={index}
+          className="text-base xl:text-lg text-primary font-[500]"
+        >
           <a href={link.url}>{link.text}</a>
         </li>
       ))}
@@ -22,8 +27,8 @@ const MainNavbar = () => {
   );
   return (
     <div className={radioCanada.className}>
-      <div className="navbar bg-base-100 text-primary lg:py-9">
-        <div className="navbar-start">
+      <div className="navbar bg-base-100 text-primary lg:py-4">
+        <div className="lg:justify-end lg:mr-4 navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -48,15 +53,18 @@ const MainNavbar = () => {
               {linkTags}
             </ul>
           </div>
-          <button className="font-bold text-center lg:text-3xl">
-            advance market <br />
-            analysis
+          <button>
+            <Image
+              className="max-w-52 lg:max-w-64 md:px-4"
+              src={logo}
+              alt="ama logo"
+            />
           </button>
         </div>
         <div className="hidden navbar-center lg:flex">
           <ul className="px-1 menu menu-horizontal">{linkTags}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="lg:w-1/4 navbar-end">
           <a className="btn">Button</a>
         </div>
       </div>
