@@ -1,5 +1,6 @@
 import Button from "@/components/ui/Button";
 import React from "react";
+import { ArrowRight } from "react-feather";
 
 const BannerFooter = () => {
   return (
@@ -8,7 +9,9 @@ const BannerFooter = () => {
         looking for Trending Report by Industries?
       </div>
       <div className="flex justify-center">
-        <Button>click here</Button>
+        <Button>
+          click here <ArrowRight size={16} color="#FDE428" />
+        </Button>
       </div>
     </div>
   );
