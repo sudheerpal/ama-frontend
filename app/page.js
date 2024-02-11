@@ -6,9 +6,9 @@ import Service from "@/components/home/Service";
 export default function Home() {
   return (
     <div>
-      {/* <Header />
+      <Header />
       <Banner />
-      <Service /> */}
+      <Service />
       <Indutries />
     </div>
   );
