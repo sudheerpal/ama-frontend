@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const ServiceCard = () => {
   return (
-    <div className="relative overflow-hidden transition duration-300 bg-gray-100 shadow-lg hover:shadow-xl max-w-96">
+    <div className="relative overflow-hidden transition duration-300 bg-gray-100 shadow-lg hover:shadow-xl">
       {/* Background image */}
       <div
         className="h-64 bg-center bg-cover"
