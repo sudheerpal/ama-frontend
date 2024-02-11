@@ -1,13 +1,15 @@
 import Banner from "@/components/home/Banner";
 import Header from "@/components/home/Header";
+import Indutries from "@/components/home/Indutries";
 import Service from "@/components/home/Service";
 
 export default function Home() {
   return (
     <div>
-      <Header />
+      {/* <Header />
       <Banner />
-      <Service />
+      <Service /> */}
+      <Indutries />
     </div>
   );
 }
