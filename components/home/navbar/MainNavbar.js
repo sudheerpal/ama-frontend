@@ -1,32 +1,14 @@
-import { radioCanada } from "@/app/layout";
 import React from "react";
 import logo from "@/assets/logo2.png";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "react-feather";
+import LinkTags from "./LinkTags";
 
 const MainNavbar = () => {
-  const links = [
-    { text: "Home", url: "#" },
-    { text: "About Us", url: "#" },
-    { text: "Services", url: "#" },
-    { text: "Verticals", url: "#" },
-    { text: "Research Insights", url: "#" },
-    { text: "Resources", url: "#" },
-    { text: "Contact Us", url: "#" },
-  ];
-  const linkTags = (
-    <>
-      {links.map((link, index) => (
-        <li key={index} className="text-base text-primary font-[500]">
-          <a href={link.url}>{link.text}</a>
-        </li>
-      ))}
-    </>
-  );
   return (
-    <div className={radioCanada.className}>
+    <div>
       <div className="navbar bg-base-100 text-primary lg:py-4">
-        <div className="lg:justify-end lg:mr-4 navbar-start">
+        <div className="lg:justify-end lg:mr-4 navbar-start lg:max-w-sm">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -48,7 +30,7 @@ const MainNavbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              {linkTags}
+              <LinkTags />
             </ul>
           </div>
           <button>
@@ -60,7 +42,9 @@ const MainNavbar = () => {
           </button>
         </div>
         <div className="hidden navbar-center lg:flex">
-          <ul className="px-1 menu menu-horizontal">{linkTags}</ul>
+          <ul className="px-1 menu menu-horizontal">
+            <LinkTags />
+          </ul>
         </div>
         <div className="lg:w-1/4 navbar-end">
           <div className="flex items-center gap-2 lg:gap-4">

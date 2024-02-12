@@ -6,7 +6,7 @@ const TopNavbar = () => {
     <div>
       {" "}
       <section className="items-center hidden gap-4 text-white lg:grid lg:grid-cols-3 bg-primary">
-        <div className="flex justify-end gap-6">
+        <div className="flex justify-end gap-4 xl-gap-6">
           <p className="flex items-center gap-1">
             <Phone color="#FDE428" size={18} />
             +1 551 333 1547
@@ -31,7 +31,7 @@ const TopNavbar = () => {
         </div>
         <div className="relative py-2 bg-secondary">
           <input
-            className="w-full px-4 py-2 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
+            className="w-full px-4 py-2 pr-12 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
             type="search"
             placeholder="Search Reports..."
           />
