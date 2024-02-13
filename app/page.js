@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import Header from "@/components/home/Header";
 import Indutries from "@/components/home/Indutries";
+import Newses from "@/components/home/Newses";
 import Service from "@/components/home/Service";
 import Sponsors from "@/components/home/Sponsors";
 import StatsSection from "@/components/home/StatsSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <StatsSection />
       <Testimonials />
       <Sponsors />
+      <Newses />
     </div>
   );
 }
