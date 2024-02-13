@@ -18,7 +18,7 @@ const ServiceCard = () => {
         style={{ backgroundImage: `url(${cardImage.src})` }}
       ></div>
       <div
-        className={`absolute left-0 right-0 h-full px-4 py-2 text-white transition duration-200 opacity-100 bg-opacity-80 bg-primary top-[200px] backdrop-filter ${
+        className={`absolute left-0 right-0 h-full px-4 py-2 text-white transition duration-300 opacity-100 bg-opacity-80 bg-primary top-[200px] backdrop-filter ${
           isHovered && "-translate-y-[200px]"
         }`}
       >

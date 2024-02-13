@@ -9,20 +9,19 @@ const IndustryCard = () => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center gap-2 px-2 py-12 duration-200 hover:bg-white"
+      className="flex items-center gap-2 px-2 py-12 duration-300 hover:bg-white"
     >
       <div>
-        {/* i want to display this emply div only when hovering the total parent div */}
         <div
           className={`w-0 h-8 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible" : "invisible"
-          } duration-200`}
+            isHovered ? "visible" : "invisible translate-y-16"
+          } duration-300`}
         ></div>
-        <Image src={industryIcon} alt="icon" />
+        <Image className="relative z-10" src={industryIcon} alt="icon" />
         <div
           className={`w-0 h-8 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible" : "invisible"
-          } duration-200`}
+            isHovered ? "visible" : "invisible -translate-y-16"
+          } duration-300`}
         ></div>
       </div>
       <div className="flex flex-col gap-2 px-4">
