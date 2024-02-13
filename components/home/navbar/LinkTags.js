@@ -17,7 +17,7 @@ const LinkTags = () => {
   return (
     <>
       {links.map((link, index) => (
-        <li key={index} className="text-base text-primary font-[500]">
+        <li key={index} className="text-base text-primary font-[500] mx-1">
           <Link
             className={`px-2 py-1 ${
               pathname == link.url ? "text-blue-500" : ""
