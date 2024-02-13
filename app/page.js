@@ -1,4 +1,5 @@
 import Banner from "@/components/home/Banner";
+import EntrepreneurBanner from "@/components/home/EntrepreneurBanner";
 import Header from "@/components/home/Header";
 import Indutries from "@/components/home/Indutries";
 import Newses from "@/components/home/Newses";
@@ -17,6 +18,7 @@ export default function Home() {
       <StatsSection />
       <Testimonials />
       <Sponsors />
+      <EntrepreneurBanner />
       <Newses />
     </div>
   );
