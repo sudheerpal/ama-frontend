@@ -50,7 +50,6 @@ const TestimonialSlider = () => {
             clickable: true,
           }}
           modules={[FreeMode, Navigation]}
-          className="mySwiper"
         >
           <SwiperSlide>
             <TestimonialCard />
