@@ -35,7 +35,7 @@ const TopNavbar = () => {
             type="search"
             placeholder="Search Reports..."
           />
-          <button className="absolute top-0 right-0 h-full px-4 text-[#002E5B] ">
+          <button className="absolute top-0 right-0 h-full px-1 text-[#002E5B] ">
             <Search />
           </button>
         </div>
