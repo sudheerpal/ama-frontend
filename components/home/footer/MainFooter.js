@@ -7,9 +7,9 @@ import Link from "next/link";
 const MainFooter = () => {
   return (
     <div>
-      <section className="grid grid-cols-1 gap-8 text-white md:grid-cols-2 lg:grid-cols-4 bg-primary">
-        <div className="w-full space-y-3">
-          <Image className="w-64" src={logo} alt="logo" />
+      <section className="grid grid-cols-1 gap-8 py-8 text-white md:grid-cols-2 lg:grid-cols-4 bg-primary lg:py-12 lg:px-12">
+        <div className="w-full p-4 space-y-3">
+          <Image className="block w-56 mx-auto" src={logo} alt="logo" />
           <p>
             Consulting WP - Before we talk destination, we shine a spotlight
             across your organization to fully understand its people, processes,
@@ -17,7 +17,7 @@ const MainFooter = () => {
             / Business WordPress theme
           </p>
         </div>
-        <div className="w-full space-y-3">
+        <div className="w-full p-4 space-y-3">
           <h2 className="pb-2 text-2xl font-bold border-b">recent news</h2>
           <div>
             <h4 className="font-medium">
@@ -38,7 +38,7 @@ const MainFooter = () => {
             </div>
           </div>
         </div>
-        <div className="w-full space-y-3">
+        <div className="w-full p-4 space-y-3">
           <h2 className="pb-2 text-2xl font-bold border-b">extra links</h2>
           <div className="grid grid-cols-2 text-blue-500">
             <div className="flex flex-col gap-2">
@@ -57,18 +57,18 @@ const MainFooter = () => {
             </div>
           </div>
         </div>
-        <div className="w-full space-y-3">
+        <div className="w-full p-4 space-y-3">
           <h2 className="pb-2 text-2xl font-bold">subscribe</h2>
           <div className="flex items-center h-8">
             <input
-              className="h-full text-black border-2 border-secondary focus:outline-none"
+              className="w-full h-full text-black border-2 border-secondary focus:outline-none"
               type="email"
             />
             <button className="block h-full px-2 bg-secondary">
               <Mail size={22} color="black" />
             </button>
           </div>
-          <p className="text-sm">get latest updates and offers.</p>
+          <p className="pt-8 text-sm">get latest updates and offers.</p>
         </div>
       </section>
     </div>
