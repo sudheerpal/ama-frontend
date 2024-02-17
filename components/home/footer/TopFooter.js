@@ -25,7 +25,7 @@ const TopFooter = () => {
 
   return (
     <div className="text-white bg-primary">
-      <section className="grid grid-cols-1 divide-x-2 lg:py-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+      <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
         {addresses?.map((address, index) => (
           <div key={index} className="flex justify-center w-full">
             <div className="p-4 space-y-3">
