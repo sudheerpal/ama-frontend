@@ -1,3 +1,4 @@
+import CustomContainer from "@/components/ui/CustomContainer";
 import React from "react";
 import { Mail, MapPin, PhoneCall } from "react-feather";
 
@@ -25,26 +26,28 @@ const TopFooter = () => {
 
   return (
     <div className="text-white bg-primary">
-      <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-        {addresses?.map((address, index) => (
-          <div key={index} className="flex justify-center w-full">
-            <div className="p-4 space-y-3">
-              <h3 className="text-2xl font-bold">{address.country}</h3>
-              <p className="flex items-center gap-2">
-                <MapPin className="text-secondary" size={18} />{" "}
-                {address.location}
-              </p>
-              <p className="flex items-center gap-2">
-                <PhoneCall className="text-secondary" size={18} />{" "}
-                {address.phone}
-              </p>
-              <p className="flex items-center gap-2">
-                <Mail className="text-secondary" size={18} /> {address.email}
-              </p>
+      <CustomContainer>
+        <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+          {addresses?.map((address, index) => (
+            <div key={index} className="flex justify-center w-full">
+              <div className="p-4 space-y-3">
+                <h3 className="text-2xl font-bold">{address.country}</h3>
+                <p className="flex items-center gap-2">
+                  <MapPin className="text-secondary" size={18} />{" "}
+                  {address.location}
+                </p>
+                <p className="flex items-center gap-2">
+                  <PhoneCall className="text-secondary" size={18} />{" "}
+                  {address.phone}
+                </p>
+                <p className="flex items-center gap-2">
+                  <Mail className="text-secondary" size={18} /> {address.email}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
-      </section>
+          ))}
+        </section>
+      </CustomContainer>
     </div>
   );
 };

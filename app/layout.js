@@ -12,9 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html data-theme="customTheme" lang="en">
-      <body className={radioCanada.className + " max-w-[1440px] mx-auto"}>
-        {children}
-      </body>
+      <body className={radioCanada.className}>{children}</body>
       {/* <body className={radioCanada.className}>{children}</body> */}
     </html>
   );
