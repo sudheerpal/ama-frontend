@@ -7,7 +7,7 @@ const Stats = () => {
     { value: 321, label: "Cases completed" },
     { value: 27, label: "Consultants" },
     { value: 125, label: "Awards winning" },
-    { value: "100%", label: "Satisfied customers" },
+    { value: 100, label: "Satisfied customers" },
   ];
 
   const [isCounting, setIsCounting] = useState(false);
@@ -49,6 +49,7 @@ const Stats = () => {
             ) : (
               stat.value
             )}
+            {idx == 3 && <span>%</span>}
           </h1>
           <h3 className="sm:text-lg md:text-xl">{stat.label}</h3>
         </div>
