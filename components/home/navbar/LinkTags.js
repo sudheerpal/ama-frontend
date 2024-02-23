@@ -1,26 +1,27 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
 
+const links = [
+  { text: "Home", url: "/home" },
+  { text: "About Us", url: "#" },
+  {
+    text: "Services",
+    url: "#",
+    submenus: [
+      { text: "Healthcare", url: "/services/healthcare" },
+      { text: "SEO & SMO", url: "/services/seo-smo" },
+    ],
+  },
+  { text: "Verticals", url: "#" },
+  { text: "Research Insights", url: "#" },
+  { text: "Resources", url: "#" },
+  { text: "Contact Us", url: "#" },
+];
 const LinkTags = () => {
   const pathname = usePathname();
-  const links = [
-    { text: "Home", url: "/home" },
-    { text: "About Us", url: "#" },
-    {
-      text: "Services",
-      url: "#",
-      submenus: [
-        { text: "Web Design", url: "/services/web-design" },
-        { text: "SEO & SMO", url: "/services/seo-smo" },
-      ],
-    },
-    { text: "Verticals", url: "#" },
-    { text: "Research Insights", url: "#" },
-    { text: "Resources", url: "#" },
-    { text: "Contact Us", url: "#" },
-  ];
+  const [isHovered, setIshovered] = useState(false);
 
   return (
     <>
@@ -28,15 +29,23 @@ const LinkTags = () => {
         <li key={index} className="text-base text-primary font-[500] mx-1">
           {link.submenus ? (
             <details>
-              <summary className="px-2 py-1 hover:text-blue-500">
+              <summary
+                onMouseOver={(e) => {
+                  console.log("clicked the button");
+                  setIshovered(true);
+                }}
+                onFocus={(e) => setIshovered(true)}
+                onMouseLeave={() => setIshovered(false)}
+                className="px-2 py-1 hover:text-blue-500"
+              >
                 {link.text}
               </summary>
-              <ul className="z-10 rounded lg:min-w-60">
+              <ul className={`z-10 rounded lg:min-w-60`}>
                 {link.submenus.map((submenu, idx) => (
                   <li key={idx}>
                     <Link
                       href={submenu.url}
-                      className="px-2 py-1 hover:text-blue-500"
+                      className="px-2 py-[6px] rounded-sm hover:text-white hover:bg-primary"
                     >
                       {submenu.text}
                     </Link>
