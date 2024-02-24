@@ -33,8 +33,8 @@ const ReportCard = () => {
             <span>
               {new Date(report.publishDate).toDateString("month", "year")}
             </span>
-            <span>Base Year:{report.baseYear}</span>
-            <span>No Of Pages:{report.totalPages}</span>
+            <span>Base Year: {report.baseYear}</span>
+            <span>No Of Pages: {report.totalPages}</span>
           </div>
         </div>
         <hr className="w-0 h-8 border" />
