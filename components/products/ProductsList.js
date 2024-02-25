@@ -26,7 +26,7 @@ const ProductsList = () => {
           <br />
           Research Methodologies
         </h3>
-        <Button>Speak to an Expert</Button>
+        <Button type="secondary">Speak to an Expert</Button>
       </div>
       <div className="relative py-2 bg-secondary">
         <input

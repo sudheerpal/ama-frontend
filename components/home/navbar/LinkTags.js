@@ -7,11 +7,11 @@ const links = [
   { text: "Home", url: "/" },
   { text: "About Us", url: "#" },
   {
-    text: "Services",
+    text: "Industries",
     url: "#",
     submenus: [
-      { text: "Healthcare", url: "/products" },
-      { text: "SEO & SMO", url: "/products/seo-smo" },
+      { text: "Healthcare", url: "/industries" },
+      { text: "SEO & SMO", url: "/industries/seo-smo" },
     ],
   },
   { text: "Verticals", url: "#" },
