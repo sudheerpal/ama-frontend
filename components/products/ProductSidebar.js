@@ -6,7 +6,7 @@ import { Minus, Plus } from "react-feather";
 const ProductSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div className="mt-5">
       <h3 className="mb-5 text-xl font-bold text-primary">Indutry Experties</h3>
       <div>
         {"123456789".split("").map((el) => (

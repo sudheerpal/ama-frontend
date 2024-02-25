@@ -6,7 +6,7 @@ import ReportCard from "./components/ReportCard";
 const ProductsList = () => {
   const reports = "123456789".split("");
   return (
-    <div className="mx-auto space-y-5">
+    <div className="mx-auto mt-5 space-y-5">
       <div>
         <h2 className="mb-3 text-xl font-bold capitalize text-primary">
           Healcare market research report

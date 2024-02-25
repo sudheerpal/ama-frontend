@@ -13,7 +13,7 @@ const Products = () => {
           <div className="lg:col-span-3">
             <ProductsList />
           </div>
-          <div className="sticky top-0 hidden lg:block">
+          <div className="sticky top-0 hidden h-min lg:block">
             <ProductSidebar />
           </div>
         </section>
