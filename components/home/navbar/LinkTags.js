@@ -14,10 +14,10 @@ const links = [
       { text: "SEO & SMO", url: "/industries/seo-smo" },
     ],
   },
-  { text: "Verticals", url: "#" },
-  { text: "Research Insights", url: "#" },
-  { text: "Resources", url: "#" },
-  { text: "Contact Us", url: "#" },
+  { text: "Services", url: "#" },
+  { text: "Insights", url: "#" },
+  { text: "About", url: "#" },
+  { text: "Contact", url: "#" },
 ];
 const LinkTags = () => {
   const pathname = usePathname();
@@ -31,7 +31,6 @@ const LinkTags = () => {
             <details>
               <summary
                 onMouseOver={(e) => {
-                  console.log("clicked the button");
                   setIshovered(true);
                 }}
                 onFocus={(e) => setIshovered(true)}
@@ -40,7 +39,9 @@ const LinkTags = () => {
               >
                 {link.text}
               </summary>
-              <ul className={`z-10 rounded lg:min-w-60`}>
+              <ul
+                className={`z-10 rounded lg:min-w-60 ${isHovered && "block"}`}
+              >
                 {link.submenus.map((submenu, idx) => (
                   <li key={idx}>
                     <Link
