@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 
 const links = [
   { text: "Home", url: "/" },
@@ -22,6 +22,7 @@ const links = [
 const LinkTags = () => {
   const pathname = usePathname();
   const [isHovered, setIshovered] = useState(false);
+  // const ref = useRef(null);
 
   return (
     <>
@@ -30,11 +31,18 @@ const LinkTags = () => {
           {link.submenus ? (
             <details>
               <summary
+                // ref={ref}
                 onMouseOver={(e) => {
+                  // ref.current.click();
                   setIshovered(true);
                 }}
-                onFocus={(e) => setIshovered(true)}
-                onMouseLeave={() => setIshovered(false)}
+                onFocus={(e) => {
+                  setIshovered(true);
+                }}
+                onMouseLeave={() => {
+                  // ref.current.click();
+                  setIshovered(false);
+                }}
                 className="px-2 py-1 hover:text-blue-500"
               >
                 {link.text}

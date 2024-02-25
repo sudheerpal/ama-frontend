@@ -12,9 +12,13 @@ const ProductSidebar = () => {
         {"123456789".split("").map((el) => (
           <div
             key={el}
-            className="border rounded collapse hover:bg-primary hover:text-white"
+            className="p-0 border rounded collapse hover:bg-primary hover:text-white"
           >
-            <input onClick={() => setIsOpen(!isOpen)} type="checkbox" />
+            <input
+              className="p-0"
+              onClick={() => setIsOpen(!isOpen)}
+              type="checkbox"
+            />
             <div className="flex items-center justify-between px-4 py-1 font-medium collapse-title">
               <p>HealthCare</p>
               <span>{isOpen ? <Minus /> : <Plus />}</span>
