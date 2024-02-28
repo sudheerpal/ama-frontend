@@ -4,16 +4,15 @@ import { Phone, Search, User, Users } from "react-feather";
 const TopNavbar = () => {
   return (
     <div>
-      {" "}
-      <section className="items-center hidden gap-4 text-white lg:grid lg:grid-cols-3 bg-primary">
+      <section className="items-center hidden gap-4 text-sm text-white lg:grid lg:grid-cols-3 bg-primary xl:text-base">
         <div className="flex justify-end gap-4 xl-gap-6">
           <p className="flex items-center gap-1">
             <Phone color="#FDE428" size={18} />
-            +1 551 333 1547
+            <span>+1 551 333 1547</span>
           </p>
           <p className="flex items-center gap-1">
             <Phone color="#FDE428" size={18} />
-            +44 2070 979277
+            <span>+44 2070 979277</span>
           </p>
           <p></p>
         </div>
