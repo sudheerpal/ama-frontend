@@ -23,8 +23,7 @@ const ProductsList = () => {
       <div className="flex flex-col items-center gap-5 p-5 text-white bg-primary md:p-12">
         <h3 className="text-xl text-center lg:text-2xl">
           Gain Critical Insights in the Healthcare Industry Through Our Robust
-          <br />
-          Research Methodologies
+          <br className="hidden lg:block" /> Research Methodologies
         </h3>
         <Button type="secondary">Speak to an Expert</Button>
       </div>
