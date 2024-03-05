@@ -17,7 +17,9 @@ const ReportCard = () => {
     <div>
       <section className="gap-5 my-5 space-y-3 md:flex md:items-center">
         <div>
-          <div className="w-32 h-40 bg-blue-200 md:mt-2"></div>
+          <div className="w-32 h-40 p-4 bg-blue-200 md:mt-2">
+            <h3 className="font-bold leading-5">U.S. Life Science Analytics</h3>
+          </div>
         </div>
         <div>
           <div className="space-y-0">
