@@ -1,35 +1,35 @@
 import React from "react";
-import { Share } from "react-feather";
+import { CheckCircle } from "react-feather";
 
 const ReportCard = () => {
   const report = {
     title:
-      "U.S. Life Science Analytics Market Size, Share & COVID-19 Impact Analysis, By Type (Software and Services), By Delivery (On-premise and On-demand), By Application (Commercial Analytics, Personalized Therapy, Clinical Research Analytics, and Supply Chain Analytics) and By End User (Medical Device Companies, Pharmaceutical & Biotechnology Companies, Clinical Research Organizations, and Others), and Country Forecast, 2023-2030",
+      "U.S. Life Science Analytics Market Size, Share & COVID-19 Impact Analysis, By Type (Software and Services), By Delivery (On-premise and On-demand), and Country Forecast, 2023-2030",
     description:
-      "The healthcare report provides a detailed analysis of various aspects of the healthcare industry, including trends, challenges, and opportunities. It covers topics such as healthcare technology, patient care, medical research, and healthcare policy. Through extensive research and data analysis, the report aims to provide valuable insights into the current state of the healthcare sector and its future prospects. It is an essential resource for healthcare professionals, policymakers, researchers, and anyone interested in understanding the dynamics of the healthcare industry.The healthcare report provides a detailed analysis of various aspects of the healthcare industry, including trends, challenges, and opportunities. It covers topics such as healthcare technology, patient care, medical research, and healthcare policy. Through extensive research and data analysis, the report aims to provide valuable insights into the current state of the healthcare sector and its future prospects. It is an essential resource for healthcare professionals, policymakers, researchers, and anyone interested in understanding the dynamics of the healthcare industry.",
+      "The healthcare report provides a detailed analysis of various aspects of the healthcare industry, including trends, challenges, policymakers, researchers, and anyone interested in understanding the dynamics of the healthcare industry.",
     publishDate: "2024-02-10",
     baseYear: "2022",
     totalPages: "80",
     category: "Healthcare",
-    price: "$1000.00",
+    price: "$1000",
   };
   return (
-    <section className="p-4 duration-100 border rounded hover:shadow-2xl hover:border-l-4 hover:border-l-primary">
-      <div className="items-center gap-4 md:flex">
+    <div>
+      <section className="gap-5 my-5 space-y-3 md:flex md:items-center">
         <div>
-          <div className="space-y-3">
+          <div className="w-32 h-40 bg-blue-200"></div>
+        </div>
+        <div>
+          <div className="space-y-0">
             <h4 className="font-bold text-primary">{report.title}</h4>
             <p className="text-gray-400">
               {report.description.length > 200
                 ? report.description.slice(0, 200)
                 : report.description}
               ...{" "}
-              <button className="inline-flex items-center gap-1 text-primary hover:font-bold">
-                Read more <Share className="hover:font-bold" size={14} />
-              </button>
             </p>
           </div>
-          <div className="flex items-center mt-3 text-sm text-gray-400 gap-x-3">
+          <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>
               {new Date(report.publishDate).toDateString("month", "year")}
             </span>
@@ -37,14 +37,38 @@ const ReportCard = () => {
             <span>No Of Pages: {report.totalPages}</span>
           </div>
         </div>
-        <hr className="w-0 h-8 border" />
-        <div>
-          <button className="px-4 py-1 duration-100 bg-gray-300 rounded-full hover:bg-primary hover:text-white hover:shadow-lg">
-            {report.price}
-          </button>
+        <hr className="hidden w-0 border min-h-32 lg:block" />
+        <div className="min-w-[20%]">
+          <section className="space-y-2">
+            <h4 className="font-bold">Price: {report.price}</h4>
+            <div className="text-xs">
+              <p className="flex items-center gap-1">
+                <CheckCircle size={10} color="green" />{" "}
+                <span>PDF, PPT, XLS</span>
+              </p>
+              <p className="flex items-center gap-1">
+                <CheckCircle size={10} color="green" />{" "}
+                <span>UPDATE AVAILABLE ON DEMAND</span>
+              </p>
+              <p className="flex items-center gap-1">
+                <CheckCircle size={10} color="green" />{" "}
+                <span className="text-blue-600">Online Licence</span>
+              </p>
+            </div>
+            <div className="space-y-2">
+              {/* <Button type="primary">Download Sample</Button>
+              <Button type="secondary">Buy Now</Button> */}
+              <button className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm">
+                Download Sample
+              </button>
+              <button className="w-full rounded btn btn-secondary text-primary btn-sm">
+                Buy Now
+              </button>
+            </div>
+          </section>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 
