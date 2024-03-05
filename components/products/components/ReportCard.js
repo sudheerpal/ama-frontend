@@ -6,7 +6,7 @@ const ReportCard = () => {
     title:
       "U.S. Life Science Analytics Market Size, Share & COVID-19 Impact Analysis, By Type (Software and Services), By Delivery (On-premise and On-demand), and Country Forecast, 2023-2030",
     description:
-      "The healthcare report provides a detailed analysis of various aspects of the healthcare industry, including trends, challenges, policymakers, researchers, and anyone interested in understanding the dynamics of the healthcare industry.",
+      "The healthcare report provides a detailed analysis of various aspects of the healthcare industry, including trends, researchers, and anyone interested in understanding the dynamics of the healthcare industry.",
     publishDate: "2024-02-10",
     baseYear: "2022",
     totalPages: "80",
@@ -17,17 +17,12 @@ const ReportCard = () => {
     <div>
       <section className="gap-5 my-5 space-y-3 md:flex md:items-center">
         <div>
-          <div className="w-32 h-40 bg-blue-200"></div>
+          <div className="w-32 h-40 bg-blue-200 md:mt-2"></div>
         </div>
         <div>
           <div className="space-y-0">
             <h4 className="font-bold text-primary">{report.title}</h4>
-            <p className="text-gray-400">
-              {report.description.length > 200
-                ? report.description.slice(0, 200)
-                : report.description}
-              ...{" "}
-            </p>
+            <p className="text-gray-400">{report.description}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>
