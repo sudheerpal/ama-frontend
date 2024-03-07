@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
@@ -35,6 +36,7 @@ const Products = () => {
           </div>
         </section>
       </CustomContainer>
+      <Footer />
     </>
   );
 };
