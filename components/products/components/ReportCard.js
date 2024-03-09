@@ -1,5 +1,7 @@
+import Image from "next/image";
 import React from "react";
 import { CheckCircle } from "react-feather";
+import reportThumbnail from "@/assets/report/reportThumbnail.png";
 
 const ReportCard = () => {
   const report = {
@@ -15,10 +17,11 @@ const ReportCard = () => {
   };
   return (
     <div>
-      <section className="gap-5 my-5 space-y-3 md:flex md:items-center">
+      <section className="gap-5 p-2 my-5 space-y-3 md:flex md:items-center hover:shadow-md lg:p-4">
         <div>
-          <div className="w-32 h-40 p-4 bg-blue-200 md:mt-2">
-            <h3 className="font-bold leading-5">U.S. Life Science Analytics</h3>
+          <div className="w-32 md:mt-2">
+            {/* <h3 className="font-bold leading-5">U.S. Life Science Analytics</h3> */}
+            <Image src={reportThumbnail} alt="Report Thumbnail" />
           </div>
         </div>
         <div>
