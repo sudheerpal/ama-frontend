@@ -17,7 +17,7 @@ const ReportCard = () => {
   };
   return (
     <div>
-      <section className="gap-5 p-2 my-5 space-y-3 md:flex md:items-center hover:shadow-md lg:p-4">
+      <section className="gap-5 p-2 my-5 space-y-3 rounded md:flex md:items-center hover:shadow-md lg:p-4">
         <div>
           <div className="w-32 md:mt-2">
             {/* <h3 className="font-bold leading-5">U.S. Life Science Analytics</h3> */}
@@ -27,7 +27,7 @@ const ReportCard = () => {
         <div>
           <div className="space-y-0">
             <h4 className="font-bold text-primary">{report.title}</h4>
-            <p className="text-gray-400">{report.description}</p>
+            <p className="text-gray-600">{report.description}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>
