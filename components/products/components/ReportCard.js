@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { CheckCircle } from "react-feather";
 import reportThumbnail from "@/assets/report/reportThumbnail.png";
+import Link from "next/link";
 
 const ReportCard = () => {
   const report = {
@@ -58,9 +59,11 @@ const ReportCard = () => {
             <div className="space-y-2">
               {/* <Button type="primary">Download Sample</Button>
               <Button type="secondary">Buy Now</Button> */}
-              <button className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm">
-                Download Sample
-              </button>
+              <Link href={`/reports/${123}`}>
+                <button className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm">
+                  Download Sample
+                </button>
+              </Link>
               <button className="w-full rounded btn btn-secondary text-primary btn-sm">
                 Buy Now
               </button>
