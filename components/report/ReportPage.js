@@ -47,16 +47,16 @@ const ReportPage = () => {
                       <p className="text-xs text-gray-500">Feb, 2024</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Published On</h4>
-                      <p className="text-xs text-gray-500">Feb, 2024</p>
+                      <h4 className="font-semibold">Base Year</h4>
+                      <p className="text-xs text-gray-500">2022</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Published On</h4>
-                      <p className="text-xs text-gray-500">Feb, 2024</p>
+                      <h4 className="font-semibold">Historical Data</h4>
+                      <p className="text-xs text-gray-500">2019 - 2021</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold">Published On</h4>
-                      <p className="text-xs text-gray-500">Feb, 2024</p>
+                      <h4 className="font-semibold">No of pages</h4>
+                      <p className="text-xs text-gray-500">80</p>
                     </div>
                   </div>
                 </div>
