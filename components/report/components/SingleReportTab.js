@@ -1,24 +1,27 @@
 import React from "react";
 
-const SingleReportTab = () => {
+const SingleReportTab = ({ tab, activeTab, handleTabChange }) => {
   return (
     <>
       <input
         type="radio"
         name="rd-tabs"
         role="tab"
-        className={`mx-4 tab rounded-t ${
-          activeTab === 1 ? "bg-primary text-white" : "text-primary"
+        className={`md:mx-4 tab border border-primary ${
+          activeTab === tab.id
+            ? "bg-primary text-white border-primary"
+            : "text-primary"
         }`}
-        id="tab1"
-        aria-label="Summary"
-        checked={activeTab === 1}
-        onChange={() => handleTabChange(1)}
+        id={tab.id}
+        aria-label={tab.label}
+        checked={activeTab === tab.id}
+        onChange={() => handleTabChange(tab.id)}
       />
-
-      <div role="tabpanel" className="p-10 tab-content">
-        Tab content 1
-      </div>
+      {activeTab === tab.id && (
+        <div role="tabpanel" className="p-10 tab-content">
+          {tab.content}
+        </div>
+      )}
     </>
   );
 };
