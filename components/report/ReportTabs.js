@@ -17,9 +17,11 @@ const ReportTabs = () => {
         type="radio"
         name="rd-tabs"
         role="tab"
-        className="tab"
+        className={`mx-4 tab rounded-t ${
+          activeTab === 1 ? "bg-primary text-white" : "text-primary"
+        }`}
         id="tab1"
-        aria-label="Tab 1"
+        aria-label="Summary"
         checked={activeTab === 1}
         onChange={() => handleTabChange(1)}
       />
@@ -32,9 +34,11 @@ const ReportTabs = () => {
         type="radio"
         name="rd-tabs"
         role="tab"
-        className="tab"
+        className={`mx-4 tab rounded-t ${
+          activeTab === 2 ? "bg-primary text-white" : "text-primary"
+        }`}
         id="tab2"
-        aria-label="Tab 2"
+        aria-label="Table of Content"
         checked={activeTab === 2}
         onChange={() => handleTabChange(2)}
       />
@@ -47,7 +51,9 @@ const ReportTabs = () => {
         type="radio"
         name="rd-tabs"
         role="tab"
-        className="tab"
+        className={`mx-4 tab rounded-t ${
+          activeTab === 3 ? "bg-primary text-white" : "text-primary"
+        }`}
         id="tab3"
         aria-label="Tab 3"
         checked={activeTab === 3}
@@ -62,7 +68,9 @@ const ReportTabs = () => {
         type="radio"
         name="rd-tabs"
         role="tab"
-        className="tab"
+        className={`mx-4 tab rounded-t ${
+          activeTab === 4 ? "bg-primary text-white" : "text-primary"
+        }`}
         id="tab4"
         aria-label="Tab 4"
         checked={activeTab === 4}
