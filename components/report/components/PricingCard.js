@@ -1,6 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState } from "react";
+import { ShoppingCart } from "react-feather";
 
 const PricingCard = () => {
   // State to track selected plan
@@ -19,64 +21,75 @@ const PricingCard = () => {
   };
 
   return (
-    <div className="max-w-sm p-4 bg-secondary">
+    <div className="max-w-sm pt-4 bg-secondary">
       <h3 className="mb-4 text-xl font-bold text-center text-primary">
         Pricing
       </h3>
-      <form onSubmit={handleSubmit} className="space-y-2">
-        <div className="text-center">
-          <input
-            type="radio"
-            id="basic"
-            name="plan"
-            value="Basic"
-            checked={selectedPlan === "Basic"}
-            onChange={() => handlePlanSelect("Basic")}
-          />
-          <label htmlFor="basic">
-            Single User License{" "}
-            <span className="p-1 ml-4 text-sm font-semibold border border-white text-primary">
+      <form onSubmit={handleSubmit}>
+        <section className="px-4 md:px-6">
+          <div className="flex items-center gap-2 my-1">
+            <input
+              className="w-4 h-4 radio radio-primary"
+              type="radio"
+              id="single"
+              name="plan"
+              value="Single"
+              checked={selectedPlan === "Single"}
+              onChange={() => handlePlanSelect("Single")}
+            />
+            <label className="cursor-pointer" htmlFor="single">
+              Single User License{" "}
+            </label>
+            <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               $2850
             </span>
-          </label>
-        </div>
-        <div className="text-center">
-          <input
-            type="radio"
-            id="standard"
-            name="plan"
-            value="Standard"
-            checked={selectedPlan === "Standard"}
-            onChange={() => handlePlanSelect("Standard")}
-          />
-          <label htmlFor="standard">
-            Multy User License{" "}
-            <span className="p-1 ml-4 text-sm font-semibold border border-white text-primary">
+          </div>
+          <div className="flex items-center gap-2 my-1">
+            <input
+              className="w-4 h-4 radio radio-primary"
+              type="radio"
+              id="multy"
+              name="plan"
+              value="Multy"
+              checked={selectedPlan === "Multy"}
+              onChange={() => handlePlanSelect("Multy")}
+            />
+            <label className="cursor-pointer" htmlFor="multy">
+              Multy User License{" "}
+            </label>
+            <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               $3200
             </span>
-          </label>
-        </div>
-        <div className="text-center">
-          <input
-            type="radio"
-            id="premium"
-            name="plan"
-            value="Premium"
-            checked={selectedPlan === "Premium"}
-            onChange={() => handlePlanSelect("Premium")}
-          />
-          <label htmlFor="premium">
-            Corporate License{" "}
-            <span className="p-1 ml-4 text-sm font-semibold border border-white text-primary">
+          </div>
+          <div className="flex items-center gap-2 my-1">
+            <input
+              className="w-4 h-4 radio radio-primary"
+              type="radio"
+              id="corporate"
+              name="plan"
+              value="Corporate"
+              checked={selectedPlan === "Corporate"}
+              onChange={() => handlePlanSelect("Corporate")}
+            />
+            <label className="cursor-pointer" htmlFor="corporate">
+              Corporate License{" "}
+            </label>
+            <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               $3600
             </span>
-          </label>
-        </div>
+          </div>
+          <Link
+            href="#"
+            className="block mx-auto text-sm text-center underline text-primary"
+          >
+            Compare Licenses
+          </Link>
+        </section>
         <button
           type="submit"
-          className="block px-4 py-2 mx-auto mt-4 text-white rounded bg-primary"
+          className="inline-flex items-center justify-center w-full gap-1 py-2 mt-4 font-semibold text-white duration-100 bg-primary hover:bg-opacity-90 hover:shadow"
         >
-          Select Plan
+          <ShoppingCart className="text-secondary" /> BUY NOW
         </button>
       </form>
     </div>
