@@ -6,6 +6,7 @@ import Image from "next/image";
 import PricingCard from "./components/PricingCard";
 import Button from "../ui/Button";
 import { Download, HelpCircle, Tag } from "react-feather";
+import ReportTabs from "./ReportTabs";
 
 const ReportPage = () => {
   return (
@@ -65,6 +66,9 @@ const ReportPage = () => {
                 <div>
                   <PricingCard />
                 </div>
+              </section>
+              <section>
+                <ReportTabs />
               </section>
             </div>
             <div className="py-5">
