@@ -4,6 +4,8 @@ import reportThumbnail from "@/assets/report/reportThumbnail.png";
 import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
+import Button from "../ui/Button";
+import { Download, HelpCircle, Tag } from "react-feather";
 
 const ReportPage = () => {
   return (
@@ -65,7 +67,22 @@ const ReportPage = () => {
                 </div>
               </section>
             </div>
-            <div></div>
+            <div className="py-5">
+              <div className="flex flex-col gap-8 p-4">
+                <Button>
+                  <Download className="text-secondary" />{" "}
+                  <span className="uppercase">Request sample</span>
+                </Button>
+                <Button>
+                  <HelpCircle className="text-secondary" />{" "}
+                  <span className="uppercase">Pre Order Enquiry</span>
+                </Button>
+                <Button>
+                  <Tag className="text-secondary" />{" "}
+                  <span className="uppercase">Request discount</span>
+                </Button>
+              </div>
+            </div>
           </main>
         </CustomContainer>
       </section>
