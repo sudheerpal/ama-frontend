@@ -37,8 +37,8 @@ const ReportPage = () => {
             Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry Development
             Trend Analysis Report 2023
           </h1>
-          <main className="grid gap-5 lg:grid-cols-4">
-            <div className="col-span-3">
+          <main className="relative grid gap-5 lg:grid-cols-4">
+            <div className="lg:col-span-3">
               <section className="grid grid-cols-1 gap-5 py-5 md:grid-cols-2">
                 <div className="flex items-center gap-5 p-2">
                   <div>
@@ -71,7 +71,7 @@ const ReportPage = () => {
                 <ReportTabs />
               </section>
             </div>
-            <div className="py-5">
+            <div className="sticky top-0 hidden py-5 h-min lg:block">
               <div className="flex flex-col gap-8 p-4">
                 <Button>
                   <Download className="text-secondary" />{" "}
