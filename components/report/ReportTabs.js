@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import SingleReportTab from "./components/SingleReportTab";
+import SummaryTabContent from "./components/SummaryTabContent";
 
 const ReportTabs = () => {
   // State to track the active tab
@@ -13,7 +14,7 @@ const ReportTabs = () => {
 
   // Tab items and content
   const tabs = [
-    { id: 1, label: "Summary", content: "Tab content 1" },
+    { id: 1, label: "Summary", content: <SummaryTabContent /> },
     { id: 2, label: "Table of Content", content: "Tab content 2" },
     { id: 3, label: "Segmentation", content: "Tab content 3" },
     { id: 4, label: "Methodology", content: "Tab content 4" },
