@@ -12,7 +12,7 @@ const Reports = () => {
     <>
       <Header />
       <section className="text-white bg-primary">
-        <CustomContainer classNames="p-5">
+        <CustomContainer>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Home className="pb-1" size={30} />
@@ -26,7 +26,7 @@ const Reports = () => {
           </div>
         </CustomContainer>
       </section>
-      <CustomContainer classNames="p-5">
+      <CustomContainer>
         <section className="grid gap-5 lg:grid-cols-4">
           <div className="lg:col-span-3">
             <ProductsList />
