@@ -33,7 +33,7 @@ const ReportPage = () => {
       </section>
       <section>
         <CustomContainer>
-          <h1 className="text-lg font-semibold md:text-2xl text-primary">
+          <h1 className="my-5 text-lg font-semibold md:text-2xl text-primary">
             Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry Development
             Trend Analysis Report 2023
           </h1>
