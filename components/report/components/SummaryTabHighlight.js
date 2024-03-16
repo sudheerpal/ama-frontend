@@ -23,13 +23,13 @@ const SummaryTabHighlight = () => {
               {"1234".split("").map((el) => (
                 <>
                   <tr className="flex items-center">
-                    <td className="flex items-center w-1/2 gap-2 p-4">
+                    <td className="flex items-center w-2/5 gap-2 p-4">
                       <Search className="text-primary" />{" "}
                       <span className="font-bold uppercase text-primary">
                         By product and services
                       </span>
                     </td>
-                    <td className="w-1/2 p-4">
+                    <td className="w-3/5 p-4">
                       <ul className="list-disc">
                         <li>Lorem ipsum dolor sit.</li>
                         <li>Aliquid doloribus dolorum consequuntur.</li>
