@@ -4,6 +4,7 @@ import barChart from "@/assets/report/barChart.png";
 import roundChart from "@/assets/report/roundChart.png";
 import Image from "next/image";
 import SummaryTabFAQ from "./SummaryTabFAQ";
+import SummaryTabHighlight from "./SummaryTabHighlight";
 
 const SummaryTabContent = () => {
   return (
@@ -129,6 +130,9 @@ const SummaryTabContent = () => {
             <Image src={roundChart} alt="barchart" />
           </div>
         </main>
+      </section>
+      <section>
+        <SummaryTabHighlight />
       </section>
       <section>
         <SummaryTabFAQ />
