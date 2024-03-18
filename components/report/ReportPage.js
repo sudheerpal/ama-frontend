@@ -1,6 +1,7 @@
 import React from "react";
 import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
 import reportThumbnail from "@/assets/report/reportThumbnail.png";
+import quotation from "@/assets/report/quotation.png";
 import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
@@ -38,6 +39,7 @@ const ReportPage = () => {
             Trend Analysis Report 2023
           </h1>
           <main className="relative grid gap-5 lg:grid-cols-4">
+            {/* ---- report tab section ---- */}
             <section className="lg:col-span-3">
               <section className="grid grid-cols-1 gap-5 py-5 md:grid-cols-2">
                 <div className="flex items-center gap-5 p-2">
@@ -71,6 +73,7 @@ const ReportPage = () => {
                 <ReportTabs />
               </section>
             </section>
+            {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block">
               <div className="flex flex-col gap-8 p-4 mb-5">
                 <Button>
@@ -117,6 +120,25 @@ const ReportPage = () => {
                     <span className="text-4xl font-extrabold drop-shadow-xl">
                       BASF
                     </span>
+                  </div>
+                </div>
+              </div>
+              <div className="mx-4 my-5">
+                <div
+                  style={{
+                    clipPath:
+                      "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
+                  }}
+                  className="p-4 pb-10 bg-gray-200"
+                >
+                  <p>
+                    “Thank you very much. I really appreciate the work your team
+                    has done. I feel very comfortable recommending your services
+                    to some of the other startups that I’m working with, and
+                    will likely establish a good long partnership with you.”
+                  </p>
+                  <div className="w-16 ml-auto">
+                    <Image src={quotation} alt="quotation" />
                   </div>
                 </div>
               </div>
