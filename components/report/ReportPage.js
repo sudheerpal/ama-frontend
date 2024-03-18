@@ -108,6 +108,18 @@ const ReportPage = () => {
                   </div>
                 </div>
               </div>
+              <div className="mx-4 my-5">
+                <div className="p-5 rounded bg-secondary">
+                  <h2 className="mb-4 text-xl font-bold text-center text-primary">
+                    Healthcare Clients
+                  </h2>
+                  <div className="py-5 text-center bg-white rounded">
+                    <span className="text-4xl font-extrabold drop-shadow-xl">
+                      BASF
+                    </span>
+                  </div>
+                </div>
+              </div>
             </section>
           </main>
         </CustomContainer>
