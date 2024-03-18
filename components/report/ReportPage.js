@@ -2,11 +2,12 @@ import React from "react";
 import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
 import reportThumbnail from "@/assets/report/reportThumbnail.png";
 import quotation from "@/assets/report/quotation.png";
+import avatar from "@/assets/report/avatar.png";
 import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
 import Button from "../ui/Button";
-import { Download, HelpCircle, Tag } from "react-feather";
+import { Clock, Download, HelpCircle, Tag } from "react-feather";
 import ReportTabs from "./ReportTabs";
 
 const ReportPage = () => {
@@ -75,6 +76,7 @@ const ReportPage = () => {
             </section>
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block">
+              {/* segment 1 */}
               <div className="flex flex-col gap-8 p-4 mb-5">
                 <Button>
                   <Download className="text-secondary" />{" "}
@@ -89,6 +91,7 @@ const ReportPage = () => {
                   <span className="uppercase">Request discount</span>
                 </Button>
               </div>
+              {/* segment 2 */}
               <div className="my-5">
                 <div className="mx-4 bg-gray-200 rounded">
                   <h3 className="py-2 text-center text-white capitalize rounded-t bg-primary">
@@ -111,6 +114,7 @@ const ReportPage = () => {
                   </div>
                 </div>
               </div>
+              {/* segment 3 */}
               <div className="mx-4 my-5">
                 <div className="p-5 rounded bg-secondary">
                   <h2 className="mb-4 text-xl font-bold text-center text-primary">
@@ -123,6 +127,7 @@ const ReportPage = () => {
                   </div>
                 </div>
               </div>
+              {/* segment 4 */}
               <div className="mx-4 my-5">
                 <div
                   style={{
@@ -141,6 +146,37 @@ const ReportPage = () => {
                     <Image src={quotation} alt="quotation" />
                   </div>
                 </div>
+                <div className="flex items-center gap-4 my-5">
+                  <div>
+                    <Image
+                      className="w-12 rounded-full"
+                      src={avatar}
+                      alt="avatar"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold">Dr. John Doe</h3>
+                    <p className="text-gray-600">
+                      Sales & Marketing, Alien Ltd.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* segment 5 */}
+              <hr className="my-5 mt-16 border-2 border-black" />
+              <div className="mx-4 my-5">
+                <h2 className="my-3 text-xl font-bold">related reports</h2>
+                {"fs".split("").map((_, i) => (
+                  <div key={i} className="my-4">
+                    <h4 className="font-semibold text-primary">
+                      U.S. life science analytics market size, share & COVID-19{" "}
+                    </h4>
+                    <div className="flex items-center gap-2 mt-2 text-sm">
+                      <Clock className="-mt-1 text-secondary" size={16} />
+                      <p>October 23, 2023</p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
           </main>
