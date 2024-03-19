@@ -17,6 +17,7 @@ const ProductsList = () => {
     // fetch data here
     // fetch(`http://localhost:8000/api/v1/products?limit=${limit}&page=${page}`)
     setCurrentPage(pageNumber);
+    console.log(pageNumber);
   };
 
   return (
