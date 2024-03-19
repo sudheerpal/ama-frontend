@@ -18,7 +18,7 @@ const ReportCard = () => {
   };
   return (
     <div>
-      <section className="gap-5 p-2 my-5 space-y-3 rounded md:flex hover:shadow-md lg:p-4">
+      <section className="gap-5 p-2 my-5 space-y-3 rounded md:flex md:space-y-0 hover:shadow-md lg:p-4">
         <div>
           <div className="w-32 md:mt-2">
             {/* <h3 className="font-bold leading-5">U.S. Life Science Analytics</h3> */}
