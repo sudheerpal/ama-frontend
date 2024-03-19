@@ -1,15 +1,29 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Button from "../ui/Button";
 import { Search } from "react-feather";
 import ReportCard from "./components/ReportCard";
+import Pagination from "../ui/pagination/Pagination";
 
 const ProductsList = () => {
-  const reports = "123456789".split("");
+  const [reports, setReports] = useState([1, 1, 1, 1, 1]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [limit, setLimit] = useState(6);
+  const [totalReports, setTotalReports] = useState(300);
+
+  // Function to handle page changes
+  const handlePageChange = (pageNumber) => {
+    setReports([1, 1, 1, 1, 1]);
+    // fetch data here
+    // fetch(`http://localhost:8000/api/v1/products?limit=${limit}&page=${page}`)
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <div className="mx-auto mt-5 space-y-5">
       <div>
         <h2 className="mb-3 text-xl font-bold capitalize text-primary">
-          Healcare market research report
+          Healthcare market research report
         </h2>
         <p>
           Healthcare organizations are currently operating in a dynamic set-up,
@@ -38,9 +52,16 @@ const ProductsList = () => {
         </button>
       </div>
       <div>
-        {reports.map((report, idx) => (
+        {reports?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
+        <section>
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(totalReports / limit)}
+            onPageChange={handlePageChange}
+          />
+        </section>
       </div>
     </div>
   );
