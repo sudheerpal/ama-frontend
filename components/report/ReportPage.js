@@ -79,7 +79,7 @@ const ReportPage = () => {
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <div className="flex flex-col gap-8 p-4 mx-4 mb-5">
+              <div className="flex flex-col gap-8 p-4 mx-4 mb-5 text-sm xl:text-base">
                 <Button>
                   <Download className="text-secondary" />{" "}
                   <span className="uppercase">Request sample</span>
