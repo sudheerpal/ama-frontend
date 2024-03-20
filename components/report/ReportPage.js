@@ -77,9 +77,9 @@ const ReportPage = () => {
               </section>
             </section>
             {/* ---- report sidebar ---- */}
-            <section className="sticky top-0 hidden py-5 h-min lg:block">
+            <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <div className="flex flex-col gap-8 p-4 mb-5">
+              <div className="flex flex-col gap-8 p-4 mx-4 mb-5">
                 <Button>
                   <Download className="text-secondary" />{" "}
                   <span className="uppercase">Request sample</span>
@@ -92,6 +92,10 @@ const ReportPage = () => {
                   <Tag className="text-secondary" />{" "}
                   <span className="uppercase">Request discount</span>
                 </Button>
+              </div>
+              {/* segment 1.5 */}
+              <div className="mx-4 my-5">
+                <PricingCard />
               </div>
               {/* segment 2 */}
               <div className="my-5">

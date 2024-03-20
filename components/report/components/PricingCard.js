@@ -21,7 +21,7 @@ const PricingCard = () => {
   };
 
   return (
-    <div className="max-w-sm pt-4 bg-secondary">
+    <div className="max-w-sm pt-4 rounded bg-secondary">
       <h3 className="mb-4 text-xl font-bold text-center text-primary">
         Pricing
       </h3>
