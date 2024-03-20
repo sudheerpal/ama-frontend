@@ -37,6 +37,12 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     return pages;
   };
 
+  const handlePageChange = (e) => {
+    setTimeout(() => {
+      onPageChange(Number(e.target.value));
+    }, 1000);
+  };
+
   return (
     <div className="my-12 lg:items-center lg:flex">
       <div className="block mx-auto rounded join w-fit">
@@ -87,7 +93,7 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           type="number"
           placeholder="Jump to Page"
           className="w-full rounded input input-bordered input-sm focus:outline-none"
-          onChange={(e) => onPageChange(+e.target.value)}
+          onChange={(e) => handlePageChange(e)}
         />
         <select className="w-full rounded select select-bordered select-sm focus:outline-none">
           <option disabled selected>
