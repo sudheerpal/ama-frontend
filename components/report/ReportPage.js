@@ -7,7 +7,7 @@ import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
 import Button from "../ui/Button";
-import { Clock, Download, HelpCircle, Tag } from "react-feather";
+import { Book, Clock, Download, HelpCircle, Tag } from "react-feather";
 import ReportTabs from "./ReportTabs";
 
 const ReportPage = () => {
@@ -35,39 +35,41 @@ const ReportPage = () => {
       </section>
       <section>
         <CustomContainer>
-          <h1 className="my-5 text-lg font-semibold md:text-2xl text-primary">
-            Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry Development
-            Trend Analysis Report 2023
-          </h1>
-          <main className="relative grid gap-5 lg:grid-cols-4">
+          <main className="relative grid gap-5 mt-5 lg:grid-cols-4 lg:mt-10">
             {/* ---- report tab section ---- */}
             <section className="lg:col-span-3">
-              <section className="grid grid-cols-1 gap-5 py-5 md:grid-cols-2">
-                <div className="flex items-center gap-5 p-2">
-                  <div>
-                    <Image src={reportThumbnail} alt="report thumbnail" />
-                  </div>
-                  <div className="flex flex-col justify-between h-full">
-                    <div>
-                      <h4 className="font-semibold">Published On</h4>
-                      <p className="text-xs text-gray-500">Feb, 2024</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Base Year</h4>
-                      <p className="text-xs text-gray-500">2022</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">Historical Data</h4>
-                      <p className="text-xs text-gray-500">2019 - 2021</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold">No of pages</h4>
-                      <p className="text-xs text-gray-500">80</p>
-                    </div>
-                  </div>
+              {/* report introduction section  */}
+              <section className="gap-5 py-5 space-y-3 md:flex md:space-y-0">
+                <div className="w-fit min-w-32 xl:min-w-40">
+                  <Image src={reportThumbnail} alt="report thumbnail" />
                 </div>
-                <div>
-                  <PricingCard />
+                <div className="space-y-3">
+                  <h1 className="text-lg font-semibold md:text-2xl text-primary">
+                    Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry
+                    Development Trend Analysis Report 2023
+                  </h1>
+                  <p className="text-sm">
+                    Asia Pacific Offshore Wind Market Research Report -
+                    Information By Technology (Wind Energy, Wave Energy, Tidal
+                    Stream, Ocean Thermal Energy Conversion (OTEC), and Other
+                    Technologies) –and Asia Pacific Market Forecast Till 2032
+                  </p>
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <div className="flex gap-1">
+                      <Book className="font-bold text-primary" size={20} />{" "}
+                      Report
+                    </div>{" "}
+                    <hr className="w-0 h-6 border-2 border-secondary" />
+                    <div>182 Pages</div>
+                    <hr className="w-0 h-6 border-2 border-secondary" />
+                    <div>April 2023</div>
+                    <hr className="w-0 h-6 border-2 border-secondary" />
+                    <div>Region : Global</div>
+                    <hr className="w-0 h-6 border-2 border-secondary" />
+                    <div>TechNavio</div>
+                    <hr className="w-0 h-6 border-2 border-secondary" />
+                    <div>ID: 2468574</div>
+                  </div>
                 </div>
               </section>
               <section>
