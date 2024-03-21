@@ -17,7 +17,7 @@ const links = [
   { text: "Services", url: "#" },
   { text: "Insights", url: "#" },
   { text: "About", url: "#" },
-  { text: "Contact", url: "#" },
+  { text: "Contact", url: "/contact" },
 ];
 const LinkTags = () => {
   const pathname = usePathname();
