@@ -31,7 +31,7 @@ const LocationTabs = () => {
                 width: "100%",
               }}
             >
-              <div className="grid w-full h-full p-5 text-white bg-opacity-80 bg-primary place-items-center">
+              <div className="grid w-full h-full p-5 py-12 text-white bg-opacity-80 bg-primary place-items-center">
                 <div>
                   <h3 className="mb-5 text-xl font-bold">contact details</h3>
                   <div className="space-y-2 text-sm">
@@ -64,30 +64,40 @@ const LocationTabs = () => {
       tabContent: (
         <>
           <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div>{/* Image one */}</div>
-            <div>{/* Map image */}</div>
+            <div>
+              <Image className="w-full" src={image1} alt="image one" />
+            </div>
+            <div>
+              <Image className="w-full" src={image2} alt="map image" />
+            </div>
             <div
               style={{
-                backgroundImage: `url(${image3})`,
+                backgroundImage: `url(${image3.src})`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
               }}
-              className="grid p-5 text-white bg-primary bg-opacity-80 place-items-center"
             >
-              <div>
-                <h3 className="mb-5 text-xl font-bold">contact details</h3>
-                <div className="space-y-2 text-sm">
-                  <p className="flex items-center gap-2">
-                    <MapPin className="text-secondary" size={14} />
-                    <span>123 London Street, London, UK.</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <PhoneCall className="text-secondary" size={14} />
-                    <span>+44 123 456 7890</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Mail className="text-secondary" size={14} />
-                    <span>london@company.com</span>
-                  </p>
+              <div className="grid w-full h-full p-5 py-12 text-white bg-opacity-80 bg-primary place-items-center">
+                <div>
+                  <h3 className="mb-5 text-xl font-bold">contact details</h3>
+                  <div className="space-y-2 text-sm">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="text-secondary" size={14} />
+                      <span>
+                        1010 Avenue of the Moon <br />
+                        New York, NY 10018 US.
+                      </span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <PhoneCall className="text-secondary" size={14} />
+                      <span>+1 453 567 7000</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Mail className="text-secondary" size={14} />
+                      <span>brandon@advance.com</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -101,30 +111,37 @@ const LocationTabs = () => {
       tabContent: (
         <>
           <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div>{/* Image one */}</div>
-            <div>{/* Map image */}</div>
+            <div>
+              <Image className="w-full" src={image1} alt="image one" />
+            </div>
+            <div>
+              <Image className="w-full" src={image2} alt="map image" />
+            </div>
             <div
               style={{
-                backgroundImage: `url("/images/location_tab_contact.png")`,
+                backgroundImage: `url(${image3.src})`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
               }}
-              className="grid p-5 text-white bg-gray-700 place-items-center"
             >
-              <div>
-                <h3 className="mb-5 text-xl font-bold">contact details</h3>
-                <div className="space-y-2 text-sm">
-                  <p className="flex items-center gap-2">
-                    <MapPin className="text-secondary" size={14} />
-                    <span>456 Paris Street, Paris, France.</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <PhoneCall className="text-secondary" size={14} />
-                    <span>+33 456 789 1234</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Mail className="text-secondary" size={14} />
-                    <span>paris@company.com</span>
-                  </p>
+              <div className="grid w-full h-full p-5 py-12 text-white bg-opacity-80 bg-primary place-items-center">
+                <div>
+                  <h3 className="mb-5 text-xl font-bold">contact details</h3>
+                  <div className="space-y-2 text-sm">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="text-secondary" size={14} />
+                      <span>456 Paris Street, Paris, France.</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <PhoneCall className="text-secondary" size={14} />
+                      <span>+33 456 789 1234</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Mail className="text-secondary" size={14} />
+                      <span>paris@company.com</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -132,36 +149,44 @@ const LocationTabs = () => {
         </>
       ),
     },
+
     {
       id: 4,
       tabName: "Tokyo Office",
       tabContent: (
         <>
           <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <div>{/* Image one */}</div>
-            <div>{/* Map image */}</div>
+            <div>
+              <Image className="w-full" src={image1} alt="image one" />
+            </div>
+            <div>
+              <Image className="w-full" src={image2} alt="map image" />
+            </div>
             <div
               style={{
-                backgroundImage: `url("/images/location_tab_contact.png")`,
+                backgroundImage: `url(${image3.src})`,
                 backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
               }}
-              className="grid p-5 text-white bg-gray-700 place-items-center"
             >
-              <div>
-                <h3 className="mb-5 text-xl font-bold">contact details</h3>
-                <div className="space-y-2 text-sm">
-                  <p className="flex items-center gap-2">
-                    <MapPin className="text-secondary" size={14} />
-                    <span>789 Tokyo Street, Tokyo, Japan.</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <PhoneCall className="text-secondary" size={14} />
-                    <span>+81 789 123 4567</span>
-                  </p>
-                  <p className="flex items-center gap-2">
-                    <Mail className="text-secondary" size={14} />
-                    <span>tokyo@company.com</span>
-                  </p>
+              <div className="grid w-full h-full p-5 py-12 text-white bg-opacity-80 bg-primary place-items-center">
+                <div>
+                  <h3 className="mb-5 text-xl font-bold">contact details</h3>
+                  <div className="space-y-2 text-sm">
+                    <p className="flex items-center gap-2">
+                      <MapPin className="text-secondary" size={14} />
+                      <span>789 Tokyo Street, Tokyo, Japan.</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <PhoneCall className="text-secondary" size={14} />
+                      <span>+81 789 123 4567</span>
+                    </p>
+                    <p className="flex items-center gap-2">
+                      <Mail className="text-secondary" size={14} />
+                      <span>tokyo@company.com</span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
