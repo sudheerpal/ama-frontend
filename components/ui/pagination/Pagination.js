@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+const Pagination = ({ currentPage, totalPages, setLimit, onPageChange }) => {
   // Function to generate an array of page numbers around the current page
   const generatePageNumbers = () => {
     const pages = [];
@@ -95,7 +95,10 @@ const Pagination = ({ currentPage, totalPages, onPageChange }) => {
           className="w-full rounded input input-bordered input-sm focus:outline-none"
           onChange={(e) => handlePageChange(e)}
         />
-        <select className="w-full rounded select select-bordered select-sm focus:outline-none">
+        <select
+          onChange={(e) => setLimit(+e.target.value)}
+          className="w-full rounded select select-bordered select-sm focus:outline-none"
+        >
           <option disabled selected>
             Reports Per Page
           </option>

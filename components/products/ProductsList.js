@@ -59,6 +59,7 @@ const ProductsList = () => {
         <section>
           <Pagination
             currentPage={currentPage}
+            setLimit={setLimit}
             totalPages={Math.ceil(totalReports / limit)}
             onPageChange={handlePageChange}
           />
