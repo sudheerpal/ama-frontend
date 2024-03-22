@@ -17,8 +17,8 @@ const ContactUsPage = () => {
           </CustomContainer>
         </section>
         {/* get in touch section */}
-        <section className="my-5 lg:my-12">
-          <CustomContainer>
+        <section className="">
+          <CustomContainer classNames="mb-10">
             <section className="grid grid-cols-1 gap-8 lg:grid-cols-3">
               {/* forms section  */}
               <div className="lg:col-span-2">
