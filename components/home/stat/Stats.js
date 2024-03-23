@@ -28,13 +28,15 @@ const Stats = () => {
       });
     }, options);
 
-    if (countRef.current) {
-      observer.observe(countRef.current);
+    const currentRef = countRef.current; // Capture the current value of countRef.current
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (countRef.current) {
-        observer.unobserve(countRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, []);
