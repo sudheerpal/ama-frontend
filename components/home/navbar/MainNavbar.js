@@ -4,7 +4,13 @@ import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import LinkTags from "./LinkTags";
 
+import { headers } from "next/headers";
+
 const MainNavbar = () => {
+  const heads = headers();
+
+  const pathname = heads.get("next-url");
+
   return (
     <div>
       <div className="navbar bg-base-100 text-primary lg:py-4">
@@ -43,7 +49,7 @@ const MainNavbar = () => {
         </div>
         <div className="hidden navbar-center lg:flex">
           <ul className="px-1 menu menu-horizontal">
-            <LinkTags />
+            <LinkTags pathname={pathname} />
           </ul>
         </div>
         <div className="lg:w-1/4 navbar-end">
