@@ -10,8 +10,7 @@ import { Home } from "react-feather";
 const Reports = () => {
   return (
     <>
-      <Header />
-      <section className="text-white bg-primary">
+      <section className="py-2 text-white bg-primary">
         <CustomContainer>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">

@@ -10,8 +10,8 @@ const links = [
     text: "Industries",
     url: "#",
     submenus: [
-      { text: "Healthcare", url: "/industries" },
-      { text: "SEO & SMO", url: "/industries/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
     ],
   },
   { text: "Services", url: "#" },
