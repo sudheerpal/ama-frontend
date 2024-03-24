@@ -3,12 +3,10 @@ import logo from "@/assets/logo2.png";
 import Image from "next/image";
 import { Facebook, Instagram, Twitter } from "react-feather";
 import LinkTags from "./LinkTags";
-
 import { headers } from "next/headers";
 
-const MainNavbar = () => {
+const MainNavbar = ({ categories = [] }) => {
   const heads = headers();
-
   const pathname = heads.get("next-url");
 
   return (
@@ -36,7 +34,7 @@ const MainNavbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <LinkTags />
+              <LinkTags categories={categories} pathname={pathname} />
             </ul>
           </div>
           <button>

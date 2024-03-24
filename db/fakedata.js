@@ -208,7 +208,7 @@ export const categories = [
   },
 ];
 
-export const parentCategory = [
+export const parentCategories = [
   {
     id: 1,
     label: "Healthcare",

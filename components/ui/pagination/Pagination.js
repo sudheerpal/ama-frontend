@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const Pagination = ({ currentPage, totalPages, setLimit, onPageChange }) => {
   // Function to generate an array of page numbers around the current page
   const generatePageNumbers = () => {
@@ -47,13 +47,21 @@ const Pagination = ({ currentPage, totalPages, setLimit, onPageChange }) => {
     <div className="my-12 lg:items-center lg:flex">
       <div className="block mx-auto rounded join w-fit">
         {/* Previous page button */}
-        <button
+        {/* <button
           className="join-item btn btn-sm"
           disabled={currentPage === 1}
           onClick={() => onPageChange(currentPage - 1)}
         >
           {"<<"}
-        </button>
+        </button> */}
+        <Link
+          href={"/page?=1"}
+          className="join-item btn btn-sm"
+          // disabled={currentPage === 1}
+          // onClick={() => onPageChange(currentPage - 1)}
+        >
+          {"<<"}
+        </Link>
 
         {/* Page buttons */}
         {generatePageNumbers().map((pageNumber, index) => (

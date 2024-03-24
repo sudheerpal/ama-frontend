@@ -8,26 +8,8 @@ import React from "react";
 import { Home } from "react-feather";
 
 const Products = () => {
-  const reports = [
-    {
-      id: 2,
-      title: "Green Cement Market ",
-      slug: "green-cement-market-2",
-      summery:
-        "Rising environmental concerns and government regulations on carbon emissionsIncreasing demand for sustainable construction materialsTechnological advancements in gr",
-      price: {
-        multiPrice: "5850",
-        singlePrice: "4850",
-        enterprisePrice: "6850",
-      },
-      createdAt: "2024-03-24T06:53:55.663Z",
-      baseyear: "2023",
-      noOfPages: "250",
-    },
-  ];
   return (
     <>
-      <Header />
       <section className="text-white bg-primary">
         <CustomContainer>
           <div className="flex items-center justify-between">
@@ -46,7 +28,7 @@ const Products = () => {
       <CustomContainer>
         <section className="grid gap-5 lg:grid-cols-4">
           <div className="lg:col-span-3">
-            <ProductsList reports={reports} />
+            <ProductsList />
           </div>
           <div className="sticky top-0 hidden h-min lg:block">
             <ProductSidebar />

@@ -9,7 +9,7 @@ const ProductsList = () => {
   const [reports, setReports] = useState([1, 1, 1, 1, 1]);
   const [currentPage, setCurrentPage] = useState(1);
   const [limit, setLimit] = useState(6);
-  const [totalReports, setTotalReports] = useState(300);
+  const totalReports = 300;
 
   // Function to handle page changes
   const handlePageChange = (pageNumber) => {
