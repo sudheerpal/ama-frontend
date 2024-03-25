@@ -8,15 +8,18 @@ const CheckoutPage = () => {
       <CustomContainer classNames="mb-12">
         <section className="my-5">
           <div className="py-2 space-y-2">
-            <h4 className="font-bold md:text-lg text-primary xl:text-xl">
-              Office Chairs- Comprehensive Study by Type (Ergonomic chairs,
-              Executive office chairs, Conference chairs, Computer chairs,
-              Others), Application (Households, School, Enterprise, Industrial,
-              Others), Material Type (Mesh,, Leather, Fabric, Plastic, Others),
-              Sale Channel (Supermarket/Hypermarket, Online, Offline)
-            </h4>
+            <h1 className="text-lg font-semibold md:text-2xl text-primary">
+              Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry Development
+              Trend Analysis Report 2023
+            </h1>
+            <p className="">
+              Asia Pacific Offshore Wind Market Research Report - Information By
+              Technology (Wind Energy, Wave Energy, Tidal Stream, Ocean Thermal
+              Energy Conversion (OTEC), and Other Technologies) –and Asia
+              Pacific Market Forecast Till 2032
+            </p>
             <p>
-              <span className="font-bold">Edition:</span>
+              <span className="font-bold">Edition: </span>
               <span>Single User</span>
             </p>
           </div>

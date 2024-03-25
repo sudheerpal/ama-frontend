@@ -4,6 +4,7 @@ const InputRadio = ({ name, value, checked, onChange, label }) => {
   return (
     <div className="flex items-center my-2">
       <input
+        id={value}
         type="radio"
         name={name}
         value={value}
@@ -11,7 +12,7 @@ const InputRadio = ({ name, value, checked, onChange, label }) => {
         onChange={onChange}
         className="mr-2 radio radio-primary"
       />
-      <label htmlFor={value} className="text-xl font-bold">
+      <label htmlFor={value} className="text-xl font-bold cursor-pointer">
         {label}
       </label>
     </div>
