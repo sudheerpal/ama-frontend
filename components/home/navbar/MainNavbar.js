@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "@/assets/logo2.png";
 import Image from "next/image";
-import { Facebook, Instagram, Twitter } from "react-feather";
+import { ChevronDown, Facebook, Home, Instagram, Twitter } from "react-feather";
 import LinkTags from "./LinkTags";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -48,7 +48,7 @@ const MainNavbar = ({ categories = [] }) => {
           </button>
         </div>
         <div className="hidden navbar-center lg:flex">
-          <ul className="px-4 text-base menu menu-horizontal">
+          <ul className="px-4 text-base font-medium menu menu-horizontal">
             {/* <LinkTags pathname={pathname} /> */}
 
             {links?.map((link, index) => (
@@ -59,12 +59,12 @@ const MainNavbar = ({ categories = [] }) => {
                 }`}
               >
                 <Link
-                  className={`p-0 ${
+                  className={`p-0 hover:text-blue-500 ${
                     pathname == link.url ? "text-blue-500" : ""
                   }`}
                   href={link.url}
                 >
-                  {link.text} {link.submenus && <span>{">"}</span>}
+                  {link.text} {link.submenus && <ChevronDown size={16} />}
                 </Link>
                 {/* Render submenus if they exist */}
                 {link.submenus && (
@@ -74,9 +74,10 @@ const MainNavbar = ({ categories = [] }) => {
                         <li key={subIndex} className="py-1">
                           <Link
                             href={submenu.url}
-                            className="block p-0 cursor-pointer text-primary"
+                            className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-blue-500"
                           >
-                            {submenu.text}
+                            <Home size={16} />
+                            <span> {submenu.text}</span>
                           </Link>
                         </li>
                       ))}
