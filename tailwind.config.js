@@ -26,5 +26,8 @@ module.exports = {
       },
     },
   },
+  variants: {
+    display: ["group-hover"],
+  },
   plugins: [require("daisyui")],
 };
