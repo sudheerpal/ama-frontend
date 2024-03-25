@@ -1,0 +1,27 @@
+export const links = [
+  { text: "Home", url: "/" },
+  { text: "About Us", url: "#" },
+  {
+    text: "Industries",
+    url: "#",
+    submenus: [
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+      { text: "SEO & SMO", url: "/reports/seo-smo" },
+      { text: "Healthcare", url: "/reports" },
+    ],
+  },
+  { text: "Services", url: "#" },
+  { text: "Insights", url: "#" },
+  { text: "About", url: "#" },
+  { text: "Contact", url: "/contact" },
+];

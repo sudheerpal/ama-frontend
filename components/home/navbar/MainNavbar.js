@@ -5,38 +5,11 @@ import { Facebook, Instagram, Twitter } from "react-feather";
 import LinkTags from "./LinkTags";
 import { headers } from "next/headers";
 import Link from "next/link";
+import { links } from "@/constants/constants";
 
 const MainNavbar = ({ categories = [] }) => {
   const heads = headers();
   const pathname = heads.get("next-url");
-
-  const links = [
-    { text: "Home", url: "/" },
-    { text: "About Us", url: "#" },
-    {
-      text: "Industries",
-      url: "#",
-      submenus: [
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-        { text: "SEO & SMO", url: "/reports/seo-smo" },
-        { text: "Healthcare", url: "/reports" },
-      ],
-    },
-    { text: "Services", url: "#" },
-    { text: "Insights", url: "#" },
-    { text: "About", url: "#" },
-    { text: "Contact", url: "/contact" },
-  ];
 
   return (
     <div>
@@ -78,7 +51,7 @@ const MainNavbar = ({ categories = [] }) => {
           <ul className="px-4 text-base menu menu-horizontal">
             {/* <LinkTags pathname={pathname} /> */}
 
-            {links.map((link, index) => (
+            {links?.map((link, index) => (
               <li
                 key={index}
                 className={`px-4 text-primary cursor-pointer ${
