@@ -14,7 +14,7 @@ const StatsSection = () => {
         width: "100%",
       }}
     >
-      <div className="px-5 py-12 bg-opacity-50 bg-primary min-h-48 md:py-24 lg:py-36">
+      <div className="py-12 bg-opacity-50  bg-primary min-h-48 md:py-24 lg:py-36">
         <CustomContainer>
           <div className="flex gap-2 lg:gap-6">
             <div>
