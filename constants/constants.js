@@ -45,27 +45,27 @@ export const industries = [
     name: "Information and Technology",
     description:
       "Design repeatable growth models and innovation pipelines that generate new products with higher potential and lower risks of failure.",
-    icon: Picture3,
+    icon: Picture4,
   },
   {
     id: 4,
     name: "Energy and Power",
     description:
       "Scheduled transport operations, from broad market trends and strategy to the development of integrated commercial strategies.",
-    icon: Picture4,
+    icon: Picture5,
   },
   {
     id: 5,
     name: "Agriculture",
     description:
       "We work across all the major geographies, meaning we understand the underlying drivers in construction markets.",
-    icon: Picture5,
+    icon: Picture6,
   },
   {
     id: 6,
     name: "Consumer Goods",
     description:
       "We work buy-side and sell-side and give our clients hard-hitting and objective answers and focus hard on the best opportunities.",
-    icon: Picture6,
+    icon: Picture3,
   },
 ];
