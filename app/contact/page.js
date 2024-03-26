@@ -6,7 +6,6 @@ import React from "react";
 const ContactUs = () => {
   return (
     <div>
-      <Header />
       <ContactUsPage />
       <Footer />
     </div>
