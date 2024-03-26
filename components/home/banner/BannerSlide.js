@@ -16,6 +16,31 @@ import CustomContainer from "@/components/ui/CustomContainer";
 
 const BannerSlide = ({ image }) => {
   const slideImages = [image1, image2, image3];
+
+  const slidesData = [
+    {
+      id: 1,
+      title: "Twice The Glory!",
+      subTitle: "We are yet again",
+      subTitle2: "A great place to work",
+      image: image1,
+    },
+    {
+      id: 2,
+      title: "Discover New Opportunities",
+      subTitle: "Explore endless possibilities",
+      subTitle2: "with our innovative solutions",
+      image: image2,
+    },
+    {
+      id: 3,
+      title: "Transform Your Business",
+      subTitle: "Unlock your potential",
+      subTitle2: "with our cutting-edge technology",
+      image: image3,
+    },
+  ];
+
   return (
     <div>
       <Swiper navigation={true} modules={[Navigation]}>
