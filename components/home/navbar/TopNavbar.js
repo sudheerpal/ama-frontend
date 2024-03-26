@@ -1,4 +1,5 @@
 import CustomContainer from "@/components/ui/CustomContainer";
+import Link from "next/link";
 import React from "react";
 import { Phone, Search, User, Users } from "react-feather";
 
@@ -19,10 +20,10 @@ const TopNavbar = () => {
             <p></p>
           </div>
           <div className="flex justify-end gap-4">
-            <p className="flex items-center gap-1 mr-4">
+            <Link href="/" className="flex items-center gap-1 mr-4">
               <Users color="#FDE428" size={18} />
               Join Our Team
-            </p>
+            </Link>
             {/* <p className="flex items-center gap-1">
               <User color="#FDE428" size={18} />
               Login

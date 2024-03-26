@@ -4,8 +4,8 @@ import CustomContainer from "../ui/CustomContainer";
 
 const Service = () => {
   return (
-    <CustomContainer>
-      <div className="p-10">
+    <CustomContainer classNames="py-10">
+      <div>
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-12">
           <ServiceCard />
           <ServiceCard />

@@ -15,8 +15,8 @@ const MainNavbar = ({ categories = [] }) => {
   return (
     <div>
       <CustomContainer>
-        <div className="p-0 navbar text-primary lg:py-4">
-          <div className="lg:mr-4 navbar-start lg:max-w-sm">
+        <div className="p-0 navbar text-primary lg:py-4 lg:gap-5">
+          <div className="navbar-start lg:max-w-sm lg:w-fit">
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -45,18 +45,16 @@ const MainNavbar = ({ categories = [] }) => {
                 <LinkTags categories={categories} pathname={pathname} />
               </ul>
             </div>
-            <button>
+            <Link href="/">
               <Image
                 className="max-w-40 lg:max-w-52 xl:max-w-64 md:px-4"
                 src={logo}
                 alt="ama logo"
               />
-            </button>
+            </Link>
           </div>
-          <div className="hidden navbar-center lg:flex">
-            <ul className="px-4 font-medium xl:text-base menu menu-horizontal">
-              {/* <LinkTags pathname={pathname} /> */}
-
+          <div className="hidden navbar-center lg:flex lg:flex-grow">
+            <ul className="px-4 font-medium lg:w-full xl:text-base menu menu-horizontal lg:justify-between">
               {links?.map((link, index) => (
                 <li
                   key={index}
@@ -94,11 +92,17 @@ const MainNavbar = ({ categories = [] }) => {
               ))}
             </ul>
           </div>
-          <div className="lg:w-1/4 navbar-end">
+          <div className="lg:w-1/6 navbar-end">
             <div className="flex items-center gap-2 lg:gap-4">
-              <Facebook size={18} />
-              <Twitter size={18} />
-              <Instagram size={18} />
+              <Link href="/" className="hover:text-blue-500">
+                <Facebook size={18} />
+              </Link>
+              <Link href="/" className="hover:text-blue-500">
+                <Twitter size={18} />
+              </Link>
+              <Link href="/" className="hover:text-blue-500">
+                <Instagram size={18} />
+              </Link>
             </div>
           </div>
         </div>

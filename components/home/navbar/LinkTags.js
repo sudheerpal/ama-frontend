@@ -1,24 +1,8 @@
 "use client";
+import { links } from "@/constants/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-
-const links = [
-  { text: "Home", url: "/" },
-  { text: "About Us", url: "#" },
-  {
-    text: "Industries",
-    url: "#",
-    submenus: [
-      { text: "Healthcare", url: "/reports" },
-      { text: "SEO & SMO", url: "/reports/seo-smo" },
-    ],
-  },
-  { text: "Services", url: "#" },
-  { text: "Insights", url: "#" },
-  { text: "About", url: "#" },
-  { text: "Contact", url: "/contact" },
-];
 const LinkTags = () => {
   const pathname = usePathname();
   const [isHovered, setIshovered] = useState(false);
@@ -39,7 +23,7 @@ const LinkTags = () => {
                 onMouseLeave={() => {
                   setIshovered(false);
                 }}
-                className="px-2 py-1 hover:text-blue-500"
+                className="px-2 py-1 rounded-sm hover:text-white hover:bg-primary"
               >
                 {link.text}
               </summary>
@@ -61,7 +45,7 @@ const LinkTags = () => {
           ) : (
             <Link
               href={link.url}
-              className={`px-2 py-1 hover:text-blue-500 ${
+              className={`px-2 py-1  rounded-sm hover:text-white hover:bg-primary ${
                 pathname == link.url ? "text-blue-500" : ""
               }`}
             >
