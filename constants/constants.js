@@ -30,42 +30,42 @@ export const industries = [
     id: 1,
     name: "Healthcare",
     description:
-      "Company that offers design and build services for you from initial sketches to the final production. We consider all the drivers of change from the ground up and we’ll motivate and support you to make the change.",
+      "Design and build services from initial sketches to final production, with focus on change drivers.",
     icon: Picture1,
   },
   {
     id: 2,
     name: "Chemicals and Materials",
     description:
-      "We work buy-side and sell-side and give our clients hard-hitting and objective answers and focus hard on the best opportunities. We work across all the major geographies, meaning we understand the underlying drivers in construction markets.",
+      "Objective solutions for construction markets, emphasizing best opportunities.",
     icon: Picture2,
   },
   {
     id: 3,
     name: "Information and Technology",
     description:
-      "Design repeatable growth models and innovation pipelines that generate new products with higher potential and lower risks of failure.",
+      "Innovative growth models generating new products with lower risks of failure.",
     icon: Picture4,
   },
   {
     id: 4,
     name: "Energy and Power",
     description:
-      "Scheduled transport operations, from broad market trends and strategy to the development of integrated commercial strategies.",
+      "Integrated commercial strategies for scheduled transport operations and market trends.",
     icon: Picture5,
   },
   {
     id: 5,
     name: "Agriculture",
     description:
-      "We work across all the major geographies, meaning we understand the underlying drivers in construction markets.",
+      "Understanding construction market drivers across major geographies.",
     icon: Picture6,
   },
   {
     id: 6,
     name: "Consumer Goods",
     description:
-      "We work buy-side and sell-side and give our clients hard-hitting and objective answers and focus hard on the best opportunities.",
+      "Objective solutions emphasizing best opportunities in buy-side and sell-side.",
     icon: Picture3,
   },
 ];

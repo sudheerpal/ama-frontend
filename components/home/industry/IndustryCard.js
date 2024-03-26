@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const IndustryCard = ({ industry }) => {
@@ -8,7 +9,8 @@ const IndustryCard = ({ industry }) => {
   const { name, description, icon } = industry;
 
   return (
-    <div
+    <Link
+      href="/"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="flex items-center gap-2 px-2 py-5 duration-300 hover:bg-white min-h-60"
@@ -32,7 +34,7 @@ const IndustryCard = ({ industry }) => {
         <h3 className="text-xl font-bold text-primary">{name}</h3>
         <p className="text-sm text-gray-400">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
