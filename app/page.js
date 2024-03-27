@@ -8,12 +8,10 @@ import Service from "@/components/home/Service";
 import Sponsors from "@/components/home/Sponsors";
 import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
+import { fetchIndustriesHome } from "@/utils/fetchFunctions";
 
 export default async function Home() {
-  const industryResponse = await fetch(
-    "https://ama-admin.com/api/categories?home=true"
-  );
-  const { data: industryCardDataHome } = await industryResponse.json();
+  const industryCardDataHome = await fetchIndustriesHome();
 
   return (
     <div>

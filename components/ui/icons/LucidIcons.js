@@ -1,10 +1,10 @@
 import React from "react";
-import dynamic from "next/dynamic";
-import dynamicIconImports from "lucide-react/dynamicIconImports";
+import { icons } from "lucide-react";
 
-const LucidIcon = ({ name, size = 24 }) => {
-  const DynamicLucideIcon = dynamic(dynamicIconImports[name]);
-  return <DynamicLucideIcon size={size} />;
+const LucidIcon = ({ name, classNames, size }) => {
+  const DynamicLucideIcon = icons[name];
+
+  return <DynamicLucideIcon className={classNames} size={size || 48} />;
 };
 
 export default LucidIcon;
