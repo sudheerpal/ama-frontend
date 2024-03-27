@@ -71,8 +71,8 @@ const SponsorSlider = ({ sponsors }) => {
         }}
         modules={[Autoplay, FreeMode, Navigation]}
       >
-        {sponsors?.map((sponsor, idx) => (
-          <SwiperSlide className="h-full" key={idx}>
+        {sponsors?.map((sponsor) => (
+          <SwiperSlide className="h-full" key={sponsor.id}>
             <SponsordCard image={sponsor.image} />
           </SwiperSlide>
         ))}
