@@ -1,37 +1,40 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
-import industryIcon from "@/assets/icons/industryIcon.png";
 
-const IndustryCard = () => {
+const IndustryCard = ({ industry }) => {
   const [isHovered, setIsHovered] = useState(false);
+
+  const { name, description, icon } = industry;
+
   return (
-    <div
+    <Link
+      href="/"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center gap-2 px-2 py-12 duration-300 hover:bg-white"
+      className="flex items-center gap-2 px-2 py-5 duration-300 hover:bg-white min-h-60"
     >
       <div>
         <div
-          className={`w-0 h-8 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible" : "invisible translate-y-16"
+          className={`w-0 mx-auto border-r-8 border-secondary ${
+            isHovered ? "visible h-8" : "invisible h-0"
           } duration-300`}
         ></div>
-        <Image className="relative z-10" src={industryIcon} alt="icon" />
+        <div className="relative z-10 w-20">
+          <Image className={`w-full`} src={icon} alt={name} />
+        </div>
         <div
-          className={`w-0 h-8 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible" : "invisible -translate-y-16"
+          className={`w-0 mx-auto border-r-8 border-secondary ${
+            isHovered ? "visible h-8" : "invisible h-0"
           } duration-300`}
         ></div>
       </div>
       <div className="flex flex-col gap-2 px-4">
-        <h3 className="text-xl font-bold text-primary">Healthcare</h3>
-        <p className="text-sm text-gray-400">
-          Company that offers design and build services for you from initial
-          sketches to the final production.
-        </p>
+        <h3 className="text-xl font-bold text-primary">{name}</h3>
+        <p className="text-sm text-gray-400">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

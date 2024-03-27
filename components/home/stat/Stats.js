@@ -4,9 +4,9 @@ import CountUp from "react-countup";
 
 const Stats = () => {
   const statsData = [
-    { value: 321, label: "Cases completed" },
-    { value: 27, label: "Consultants" },
-    { value: 125, label: "Awards winning" },
+    { value: 5150, label: "Reports" },
+    { value: 2350, label: "Clients" },
+    { value: 1050, label: "Managed Reports" },
     { value: 100, label: "Satisfied customers" },
   ];
 
@@ -45,15 +45,18 @@ const Stats = () => {
     <div className="grid grid-cols-2 mt-12 font-bold text-white lg:grid-cols-4 lg:mt-24">
       {statsData.map((stat, idx) => (
         <div key={idx} className="px-2 py-2 lg:px-6 lg:py-3">
-          <h1 ref={countRef} className="text-2xl md:text-4xl lg:text-6xl">
+          <h1
+            ref={countRef}
+            className="text-2xl md:text-4xl lg:text-5xl xl:text-6xl"
+          >
             {isCounting ? (
               <CountUp end={+stat.value}>{stat.value}</CountUp>
             ) : (
               stat.value
             )}
-            {idx == 3 && <span>%</span>}
+            {idx == 3 ? <span>%</span> : <span>+</span>}
           </h1>
-          <h3 className="sm:text-lg md:text-xl">{stat.label}</h3>
+          <h3 className="sm:text-lg md:text-xl md:mt-2">{stat.label}</h3>
         </div>
       ))}
     </div>

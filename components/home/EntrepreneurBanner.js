@@ -11,7 +11,7 @@ const EntrepreneurBanner = () => {
         width: "100%",
       }}
     >
-      <div className="px-5 py-12 text-lg font-bold text-center text-white bg-opacity-50 bg-primary min-h-48 md:p-24 lg:p-36 md:text-2xl lg:text-3xl xl:text-4xl">
+      <div className="px-5 py-12 text-lg font-bold text-center text-white bg-opacity-50 bg-primary min-h-36 md:p-24 lg:p-36 md:text-2xl lg:text-3xl xl:text-4xl">
         <h2>
           To help entrepreneurs get their act together <br />{" "}
           <span className="text-secondary">before they talk to investors.</span>

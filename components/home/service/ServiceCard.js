@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import cardImage from "@/assets/serviceCard/image-1.png";
-import icon from "@/assets/icons/Consulting.png";
 import Image from "next/image";
 
-const ServiceCard = () => {
+const ServiceCard = ({ service }) => {
   const [isHovered, setIsHoverd] = useState(false);
+
+  const { title, description, image, icon } = service;
+
   return (
     <div
       onMouseEnter={(e) => setIsHoverd(true)}
@@ -15,7 +16,7 @@ const ServiceCard = () => {
       {/* Background image */}
       <div
         className="h-64 bg-center bg-cover"
-        style={{ backgroundImage: `url(${cardImage.src})` }}
+        style={{ backgroundImage: `url(${image.src})` }}
       ></div>
       <div
         className={`absolute left-0 right-0 h-full px-4 py-2 text-white transition duration-300 opacity-100 bg-opacity-80 bg-primary top-[200px] backdrop-filter ${
@@ -25,12 +26,9 @@ const ServiceCard = () => {
         <div className="flex flex-col items-start gap-2">
           <h3 className="flex items-center gap-3 text-xl font-bold">
             <Image className="w-10 h-10" src={icon} alt="icon" />
-            Consulting
+            {title}
           </h3>
-          <div className="px-4 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laborum
-            vitae reiciendis doloremque!
-          </div>
+          <div className="px-4 text-sm text-gray-300">{description}</div>
           <button className="mx-4 text-sm text-secondary">read more</button>
         </div>
       </div>
