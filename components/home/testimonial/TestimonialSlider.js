@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 import "./TesimonialSlider.css";
 import TestimonialCard from "./TestimonialCard";
 
-const TestimonialSlider = () => {
+const TestimonialSlider = ({ testimonials }) => {
   const [screenWidth, setScreenWidth] = useState(null);
 
   useEffect(() => {
@@ -49,21 +49,11 @@ const TestimonialSlider = () => {
         }}
         modules={[FreeMode, Navigation]}
       >
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TestimonialCard />
-        </SwiperSlide>
+        {testimonials?.map((testimonial) => (
+          <SwiperSlide key={testimonial.id}>
+            <TestimonialCard testimonial={testimonial} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

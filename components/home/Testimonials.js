@@ -5,11 +5,11 @@ import SectionTitle from "../ui/SectionTitle";
 import { FreeMode, Pagination } from "swiper/modules";
 import TestimonialSlider from "./testimonial/TestimonialSlider";
 
-const Testimonials = () => {
+const Testimonials = ({ testimonials }) => {
   return (
     <div>
       <SectionTitle>Testimonials</SectionTitle>
-      <TestimonialSlider />
+      <TestimonialSlider testimonials={testimonials} />
     </div>
   );
 };
