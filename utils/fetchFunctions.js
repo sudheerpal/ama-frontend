@@ -54,3 +54,14 @@ export const fetchCategories = async () => {
     return [];
   }
 };
+
+export const fetchReports = async () => {
+  try {
+    const res = await fetch("https://ama-admin.com/api/reports");
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return [];
+  }
+};

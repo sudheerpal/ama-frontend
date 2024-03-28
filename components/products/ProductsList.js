@@ -5,8 +5,8 @@ import { Search } from "react-feather";
 import ReportCard from "./components/ReportCard";
 import Pagination from "../ui/pagination/Pagination";
 
-const ProductsList = () => {
-  const [reports, setReports] = useState([1, 1, 1, 1, 1]);
+const ProductsList = ({ reports }) => {
+  // const [reports, setReports] = useState([1, 1, 1, 1, 1]);
   const [currentPage, setCurrentPage] = useState(1);
   const [limit, setLimit] = useState(6);
   const totalReports = 300;
