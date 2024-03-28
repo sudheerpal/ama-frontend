@@ -1,24 +1,12 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Button from "../ui/Button";
 import { Search } from "react-feather";
 import ReportCard from "./components/ReportCard";
 import Pagination from "../ui/pagination/Pagination";
 
-const ProductsList = ({ reports }) => {
-  // const [reports, setReports] = useState([1, 1, 1, 1, 1]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(6);
-  const totalReports = 300;
-
-  // Function to handle page changes
-  const handlePageChange = (pageNumber) => {
-    setReports([1, 1, 1, 1, 1]);
-    // fetch data here
-    // fetch(`http://localhost:8000/api/v1/products?limit=${limit}&page=${page}`)
-    setCurrentPage(pageNumber);
-    console.log(pageNumber);
-  };
+const ProductsList = ({ reports: reportsData }) => {
+  const currentPage = reportsData.page;
+  const totalReports = reportsData.totalCount;
 
   return (
     <div className="mx-auto mt-5 space-y-5">
@@ -53,15 +41,14 @@ const ProductsList = ({ reports }) => {
         </button>
       </div>
       <div>
-        {reports?.map((report, idx) => (
+        {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
         <section>
           <Pagination
+            category={reportsData?.category}
             currentPage={currentPage}
-            setLimit={setLimit}
-            totalPages={Math.ceil(totalReports / limit)}
-            onPageChange={handlePageChange}
+            totalPages={Math.ceil(totalReports / 20)}
           />
         </section>
       </div>
