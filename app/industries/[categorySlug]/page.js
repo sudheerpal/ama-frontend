@@ -8,8 +8,9 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
 
-const ReportListing = async () => {
-  const reports = await fetchReports();
+const ReportListing = async ({ params }) => {
+  const categorySlug = decodeURIComponent(params.categorySlug);
+  const reports = await fetchReports({ query: categorySlug });
   const sidebarCategories = await fetchCategories();
   return (
     <>
