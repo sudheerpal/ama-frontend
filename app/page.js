@@ -8,16 +8,25 @@ import Service from "@/components/home/Service";
 import Sponsors from "@/components/home/Sponsors";
 import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
+import {
+  fetchIndustriesHome,
+  fetchSponsorLogos,
+  fetchTestimonials,
+} from "@/utils/fetchFunctions";
 
-export default function Home() {
+export default async function Home() {
+  const industryCardDataHome = await fetchIndustriesHome();
+  const testimonialsHome = await fetchTestimonials();
+  const sponsorsHome = await fetchSponsorLogos();
+
   return (
     <div>
       <Banner />
       <Service />
-      <Indutries />
+      <Indutries industries={industryCardDataHome} />
       <StatsSection />
-      <Testimonials />
-      <Sponsors />
+      <Testimonials testimonials={testimonialsHome} />
+      <Sponsors sponsors={sponsorsHome} />
       <EntrepreneurBanner />
       <Newses />
       <Footer />

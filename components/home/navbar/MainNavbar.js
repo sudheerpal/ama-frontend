@@ -7,8 +7,9 @@ import { headers } from "next/headers";
 import Link from "next/link";
 import { links } from "@/constants/constants";
 import CustomContainer from "@/components/ui/CustomContainer";
+import LucidIcon from "@/components/ui/icons/LucidIcons";
 
-const MainNavbar = ({ categories = [] }) => {
+const MainNavbar = ({ parentCategories = [] }) => {
   const heads = headers();
   const pathname = heads.get("next-url");
 
@@ -42,7 +43,7 @@ const MainNavbar = ({ categories = [] }) => {
                 tabIndex={0}
                 className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded w-52"
               >
-                <LinkTags categories={categories} pathname={pathname} />
+                <LinkTags pathname={pathname} />
               </ul>
             </div>
             <Link href="/">
@@ -73,15 +74,15 @@ const MainNavbar = ({ categories = [] }) => {
                   {/* Render submenus if they exist */}
                   {link.submenus && (
                     <div className="absolute hidden h-auto group-hover:block dropdown-menu">
-                      <ul className="top-0 z-10 grid grid-cols-2 gap-2 p-4 bg-white rounded shadow w-96">
-                        {link.submenus.map((submenu, subIndex) => (
-                          <li key={subIndex} className="py-1">
+                      <ul className="top-0 z-10 grid grid-cols-2 gap-2 p-4 bg-white rounded shadow w-[576px]">
+                        {parentCategories?.map((submenu) => (
+                          <li key={submenu.id} className="py-1">
                             <Link
-                              href={submenu.url}
+                              href={submenu.link}
                               className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-blue-500"
                             >
-                              <Home size={16} />
-                              <span> {submenu.text}</span>
+                              <LucidIcon name={submenu.icon} size={20} />
+                              <span> {submenu.label}</span>
                             </Link>
                           </li>
                         ))}

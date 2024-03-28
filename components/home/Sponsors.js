@@ -1,10 +1,10 @@
 import React from "react";
 import SponsorSlider from "./sponsor/SponsorSlider";
 
-const Sponsors = () => {
+const Sponsors = ({ sponsors }) => {
   return (
-    <div className="py-12 bg-accent lg:py-24">
-      <SponsorSlider />
+    <div className="py-12 lg:py-24">
+      <SponsorSlider sponsors={sponsors} />
     </div>
   );
 };

@@ -1,25 +1,25 @@
 import Image from "next/image";
 import React from "react";
-import image from "@/assets/testimonials/image.png";
 
-const TestimonialCard = () => {
+const TestimonialCard = ({ testimonial }) => {
+  const { name, occupation, testimonial: testimonialText, image } = testimonial;
+
   return (
     <div className="grid max-w-lg grid-cols-2 gap-4 mx-2">
-      <div>
-        <Image src={image} alt="testimonial image" />
+      <div className="pt-1">
+        <Image
+          src={image}
+          width={500}
+          height={500}
+          alt={`Testimonial image of ${name}`}
+        />
       </div>
-      <div className="flex flex-col justify-center gap-2">
-        <h2 className="text-xl font-bold md:text-2xl text-primary">
-          Amanda Seyfried
+      <div className="flex flex-col text-left">
+        <h2 className="text-xl font-bold leading-none md:text-2xl text-primary">
+          {name}
         </h2>
-        <h4 className="text-lg font-bold text-gray-500">
-          Sales & Marketing Alien Ltd.
-        </h4>
-        <p className="mt-2 font-light">
-          Consulting WP really helped us achieve our financial goals. The slick
-          presentation along with fantastic readability ensures that our
-          financial standing is stable.
-        </p>
+        <h4 className="text-lg font-bold text-gray-500">{occupation}</h4>
+        <p className="mt-3 text-sm font-light">{testimonialText}</p>
       </div>
     </div>
   );

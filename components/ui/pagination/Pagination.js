@@ -96,7 +96,7 @@ const Pagination = ({ currentPage, totalPages, setLimit, onPageChange }) => {
           {">>"}
         </button>
       </div>
-      <div className="flex gap-5 mx-auto my-2 w-fit">
+      {/* <div className="flex gap-5 mx-auto my-2 w-fit">
         <input
           type="number"
           placeholder="Jump to Page"
@@ -114,7 +114,7 @@ const Pagination = ({ currentPage, totalPages, setLimit, onPageChange }) => {
           <option>10</option>
           <option>20</option>
         </select>
-      </div>
+      </div> */}
     </div>
   );
 };

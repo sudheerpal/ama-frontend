@@ -1,13 +1,23 @@
 import NavElement from "./components/NavElement";
 
-const ProductSidebar = () => {
+const ProductSidebar = ({ categories }) => {
+  const { parentCategories, subCategories } = categories;
   return (
     <div className="mt-5">
       <h3 className="mb-5 text-xl font-bold text-primary">Indutry Experties</h3>
       <div>
-        {"123456789".split("").map((el) => (
-          <NavElement key={el} />
-        ))}
+        {parentCategories?.map((parentCategory) => {
+          const subCategoriesOfParent = subCategories?.filter(
+            (sCt) => sCt.parentCategory == parentCategory.id
+          );
+          return (
+            <NavElement
+              key={parentCategory.id}
+              parentCategory={parentCategory}
+              subCategoriesOfParent={subCategoriesOfParent}
+            />
+          );
+        })}
       </div>
     </div>
   );

@@ -26,7 +26,7 @@ const companyLogos = [
   { image: image4 },
 ];
 
-const SponsorSlider = () => {
+const SponsorSlider = ({ sponsors }) => {
   const [screenWidth, setScreenWidth] = useState(null);
 
   useEffect(() => {
@@ -71,9 +71,9 @@ const SponsorSlider = () => {
         }}
         modules={[Autoplay, FreeMode, Navigation]}
       >
-        {companyLogos.map((el, idx) => (
-          <SwiperSlide key={idx}>
-            <SponsordCard image={el.image} />
+        {sponsors?.map((sponsor) => (
+          <SwiperSlide className="h-full" key={sponsor.id}>
+            <SponsordCard image={sponsor.image} />
           </SwiperSlide>
         ))}
       </Swiper>

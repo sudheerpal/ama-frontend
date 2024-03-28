@@ -3,6 +3,7 @@ import "./globals.css";
 import TopNavbar from "@/components/home/navbar/TopNavbar";
 import MainNavbar from "@/components/home/navbar/MainNavbar";
 import { parentCategories } from "@/db/fakedata";
+import { fetchParentCategories } from "@/utils/fetchFunctions";
 
 const inter = Inter({ subsets: ["latin"] });
 export const radioCanada = Radio_Canada({ subsets: ["latin"] });
@@ -13,12 +14,7 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  // let data = [];
-  try {
-    // const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-    //  data = await res.json();
-    // console.log(data);
-  } catch (error) {}
+  const parentCategories = await fetchParentCategories();
   return (
     <html data-theme="customTheme" lang="en">
       <body className={radioCanada.className}>

@@ -4,10 +4,12 @@ import Header from "@/components/home/Header";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
+import { fetchCategories } from "@/utils/fetchFunctions";
 import React from "react";
 import { Home } from "react-feather";
 
-const Reports = () => {
+const Reports = async () => {
+  const sidebarCategories = await fetchCategories();
   return (
     <>
       <section className="py-2 text-white bg-primary">
@@ -31,7 +33,7 @@ const Reports = () => {
             <ProductsList />
           </div>
           <div className="sticky top-0 hidden h-min lg:block">
-            <ProductSidebar />
+            <ProductSidebar categories={sidebarCategories} />
           </div>
         </section>
       </CustomContainer>
