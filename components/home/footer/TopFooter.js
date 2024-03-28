@@ -27,25 +27,41 @@ const TopFooter = () => {
   return (
     <div className="text-white bg-primary">
       <CustomContainer>
-        <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 lg:grid-cols-3 place-items-center">
-          {addresses?.map((address, index) => (
-            <div key={index} className="flex justify-center w-full">
-              <div className="p-4 space-y-3">
-                <h3 className="text-2xl font-bold">{address.country}</h3>
-                <p className="flex items-center gap-2">
-                  <MapPin className="text-secondary" size={18} />{" "}
-                  {address.location}
-                </p>
-                <p className="flex items-center gap-2">
-                  <PhoneCall className="text-secondary" size={18} />{" "}
-                  {address.phone}
-                </p>
-                <p className="flex items-center gap-2">
-                  <Mail className="text-secondary" size={18} /> {address.email}
+        <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 place-items-center">
+          <div className="flex justify-center w-full">
+            <div className="p-4 space-y-3">
+              <h3 className="text-2xl font-bold">Business Address</h3>
+              <h3 className="text-2xl font-bold">Head Office</h3>
+              <p className="flex items-center gap-2">
+                <MapPin className="text-secondary" size={18} />{" "}
+                <span>
+                  Office no. A 5010, fifth floor, Solitaire Business Hub,
+                  <br /> Near Phoenix mall, Pune, Maharashtra 41101
+                </span>
+              </p>
+            </div>
+          </div>
+          <div className="flex justify-center w-full">
+            <div className="p-4 space-y-3">
+              <h3 className="text-2xl font-bold">Contact Information</h3>
+              <div className="flex flex-col">
+                <p>Craig Francis</p>
+                <p className="text-sm text-gray-400">
+                  Business Development Head
                 </p>
               </div>
+              <p className="flex items-center gap-2">
+                <PhoneCall className="text-secondary" size={18} />{" "}
+                <span>+44 1223 92 666</span>
+              </p>
+              <p className="flex items-center gap-2">
+                <Mail className="text-secondary" size={18} />
+                <span className="text-blue-500">
+                  sales@advancemarketanalytics.com
+                </span>
+              </p>
             </div>
-          ))}
+          </div>
         </section>
       </CustomContainer>
     </div>
