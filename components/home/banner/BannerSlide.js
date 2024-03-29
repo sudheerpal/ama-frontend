@@ -14,29 +14,27 @@ import image3 from "@/assets/bannerSlider/image-3.png";
 import { Navigation } from "swiper/modules";
 import CustomContainer from "@/components/ui/CustomContainer";
 
-const BannerSlide = ({ image }) => {
-  const slideImages = [image1, image2, image3];
-
+const BannerSlide = () => {
   const slidesData = [
     {
       id: 1,
-      title: "Twice The Glory!",
-      subTitle: "We are yet again",
-      subTitle2: "A great place to work",
+      title: "Transform Your Business",
+      subTitle: "Unlock your potential",
+      subTitle2: "with our cutting-edge technology",
       image: image1,
     },
     {
       id: 2,
-      title: "Discover New Opportunities",
-      subTitle: "Explore endless possibilities",
-      subTitle2: "with our innovative solutions",
+      title: "Twice The Glory!",
+      subTitle: "We are yet again",
+      subTitle2: "A great place to work",
       image: image2,
     },
     {
       id: 3,
-      title: "Transform Your Business",
-      subTitle: "Unlock your potential",
-      subTitle2: "with our cutting-edge technology",
+      title: "Discover New Opportunities",
+      subTitle: "Explore endless possibilities",
+      subTitle2: "with our innovative solutions",
       image: image3,
     },
   ];
@@ -44,11 +42,11 @@ const BannerSlide = ({ image }) => {
   return (
     <div>
       <Swiper navigation={true} modules={[Navigation]}>
-        {slideImages.map((image, index) => (
+        {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
               style={{
-                backgroundImage: `url(${image.src})`,
+                backgroundImage: `url(${slide.image.src})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 width: "100%",
@@ -59,15 +57,16 @@ const BannerSlide = ({ image }) => {
                   "flex items-center justify-center lg:justify-start lg:px-40 min-h-96"
                 }
               >
-                <div className="flex flex-col items-start">
+                <div className="text-center md:text-left">
                   <h1 className="mb-3 text-4xl font-bold xl:text-6xl text-primary lg:mb-7">
-                    Twice The Glory!
+                    {slide.title}
                   </h1>
                   <h3 className="mb-2 text-2xl md:text-3xl xl:text-4xl">
-                    We are yet again <br />
+                    {slide.subTitle}
+                    <br />
                   </h3>
                   <h3 className="text-2xl font-bold md:text-3xl xl:text-4xl">
-                    A great place to work
+                    {slide.subTitle2}
                   </h3>
                 </div>
               </CustomContainer>
