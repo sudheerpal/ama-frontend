@@ -4,7 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { ShoppingCart } from "react-feather";
 
-const PricingCard = () => {
+const PricingCard = ({ price }) => {
   // State to track selected plan
   const [selectedPlan, setSelectedPlan] = useState(null);
 
@@ -41,7 +41,7 @@ const PricingCard = () => {
               Single User License{" "}
             </label>
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
-              $2850
+              ${price.singlePrice}
             </span>
           </div>
           <div className="flex items-center gap-2 my-1">
@@ -58,7 +58,7 @@ const PricingCard = () => {
               Multy User License{" "}
             </label>
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
-              $3200
+              ${price.multiPrice}
             </span>
           </div>
           <div className="flex items-center gap-2 my-1">
@@ -75,7 +75,7 @@ const PricingCard = () => {
               Corporate License{" "}
             </label>
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
-              $3600
+              ${price.enterprisePrice}
             </span>
           </div>
           <Link

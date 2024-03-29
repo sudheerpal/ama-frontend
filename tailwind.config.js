@@ -29,5 +29,5 @@ module.exports = {
   variants: {
     display: ["group-hover"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };

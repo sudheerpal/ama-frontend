@@ -1,60 +1,88 @@
 import React from "react";
 import { Search } from "react-feather";
 
-const SummaryTabHighlight = () => {
+const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
   return (
-    <div>
-      <header className="my-4">
-        <h3 className="text-xl font-bold uppercase border-b-4 text-primary border-secondary w-fit">
-          DIGITAL HEALTH MARKET REPORT HIGHLIGHTS
-        </h3>
-      </header>
-      <main>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            {/* head */}
-            <thead className="text-base text-white bg-primary">
-              <tr className="flex items-center">
-                <th className="w-1/2 py-2">Aspects</th>
-                <th className="w-1/2 py-2">Details</th>
-              </tr>
-            </thead>
-            <tbody className="bg-gray-200">
-              {"1234".split("").map((el) => (
-                <>
-                  <tr className="flex items-center">
-                    <td className="flex items-center w-2/5 gap-2 p-4">
-                      <Search className="text-primary" />{" "}
-                      <span className="font-bold uppercase text-primary">
-                        By product and services
-                      </span>
-                    </td>
-                    <td className="w-3/5 p-4">
-                      <ul className="list-disc">
-                        <li>Lorem ipsum dolor sit.</li>
-                        <li>Aliquid doloribus dolorum consequuntur.</li>
-                        <li>Asperiores aut alias reprehenderit.</li>
-                        <li>Assumenda exercitationem nostrum natus.</li>
-                        <li>Vero explicabo dignissimos nisi.</li>
-                        <li>Laboriosam temporibus velit eligendi?</li>
-                        <li>Necessitatibus nisi dignissimos amet?</li>
-                        <li>Nostrum obcaecati eius voluptatem.</li>
-                        <li>Aliquid magnam consequuntur laborum?</li>
-                        <li>Libero suscipit provident nam!</li>
-                        <li>Maxime voluptatem sit id.</li>
-                        <li>Quisquam optio rem temporibus!</li>
-                        <li>Illum quis repellendus quod!</li>
-                        <li>Consectetur vitae dignissimos repellat.</li>
-                      </ul>
-                    </td>
-                  </tr>
-                </>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </main>
-    </div>
+    <main>
+      <div className="overflow-x-auto">
+        <table className="table  table-zebra">
+          {/* head */}
+          <thead className="text-base text-white bg-primary">
+            <tr>
+              <th className="">Aspects</th>
+              <th className="">Details</th>
+            </tr>
+          </thead>
+          <tbody className="bg-gray-200">
+            <tr>
+              <td className="pl-3">Study Period </td>
+              <td>
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 7}
+              </td>
+            </tr>
+            <tr>
+              <td className="pl-3">Base Year </td>
+              <td>{new Date().getFullYear() - 1}</td>
+            </tr>
+            <tr>
+              <td className="pl-3">Estimated Year </td>
+              <td>{new Date().getFullYear()}</td>
+            </tr>
+            <tr>
+              <td className="pl-3">Forecast Period</td>
+              <td>
+                {new Date().getFullYear()}-{new Date().getFullYear() + 7}
+              </td>
+            </tr>
+            <tr>
+              <td className="pl-3">Historical Period</td>
+              <td>
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() - 1}
+              </td>
+            </tr>
+            <tr>
+              <td className="pl-3">Growth Rate</td>
+              <td>
+                CAGR of {basic.marketData.cagr}% from{" "}
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 7}
+              </td>
+            </tr>
+            <tr>
+              <td className="pl-3">Segmentation</td>
+              <td>
+                <ul>
+                  {marketAnalysis.segments.map((segment, index) => {
+                    const segments = segment.split(":");
+                    if (segments.length > 1) {
+                      const parent = segments[0];
+                      const child = segments[1].split(",");
+                      const compositeKey = parent + "_" + child.join("_"); // Creating a composite key
+                      return (
+                        <React.Fragment key={compositeKey}>
+                          <li className="font-semibold mt-3">By {parent}</li>
+                          <li className="ml-2 mt-1">
+                            <ul>
+                              {child.map((item, itemIndex) => {
+                                return (
+                                  <li key={compositeKey + "_" + itemIndex}>
+                                    {item}
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </li>
+                        </React.Fragment>
+                      );
+                    }
+                    return <li key={index}>By {segment}</li>;
+                  })}
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
   );
 };
 
