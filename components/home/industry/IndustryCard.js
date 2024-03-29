@@ -23,7 +23,13 @@ const IndustryCard = ({ industry }) => {
           } duration-300`}
         ></div>
         <div className="relative z-10 w-20">
-          {icon && <LucidIcon name={icon} classNames="mx-auto" size={48} />}
+          {icon && (
+            <LucidIcon
+              name={icon}
+              classNames="mx-auto text-primary"
+              size={48}
+            />
+          )}
           {/* <Image className={`w-full`} src={icon} alt={name} /> */}
         </div>
         <div

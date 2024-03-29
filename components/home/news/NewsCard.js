@@ -8,7 +8,7 @@ const NewsCard = () => {
     <div>
       <Image src={image1} className="w-full" alt="news image" />
       <hr className="w-20 my-5 border-4 rounded-lg border-secondary" />
-      <h3 className="text-lg font-semibold md:text-xl">
+      <h3 className="text-lg font-semibold md:text-xl text-primary">
         A digital prescription for the pharma industry
       </h3>
       <div className="flex gap-2 mt-4">
