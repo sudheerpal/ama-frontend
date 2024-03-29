@@ -7,7 +7,7 @@ import Picture6 from "@/assets/icons/Picture6.png";
 
 export const links = [
   { text: "Home", url: "/" },
-  { text: "About Us", url: "#" },
+  { text: "About Us", url: "/about" },
   {
     text: "Industries",
     url: "/industries",
