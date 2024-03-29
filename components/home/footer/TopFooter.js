@@ -27,7 +27,7 @@ const TopFooter = () => {
   return (
     <div className="text-white bg-primary">
       <CustomContainer>
-        <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2 place-items-center">
+        <section className="grid grid-cols-1 lg:divide-x-2 lg:py-10 md:grid-cols-2">
           <div className="flex justify-center w-full">
             <div className="p-4 space-y-3">
               <h3 className="text-2xl font-bold">Business Address</h3>
