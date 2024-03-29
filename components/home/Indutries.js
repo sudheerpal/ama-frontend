@@ -5,7 +5,7 @@ import CustomContainer from "../ui/CustomContainer";
 
 const Indutries = ({ industries }) => {
   return (
-    <div className="py-5 lg:py-10 bg-accent">
+    <div className="pb-5 lg:pb-10 bg-accent">
       <SectionTitle>Industries</SectionTitle>
       <CustomContainer>
         <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

@@ -2,7 +2,7 @@ import React from "react";
 
 const SectionTitle = ({ children }) => {
   return (
-    <div className="flex flex-col items-center my-12">
+    <div className="flex flex-col items-center py-5 md:py-12">
       <h1 className="text-2xl font-bold text-center capitalize md:text-3xl lg:text-5xl text-primary">
         {children}
       </h1>

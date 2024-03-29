@@ -48,13 +48,13 @@ const MainFooter = () => {
             <h2 className="pb-2 text-2xl font-bold border-b">extra links</h2>
             <div className="grid grid-cols-2 text-blue-500">
               <div className="flex flex-col gap-2">
-                <Link href="/">About</Link>
-                <Link href="/">Contacts</Link>
-                <Link href="/">Testimonials</Link>
+                <Link href="/about">About</Link>
+                <Link href="/contact">Contacts</Link>
+                <Link href="#testimonial">Testimonials</Link>
               </div>
               <div className="flex flex-col gap-2">
-                <Link href="/">Services</Link>
-                <Link href="/">Our team</Link>
+                <Link href="/service">Services</Link>
+                <Link href="/career">Our team</Link>
                 <Link href="/">Our approach</Link>
               </div>
             </div>
