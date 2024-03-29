@@ -7,7 +7,7 @@ import TestimonialSlider from "./testimonial/TestimonialSlider";
 
 const Testimonials = ({ testimonials }) => {
   return (
-    <div>
+    <div id="testimonial">
       <SectionTitle>Testimonials</SectionTitle>
       <TestimonialSlider testimonials={testimonials} />
     </div>

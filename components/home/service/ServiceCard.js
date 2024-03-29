@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const ServiceCard = ({ service }) => {
   const [isHovered, setIsHoverd] = useState(false);
@@ -29,7 +30,9 @@ const ServiceCard = ({ service }) => {
             {title}
           </h3>
           <div className="px-4 text-sm text-gray-300">{description}</div>
-          <button className="mx-4 text-sm text-secondary">read more</button>
+          <Link href="/service" className="mx-4 text-sm text-secondary">
+            Explore more
+          </Link>
         </div>
       </div>
     </div>

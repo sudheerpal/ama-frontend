@@ -20,7 +20,7 @@ const TopNavbar = () => {
             <p></p>
           </div>
           <div className="flex justify-end gap-4">
-            <Link href="/" className="flex items-center gap-1 mr-4">
+            <Link href="/career" className="flex items-center gap-1 mr-4">
               <Users color="#FDE428" size={18} />
               Join Our Team
             </Link>

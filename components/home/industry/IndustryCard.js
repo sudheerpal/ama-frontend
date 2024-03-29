@@ -1,35 +1,30 @@
-"use client";
 import LucidIcon from "@/components/ui/icons/LucidIcons";
-import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 
 const IndustryCard = ({ industry }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
   const { label, summary, icon } = industry;
 
   return (
     <Link
       href="/"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="flex items-center gap-2 px-2 py-5 duration-300 hover:bg-white min-h-60"
+      className="flex items-center gap-2 px-2 py-5 duration-300 hover:bg-white min-h-60 group"
     >
       <div>
         <div
-          className={`w-0 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible h-8" : "invisible h-0"
-          } duration-300`}
+          className={`w-0 mx-auto border-r-8 border-secondary group-hover:visible h-0 group-hover:h-8 duration-300`}
         ></div>
         <div className="relative z-10 w-20">
-          {icon && <LucidIcon name={icon} classNames="mx-auto" size={48} />}
-          {/* <Image className={`w-full`} src={icon} alt={name} /> */}
+          {icon && (
+            <LucidIcon
+              name={icon}
+              classNames="mx-auto text-primary"
+              size={48}
+            />
+          )}
         </div>
         <div
-          className={`w-0 mx-auto border-r-8 border-secondary ${
-            isHovered ? "visible h-8" : "invisible h-0"
-          } duration-300`}
+          className={`w-0 h-0 mx-auto border-r-8 border-secondary group-hover:visible group-hover:h-8 duration-300`}
         ></div>
       </div>
       <div className="flex flex-col gap-2 px-4">

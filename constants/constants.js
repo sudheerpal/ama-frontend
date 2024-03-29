@@ -7,10 +7,10 @@ import Picture6 from "@/assets/icons/Picture6.png";
 
 export const links = [
   { text: "Home", url: "/" },
-  { text: "About Us", url: "#" },
+  { text: "About Us", url: "/about" },
   {
     text: "Industries",
-    url: "#",
+    url: "/industries",
     submenus: [
       { text: "Healthcare", url: "/reports" },
       { text: "Technology", url: "/reports" },
@@ -19,8 +19,8 @@ export const links = [
       { text: "Manufacturing", url: "/reports" },
     ],
   },
-  { text: "Services", url: "/checkout" },
-  { text: "Insights", url: "#" },
+  { text: "Services", url: "/service" },
+  // { text: "Insights", url: "#" },
   { text: "Contact", url: "/contact" },
 ];
 
