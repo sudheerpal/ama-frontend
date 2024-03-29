@@ -10,7 +10,7 @@ const Button = ({ children, type = "primary" }) => {
 
   return (
     <button
-      className={`flex items-center justify-center gap-1 px-4 py-2 rounded font-semibold hover:bg-opacity-90 hover:shadow duration-100 ${
+      className={`flex items-center justify-center gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 ${
         buttonStyles[type] || buttonStyles.primary
       }`}
     >

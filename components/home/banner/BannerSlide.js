@@ -25,7 +25,7 @@ const BannerSlide = () => {
     },
     {
       id: 2,
-      title: "Twice The Glory!",
+      title: "Twice The Glory",
       subTitle: "We are yet again",
       subTitle2: "A great place to work",
       image: image2,

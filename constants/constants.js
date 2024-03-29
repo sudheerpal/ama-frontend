@@ -10,7 +10,7 @@ export const links = [
   { text: "About Us", url: "#" },
   {
     text: "Industries",
-    url: "#",
+    url: "/industries",
     submenus: [
       { text: "Healthcare", url: "/reports" },
       { text: "Technology", url: "/reports" },
