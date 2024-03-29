@@ -6,6 +6,8 @@ import Link from "next/link";
 import CustomContainer from "@/components/ui/CustomContainer";
 
 const MainFooter = () => {
+  const currentYear = new Date().getFullYear();
+  const copyrightMsg = "AMA Research. All rights reserved";
   return (
     <div className="bg-primary">
       <CustomContainer>
@@ -73,7 +75,7 @@ const MainFooter = () => {
         </section>
         <hr />
         <footer className="py-6 text-sm text-white md:flex md:justify-between">
-          <p>© 2024 Consulting WordPress Theme by StylemixThemes</p>
+          <p>© {`${currentYear} ${copyrightMsg}`}</p>
           <div className="flex items-center gap-2 lg:gap-4">
             <Link
               href="https://www.facebook.com/advancemarketanalytics"
