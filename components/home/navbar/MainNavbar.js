@@ -62,7 +62,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
             </Link>
           </div>
           <div className="hidden navbar-center lg:flex lg:flex-grow">
-            <ul className="px-4 font-medium lg:w-full xl:text-base menu menu-horizontal lg:justify-between">
+            <ul className="px-4 font-medium lg:w-full lg:max-w-3xl xl:text-base menu menu-horizontal lg:justify-between">
               {links?.map((link, index) => (
                 <li
                   key={index}

@@ -19,7 +19,7 @@ export const links = [
       { text: "Manufacturing", url: "/reports" },
     ],
   },
-  { text: "Services", url: "/checkout" },
+  { text: "Services", url: "/service" },
   // { text: "Insights", url: "#" },
   { text: "Contact", url: "/contact" },
 ];
