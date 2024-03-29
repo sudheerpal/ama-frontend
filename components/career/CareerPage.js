@@ -4,7 +4,7 @@ import CustomContainer from "../ui/CustomContainer";
 import Link from "next/link";
 import { ChevronRight } from "react-feather";
 import Button from "../ui/Button";
-import jobDetails from "@/constants/constants";
+import { jobDetails } from "@/constants/constants";
 
 // Sample data for job posts
 // const jobPosts = [
@@ -87,7 +87,7 @@ const CareerPage = () => {
                 </div>
                 <p className="mt-3">{job.jobSummary}</p>
                 <div className="mt-3 text-sm">
-                  <Link href={`/career/123`}>
+                  <Link href={`/career/${job.id}`}>
                     <Button type="secondary">Apply Now</Button>
                   </Link>
                 </div>

@@ -2,10 +2,10 @@ import JobDetailsPage from "@/components/career/JobDetailsPage";
 import Footer from "@/components/home/Footer";
 import React from "react";
 
-const JobDescription = () => {
+const JobDescription = ({ params }) => {
   return (
     <div>
-      <JobDetailsPage />
+      <JobDetailsPage jobId={params.jobId} />
       <Footer />
     </div>
   );

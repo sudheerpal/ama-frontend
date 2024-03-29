@@ -265,5 +265,3 @@ export const jobDetails = [
       "SoftTech is a leading software development company specializing in...",
   },
 ];
-
-export default jobDetails;
