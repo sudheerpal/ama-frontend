@@ -85,7 +85,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
                         {parentCategories?.map((submenu) => (
                           <li key={submenu.id} className="py-1">
                             <Link
-                              href={submenu.link}
+                              href={`/industries/${submenu.link}`}
                               className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-blue-500"
                             >
                               <LucidIcon name={submenu.icon} size={20} />

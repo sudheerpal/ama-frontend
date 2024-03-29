@@ -20,7 +20,7 @@ export const links = [
     ],
   },
   { text: "Services", url: "/checkout" },
-  { text: "Insights", url: "#" },
+  // { text: "Insights", url: "#" },
   { text: "Contact", url: "/contact" },
 ];
 
