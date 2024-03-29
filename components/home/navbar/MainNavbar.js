@@ -1,7 +1,14 @@
 import React from "react";
 import logo from "@/assets/logo2.png";
 import Image from "next/image";
-import { ChevronDown, Facebook, Home, Instagram, Twitter } from "react-feather";
+import {
+  ChevronDown,
+  Facebook,
+  Home,
+  Instagram,
+  Linkedin,
+  Twitter,
+} from "react-feather";
 import LinkTags from "./LinkTags";
 import { headers } from "next/headers";
 import Link from "next/link";
@@ -95,14 +102,26 @@ const MainNavbar = ({ parentCategories = [] }) => {
           </div>
           <div className="lg:w-1/6 navbar-end">
             <div className="flex items-center gap-2 lg:gap-4">
-              <Link href="/" className="hover:text-blue-500">
+              <Link
+                href="https://www.facebook.com/advancemarketanalytics"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
                 <Facebook size={18} />
               </Link>
-              <Link href="/" className="hover:text-blue-500">
+              <Link
+                href="https://twitter.com/amareport"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
                 <Twitter size={18} />
               </Link>
-              <Link href="/" className="hover:text-blue-500">
-                <Instagram size={18} />
+              <Link
+                href="https://www.linkedin.com/company/advance-market-analytics"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
+                <Linkedin size={18} />
               </Link>
             </div>
           </div>
