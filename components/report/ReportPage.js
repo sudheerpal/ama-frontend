@@ -9,8 +9,15 @@ import PricingCard from "./components/PricingCard";
 import Button from "../ui/Button";
 import { Book, Clock, Download, HelpCircle, Tag } from "react-feather";
 import ReportTabs from "./ReportTabs";
+import { getSubHeading } from "@/utils/helper";
 
-const ReportPage = () => {
+const ReportPage = ({ reportData = {} }) => {
+  const { basic, marketAnalysis, marketReport, rd } = reportData;
+  const subHeading = getSubHeading({
+    ...basic,
+    ...marketAnalysis,
+    ...marketReport,
+  });
   return (
     <div>
       <section
@@ -23,10 +30,7 @@ const ReportPage = () => {
         }}
       >
         <CustomContainer>
-          <p className="text-xs">
-            Advance Market Analytics - New York {">"} Reports {">"} Corrugated
-            Market
-          </p>
+          <p className="text-xs">{basic.marketKeyword}</p>
           <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
             Healthcare
           </h1>
@@ -40,21 +44,15 @@ const ReportPage = () => {
             <section className="lg:col-span-3">
               {/* report introduction section  */}
               <section className="gap-5 py-5 space-y-3 md:flex md:space-y-0">
-                <div className="w-fit min-w-32 xl:min-w-40">
+                <div className="w-fit min-w-24 xl:min-w-28">
                   <Image src={reportThumbnail} alt="report thumbnail" />
                 </div>
                 <div className="space-y-3">
                   <h1 className="text-lg font-semibold md:text-2xl text-primary">
-                    Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry
-                    Development Trend Analysis Report 2023
+                    {basic.title}
                   </h1>
-                  <p className="text-sm">
-                    Asia Pacific Offshore Wind Market Research Report -
-                    Information By Technology (Wind Energy, Wave Energy, Tidal
-                    Stream, Ocean Thermal Energy Conversion (OTEC), and Other
-                    Technologies) –and Asia Pacific Market Forecast Till 2032
-                  </p>
-                  <div className="flex flex-wrap gap-3 text-sm">
+                  <p className="text-base font-semibold">{subHeading}</p>
+                  {/* <div className="flex flex-wrap gap-3 text-sm">
                     <div className="flex gap-1">
                       <Book className="font-bold text-primary" size={20} />{" "}
                       Report
@@ -69,17 +67,22 @@ const ReportPage = () => {
                     <div>TechNavio</div>
                     <hr className="w-0 h-6 border-2 border-secondary" />
                     <div>ID: 2468574</div>
-                  </div>
+                  </div> */}
                 </div>
               </section>
               <section>
-                <ReportTabs />
+                <ReportTabs
+                  basic={basic}
+                  marketAnalysis={marketAnalysis}
+                  marketReport={marketReport}
+                  rd={rd}
+                />
               </section>
             </section>
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <div className="flex flex-col gap-8 p-4 mx-4 mb-5 text-sm xl:text-base">
+              <div className="flex flex-col gap-3 p-4 mx-4 mb-5 text-sm xl:text-base">
                 <Button>
                   <Download className="text-secondary" />{" "}
                   <span className="uppercase">Request sample</span>
@@ -95,12 +98,12 @@ const ReportPage = () => {
               </div>
               {/* segment 1.5 */}
               <div className="mx-4 my-5">
-                <PricingCard />
+                <PricingCard price={basic.price} />
               </div>
               {/* segment 2 */}
               <div className="my-5">
                 <div className="mx-4 bg-gray-200 rounded">
-                  <h3 className="py-2 text-center text-white capitalize rounded-t bg-primary">
+                  <h3 className="py-2 text-center text-white capitalize w-full rounded-t bg-primary">
                     Tailored for you
                   </h3>
                   <div className="p-4 pl-8">

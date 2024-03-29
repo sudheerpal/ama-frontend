@@ -2,8 +2,10 @@
 import React, { useState } from "react";
 import SingleReportTab from "./components/SingleReportTab";
 import SummaryTabContent from "./components/SummaryTabContent";
+import TOC from "./components/TOC";
+import SummaryTabHighlight from "./components/SummaryTabHighlight";
 
-const ReportTabs = () => {
+const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
   // State to track the active tab
   const [activeTab, setActiveTab] = useState(1);
 
@@ -14,9 +16,36 @@ const ReportTabs = () => {
 
   // Tab items and content
   const tabs = [
-    { id: 1, label: "Summary", content: <SummaryTabContent /> },
-    { id: 2, label: "Table of Content", content: "Tab content 2" },
-    { id: 3, label: "Segmentation", content: "Tab content 3" },
+    {
+      id: 1,
+      label: "Summary",
+      content: (
+        <SummaryTabContent
+          basic={basic}
+          marketAnalysis={marketAnalysis}
+          marketReport={marketReport}
+          rd={rd}
+        />
+      ),
+    },
+    {
+      id: 2,
+      label: "Table of Content",
+      content: (
+        <TOC
+          marketAnalysis={marketAnalysis}
+          marketReport={marketReport}
+          report={basic}
+        />
+      ),
+    },
+    {
+      id: 3,
+      label: "Segmentation",
+      content: (
+        <SummaryTabHighlight basic={basic} marketAnalysis={marketAnalysis} />
+      ),
+    },
     { id: 4, label: "Methodology", content: "Tab content 4" },
   ];
 
