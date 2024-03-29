@@ -1,6 +1,8 @@
 export const fetchIndustriesHome = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/categories?home=true");
+    const res = await fetch("https://ama-admin.com/api/categories?home=true", {
+      cache: "no-cache",
+    });
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -11,7 +13,9 @@ export const fetchIndustriesHome = async () => {
 
 export const fetchTestimonials = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/testimonial");
+    const res = await fetch("https://ama-admin.com/api/testimonial", {
+      cache: "no-cache",
+    });
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -22,7 +26,9 @@ export const fetchTestimonials = async () => {
 
 export const fetchSponsorLogos = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/client-logo");
+    const res = await fetch("https://ama-admin.com/api/client-logo", {
+      cache: "no-cache",
+    });
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -33,7 +39,10 @@ export const fetchSponsorLogos = async () => {
 
 export const fetchParentCategories = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/categories?parent=true");
+    const res = await fetch(
+      "https://ama-admin.com/api/categories?parent=true",
+      { cache: "no-cache" }
+    );
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -44,7 +53,9 @@ export const fetchParentCategories = async () => {
 
 export const fetchCategories = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/categories");
+    const res = await fetch("https://ama-admin.com/api/categories", {
+      cache: "no-cache",
+    });
     const { data } = await res.json();
     const parentCategories = data?.filter((ct) => ct.parent === null) || [];
     const subCategories = data?.filter((ct) => ct.parent !== null) || [];
@@ -63,7 +74,9 @@ export const fetchReports = async ({ query }) => {
     // const res = await fetch(
     //   `https://ama-admin.com/api/reports?active=true&link=${category}&page=${currentPage}`
     // );
-    const res = await fetch("https://ama-admin.com/api/reports");
+    const res = await fetch("https://ama-admin.com/api/reports", {
+      cache: "no-cache",
+    });
     const data = await res.json();
     return { ...data, category };
   } catch (error) {

@@ -22,7 +22,7 @@ const ReportDetails = async ({ params }) => {
       {reportData.basic ? (
         <ReportPage reportData={reportData} />
       ) : (
-        <div className="text-center font-bold text-lg py-4 text-red-600">
+        <div className="text-center rd font-bold text-lg py-4 text-red-600">
           Report Not Found
         </div>
       )}
