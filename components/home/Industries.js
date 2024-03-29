@@ -3,7 +3,7 @@ import IndustryCard from "./industry/IndustryCard";
 import SectionTitle from "../ui/SectionTitle";
 import CustomContainer from "../ui/CustomContainer";
 
-const Indutries = ({ industries }) => {
+const Industries = ({ industries }) => {
   return (
     <div className="pb-5 lg:pb-10 bg-accent">
       <SectionTitle>Industries</SectionTitle>
@@ -18,4 +18,4 @@ const Indutries = ({ industries }) => {
   );
 };
 
-export default Indutries;
+export default Industries;
