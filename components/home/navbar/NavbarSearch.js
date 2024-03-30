@@ -60,10 +60,10 @@ const NavbarSearch = () => {
         console.log("Search value:", value);
         // Perform further processing here
 
-        // sugesstionFetch({
-        //   catID: null,
-        //   query: value,
-        // });
+        sugesstionFetch({
+          catID: null,
+          query: value,
+        });
 
         setIsTyping(true);
       }

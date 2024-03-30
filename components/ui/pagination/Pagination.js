@@ -15,7 +15,7 @@ const Pagination = ({ category, currentPage, totalPages }) => {
 
     if (startPage > 2) {
       pages.push(1, 2, "...");
-    } else if (startPage === 2) {
+    } else if (startPage == 2) {
       pages.push(1, 2);
     }
 
@@ -25,7 +25,7 @@ const Pagination = ({ category, currentPage, totalPages }) => {
 
     if (totalPages - endPage > 1) {
       pages.push("...", totalPages - 1, totalPages);
-    } else if (totalPages - endPage === 1) {
+    } else if (totalPages - endPage == 1) {
       pages.push(totalPages - 1, totalPages);
     }
 
@@ -35,20 +35,20 @@ const Pagination = ({ category, currentPage, totalPages }) => {
   return (
     <div className="my-12 lg:items-center lg:flex">
       <div className="block mx-auto rounded join w-fit">
-        <Link href={`/industries/${category}=${currentPage - 1}`} passHref>
-          <button className="join-item btn btn-sm" disabled={currentPage === 1}>
+        <Link href={`/industries?page=${currentPage - 1}`} passHref>
+          <button className="join-item btn btn-sm" disabled={currentPage == 1}>
             {"<<"}
           </button>
         </Link>
         {generatePageNumbers().map((pageNumber, index) => (
           <React.Fragment key={index}>
-            {pageNumber === "..." ? (
+            {pageNumber == "..." ? (
               <button className="join-item btn btn-sm" disabled>
                 {pageNumber}
               </button>
             ) : (
               <Link
-                href={`/industries/${category}=${pageNumber}`}
+                href={`/industries?page=${pageNumber}`}
                 passHref
                 key={pageNumber}
               >
@@ -63,10 +63,10 @@ const Pagination = ({ category, currentPage, totalPages }) => {
             )}
           </React.Fragment>
         ))}
-        <Link href={`/industries/${category}=${currentPage + 1}`} passHref>
+        <Link href={`/industries?page=${currentPage + 1}`} passHref>
           <button
             className="join-item btn btn-sm"
-            disabled={currentPage === totalPages}
+            disabled={currentPage == totalPages}
           >
             {">>"}
           </button>

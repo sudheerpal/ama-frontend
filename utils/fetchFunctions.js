@@ -82,6 +82,27 @@ export const fetchCategories = async () => {
   }
 };
 
+export const fetchAllReports = async ({ query }) => {
+  const currentPage = query.page;
+
+  try {
+    const res = await fetch(
+      `https://ama-admin.com/api/reports?page=${currentPage}`,
+      {
+        cache: "no-cache",
+      }
+    );
+    // const res = await fetch(
+    //   `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
+    //   { cache: "no-cache" }
+    // );
+    const data = await res.json();
+    return { ...data };
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return [];
+  }
+};
 export const fetchReports = async ({ query }) => {
   const [category, page] = query.split("=");
   const currentPage = page || "1";

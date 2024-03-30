@@ -9,6 +9,8 @@ const ProductsList = ({ reports: reportsData }) => {
   const currentPage = reportsData.page;
   const totalReports = reportsData.totalCount;
 
+  console.log("this is the total count line 12", totalReports);
+
   return (
     <div className="mx-auto mt-5 space-y-5">
       <div>
@@ -36,11 +38,11 @@ const ProductsList = ({ reports: reportsData }) => {
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
-        {reportsData?.data?.totalCount ? (
+        {!reportsData?.data?.totalCount ? (
           <section>
             <Pagination
               category={reportsData?.category}
-              currentPage={currentPage}
+              currentPage={+currentPage}
               totalPages={Math.ceil(totalReports / 20)}
             />
           </section>

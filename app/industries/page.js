@@ -3,7 +3,7 @@ import Footer from "@/components/home/Footer";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
-import { fetchCategories, fetchReports } from "@/utils/fetchFunctions";
+import { fetchCategories, fetchAllReports } from "@/utils/fetchFunctions";
 import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
@@ -11,9 +11,8 @@ import { Home } from "react-feather";
 const ReportListing = async ({ params, searchParams }) => {
   const categorySlug = decodeURIComponent(params.categorySlug);
   // fetch all the reports here
-  const reports = await fetchReports({ query: categorySlug });
+  const reports = await fetchAllReports({ query: searchParams });
   const sidebarCategories = await fetchCategories();
-  console.log("this is rom the all reports", searchParams);
   return (
     <>
       <section className="py-2 text-white bg-primary">
