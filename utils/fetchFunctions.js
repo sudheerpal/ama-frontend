@@ -84,7 +84,8 @@ export const fetchCategories = async () => {
 
 export const fetchReports = async ({ query }) => {
   const [category, page] = query.split("=");
-  const currentPage = page || 1;
+  const currentPage = page || "1";
+  console.log("This is the queries", { category, currentPage });
   try {
     const res = await fetch(
       `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
