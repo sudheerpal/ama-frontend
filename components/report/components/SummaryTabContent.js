@@ -42,7 +42,6 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
     if (rdContent.current && growthRef.current) {
       try {
         const h3Elements = Array.from(rdContent.current.querySelectorAll("h3"));
-        console.log("h3 elements", h3Elements);
         h3Elements.forEach((h3) => {
           if (h3.textContent.includes("Growth Catalysts")) {
             h3.parentNode.insertBefore(growthRef.current, h3.nextSibling);
@@ -55,7 +54,6 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
     if (rdContent.current && sizeRef.current) {
       try {
         const h3Elements = Array.from(rdContent.current.querySelectorAll("h3"));
-        console.log("h3 elements", h3Elements);
         h3Elements.forEach((h3) => {
           if (h3.textContent.includes("Driving Forces")) {
             h3.parentNode.insertBefore(sizeRef.current, h3.nextSibling);

@@ -11,6 +11,7 @@ import { Home } from "react-feather";
 const ReportListing = async ({ params }) => {
   const categorySlug = decodeURIComponent(params.categorySlug);
   const reports = await fetchReports({ query: categorySlug });
+  console.log("reports", reports);
   const sidebarCategories = await fetchCategories();
   return (
     <>

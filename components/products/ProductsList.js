@@ -44,13 +44,19 @@ const ProductsList = ({ reports: reportsData }) => {
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
-        <section>
-          <Pagination
-            category={reportsData?.category}
-            currentPage={currentPage}
-            totalPages={Math.ceil(totalReports / 20)}
-          />
-        </section>
+        {reportsData?.data?.totalCount ? (
+          <section>
+            <Pagination
+              category={reportsData?.category}
+              currentPage={currentPage}
+              totalPages={Math.ceil(totalReports / 20)}
+            />
+          </section>
+        ) : (
+          <div className="font-semibold text-center">
+            No More Records | We are working on it
+          </div>
+        )}
       </div>
     </div>
   );

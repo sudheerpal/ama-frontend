@@ -31,7 +31,7 @@ const NavElement = ({ parentCategory, subCategoriesOfParent }) => {
                 key={ct.id}
                 className="text-sm text-gray-400 hover:text-white"
               >
-                <Link href={`/reports/${ct.link}`}>{ct.label}</Link>
+                <Link href={`/industries/${ct.link}`}>{ct.label}</Link>
               </li>
             ))}
           </ul>
