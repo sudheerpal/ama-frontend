@@ -19,7 +19,10 @@ const ProductsList = ({
         currentCategory={currentCategory}
       />
 
-      <ProductListSearch isAllReports={isAllReports} />
+      <ProductListSearch
+        isAllReports={isAllReports}
+        currentCategory={currentCategory}
+      />
       <div>
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />

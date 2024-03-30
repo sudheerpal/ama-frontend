@@ -4,11 +4,15 @@ import React, { useState, useEffect } from "react";
 import { Search } from "react-feather";
 import Link from "next/link"; // Import Link from Next.js
 
-const ProductListSearch = () => {
+const ProductListSearch = ({ currentCategory }) => {
   // State to hold the input field value
   const [searchValue, setSearchValue] = useState("");
-  // State to track whether suggestions are visible
-  const [showSuggestions, setShowSuggestions] = useState(false);
+
+  // State to track whether the user is typing
+  const [isTyping, setIsTyping] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+
+  const categoryId = currentCategory?.parent?.id || currentCategory?.id;
 
   // Debounce function
   const debounce = (func, delay) => {
@@ -29,8 +33,24 @@ const ProductListSearch = () => {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can use the searchValue state here for further processing
-    console.log("Search value:", searchValue);
+    setSearchValue("");
+  };
+
+  const sugesstionFetch = async (payload) => {
+    try {
+      const res = await fetch(`https://ama-admin.com/api/search`, {
+        method: "POST",
+        // headers: {
+        //   "Content-Type": "application/json",
+        // },
+        body: JSON.stringify(payload),
+      });
+      const { data } = await res.json();
+      setSuggestions(data);
+    } catch (error) {
+      console.error("Error fetching suggestions:", error);
+      return [];
+    }
   };
 
   // Effect to debounce input value changes and execute after a delay
@@ -40,22 +60,27 @@ const ProductListSearch = () => {
       if (value.trim().replace(/\s/g, "").length >= 3) {
         console.log("Search value:", value);
         // Perform further processing here
-        setShowSuggestions(true);
+
+        if (categoryId) {
+          sugesstionFetch({
+            catID: categoryId,
+            query: value,
+          });
+        }
+
+        setIsTyping(true);
       }
     }, 700);
 
     if (searchValue.trim().replace(/\s/g, "").length <= 3) {
-      setShowSuggestions(false);
+      setIsTyping(false);
     }
     debouncedSearch(searchValue);
 
     return () => {
       clearTimeout(debouncedSearch);
     };
-  }, [searchValue]);
-
-  // Dummy suggestion links
-  const suggestionLinks = ["Suggestion 1", "Suggestion 2", "Suggestion 3"];
+  }, [searchValue, categoryId]);
 
   return (
     <div className="relative py-2 bg-secondary">
@@ -74,15 +99,19 @@ const ProductListSearch = () => {
           <Search />
         </button>
       </form>
-      {showSuggestions && ( // Render suggestions if showSuggestions is true
+      {isTyping && (
         <div className="absolute left-0 p-4 text-sm text-black bg-white rounded shadow-md w-96 top-full">
-          {suggestionLinks.map((link, index) => (
+          {suggestions?.map((sg, index) => (
             <Link
               key={index}
-              href={link}
+              href={`/reports/${sg?.slug}`}
               className="block mb-1 hover:text-blue-500"
+              onClick={() => {
+                setSearchValue("");
+                setIsTyping(false);
+              }}
             >
-              {link}
+              {sg?.title}
             </Link>
           ))}
         </div>
@@ -92,3 +121,6 @@ const ProductListSearch = () => {
 };
 
 export default ProductListSearch;
+
+// http://localhost:3000/industries/green-cement-market-437
+// http://localhost:3000/reports/green-cement-market-437

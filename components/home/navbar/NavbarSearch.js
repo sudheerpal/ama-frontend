@@ -99,7 +99,7 @@ const NavbarSearch = () => {
           {suggestions?.map((sg, index) => (
             <Link
               key={index}
-              href={`/industries/${sg?.slug}`}
+              href={`/reports/${sg?.slug}`}
               className="block mb-1 hover:text-blue-500"
               onClick={() => {
                 setSearchValue("");
