@@ -8,8 +8,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
 
-const ReportListing = async ({ params, searchParams }) => {
-  const categorySlug = decodeURIComponent(params.categorySlug);
+const ReportListing = async ({ searchParams }) => {
   // fetch all the reports here
   const reports = await fetchAllReports({ query: searchParams });
   const sidebarCategories = await fetchCategories();
@@ -33,7 +32,7 @@ const ReportListing = async ({ params, searchParams }) => {
       <CustomContainer>
         <section className="grid gap-5 lg:grid-cols-4">
           <div className="lg:col-span-3">
-            <ProductsList reports={reports} />
+            <ProductsList reports={reports} isAllReports={true} />
           </div>
           <div className="sticky top-0 hidden h-min lg:block">
             <ProductSidebar categories={sidebarCategories} />
