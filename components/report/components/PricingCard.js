@@ -4,9 +4,9 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { ShoppingCart } from "react-feather";
 
-const PricingCard = ({ price }) => {
+const PricingCard = ({ price, slug }) => {
   // State to track selected plan
-  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [selectedPlan, setSelectedPlan] = useState("Single");
 
   // Function to handle selection of plan
   const handlePlanSelect = (plan) => {
@@ -85,12 +85,13 @@ const PricingCard = ({ price }) => {
             Compare Licenses
           </Link>
         </section>
-        <button
+        <Link
+          href={`/report/${slug}/checkout`}
           type="submit"
           className="inline-flex items-center justify-center w-full gap-1 py-2 mt-4 font-semibold text-white duration-100 bg-primary hover:bg-opacity-90 hover:shadow"
         >
           <ShoppingCart className="text-secondary" /> BUY NOW
-        </button>
+        </Link>
       </form>
     </div>
   );

@@ -10,6 +10,7 @@ import Button from "../ui/Button";
 import { Book, Clock, Download, HelpCircle, Tag } from "react-feather";
 import ReportTabs from "./ReportTabs";
 import { getSubHeading } from "@/utils/helper";
+import Forms from "./Forms";
 
 const ReportPage = ({ reportData = {} }) => {
   const { basic, marketAnalysis, marketReport, rd } = reportData;
@@ -82,23 +83,10 @@ const ReportPage = ({ reportData = {} }) => {
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <div className="flex flex-col gap-3 p-4 mx-4 mb-5 text-sm xl:text-base">
-                <Button>
-                  <Download className="text-secondary" />{" "}
-                  <span className="uppercase">Request sample</span>
-                </Button>
-                <Button>
-                  <HelpCircle className="text-secondary" />{" "}
-                  <span className="uppercase">Pre Order Enquiry</span>
-                </Button>
-                <Button>
-                  <Tag className="text-secondary" />{" "}
-                  <span className="uppercase">Request discount</span>
-                </Button>
-              </div>
+              <Forms />
               {/* segment 1.5 */}
               <div className="mx-4 my-5">
-                <PricingCard price={basic.price} />
+                <PricingCard price={basic.price} slug={basic.slug} />
               </div>
               {/* segment 2 */}
               <div className="my-5">

@@ -8,8 +8,9 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
 
-const ReportListing = async ({ params }) => {
+const ReportListing = async ({ params, searchParams }) => {
   const categorySlug = decodeURIComponent(params.categorySlug);
+  console.log("query");
   // fetch all the reports here
   const reports = await fetchAllReports({ query: categorySlug });
   const sidebarCategories = await fetchCategories();
@@ -20,7 +21,7 @@ const ReportListing = async ({ params }) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <Home className="pb-1" size={30} />
-              <span className="text-lg font-bold md:text-xl ">Healthcare</span>
+              <span className="text-lg font-bold md:text-xl ">All Reports</span>
             </div>
             <div className="hidden md:block">
               <i className="text-lg font-bold md:text-xl ">

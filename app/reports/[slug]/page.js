@@ -9,9 +9,7 @@ const ReportDetails = async ({ params }) => {
   const reportId = arrays[arrays.length - 1];
   let reportData = null;
   try {
-    const res = await fetch(`${process.env.API_URL}/api/reports/${reportId}`, {
-      cache: "no-cache",
-    });
+    const res = await fetch(`${process.env.API_URL}/api/reports/${reportId}`);
     const data = await res.json();
     reportData = data.data;
   } catch (error) {

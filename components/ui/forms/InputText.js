@@ -1,7 +1,14 @@
 // InputText.js
 import React from "react";
 
-const InputText = ({ classNames, placeholder, name, value, onChange }) => {
+const InputText = ({
+  classNames,
+  placeholder,
+  name,
+  value,
+  onChange,
+  required,
+}) => {
   return (
     <input
       className={`w-full px-4 py-3 bg-gray-200 focus:outline-none text-sm ${classNames}`}
@@ -10,6 +17,7 @@ const InputText = ({ classNames, placeholder, name, value, onChange }) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      required={required}
     />
   );
 };

@@ -60,9 +60,12 @@ const ReportCard = ({ report }) => {
               <button className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm">
                 Download Sample
               </button>
-              <button className="w-full rounded btn btn-secondary text-primary btn-sm">
+              <Link
+                href={`/report/${slug}/checkout`}
+                className="w-full rounded btn btn-secondary text-primary btn-sm"
+              >
                 Buy Now
-              </button>
+              </Link>
             </div>
           </section>
         </div>
