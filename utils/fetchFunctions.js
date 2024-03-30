@@ -37,6 +37,22 @@ export const fetchSponsorLogos = async () => {
   }
 };
 
+export const fetchRecentReports = async () => {
+  try {
+    const res = await fetch(
+      "https://ama-admin.com/api/reports/recent?limit=4",
+      {
+        cache: "no-cache",
+      }
+    );
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching sponsor logos:", error);
+    return [];
+  }
+};
+
 export const fetchParentCategories = async () => {
   try {
     const res = await fetch(
@@ -72,12 +88,10 @@ export const fetchReports = async ({ query }) => {
   console.log("This is the queries", { category, currentPage });
 
   try {
-    // const res = await fetch(
-    //   `https://ama-admin.com/api/reports?active=true&link=${category}&page=${currentPage}`
-    // );
-    const res = await fetch("https://ama-admin.com/api/reports", {
-      cache: "no-cache",
-    });
+    const res = await fetch(
+      `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
+      { cache: "no-cache" }
+    );
     const data = await res.json();
     return { ...data, category };
   } catch (error) {

@@ -9,6 +9,7 @@ import StatsSection from "@/components/home/StatsSection";
 import Testimonials from "@/components/home/Testimonials";
 import {
   fetchIndustriesHome,
+  fetchRecentReports,
   fetchSponsorLogos,
   fetchTestimonials,
 } from "@/utils/fetchFunctions";
@@ -17,6 +18,7 @@ export default async function Home() {
   const industryCardDataHome = await fetchIndustriesHome();
   const testimonialsHome = await fetchTestimonials();
   const sponsorsHome = await fetchSponsorLogos();
+  const recentReports = await fetchRecentReports();
 
   return (
     <div>
@@ -27,7 +29,7 @@ export default async function Home() {
       <Testimonials testimonials={testimonialsHome} />
       <Sponsors sponsors={sponsorsHome} />
       <EntrepreneurBanner />
-      <Newses />
+      <Newses recentReports={recentReports} />
       <Footer />
     </div>
   );
