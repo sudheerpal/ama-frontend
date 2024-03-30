@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const radioCanada = Radio_Canada({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Advance Market Analytics",
+  title: "Market Research Forecast",
   description: "Research paper selling website",
 };
 
