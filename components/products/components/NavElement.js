@@ -18,7 +18,7 @@ const NavElement = ({ parentCategory, subCategoriesOfParent }) => {
         type="checkbox"
       />
       <div className="flex items-center justify-between px-4 py-1 font-medium collapse-title">
-        <Link className="z-10 hover:font-bold" href={`/reports/${link}`}>
+        <Link className="z-10 hover:font-bold" href={`/industries/${link}`}>
           {label}
         </Link>
         <span>{isOpen ? <Minus /> : <Plus />}</span>
@@ -31,7 +31,7 @@ const NavElement = ({ parentCategory, subCategoriesOfParent }) => {
                 key={ct.id}
                 className="text-sm text-gray-400 hover:text-white"
               >
-                <Link href={`/reports/${ct.link}`}>{ct.label}</Link>
+                <Link href={`/industries/${ct.link}`}>{ct.label}</Link>
               </li>
             ))}
           </ul>
