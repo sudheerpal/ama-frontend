@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import Picture1 from "@/assets/icons/Picture1.png";
 import Picture2 from "@/assets/icons/Picture2.png";
 import Picture3 from "@/assets/icons/Picture3.png";
@@ -66,5 +67,201 @@ export const industries = [
     description:
       "Objective solutions emphasizing best opportunities in buy-side and sell-side.",
     icon: Picture3,
+  },
+];
+
+export const jobDetails = [
+  {
+    id: 1,
+    title: "Frontend Developer",
+    vacancy: 2,
+    postedAt: "2024-03-01",
+    jobSummary: `We're seeking a talented Frontend Developer to join our team at TechCo, where innovation and creativity thrive. As a Frontend Developer, you'll play a pivotal role in developing user-friendly web interfaces using cutting-edge technologies like React.js. If you're passionate about creating seamless user experiences and enjoy working in a collaborative environment, then this role is perfect for you.`,
+    jobDescription: (
+      <div>
+        <p>
+          We're seeking a Frontend Developer to join our dynamic team at TechCo,
+          where innovation and creativity thrive.
+        </p>
+        <p>
+          As a Frontend Developer, you'll play a crucial role in developing
+          user-facing web applications using cutting-edge technologies and
+          frameworks.
+        </p>
+
+        <h3>Why Join TechCo?</h3>
+        <ul>
+          <li>
+            Work on exciting projects that push the boundaries of technology.
+          </li>
+          <li>
+            Collaborate with talented individuals in a supportive and inclusive
+            environment.
+          </li>
+          <li>Competitive salary and benefits package.</li>
+          <li>Opportunities for career growth and advancement.</li>
+        </ul>
+
+        <h3>Skills and Qualifications:</h3>
+        <ul>
+          <li>
+            <strong>Proficiency in HTML, CSS, and JavaScript:</strong> Solid
+            understanding of frontend development fundamentals.
+          </li>
+          <li>
+            <strong>Experience with React.js:</strong> Hands-on experience
+            developing React applications.
+          </li>
+          <li>
+            <strong>Responsive Design:</strong> Ability to create responsive and
+            mobile-friendly user interfaces.
+          </li>
+          <li>
+            <strong>Version Control:</strong> Familiarity with Git and version
+            control best practices.
+          </li>
+          <li>
+            <strong>Problem-Solving Skills:</strong> Ability to troubleshoot and
+            debug frontend issues effectively.
+          </li>
+          <li>
+            <strong>Team Player:</strong> Excellent communication and
+            collaboration skills.
+          </li>
+        </ul>
+
+        <h3>Key Responsibilities:</h3>
+        <ul>
+          <li>
+            Develop user-friendly web interfaces using React.js and other
+            frontend technologies.
+          </li>
+          <li>
+            Collaborate with backend developers to integrate frontend components
+            with server-side logic.
+          </li>
+          <li>
+            Implement responsive designs and ensure cross-browser compatibility.
+          </li>
+          <li>Optimize web applications for maximum speed and scalability.</li>
+          <li>
+            Participate in code reviews and provide constructive feedback to
+            team members.
+          </li>
+          <li>
+            Stay updated with frontend development trends and best practices.
+          </li>
+        </ul>
+
+        <p>
+          Join us at TechCo and be part of a team that's shaping the future of
+          technology. Apply now and take your frontend development career to new
+          heights!
+        </p>
+      </div>
+    ),
+    aboutCompany: "TechCo is a leading technology company specializing in...",
+  },
+  {
+    id: 2,
+    title: "Backend Developer",
+    vacancy: 3,
+    postedAt: "2024-03-10",
+    jobSummary: `Join our dynamic team at SoftTech as a Backend Developer and contribute to building robust and scalable backend systems. You'll have the opportunity to work on challenging projects and collaborate with cross-functional teams to deliver high-quality solutions. If you have a strong proficiency in Node.js and a passion for backend development, then we'd love to hear from you`,
+    jobDescription: (
+      <div>
+        <p>
+          We're looking for a skilled Backend Developer to join our team at
+          SoftTech, where innovation meets excellence.
+        </p>
+        <p>
+          As a Backend Developer, you'll be responsible for building robust and
+          scalable backend systems to support our web and mobile applications.
+        </p>
+
+        <h3>Why Join SoftTech?</h3>
+        <ul>
+          <li>
+            Work on challenging projects in a collaborative and supportive
+            environment.
+          </li>
+          <li>
+            Opportunity to contribute to the development of cutting-edge
+            technology solutions.
+          </li>
+          <li>
+            Competitive salary and benefits package, including flexible work
+            arrangements.
+          </li>
+          <li>Room for professional growth and career advancement.</li>
+        </ul>
+
+        <h3>Skills and Qualifications:</h3>
+        <ul>
+          <li>
+            <strong>Proficiency in Node.js:</strong> Extensive experience
+            developing backend applications using Node.js and related
+            frameworks.
+          </li>
+          <li>
+            <strong>Database Management:</strong> Solid understanding of
+            database design and management, with experience in SQL and NoSQL
+            databases.
+          </li>
+          <li>
+            <strong>RESTful APIs:</strong> Experience building and consuming
+            RESTful APIs for web and mobile applications.
+          </li>
+          <li>
+            <strong>Cloud Services:</strong> Familiarity with cloud platforms
+            like AWS or Azure, including serverless architectures.
+          </li>
+          <li>
+            <strong>Agile Development:</strong> Ability to work in an agile
+            environment and adapt to changing project requirements.
+          </li>
+          <li>
+            <strong>Problem-Solving Skills:</strong> Excellent analytical and
+            problem-solving abilities.
+          </li>
+        </ul>
+
+        <h3>Key Responsibilities:</h3>
+        <ul>
+          <li>
+            Design and develop scalable backend systems using Node.js and
+            related technologies.
+          </li>
+          <li>
+            Integrate backend services with frontend components to deliver
+            seamless user experiences.
+          </li>
+          <li>
+            Implement secure authentication and authorization mechanisms for web
+            and mobile applications.
+          </li>
+          <li>
+            Optimize backend applications for performance, reliability, and
+            scalability.
+          </li>
+          <li>
+            Collaborate with cross-functional teams to define project
+            requirements and deliver high-quality solutions.
+          </li>
+          <li>
+            Stay updated with emerging technologies and best practices in
+            backend development.
+          </li>
+        </ul>
+
+        <p>
+          Join us at SoftTech and be part of a team that's shaping the future of
+          technology. Apply now and unleash your potential as a Backend
+          Developer!
+        </p>
+      </div>
+    ),
+    aboutCompany:
+      "SoftTech is a leading software development company specializing in...",
   },
 ];

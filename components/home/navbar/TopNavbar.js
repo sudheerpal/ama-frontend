@@ -5,7 +5,7 @@ import { Phone, Search, User, Users } from "react-feather";
 
 const TopNavbar = () => {
   return (
-    <div className="bg-primary">
+    <div className="relative bg-primary">
       <CustomContainer>
         <section className="items-center hidden gap-4 text-sm text-white lg:grid lg:grid-cols-3 xl:text-base">
           <div className="flex gap-4 xl-gap-6">
@@ -31,7 +31,7 @@ const TopNavbar = () => {
             <span>|</span>
             <p>Register</p> */}
           </div>
-          <div className="relative py-2 bg-secondary">
+          <div className="relative z-20 py-2 bg-secondary">
             <input
               className="w-full px-4 py-2 pr-12 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
               type="search"
@@ -43,6 +43,7 @@ const TopNavbar = () => {
           </div>
         </section>
       </CustomContainer>
+      <div className="absolute top-0 right-0 z-10 w-1/3 h-full bg-secondary"></div>
     </div>
   );
 };
