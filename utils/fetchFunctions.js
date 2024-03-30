@@ -88,10 +88,13 @@ export const fetchReports = async ({ query }) => {
   console.log("This is the queries", { category, currentPage });
 
   try {
-    const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
-      { cache: "no-cache" }
-    );
+    const res = await fetch(`https://ama-admin.com/api/reports`, {
+      cache: "no-cache",
+    });
+    // const res = await fetch(
+    //   `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
+    //   { cache: "no-cache" }
+    // );
     const data = await res.json();
     return { ...data, category };
   } catch (error) {
