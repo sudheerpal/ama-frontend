@@ -12,7 +12,8 @@ const ProductListSearch = ({ currentCategory }) => {
   const [isTyping, setIsTyping] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
 
-  const categoryId = currentCategory?.parent?.id || currentCategory?.id;
+  // const categoryId = currentCategory?.parent?.id || currentCategory?.id;
+  const categoryId = currentCategory?.id;
 
   // Debounce function
   const debounce = (func, delay) => {
