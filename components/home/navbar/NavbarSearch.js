@@ -11,7 +11,6 @@ const NavbarSearch = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
 
-  console.log(suggestions);
   // Debounce function
   const debounce = (func, delay) => {
     let timerId;
@@ -31,17 +30,16 @@ const NavbarSearch = () => {
   // Function to handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can use the searchValue state here for further processing
-    console.log("Search value:", searchValue);
+    setSearchValue("");
   };
 
   const sugesstionFetch = async (payload) => {
     try {
       const res = await fetch(`https://ama-admin.com/api/search`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        // headers: {
+        //   "Content-Type": "application/json",
+        // },
         body: JSON.stringify(payload),
       });
       const { data } = await res.json();
@@ -79,9 +77,6 @@ const NavbarSearch = () => {
     };
   }, [searchValue]);
 
-  // Dummy search suggestion links
-  const suggestionLinks = ["Suggestion 1", "Suggestion 2", "Suggestion 3"];
-
   return (
     <div className="relative z-20 py-2 bg-secondary">
       <form onSubmit={handleSubmit}>
@@ -101,14 +96,17 @@ const NavbarSearch = () => {
       </form>
       {isTyping && (
         <div className="absolute left-0 p-4 text-sm text-black bg-white rounded shadow-md w-96 top-full">
-          {suggestions?.map((link, index) => (
+          {suggestions?.map((sg, index) => (
             <Link
               key={index}
-              href={link}
+              href={`/industries/${sg?.slug}`}
               className="block mb-1 hover:text-blue-500"
-              onClick={() => setIsTyping(false)}
+              onClick={() => {
+                setSearchValue("");
+                setIsTyping(false);
+              }}
             >
-              {link}
+              {sg?.title}
             </Link>
           ))}
         </div>
