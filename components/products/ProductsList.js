@@ -7,7 +7,6 @@ import Pagination from "../ui/pagination/Pagination";
 const ProductsList = ({ reports: reportsData }) => {
   const currentPage = reportsData.page;
   const totalReports = reportsData.totalCount;
-
   return (
     <div className="mx-auto mt-5 space-y-5">
       <div>
@@ -44,7 +43,7 @@ const ProductsList = ({ reports: reportsData }) => {
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
-        {reportsData?.data?.totalCount ? (
+        {reportsData?.totalCount ? (
           <section>
             <Pagination
               category={reportsData?.category}
