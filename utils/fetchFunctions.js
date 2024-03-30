@@ -98,3 +98,19 @@ export const fetchReports = async ({ query }) => {
     return [];
   }
 };
+export const fetchAllReports = async ({ query }) => {
+  const [category, page] = query.split("=");
+  const currentPage = page || "1";
+  console.log("This is the queries", { category, currentPage });
+  try {
+    const res = await fetch(
+      `https://ama-admin.com/api/reports?active=true&page=${currentPage}`,
+      { cache: "no-cache" }
+    );
+    const data = await res.json();
+    return { ...data, category };
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return [];
+  }
+};
