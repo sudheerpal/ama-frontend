@@ -3,6 +3,7 @@ import Button from "../ui/Button";
 import { Search } from "react-feather";
 import ReportCard from "./components/ReportCard";
 import Pagination from "../ui/pagination/Pagination";
+import ProductListSearch from "./components/ProductListSearch";
 
 const ProductsList = ({ reports: reportsData }) => {
   const currentPage = reportsData.page;
@@ -30,16 +31,7 @@ const ProductsList = ({ reports: reportsData }) => {
         </h3>
         <Button type="secondary">Speak to an Expert</Button>
       </div>
-      <div className="relative py-2 bg-secondary">
-        <input
-          className="w-full px-4 py-2 pr-12 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
-          type="search"
-          placeholder="Search Reports..."
-        />
-        <button className="absolute top-0 right-0 h-full px-1 text-[#002E5B] ">
-          <Search />
-        </button>
-      </div>
+      <ProductListSearch />
       <div>
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />

@@ -102,3 +102,20 @@ export const fetchReports = async ({ query }) => {
     return [];
   }
 };
+
+export const sugesstionFetch = async (payload) => {
+  try {
+    const res = await fetch(`https://ama-admin.com/api/search`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching suggestions:", error);
+    return [];
+  }
+};

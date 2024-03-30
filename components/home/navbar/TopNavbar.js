@@ -1,7 +1,8 @@
 import CustomContainer from "@/components/ui/CustomContainer";
 import Link from "next/link";
 import React from "react";
-import { Phone, Search, User, Users } from "react-feather";
+import { Phone, User, Users } from "react-feather";
+import NavbarSearch from "./NavbarSearch";
 
 const TopNavbar = () => {
   return (
@@ -31,16 +32,7 @@ const TopNavbar = () => {
             <span>|</span>
             <p>Register</p> */}
           </div>
-          <div className="relative z-20 py-2 bg-secondary">
-            <input
-              className="w-full px-4 py-2 pr-12 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
-              type="search"
-              placeholder="Search Reports..."
-            />
-            <button className="absolute top-0 right-0 h-full px-1 text-[#002E5B] ">
-              <Search />
-            </button>
-          </div>
+          <NavbarSearch />
         </section>
       </CustomContainer>
       <div className="absolute top-0 right-0 z-10 w-1/3 h-full bg-secondary"></div>
