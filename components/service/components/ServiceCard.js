@@ -12,7 +12,7 @@ const ServiceCard = ({ service }) => {
       </div>
       <section className="lg:col-span-2">
         <div className="flex flex-col h-auto p-4 space-y-3">
-          <h3 className="flex items-center gap-3 text-xl font-bold lg:text-2xl">
+          <h3 className="flex items-center gap-3 text-xl font-bold lg:text-2xl text-primary">
             <Image className="w-10 h-10" src={icon} alt="icon" />
             {title}
           </h3>
