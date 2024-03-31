@@ -24,18 +24,18 @@ const BannerSlide = () => {
       image: image1,
     },
     {
-      id: 2,
-      title: "Twice The Glory",
-      subTitle: "We are yet again",
-      subTitle2: "A great place to work",
-      image: image2,
-    },
-    {
       id: 3,
       title: "Discover New Opportunities",
       subTitle: "Explore endless possibilities",
       subTitle2: "with our innovative solutions",
       image: image3,
+    },
+    {
+      id: 2,
+      title: "Twice The Glory",
+      subTitle: "We are yet again",
+      subTitle2: "A great place to work",
+      image: image2,
     },
   ];
 

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import CustomContainer from "../ui/CustomContainer";
 import Button from "../ui/Button";
@@ -55,18 +56,21 @@ const AboutPage = () => {
             <div className="grid grid-cols-1 bg-secondary md:grid-cols-2 md:p-10 xl:p-16">
               <div className="p-4">
                 <h1 className="text-xl font-bold md:text-3xl lg:text-4xl">
-                  <span className="text-primary">Workshops</span>
+                  <span className="text-primary">Explore</span>
                   <br />
-                  <span>thats awesome</span>
+                  <span>Our Reports</span>
                 </h1>
                 <p>
-                  We are company that offers design and built services for you
-                  from initial sketches to the final construction.
+                  We are company that offers consulting, customized and sydicate
+                  research services for you from initial sketches to the final
+                  construction.
                 </p>
                 <div className="mt-5">
-                  <Button>
-                    click here <ArrowRight size={16} color="#FDE428" />
-                  </Button>
+                  <Link href="/industries">
+                    <Button>
+                      Explore <ArrowRight size={16} color="#FDE428" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
               <div className="relative p-4 min-h-72">
@@ -113,25 +117,45 @@ const AboutPage = () => {
                 <hr className="w-12 mt-2 border-t-4 border-b-4 rounded border-secondary" />
               </div>
               <p>
-                Consulting WP is a global consulting powerhouse. We began our
-                operations a few decades ago and have grown due to excellent
-                relationships with our clients. We started out small, with just
-                a few people and a small office, but today we have offices in
-                multiple countries with hundreds of people working inside them.{" "}
+                MR Forecast stands as a premier Market Research Company,
+                offering quantified B2B research that uncovers high-growth
+                emerging opportunities impacting over 80% of global corporate
+                revenues. Our team of Analysts diligently tracks high-growth
+                studies, providing detailed statistical analyses and in-depth
+                insights into market trends and dynamics, delivering a
+                comprehensive industry overview. Employing an extensive research
+                methodology, we fuse critical insights with industry factors and
+                market forces to deliver optimal value to our clients. Drawing
+                from reliable primary and secondary data sources, our analysts
+                and consultants extract actionable data tailored to meet our
+                clients' business objectives.
                 <br />
                 <span className="inline-block mt-3">
                   {" "}
-                  We achieved our success because of how successfully we
-                  integrate with our clients. One compl- aint many people have
-                  about consultants is that they can be disruptive. Employees
-                  fear outside consultants coming in and destroying the
-                  workflow. Our clients face no such issues.
+                  Our research studies empower clients to achieve diverse market
+                  objectives, ranging from global footprint expansion and supply
+                  chain optimization to competitor profiling and M&As. With over
+                  a decade of experience, we have collaborated with over 8,000
+                  companies, generating a revenue impact exceeding $150 billion.
+                  Consequently, we have transitioned from a market research
+                  publisher to a growth-enabling firm, fostering a corporate
+                  culture centered around "GIVE growth" to instill a growth
+                  mindset within our workforce. Earlier this year, we underwent
+                  a formal transformation, emerging as one of America's top
+                  management consulting firms, recognized by Forbes in their
+                  survey - notably as the sole Indian-origin startup among the
+                  list of 200 firms. Distinguishing ourselves even within this
+                  elite group, we offer a unique value proposition through our
+                  proprietary Knowledge Store - a primary research-driven,
+                  AI-enabled market intelligence platform designed for
+                  growth-minded executives.
                 </span>
               </p>
               <div className="p-4 mt-5 font-semibold bg-gray-200 border-l-8 border-secondary lg:px-10 xl:px-20">
-                Consulting WP continues to grow ever day thanks to the
-                confidence our clients have in us. We cover many industries such
-                as financial, energy, business services, consumer products.
+                MR Forecast's growth is consistently fueled by the trust
+                bestowed upon us by our valued clients. Our expertise spans
+                across diverse industries including finance, energy, business
+                services, and consumer products.
               </div>
             </section>
             <section className="md:flex md:gap-5">
@@ -140,20 +164,27 @@ const AboutPage = () => {
                   Our Misson
                 </h1>
                 <p>
-                  Our mission is to build a strong and establish long
-                  relationship with our clients. Our single-minded passion is to
-                  become the country’s greatest resource for financial & market
-                  intelligence information on the Internet. The first priority
-                  is customer service & requirement fulfilling. We believe
-                  whatever we are providing to our client should meet highest
-                  level of standards
+                  Our goal is to forge enduring relationships with our clients,
+                  emphasizing unparalleled commitment to becoming the premier
+                  source of financial and market intelligence Reports worldwide.
+                  Customer satisfaction and meeting their needs are our top
+                  priorities. We adhere to the highest standards in delivering
+                  services to ensure client satisfaction.
                 </p>
               </div>
               <div className="flex-1">
                 <h1 className="mt-4 mb-5 text-2xl font-bold capitalize text-primary lg:text-3xl">
                   how we work
                 </h1>
-                <div className="bg-gray-200 min-h-44"></div>
+                <div className="aspect-w-16 aspect-h-9">
+                  <iframe
+                    src="https://www.youtube.com/embed/yWAmQRS1mOE"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                </div>
               </div>
             </section>
           </div>
@@ -165,7 +196,7 @@ const AboutPage = () => {
                   href={"#"}
                   key={idx}
                   className={`block px-4 py-2 duration-100 bg-gray-200 mb-1 hover:bg-primary hover:text-white text-primary ${
-                    idx === 3 && "border-l-4 border-primary"
+                    idx === 0 && "border-l-4 border-primary"
                   }`}
                 >
                   {link.text}
@@ -173,10 +204,12 @@ const AboutPage = () => {
               ))}
             </section>
             <section className="mx-4">
-              <Button classNames="w-full">
-                <FileText className="text-secondary" size={16} /> Company
-                Reports
-              </Button>
+              <Link href="/industries">
+                <Button classNames="w-full">
+                  <FileText className="text-secondary" size={16} /> Company
+                  Reports
+                </Button>
+              </Link>
             </section>
             <section className="p-4 mx-4 bg-secondary">
               <h4 className="font-semibold">How can we help you?</h4>
@@ -184,9 +217,11 @@ const AboutPage = () => {
                 Contact us at the Advance Market Analytics office nearest to you
                 or submit a business inquiry online.
               </p>
-              <Button classNames="text-sm mt-5">
-                <Phone className="text-secondary" size={12} /> Contacts
-              </Button>
+              <Link href="/contact">
+                <Button classNames="text-sm mt-5">
+                  <Phone className="text-secondary" size={12} /> Contacts
+                </Button>
+              </Link>
             </section>
             <section className="mx-4">
               <div
@@ -228,7 +263,7 @@ const AboutPage = () => {
           <CustomContainer
             classNames={`items-center justify-between py-4 lg:flex `}
           >
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold capitalize">
               looking for Trending Report by Industries?
             </div>
             <div className="flex justify-center">

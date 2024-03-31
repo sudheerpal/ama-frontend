@@ -38,17 +38,17 @@ const LocationTabs = () => {
                     <p className="flex items-center gap-2">
                       <MapPin className="text-secondary" size={14} />
                       <span>
-                        1010 Avenue of the Moon <br />
-                        New York, NY 10018 US.
+                        A5010, Solitaire Business Hub, <br /> Viman Nagar,{" "}
+                        <br /> Pune India - 411014
                       </span>
                     </p>
                     <p className="flex items-center gap-2">
                       <PhoneCall className="text-secondary" size={14} />
-                      <span>+1 453 567 7000</span>
+                      <span>+1 551 333 1547 </span>
                     </p>
                     <p className="flex items-center gap-2">
                       <Mail className="text-secondary" size={14} />
-                      <span>brandon@advance.com</span>
+                      <span>sales@advancemarketanalytics.com</span>
                     </p>
                   </div>
                 </div>
