@@ -41,7 +41,9 @@ const LocationTabs = () => {
             >
               <div className="grid w-full h-full p-5 py-12 text-white bg-opacity-80 bg-primary place-items-center">
                 <div>
-                  <h3 className="mb-5 text-xl font-bold">contact details</h3>
+                  <h3 className="mb-5 text-xl font-bold capitalize">
+                    contact details
+                  </h3>
                   <div className="space-y-2 text-sm">
                     <p className="flex items-center gap-2">
                       <MapPin className="text-secondary" size={14} />
