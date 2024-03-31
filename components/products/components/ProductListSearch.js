@@ -13,7 +13,7 @@ const ProductListSearch = ({ currentCategory }) => {
   const [suggestions, setSuggestions] = useState([]);
 
   // const categoryId = currentCategory?.parent?.id || currentCategory?.id;
-  const categoryId = currentCategory?.id;
+  const categoryId = null;
 
   // Debounce function
   const debounce = (func, delay) => {
