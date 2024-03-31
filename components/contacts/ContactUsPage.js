@@ -40,7 +40,6 @@ const ContactUsPage = () => {
                 </div>
                 <div className="space-y-3">
                   <UserCard />
-                  <UserCard />
                 </div>
               </div>
             </section>

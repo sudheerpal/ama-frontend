@@ -9,11 +9,11 @@ const UserCard = () => {
       </div>
       <div className="space-y-1 text-sm">
         <div>
-          <h4 className="text-base font-bold">Jhon Doe</h4>
-          <p className="font-bold text-gray-600">Head of communications</p>
+          <h4 className="text-base font-bold">Praveen Kumar</h4>
+          <p className="font-bold text-gray-600">Head Of Sales</p>
         </div>
-        <p>Email: jhondoe@gmail.com</p>
-        <p>Skype: jhondoe.consulting</p>
+        <p>Email: sales@advancemarketanalytics.com</p>
+        <a href="tel:+1 2015653262">+1 2015653262</a>
       </div>
     </div>
   );
