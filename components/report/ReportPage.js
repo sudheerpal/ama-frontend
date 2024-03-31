@@ -46,15 +46,11 @@ const ReportPage = ({
         }}
       >
         <CustomContainer>
-          <div className="text-sm flex items-center">
+          <div>{basic.marketKeyword}</div>
+          <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
             <Link href={`/industries/${basic.category.link}`}>
               {basic.category.label}
             </Link>
-            <ArrowRight className="mx-2" />
-            {basic.marketKeyword}
-          </div>
-          <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-            Healthcare
           </h1>
           <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
         </CustomContainer>

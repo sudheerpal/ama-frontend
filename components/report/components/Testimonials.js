@@ -11,7 +11,7 @@ import quotation from "@/assets/report/quotation.png";
 
 export default function Testimonials({ testimonials = [] }) {
   return (
-    <div>
+    <div className="remove_arrow">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

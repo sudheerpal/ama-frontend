@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function ClientLogos({ clientLogos = [] }) {
   return (
-    <div>
+    <div className="remove_arrow">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

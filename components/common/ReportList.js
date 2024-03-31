@@ -4,10 +4,10 @@ import moment from "moment";
 import React, { useEffect, useState } from "react";
 import { Clock } from "react-feather";
 import Link from "next/link";
-export default function ReportList() {
+export default function ReportList({ limit = 2 }) {
   const [reports, setReports] = useState([]);
   const getReports = async () => {
-    const recentReports = await fetchRecentReports(2);
+    const recentReports = await fetchRecentReports(limit);
     setReports(recentReports);
   };
   useEffect(() => {
