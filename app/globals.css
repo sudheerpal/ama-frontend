@@ -48,3 +48,8 @@ body {
   width: fit-content;
   /* Equivalent to Tailwind's w-fit class */
 }
+
+.remove_arrow .swiper-button-next,
+.remove_arrow .swiper-button-prev {
+  visibility: hidden;
+}

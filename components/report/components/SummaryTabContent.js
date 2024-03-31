@@ -71,7 +71,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
         <div
           ref={rdContent}
           id="rd_content"
-          dangerouslySetInnerHTML={{ __html: rd.rd || "" }}
+          dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
         ></div>
         {/* {chartData?.regional_market_share && (
           <RegionData regions={rd?.chart?.regional_market_share || {}} />

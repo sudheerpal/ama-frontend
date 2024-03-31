@@ -11,7 +11,6 @@ const ProductsList = ({
 }) => {
   const currentPage = reportsData.page;
   const totalReports = reportsData.totalCount;
-
   return (
     <div className="mx-auto mt-5 space-y-5">
       <ProductListContentDescription
@@ -27,7 +26,7 @@ const ProductsList = ({
         {reportsData?.data?.map((report, idx) => (
           <ReportCard report={report} key={idx} />
         ))}
-        {!reportsData?.data?.totalCount && isAllReports ? (
+      {!reportsData?.data?.totalCount && isAllReports ? (
           <section>
             <Pagination
               category={reportsData?.category}

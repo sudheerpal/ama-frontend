@@ -5,17 +5,22 @@ import Image from "next/image";
 import React, { useState } from "react";
 import visaLogo from "@/assets/checkout/visaLogo.jpg";
 import bankLogo from "@/assets/checkout/bankLogo.png";
+import { usePathname } from "next/navigation";
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ btnText = "Submit", handleFormData }) => {
+  const pathName = usePathname();
   const [formData, setFormData] = useState({
-    name: "",
+    full_name: "",
     email: "",
     country: "",
-    contact: "",
-    company: "",
+    phone: "",
+    company_name: "",
     designation: "",
-    message: "",
+    comment: "",
+    industry: "MRF",
+    service_type: "MRF",
     paymentMethod: "visa", // Default payment method
+    report_page_link: `https://ama-admin.com${pathName}`,
   });
 
   const handleInputChange = (e) => {
@@ -23,56 +28,57 @@ const CheckoutForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handlePaymentMethodChange = (e) => {
-    setFormData({ ...formData, paymentMethod: e.target.value });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log("Form submitted with data:", formData);
+    handleFormData(formData);
   };
   return (
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 md:gap-8">
         <InputText
-          name="name"
+          name="full_name"
           placeholder="Enter your name *"
           value={formData.name}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
           name="email"
           placeholder="Enter your email *"
           value={formData.email}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
           name="country"
           placeholder="Enter your country *"
           value={formData.country}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
-          name="contact"
+          name="phone"
           placeholder="Enter your contact *"
           value={formData.contact}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
-          name="company"
+          name="company_name"
           placeholder="Enter your company *"
           value={formData.company}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
           name="designation"
           placeholder="Enter your designation *"
           value={formData.designation}
           onChange={handleInputChange}
+          required={true}
         />
         <InputText
-          name="message"
+          name="comment"
           placeholder="Enter your message *"
           value={formData.message}
           onChange={handleInputChange}
@@ -80,7 +86,7 @@ const CheckoutForm = () => {
         />
       </div>
       {/* Payment method radio inputs */}
-      <div className="my-4">
+      {/* <div className="my-4">
         <label className="block mb-2 font-semibold">Payment Method:</label>
         <div className="">
           <InputRadio
@@ -101,15 +107,14 @@ const CheckoutForm = () => {
               <Image className="max-w-24" src={bankLogo} alt="bank image" />
             }
           />
-          {/* Add more radio inputs for other payment methods */}
         </div>
-      </div>
+      </div> */}
 
       <button
         type="submit"
         className="px-4 py-2 mt-5 text-sm text-white rounded bg-primary"
       >
-        Proceed To Pay
+        {btnText}
       </button>
     </form>
   );

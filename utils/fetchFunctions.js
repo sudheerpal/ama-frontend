@@ -37,10 +37,10 @@ export const fetchSponsorLogos = async () => {
   }
 };
 
-export const fetchRecentReports = async () => {
+export const fetchRecentReports = async (limit = 4) => {
   try {
     const res = await fetch(
-      "https://ama-admin.com/api/reports/recent?limit=4",
+      `https://ama-admin.com/api/reports/recent?limit=${limit}`,
       {
         cache: "no-cache",
       }

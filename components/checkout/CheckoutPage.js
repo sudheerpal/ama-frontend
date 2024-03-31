@@ -1,18 +1,62 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import CustomContainer from "../ui/CustomContainer";
 import CheckoutForm from "./components/CheckoutForm";
+import { useRouter } from "next/navigation";
 
-const CheckoutPage = () => {
+const CheckoutPage = ({ title }) => {
+  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
+  const [type, setType] = useState("");
+  const handleFormData = async (data) => {
+    const myHeaders = new Headers();
+    myHeaders.append(
+      "Authorization",
+      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc2lyLmJzbXJzdHVAZ21haWwuY29tIiwicm9sZSI6eyJuYW1lIjoiYWRtaW4iLCJpZCI6IjY0Mjg2ZjU5Y2E5ODU4MDJiMDQ2MDg4NSJ9LCJpYXQiOjE2OTM1NzUxMjMsImV4cCI6MTY5Mzc3NTEyM30.HT00apprh6glUevBzUYRQtTYjeQ2H-AGs5zDk2kb1SY"
+    );
+    myHeaders.append("Content-Type", "application/json");
+    console.log("data", data);
+    // Check if any required field is empty
+    const requiredFields = [
+      "full_name",
+      "email",
+      "country",
+      "phone",
+      "company_name",
+      "designation",
+    ];
+    const isAnyFieldEmpty = requiredFields.some((field) => !data[field]);
+
+    if (isAnyFieldEmpty) {
+      alert("Please fill in all required fields.");
+      return; // Stop submission
+    } else {
+      try {
+        setSubmitted(true);
+        const res = await fetch(
+          `https://www.advancemarketreport.com/api/v1/lead`,
+          {
+            method: "POST",
+            headers: myHeaders,
+            body: JSON.stringify(data),
+          }
+        );
+        const resData = await res.json();
+        router.push("/thank-you");
+      } catch (error) {
+        console.log("error", error);
+      }
+    }
+  };
   return (
     <div>
       <CustomContainer classNames="mb-12">
         <section className="my-5">
           <div className="py-2 space-y-2">
             <h1 className="text-lg font-semibold md:text-2xl text-primary">
-              Post-Covid-19 Epidemic Era, Anesthesia Drugs Industry Development
-              Trend Analysis Report 2023
+              {title}
             </h1>
-            <p className="">
+            {/* <p className="">
               Asia Pacific Offshore Wind Market Research Report - Information By
               Technology (Wind Energy, Wave Energy, Tidal Stream, Ocean Thermal
               Energy Conversion (OTEC), and Other Technologies) –and Asia
@@ -21,9 +65,9 @@ const CheckoutPage = () => {
             <p>
               <span className="font-bold">Edition: </span>
               <span>Single User</span>
-            </p>
+            </p> */}
           </div>
-          <div className="py-2">
+          {/* <div className="py-2">
             <p className="font-bold">Subtotal: $3000</p>
           </div>
           <div className="py-2">
@@ -31,10 +75,13 @@ const CheckoutPage = () => {
           </div>
           <div className="py-2">
             <p className="font-bold">Total: $3000</p>
-          </div>
+          </div> */}
         </section>
         <section>
-          <CheckoutForm />
+          <CheckoutForm
+            btnText={submitted ? "Submitting" : "Send Buy Request"}
+            handleFormData={handleFormData}
+          />
         </section>
       </CustomContainer>
     </div>

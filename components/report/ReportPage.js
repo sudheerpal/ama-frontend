@@ -7,11 +7,27 @@ import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
 import Button from "../ui/Button";
-import { Book, Clock, Download, HelpCircle, Tag } from "react-feather";
+import {
+  ArrowRight,
+  Book,
+  Clock,
+  Download,
+  HelpCircle,
+  Tag,
+} from "react-feather";
 import ReportTabs from "./ReportTabs";
 import { getSubHeading } from "@/utils/helper";
+import Forms from "./Forms";
+import ClientLogos from "./components/ClientLogos";
+import Testimonials from "./components/Testimonials";
+import ReportList from "../common/ReportList";
+import Link from "next/link";
 
-const ReportPage = ({ reportData = {} }) => {
+const ReportPage = ({
+  testimonials = [],
+  reportData = {},
+  clientLogos = [],
+}) => {
   const { basic, marketAnalysis, marketReport, rd } = reportData;
   const subHeading = getSubHeading({
     ...basic,
@@ -30,9 +46,11 @@ const ReportPage = ({ reportData = {} }) => {
         }}
       >
         <CustomContainer>
-          <p className="text-xs">{basic.marketKeyword}</p>
+          <div>{basic.marketKeyword}</div>
           <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-            Healthcare
+            <Link href={`/industries/${basic.category.link}`}>
+              {basic.category.label}
+            </Link>
           </h1>
           <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
         </CustomContainer>
@@ -85,23 +103,10 @@ const ReportPage = ({ reportData = {} }) => {
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <div className="flex flex-col gap-3 p-4 mx-4 mb-5 text-sm xl:text-base">
-                <Button>
-                  <Download className="text-secondary" />{" "}
-                  <span className="uppercase">Request sample</span>
-                </Button>
-                <Button>
-                  <HelpCircle className="text-secondary" />{" "}
-                  <span className="uppercase">Pre Order Enquiry</span>
-                </Button>
-                <Button>
-                  <Tag className="text-secondary" />{" "}
-                  <span className="uppercase">Request discount</span>
-                </Button>
-              </div>
+              <Forms />
               {/* segment 1.5 */}
               <div className="mx-4 my-5">
-                <PricingCard price={basic.price} />
+                <PricingCard price={basic.price} slug={basic.slug} />
               </div>
               {/* segment 2 */}
               <div className="my-5">
@@ -129,67 +134,18 @@ const ReportPage = ({ reportData = {} }) => {
               {/* segment 3 */}
               <div className="mx-4 my-5">
                 <div className="p-5 rounded bg-secondary">
-                  <h2 className="mb-4 text-xl font-bold text-center text-primary">
-                    Healthcare Clients
+                  <h2 className="mb-4 font-semibold text-sm text-center text-primary">
+                    {reportData.basic.category?.label} Clients
                   </h2>
-                  <div className="py-5 text-center bg-white rounded">
-                    <span className="text-4xl font-extrabold drop-shadow-xl">
-                      BASF
-                    </span>
+                  <div className="text-center bg-white rounded">
+                    <ClientLogos clientLogos={clientLogos} />
                   </div>
                 </div>
               </div>
-              {/* segment 4 */}
-              <div className="mx-4 my-5">
-                <div
-                  style={{
-                    clipPath:
-                      "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
-                  }}
-                  className="p-4 pb-10 bg-gray-200"
-                >
-                  <p>
-                    “Thank you very much. I really appreciate the work your team
-                    has done. I feel very comfortable recommending your services
-                    to some of the other startups that I’m working with, and
-                    will likely establish a good long partnership with you.”
-                  </p>
-                  <div className="w-16 ml-auto">
-                    <Image src={quotation} alt="quotation" />
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 my-5">
-                  <div>
-                    <Image
-                      className="w-12 rounded-full"
-                      src={avatar}
-                      alt="avatar"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold">Dr. John Doe</h3>
-                    <p className="text-gray-600">
-                      Sales & Marketing, Alien Ltd.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <Testimonials testimonials={testimonials} />
               {/* segment 5 */}
               <hr className="my-5 mt-16 border-2 border-black" />
-              <div className="mx-4 my-5">
-                <h2 className="my-3 text-xl font-bold">related reports</h2>
-                {"fs".split("").map((_, i) => (
-                  <div key={i} className="my-4">
-                    <h4 className="font-semibold text-primary">
-                      U.S. life science analytics market size, share & COVID-19{" "}
-                    </h4>
-                    <div className="flex items-center gap-2 mt-2 text-sm">
-                      <Clock className="-mt-1 text-secondary" size={16} />
-                      <p>October 23, 2023</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <ReportList />
             </section>
           </main>
         </CustomContainer>
