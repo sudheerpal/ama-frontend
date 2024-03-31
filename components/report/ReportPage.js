@@ -1,6 +1,6 @@
 import React from "react";
 import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
-import reportThumbnail from "@/assets/report/reportThumbnail.png";
+import reportThumbnail from "@/assets/report/newReportThumbnail.jpeg";
 import quotation from "@/assets/report/quotation.png";
 import avatar from "@/assets/report/avatar.png";
 import CustomContainer from "../ui/CustomContainer";
@@ -62,8 +62,11 @@ const ReportPage = ({
             <section className="lg:col-span-3">
               {/* report introduction section  */}
               <section className="gap-5 py-5 space-y-3 md:flex md:space-y-0">
-                <div className="w-fit min-w-24 xl:min-w-28">
+                <div className="relative border-2 shadow border-primary w-fit min-w-28 xl:min-w-36">
                   <Image src={reportThumbnail} alt="report thumbnail" />
+                  <span className="absolute text-sm font-bold text-center max-w-28 top-12 right-1">
+                    {basic.marketKeyword}
+                  </span>
                 </div>
                 <div className="space-y-3">
                   <h1 className="text-lg font-semibold md:text-2xl text-primary">
@@ -108,7 +111,7 @@ const ReportPage = ({
               {/* segment 2 */}
               <div className="my-5">
                 <div className="mx-4 bg-gray-200 rounded">
-                  <h3 className="py-2 text-center text-white capitalize w-full rounded-t bg-primary">
+                  <h3 className="w-full py-2 text-center text-white capitalize rounded-t bg-primary">
                     Tailored for you
                   </h3>
                   <div className="p-4 pl-8">

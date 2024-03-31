@@ -10,7 +10,7 @@ const BannerFooter = () => {
       <CustomContainer
         classNames={`items-center justify-between py-4 lg:flex `}
       >
-        <div className="text-2xl font-bold">
+        <div className="text-2xl font-bold capitalize">
           looking for Trending Report by Industries?
         </div>
         <div className="flex justify-center">

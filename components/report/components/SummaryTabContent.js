@@ -67,7 +67,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
 
   return (
     <div>
-      <section className="prose">
+      <section className="max-w-full prose">
         <div
           ref={rdContent}
           id="rd_content"
@@ -79,11 +79,11 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       </section>
       {Chart && chartData && chartData.market_growth && (
         <div
-          className="relative w-fit mx-auto border my-3 shadow-lg py-4 px-12"
+          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
           ref={growthRef}
           id="chart_content"
         >
-          <div className="font-semibold text-gray-500 text-center">
+          <div className="font-semibold text-center text-gray-500">
             Market Growth
           </div>
           <div className="flex justify-center">
@@ -111,11 +111,11 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       )}
       {Chart && chartData && chartData.market_size && (
         <div
-          className="relative w-fit mx-auto border my-3 shadow-lg py-4 px-12"
+          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
           ref={sizeRef}
           id="chart_content"
         >
-          <div className="font-semibold text-gray-500 text-center">
+          <div className="font-semibold text-center text-gray-500">
             Market Size
           </div>
           <div className="flex justify-center">

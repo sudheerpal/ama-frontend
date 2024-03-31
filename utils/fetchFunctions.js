@@ -82,13 +82,30 @@ export const fetchCategories = async () => {
   }
 };
 
-export const fetchReports = async ({ query }) => {
-  const [category, page] = query.split("=");
-  const currentPage = page || "1";
-  console.log("This is the queries", { category, currentPage });
+export const fetchAllReports = async ({ query }) => {
+  const currentPage = query.page || "1";
+
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
+      `https://ama-admin.com/api/reports?page=${currentPage}`,
+      {
+        cache: "no-cache",
+      }
+    );
+    const data = await res.json();
+    return { ...data };
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return [];
+  }
+};
+export const fetchReports = async (payload) => {
+  const category = payload.categorySlug;
+  const currentPage = payload.searchParams.page || "1";
+
+  try {
+    const res = await fetch(
+      `https://ama-admin.com/api/reports?active=true&link=${category}&page=${currentPage}`,
       { cache: "no-cache" }
     );
     const data = await res.json();
@@ -98,19 +115,36 @@ export const fetchReports = async ({ query }) => {
     return [];
   }
 };
-export const fetchAllReports = async ({ query }) => {
-  const [category, page] = query.split("=");
-  const currentPage = page || "1";
-  console.log("This is the queries", { category, currentPage });
+
+export const sugesstionFetch = async (payload) => {
+  try {
+    const res = await fetch(`https://ama-admin.com/api/search`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching suggestions:", error);
+    return [];
+  }
+};
+
+export const fetchCategory = async (query) => {
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&page=${currentPage}`,
-      { cache: "no-cache" }
+      `https://ama-admin.com/api/categories?slug=${query}`,
+      {
+        cache: "no-cache",
+      }
     );
-    const data = await res.json();
-    return { ...data, category };
+    const { data } = await res.json();
+    return data;
   } catch (error) {
-    console.error("Error fetching reports:", error);
+    console.error("Error fetching categories:", error);
     return [];
   }
 };

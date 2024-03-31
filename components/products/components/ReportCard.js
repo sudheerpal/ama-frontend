@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { CheckCircle } from "react-feather";
 import Link from "next/link";
-import reportThumbnail from "@/assets/report/reportThumbnail.png";
+import reportThumbnail from "@/assets/report/newReportThumbnail.jpeg";
 
 const ReportCard = ({ report }) => {
   const {
@@ -13,6 +13,7 @@ const ReportCard = ({ report }) => {
     baseyear,
     noOfPages,
     category,
+    marketKeyword,
     price,
     slug,
   } = report;
@@ -21,8 +22,11 @@ const ReportCard = ({ report }) => {
     <div>
       <section className="gap-5 p-2 my-5 space-y-3 rounded md:flex md:space-y-0 hover:shadow-md lg:p-4">
         <div>
-          <div className="w-32 md:mt-2">
-            <Image src={reportThumbnail} alt="Report Thumbnail" />
+          <div className="relative border-2 shadow border-primary w-36">
+            <Image src={reportThumbnail} alt="report thumbnail" />
+            <span className="absolute text-sm font-bold text-center max-w-28 top-12 right-1">
+              {marketKeyword}
+            </span>
           </div>
         </div>
         <div className="md:flex-1">

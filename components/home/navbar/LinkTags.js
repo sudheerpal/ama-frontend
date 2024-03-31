@@ -3,7 +3,7 @@ import { links } from "@/constants/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
-const LinkTags = () => {
+const LinkTags = ({ parentCategories }) => {
   const pathname = usePathname();
   const [isHovered, setIshovered] = useState(false);
 
@@ -30,13 +30,13 @@ const LinkTags = () => {
               <ul
                 className={`z-10 rounded lg:min-w-60 ${isHovered && "block"}`}
               >
-                {link.submenus.map((submenu, idx) => (
+                {parentCategories?.map((submenu, idx) => (
                   <li key={idx}>
                     <Link
-                      href={submenu.url}
+                      href={submenu.link}
                       className="px-2 py-[6px] rounded-sm hover:text-white hover:bg-primary"
                     >
-                      {submenu.text}
+                      {submenu.label}
                     </Link>
                   </li>
                 ))}

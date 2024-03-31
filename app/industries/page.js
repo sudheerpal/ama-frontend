@@ -3,16 +3,15 @@ import Footer from "@/components/home/Footer";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
-import { fetchAllReports, fetchCategories } from "@/utils/fetchFunctions";
+import { fetchCategories, fetchAllReports } from "@/utils/fetchFunctions";
 import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
 
-const ReportListing = async ({ params, searchParams }) => {
-  const categorySlug = decodeURIComponent(params.categorySlug);
-  console.log("query");
-  // fetch all the reports here
-  const reports = await fetchAllReports({ query: categorySlug });
+
+const ReportListing = async ({ searchParams }) => {
+const reports = await fetchAllReports({ query: searchParams });
+
   const sidebarCategories = await fetchCategories();
   return (
     <>
@@ -34,7 +33,7 @@ const ReportListing = async ({ params, searchParams }) => {
       <CustomContainer>
         <section className="grid gap-5 lg:grid-cols-4">
           <div className="lg:col-span-3">
-            <ProductsList reports={reports} />
+            <ProductsList reports={reports} isAllReports={true} />
           </div>
           <div className="sticky top-0 hidden h-min lg:block">
             <ProductSidebar categories={sidebarCategories} />
