@@ -2,7 +2,7 @@ import React from "react";
 import CustomContainer from "../ui/CustomContainer";
 import Link from "next/link";
 import { ChevronRight, FileText, Phone } from "react-feather";
-import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
+import serviceHeaderBg from "@/assets/services/serviceBanner.png";
 import avatar from "@/assets/report/avatar.png";
 import quotation from "@/assets/report/quotation.png";
 import Button from "../ui/Button";
@@ -48,7 +48,7 @@ const ServicePage = () => {
       <section
         className="py-12 mb-5 text-white lg:mb-10"
         style={{
-          backgroundImage: `url(${reportHeaderBg.src})`,
+          backgroundImage: `url(${serviceHeaderBg.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
