@@ -91,7 +91,7 @@ const LocationTabs = () => {
             <div>
               {/* <Image className="w-full" src={usaLocationMap} alt="map image" /> */}
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326449.15395541716!2d-74.39493088004882!3d40.520931808920515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b64447791f2b%3A0x432ad0562805c3a!2s429%20Parsonage%20Rd%2C%20Edison%2C%20NJ%2008837%2C%20USA!5e0!3m2!1sen!2sbd!4v1711908268826!5m2!1sen!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.422585807878!2d-74.34572982450985!3d40.554344347253036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b64447791f2b%3A0x432ad0562805c3a!2s429%20Parsonage%20Rd%2C%20Edison%2C%20NJ%2008837%2C%20USA!5e0!3m2!1sen!2sbd!4v1711909188315!5m2!1sen!2sbd"
                 style={{
                   border: "none",
                   width: "100%",
