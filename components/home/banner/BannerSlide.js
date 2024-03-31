@@ -11,7 +11,7 @@ import "./BannerSlide.css";
 import image1 from "@/assets/bannerSlider/image-1.png";
 import image2 from "@/assets/bannerSlider/image-2.png";
 import image3 from "@/assets/bannerSlider/image-3.png";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import CustomContainer from "@/components/ui/CustomContainer";
 
 const BannerSlide = () => {
@@ -41,7 +41,14 @@ const BannerSlide = () => {
 
   return (
     <div>
-      <Swiper navigation={true} modules={[Navigation]}>
+      <Swiper
+        navigation={true}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, Navigation]}
+      >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
             <div
@@ -54,11 +61,11 @@ const BannerSlide = () => {
             >
               <CustomContainer
                 classNames={
-                  "flex items-center justify-center lg:justify-start lg:px-40 min-h-96"
+                  "flex items-center justify-center lg:justify-start lg:px-40 min-h-96 xl:min-h-[476px]"
                 }
               >
                 <div className="text-center md:text-left">
-                  <h1 className="mb-3 text-4xl font-bold xl:text-6xl text-primary lg:mb-7">
+                  <h1 className="mb-3 text-4xl font-bold xl:text-6xl text-primary lg:mb-7 min-h">
                     {slide.title}
                   </h1>
                   <h3 className="mb-2 text-2xl md:text-3xl xl:text-4xl">
