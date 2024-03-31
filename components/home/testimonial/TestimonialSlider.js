@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation } from "swiper/modules";
+import { Autoplay, FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "./TesimonialSlider.css";
@@ -47,7 +47,11 @@ const TestimonialSlider = ({ testimonials }) => {
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode, Navigation]}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
+        modules={[Autoplay, FreeMode, Navigation]}
       >
         {testimonials?.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
