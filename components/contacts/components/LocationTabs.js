@@ -25,11 +25,22 @@ const LocationTabs = () => {
               <Image className="w-full" src={indiaBuilding} alt="image one" />
             </div>
             <div>
-              <Image
+              {/* <Image
                 className="w-full"
                 src={indiaLocationMap}
                 alt="map image"
-              />
+              /> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.266862679434!2d73.9091862770383!3d18.562003822911418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c1a9d17181d1%3A0xa43b5ca862fdefd7!2sSolitaire%20Business%20Hub%20Viman%20Nagar!5e0!3m2!1sen!2sbd!4v1711908597201!5m2!1sen!2sbd"
+                style={{
+                  border: "none",
+                  width: "100%",
+                  height: "100%",
+                }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div
               style={{
@@ -78,7 +89,18 @@ const LocationTabs = () => {
               <Image className="w-full" src={usaBuilding} alt="image one" />
             </div>
             <div>
-              <Image className="w-full" src={usaLocationMap} alt="map image" />
+              {/* <Image className="w-full" src={usaLocationMap} alt="map image" /> */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d326449.15395541716!2d-74.39493088004882!3d40.520931808920515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b64447791f2b%3A0x432ad0562805c3a!2s429%20Parsonage%20Rd%2C%20Edison%2C%20NJ%2008837%2C%20USA!5e0!3m2!1sen!2sbd!4v1711908268826!5m2!1sen!2sbd"
+                style={{
+                  border: "none",
+                  width: "100%",
+                  height: "100%",
+                }}
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div
               style={{
