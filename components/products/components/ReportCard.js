@@ -30,8 +30,8 @@ const ReportCard = ({ report }) => {
           </div>
         </div>
         <div className="md:flex-1">
-          <div className="space-y-0">
-            <h4 className="font-bold text-primary">
+          <div className="space-y-0 md:space-y-2">
+            <h4 className="font-bold text-primary md:text-xl">
               <Link href={`/reports/${slug}`}>{title}</Link>{" "}
             </h4>
             <p className="text-gray-600">{summery}</p>
@@ -42,7 +42,7 @@ const ReportCard = ({ report }) => {
             <span>No Of Pages: {noOfPages}</span>
           </div>
         </div>
-        <hr className="hidden w-0 border min-h-32 lg:block" />
+        <hr className="hidden w-0 h-auto border min-h-32 lg:block" />
         <div className="min-w-[20%]">
           <section className="space-y-2">
             <h4 className="font-bold">Price: {price?.singlePrice}</h4>
