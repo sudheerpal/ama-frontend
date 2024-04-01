@@ -23,8 +23,8 @@ const MainFooter = () => {
           <div className="w-full py-4 space-y-3">
             <h3 className="text-2xl font-bold">Business Address</h3>
             <h3 className="text-2xl font-bold">Head Office</h3>
-            <p className="flex items-center gap-2">
-              <MapPin className="w-[46px] text-secondary" size={18} />
+            <p className="flex gap-2">
+              <MapPin className="w-[46px] text-secondary mt-1" size={18} />
               <span>
                 Office no. A 5010, fifth floor, Solitaire Business Hub, Near
                 Phoenix mall, Pune, Maharashtra 41101
