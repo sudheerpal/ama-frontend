@@ -59,7 +59,7 @@ const MainFooter = () => {
               <div className="flex flex-col gap-2">
                 <Link href="/service">Services</Link>
                 <Link href="/career">Our team</Link>
-                <Link href="/">Our approach</Link>
+                <Link href="/about">Our approach</Link>
               </div>
             </div>
           </div>
