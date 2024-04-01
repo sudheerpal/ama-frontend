@@ -1,15 +1,20 @@
-import CheckoutPage from "@/components/checkout/CheckoutPage";
+import CheckoutForm from "@/components/checkout/components/CheckoutForm";
+import CustomContainer from "@/components/ui/CustomContainer";
+import { fetchReportBasicData } from "@/utils/fetchFunctions";
 import React from "react";
 
-const Checkout = async ({ params }) => {
+export default async function page({ params }) {
   const arrays = params.slug.split("-");
   const reportId = arrays[arrays.length - 1];
-  const title = params.slug.replaceAll("-", " ").replace(reportId, "");
-  return (
-    <div className="">
-      <CheckoutPage title={title} />
-    </div>
-  );
-};
+  const reportData = await fetchReportBasicData(reportId);
 
-export default Checkout;
+  return (
+    <CustomContainer>
+      <CheckoutForm
+        reportData={reportData}
+        title={"Submit Buy Request"}
+        type="DIR"
+      />
+    </CustomContainer>
+  );
+}

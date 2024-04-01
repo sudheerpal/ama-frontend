@@ -103,10 +103,10 @@ const ReportPage = ({
             {/* ---- report sidebar ---- */}
             <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
               {/* segment 1 */}
-              <Forms />
+              <Forms slug={basic.slug} />
               {/* segment 1.5 */}
               <div className="mx-4 my-5">
-                <PricingCard price={basic.price} slug={basic.slug} />
+                <PricingCard price={basic?.price} slug={basic?.slug} />
               </div>
               {/* segment 2 */}
               <div className="my-5">

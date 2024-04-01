@@ -1,10 +1,11 @@
 "use client";
 
+import Tooltip from "@/components/ui/Tooltip";
 import Link from "next/link";
 import React, { useState } from "react";
-import { ShoppingCart } from "react-feather";
+import { Info, ShoppingCart } from "react-feather";
 
-const PricingCard = ({ price, slug }) => {
+const PricingCard = ({ price = {}, slug = "" }) => {
   // State to track selected plan
   const [selectedPlan, setSelectedPlan] = useState("Single");
 
@@ -21,7 +22,7 @@ const PricingCard = ({ price, slug }) => {
   };
 
   return (
-    <div className="max-w-sm pt-4 rounded bg-secondary">
+    <div className="max-w-sm pt-4 text-sm rounded bg-secondary">
       <h3 className="mb-4 text-xl font-bold text-center text-primary">
         Pricing
       </h3>
@@ -43,6 +44,17 @@ const PricingCard = ({ price, slug }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.singlePrice}
             </span>
+            <Tooltip
+              text={`Scope: Accessible to all employees, regardless of location. Printing permitted.
+Excel Compatibility: Includes Excel version for BI software (SAAS or SAP) integration.
+Insights: Comprehensive quantitative and financial market insights.
+Customizations: Up to 15% within project scope at no extra charge.
+Support: Post-purchase analyst support provided.
+Presentation: Graphs and charts available for presentations.
+Data Sharing: Public sharing allowed with AMA citation.`}
+            >
+              <Info className="z-10" />
+            </Tooltip>
           </div>
           <div className="flex items-center gap-2 my-1">
             <input
@@ -60,6 +72,12 @@ const PricingCard = ({ price, slug }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.multiPrice}
             </span>
+            <Tooltip
+              text={`Delivery: Report emailed in PDF format.
+Accessibility: Allows 1-10 employees within the organization to access.`}
+            >
+              <Info className="z-10" />
+            </Tooltip>
           </div>
           <div className="flex items-center gap-2 my-1">
             <input
@@ -77,13 +95,12 @@ const PricingCard = ({ price, slug }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.enterprisePrice}
             </span>
+            <Tooltip
+              text={`Accessibility: Only one user access at a time. No printing allowed`}
+            >
+              <Info className="z-10" />
+            </Tooltip>
           </div>
-          <Link
-            href="#"
-            className="block mx-auto text-sm text-center underline text-primary"
-          >
-            Compare Licenses
-          </Link>
         </section>
         <Link
           href={`/report/${slug}/checkout`}
