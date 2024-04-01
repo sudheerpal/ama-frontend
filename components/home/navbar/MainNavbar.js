@@ -58,9 +58,9 @@ const MainNavbar = ({ parentCategories = [] }) => {
             </div>
             <Link href="/">
               <Image
-                className="max-w-40 lg:max-w-52 xl:max-w-64 md:px-4"
+                className="max-w-28 lg:max-w-36 xl:max-w-40 md:pr-4"
                 src={logo}
-                alt="ama logo"
+                alt="MRF logo"
               />
             </Link>
           </div>
