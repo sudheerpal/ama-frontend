@@ -4,8 +4,10 @@ import Button from "../ui/Button";
 import { Download, HelpCircle, Tag, X } from "react-feather";
 import CheckoutForm from "../checkout/components/CheckoutForm";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
+import CustomLink from "../ui/Link";
 
-export default function Forms() {
+export default function Forms({ slug = "" }) {
   const [submitted, setSubmitted] = useState(false);
   const router = useRouter();
   const [type, setType] = useState("");
@@ -51,37 +53,34 @@ export default function Forms() {
   };
   return (
     <div className="flex flex-col gap-3 p-4 mx-4 mb-5 text-sm xl:text-base">
-      <Button
-        classNames={"text-sm"}
-        onClick={() => {
-          setType("Request Sample");
-          document.getElementById("request_form").showModal();
-        }}
+      <Link
+        href={`/report/${slug}/sample-report`}
+        className={
+          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+        }
       >
         <Download className="text-secondary" />
-        <span className="uppercase w-full">Request sample</span>
-      </Button>
+        <span className="uppercase">Request sample</span>
+      </Link>
 
-      <Button
-        onClick={() => {
-          setType("Pre Order Enquiry");
-          document.getElementById("request_form").showModal();
-        }}
-        classNames={"text-sm"}
+      <Link
+        href={`/report/${slug}/enquiry-before-buy`}
+        className={
+          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+        }
       >
         <HelpCircle className="text-secondary" />{" "}
-        <span className="uppercase w-full">Pre Order Enquiry</span>
-      </Button>
-      <Button
-        onClick={() => {
-          setType("Request discount");
-          document.getElementById("request_form").showModal();
-        }}
-        classNames={"text-sm"}
+        <span className="uppercase ">Pre Order Enquiry</span>
+      </Link>
+      <Link
+        href={`/report/${slug}/request-discount`}
+        className={
+          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+        }
       >
         <Tag className="text-secondary" />{" "}
-        <span className="uppercase w-full">Request discount</span>
-      </Button>
+        <span className="uppercase">Request discount</span>
+      </Link>
       <dialog id="request_form" className="modal">
         <div className="modal-box">
           <div className="flex justify-between">

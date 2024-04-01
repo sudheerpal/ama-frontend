@@ -148,3 +148,17 @@ export const fetchCategory = async (query) => {
     return [];
   }
 };
+
+export const fetchReportBasicData = async (id) => {
+  try {
+    const res = await fetch(
+      `https://ama-admin.com/api/reports/${id}?basic=true`,
+      { cache: "no-cache" }
+    );
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching reports:", error);
+    return [];
+  }
+};
