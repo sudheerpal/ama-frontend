@@ -1,4 +1,5 @@
 "use client";
+import LucidIcon from "@/components/ui/icons/LucidIcons";
 import { links } from "@/constants/constants";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,16 +26,24 @@ const LinkTags = ({ parentCategories }) => {
                 }}
                 className="px-2 py-1 rounded-sm hover:text-white hover:bg-primary"
               >
-                {link.text}
+                <Link
+                  href={link.url}
+                  className={`px-2 py-1  rounded-sm hover:text-white hover:bg-primary ${
+                    pathname == link.url ? "text-blue-500" : ""
+                  }`}
+                >
+                  {link.text}
+                </Link>
               </summary>
               <ul
                 className={`z-10 rounded lg:min-w-60 ${isHovered && "block"}`}
               >
                 {parentCategories?.map((submenu, idx) => (
-                  <li key={idx}>
+                  <li key={idx} className="flex flex-row items-center gap-2">
+                    <LucidIcon classNames="p-0" name={submenu.icon} size={18} />
                     <Link
-                      href={submenu.link}
-                      className="px-2 py-[6px] rounded-sm hover:text-white hover:bg-primary"
+                      href={`/industries/${submenu.link}`}
+                      className="py-[6px] rounded-sm px-0 hover:text-white hover:bg-primary"
                     >
                       {submenu.label}
                     </Link>
