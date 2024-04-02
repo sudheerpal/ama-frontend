@@ -61,11 +61,14 @@ const ReportCard = ({ report }) => {
               </p>
             </div>
             <div className="space-y-2">
-              <button className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm">
-                Download Sample
-              </button>
               <Link
-                href={`/report/${slug}/checkout`}
+                href={`/report/${slug}/sample-report`}
+                className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm"
+              >
+                Download Sample
+              </Link>
+              <Link
+                href={`/report/${slug}/checkout?type=single`}
                 className="w-full rounded btn btn-secondary text-primary btn-sm"
               >
                 Buy Now
