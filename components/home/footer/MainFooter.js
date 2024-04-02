@@ -86,10 +86,7 @@ const MainFooter = () => {
                 Privacy Policy
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link
-                className="hover:text-blue-500"
-                href="/terms-and-conditions"
-              >
+              <Link className="hover:text-blue-500" href="/terms-and-condition">
                 Terms and Conditions
               </Link>
               <hr className="w-0 h-auto border" />
