@@ -78,9 +78,25 @@ const MainFooter = () => {
           </div>
         </section>
         <hr />
-        <footer className="py-6 text-sm text-white md:flex md:justify-between">
+        <footer className="py-6 space-y-3 text-sm text-white md:flex md:justify-between md:space-y-0">
           <p>© {`${currentYear} ${copyrightMsg}`}</p>
           <div className="flex items-center gap-2 lg:gap-4">
+            <div className="flex gap-2 mr-10">
+              <Link className="hover:text-blue-500" href="/privacy-policy">
+                Privacy Policy
+              </Link>
+              <hr className="w-0 h-auto border" />
+              <Link
+                className="hover:text-blue-500"
+                href="/terms-and-conditions"
+              >
+                Terms and Conditions
+              </Link>
+              <hr className="w-0 h-auto border" />
+              <Link className="hover:text-blue-500" href="/faq">
+                FAQ
+              </Link>
+            </div>
             <Link
               href="https://www.facebook.com/advancemarketanalytics"
               target="_blank"
