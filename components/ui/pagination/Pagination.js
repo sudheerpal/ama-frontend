@@ -48,7 +48,7 @@ const Pagination = ({ category, currentPage, totalPages }) => {
   };
 
   return (
-    <div className="my-12 lg:items-center lg:flex">
+    <div className="lg:my-12 lg:items-center lg:flex">
       <div className="block mx-auto rounded join w-fit">
         <Link
           href={`/industries?page=${currentPage == 1 ? 1 : currentPage - 1}`}
