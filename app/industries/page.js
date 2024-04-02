@@ -3,24 +3,30 @@ import Footer from "@/components/home/Footer";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
+import LucidIcon from "@/components/ui/icons/LucidIcons";
 import { fetchCategories, fetchAllReports } from "@/utils/fetchFunctions";
+import { FileTextIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import React from "react";
-import { Home } from "react-feather";
-
 
 const ReportListing = async ({ searchParams }) => {
-const reports = await fetchAllReports({ query: searchParams });
+  const reports = await fetchAllReports({ query: searchParams });
 
   const sidebarCategories = await fetchCategories();
   return (
     <>
-      <section className="py-2 text-white bg-primary">
+      <section className="py-2 text-white lg:py-4 bg-primary">
         <CustomContainer>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Home className="pb-1" size={30} />
-              <span className="text-lg font-bold md:text-xl ">All Reports</span>
+              <LucidIcon
+                name="FileText"
+                classNames="mx-auto text-white"
+                size={30}
+              />
+              <span className="text-lg font-bold md:text-xl ">
+                Explore Our Latest Research Reports
+              </span>
             </div>
             <div className="hidden md:block">
               <i className="text-lg font-bold md:text-xl ">

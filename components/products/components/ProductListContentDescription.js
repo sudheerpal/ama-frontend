@@ -9,9 +9,9 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
   return isAllReports ? (
     <>
       <div>
-        <h2 className="mb-3 text-xl font-bold capitalize text-primary">
+        {/* <h2 className="mb-3 text-xl font-bold capitalize text-primary">
           Explore Our Latest Research Reports
-        </h2>
+        </h2> */}
         <p>
           Stay informed with our comprehensive research reports covering a wide
           range of topics and industries. Our reports provide valuable insights
@@ -38,9 +38,9 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
   ) : (
     <>
       <div>
-        <h2 className="mb-3 text-xl font-bold capitalize text-primary">
+        {/* <h2 className="mb-3 text-xl font-bold capitalize text-primary">
           {currentCategory?.label}
-        </h2>
+        </h2> */}
         <p>{currentCategory?.summary}</p>
       </div>
       <section
