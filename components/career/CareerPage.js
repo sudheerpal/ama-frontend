@@ -1,5 +1,5 @@
 import React from "react";
-import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
+import carrerBg from "@/assets/career/careerBg4.jpeg";
 import CustomContainer from "../ui/CustomContainer";
 import Link from "next/link";
 import { ChevronRight } from "react-feather";
@@ -32,29 +32,31 @@ const CareerPage = () => {
   return (
     <div className="pb-10">
       <section
-        className="py-12 text-white"
+        className="text-white"
         style={{
-          backgroundImage: `url(${reportHeaderBg.src})`,
+          backgroundImage: `url(${carrerBg.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
         }}
       >
-        <CustomContainer>
-          <p className="flex flex-wrap items-center gap-[2px] text-xs">
-            <Link href="/" className="hover:text-blue-500">
-              Home
-            </Link>
-            <ChevronRight size={10} />
-            <Link href="/career" className="hover:text-blue-500">
+        <div className="py-12 bg-opacity-50 bg-primary">
+          <CustomContainer>
+            <p className="flex flex-wrap items-center gap-[2px] text-xs">
+              <Link href="/" className="hover:text-blue-500">
+                Home
+              </Link>
+              <ChevronRight size={10} />
+              <Link href="/career" className="hover:text-blue-500">
+                Career
+              </Link>
+            </p>
+            <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
               Career
-            </Link>
-          </p>
-          <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-            Career
-          </h1>
-          <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
-        </CustomContainer>
+            </h1>
+            <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
+          </CustomContainer>
+        </div>
       </section>
       <section>
         <CustomContainer>
