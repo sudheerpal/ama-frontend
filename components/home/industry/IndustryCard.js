@@ -3,11 +3,11 @@ import Link from "next/link";
 import React from "react";
 
 const IndustryCard = ({ industry }) => {
-  const { label, summary, icon } = industry;
+  const { label, summary, icon, link } = industry;
 
   return (
     <Link
-      href="/"
+      href={`/industries/${link}`}
       className="flex items-center gap-2 px-2 py-5 duration-300 hover:bg-white min-h-60 group"
     >
       <div>

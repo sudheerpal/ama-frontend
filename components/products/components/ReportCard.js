@@ -20,9 +20,9 @@ const ReportCard = ({ report }) => {
 
   return (
     <div>
-      <section className="gap-5 p-2 my-5 space-y-3 rounded md:flex md:space-y-0 hover:shadow-md lg:p-4">
+      <section className="gap-5 p-2 my-5 space-y-3 duration-300 rounded md:flex md:space-y-0 hover:shadow-lg lg:p-4">
         <div>
-          <div className="relative border-2 shadow border-primary w-36">
+          <div className="relative overflow-hidden border-4 shadow border-primary w-36 max-h-48">
             <Image src={reportThumbnail} alt="report thumbnail" />
             <span className="absolute text-sm font-bold text-center max-w-28 top-12 right-1">
               {marketKeyword}
@@ -30,8 +30,8 @@ const ReportCard = ({ report }) => {
           </div>
         </div>
         <div className="md:flex-1">
-          <div className="space-y-0">
-            <h4 className="font-bold text-primary">
+          <div className="space-y-0 md:space-y-2">
+            <h4 className="font-bold text-primary md:text-xl">
               <Link href={`/reports/${slug}`}>{title}</Link>{" "}
             </h4>
             <p className="text-gray-600">{summery}</p>
@@ -42,7 +42,7 @@ const ReportCard = ({ report }) => {
             <span>No Of Pages: {noOfPages}</span>
           </div>
         </div>
-        <hr className="hidden w-0 border min-h-32 lg:block" />
+        <hr className="hidden w-0 h-auto border min-h-32 lg:block" />
         <div className="min-w-[20%]">
           <section className="space-y-2">
             <h4 className="font-bold">Price: {price?.singlePrice}</h4>

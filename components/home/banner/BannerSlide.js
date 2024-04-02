@@ -17,11 +17,11 @@ import CustomContainer from "@/components/ui/CustomContainer";
 const BannerSlide = () => {
   const slidesData = [
     {
-      id: 1,
-      title: "Transform Your Business",
-      subTitle: "Unlock your potential",
-      subTitle2: "with our cutting-edge technology",
-      image: image1,
+      id: 2,
+      title: "Twice The Glory",
+      subTitle: "We are yet again",
+      subTitle2: "A great place to work",
+      image: image2,
     },
     {
       id: 3,
@@ -31,11 +31,11 @@ const BannerSlide = () => {
       image: image3,
     },
     {
-      id: 2,
-      title: "Twice The Glory",
-      subTitle: "We are yet again",
-      subTitle2: "A great place to work",
-      image: image2,
+      id: 1,
+      title: "Transform Your Business",
+      subTitle: "Unlock your potential",
+      subTitle2: "with our cutting-edge technology",
+      image: image1,
     },
   ];
 

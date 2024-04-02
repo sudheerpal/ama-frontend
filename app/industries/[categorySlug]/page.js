@@ -3,6 +3,7 @@ import Footer from "@/components/home/Footer";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
+import LucidIcon from "@/components/ui/icons/LucidIcons";
 import {
   fetchCategories,
   fetchCategory,
@@ -19,12 +20,18 @@ const ReportListing = async ({ params, searchParams }) => {
   const sidebarCategories = await fetchCategories();
   return (
     <>
-      <section className="py-2 text-white bg-primary">
+      <section className="py-2 text-white lg:py-4 bg-primary">
         <CustomContainer>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Home className="pb-1" size={30} />
-              <span className="text-lg font-bold md:text-xl ">Healthcare</span>
+              <LucidIcon
+                name={currentCategory?.icon}
+                classNames="mx-auto text-white"
+                size={30}
+              />
+              <span className="text-lg font-bold md:text-xl ">
+                {currentCategory?.label}
+              </span>
             </div>
             <div className="hidden md:block">
               <i className="text-lg font-bold md:text-xl ">

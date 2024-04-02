@@ -1,7 +1,15 @@
 import React from "react";
 import logo from "@/assets/logo3.png";
 import Image from "next/image";
-import { Clock, Facebook, Linkedin, Mail, Twitter } from "react-feather";
+import {
+  Clock,
+  Facebook,
+  Linkedin,
+  Mail,
+  MapPin,
+  PhoneCall,
+  Twitter,
+} from "react-feather";
 import Link from "next/link";
 import CustomContainer from "@/components/ui/CustomContainer";
 
@@ -13,39 +21,35 @@ const MainFooter = () => {
       <CustomContainer>
         <section className="grid grid-cols-1 gap-8 py-8 text-white md:grid-cols-2 lg:grid-cols-4 lg:py-12">
           <div className="w-full py-4 space-y-3">
-            <Image className="block w-56 mx-auto" src={logo} alt="logo" />
-            <p className="text-sm">
-              Advance Market Analytics is a wholly owned brand of AMA Research &
-              Media LLP which provides next generation service for organizations
-              with a deep focus on market intelligence, data analytics, and
-              social intelligence, all uniquely delivered under one roof by
-              skilled professionals. By combining and analyzing acquire lucid
-              and most relevant data which would help in better decision-making.
+            <h3 className="text-2xl font-bold">Business Address</h3>
+            <h3 className="text-2xl font-bold">Head Office</h3>
+            <p className="flex gap-2">
+              <MapPin className="w-[46px] text-secondary mt-1" size={18} />
+              <span>
+                Office no. A 5010, fifth floor, Solitaire Business Hub, Near
+                Phoenix mall, Pune, Maharashtra 41101
+              </span>
+            </p>
+          </div>{" "}
+          <div className="w-full py-4 space-y-3">
+            <h3 className="text-2xl font-bold">Contact Information</h3>
+            <div className="flex flex-col">
+              <p>Craig Francis</p>
+              <p className="text-sm text-gray-400">Business Development Head</p>
+            </div>
+            <p className="flex items-center gap-2">
+              <PhoneCall className="text-secondary" size={18} />{" "}
+              <span>+44 1223 92 666</span>
+            </p>
+            <p className="flex items-center gap-2">
+              <Mail className="text-secondary" size={18} />
+              <span className="text-blue-500">
+                sales@advancemarketanalytics.com
+              </span>
             </p>
           </div>
           <div className="w-full py-4 space-y-3">
-            <h2 className="pb-2 text-2xl font-bold border-b">recent news</h2>
-            <div>
-              <h4 className="font-medium">
-                A digital prescription for the pharma industry
-              </h4>
-              <div className="flex gap-2 mt-2">
-                <Clock className="mt-[2px] text-secondary" size={18} />
-                <p className="text-gray-400">October 23, 2023</p>
-              </div>
-            </div>
-            <div>
-              <h4 className="font-medium">
-                A digital prescription for the pharma industry
-              </h4>
-              <div className="flex gap-2 mt-2">
-                <Clock className="mt-[2px] text-secondary" size={18} />
-                <p className="text-gray-400">October 23, 2023</p>
-              </div>
-            </div>
-          </div>
-          <div className="w-full py-4 space-y-3">
-            <h2 className="pb-2 text-2xl font-bold border-b">extra links</h2>
+            <h2 className="pb-2 text-2xl font-bold border-b">Extra Links</h2>
             <div className="grid grid-cols-2 text-blue-500">
               <div className="flex flex-col gap-2">
                 <Link href="/about">About</Link>
@@ -55,12 +59,12 @@ const MainFooter = () => {
               <div className="flex flex-col gap-2">
                 <Link href="/service">Services</Link>
                 <Link href="/career">Our team</Link>
-                <Link href="/">Our approach</Link>
+                <Link href="/about">Our approach</Link>
               </div>
             </div>
           </div>
           <div className="w-full py-4 space-y-3">
-            <h2 className="pb-2 text-2xl font-bold">subscribe</h2>
+            <h2 className="pb-2 text-2xl font-bold">Subscribe</h2>
             <div className="flex items-center h-8">
               <input
                 className="w-full h-full text-black border-2 border-secondary focus:outline-none"
@@ -74,9 +78,25 @@ const MainFooter = () => {
           </div>
         </section>
         <hr />
-        <footer className="py-6 text-sm text-white md:flex md:justify-between">
+        <footer className="py-6 space-y-3 text-sm text-white md:flex md:justify-between md:space-y-0">
           <p>© {`${currentYear} ${copyrightMsg}`}</p>
           <div className="flex items-center gap-2 lg:gap-4">
+            <div className="flex gap-2 mr-10">
+              <Link className="hover:text-blue-500" href="/privacy-policy">
+                Privacy Policy
+              </Link>
+              <hr className="w-0 h-auto border" />
+              <Link
+                className="hover:text-blue-500"
+                href="/terms-and-conditions"
+              >
+                Terms and Conditions
+              </Link>
+              <hr className="w-0 h-auto border" />
+              <Link className="hover:text-blue-500" href="/faq">
+                FAQ
+              </Link>
+            </div>
             <Link
               href="https://www.facebook.com/advancemarketanalytics"
               target="_blank"

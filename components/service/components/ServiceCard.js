@@ -17,9 +17,9 @@ const ServiceCard = ({ service }) => {
             {title}
           </h3>
           <p className="flex-1">{description}</p>
-          <div className="mt-auto">
+          {/* <div className="mt-auto">
             <Button>Learn More</Button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
