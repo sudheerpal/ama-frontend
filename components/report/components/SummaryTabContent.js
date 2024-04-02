@@ -91,6 +91,9 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               options={{
                 chart: {
                   id: "basic-bar",
+                  toolbar: {
+                    show: false,
+                  },
                 },
                 xaxis: {
                   categories: Object.keys(chartData.market_growth),
@@ -123,6 +126,9 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               options={{
                 chart: {
                   id: "basic-bar",
+                  toolbar: {
+                    show: false,
+                  },
                 },
                 xaxis: {
                   categories: Object.keys(chartData.market_size),

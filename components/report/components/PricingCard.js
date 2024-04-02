@@ -44,10 +44,11 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.singlePrice}
             </span>
-            <div class="relative group">
+            <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div class="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
-                <ul className="list-disc ">
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Single User License: </div>
+                <ul className="list-disc ml-3 mt-1">
                   <li>Only one user can access this report at time</li>
                   <li>
                     users are not allowed to take a print out of the report PDF
@@ -67,15 +68,16 @@ const PricingCard = ({ price = {}, slug = "" }) => {
               onChange={() => handlePlanSelect("multi")}
             />
             <label className="cursor-pointer" htmlFor="multy">
-              Multy User License{" "}
+              Multy User License
             </label>
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.multiPrice}
             </span>
-            <div class="relative group">
+            <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div class="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
-                <ul className="list-disc ">
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Multi User License: </div>
+                <ul className="list-disc ml-3 mt-1">
                   <li>The report will be emailed to you in PDF format. </li>
                   <li>
                     This is a multi-user license, allowing 1-10 employees within
@@ -101,10 +103,11 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.enterprisePrice}
             </span>
-            <div class="relative group">
+            <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div class="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
-                <ul className="list-disc ">
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Corporate User License: </div>
+                <ul className="list-disc ml-3 mt-1">
                   <li>The report will be emailed to you in PDF format. </li>
                   <li>
                     Excel Raw data with access to full quantitative & financial
