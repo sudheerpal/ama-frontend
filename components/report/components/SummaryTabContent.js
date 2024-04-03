@@ -22,21 +22,23 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
   const rdContent = useRef(null);
   const growthRef = useRef(null);
   const sizeRef = useRef(null);
+  const regionRef = useRef(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   let chartData = {};
   try {
     chartData = JSON.parse(rd.chart);
   } catch (error) {
     // console.error(error)
   }
-  let newData = {};
-  if (chartData && chartData.regional_market_share) {
-    if (typeof Object.values(chartData.regional_market_share)[0] === "object") {
-      for (const key in chartData.regional_market_share) {
-        const firstYearValue = chartData.regional_market_share[key]["2023"];
-        newData[key] = firstYearValue;
-      }
-    } else newData = chartData.regional_market_share;
-  }
+  // let newData = {};
+  // if (chartData && chartData.regional_market_share) {
+  //   if (typeof Object.values(chartData.regional_market_share)[0] === "object") {
+  //     for (const key in chartData.regional_market_share) {
+  //       const firstYearValue = chartData.regional_market_share[key]["2023"];
+  //       newData[key] = firstYearValue;
+  //     }
+  //   } else newData = chartData.regional_market_share;
+  // }
 
   useEffect(() => {
     if (rdContent.current && growthRef.current) {
@@ -63,16 +65,31 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
         console.error("error", error);
       }
     }
+    if (rdContent.current && regionRef.current) {
+      try {
+        const h3Elements = Array.from(rdContent.current.querySelectorAll("h3"));
+        h3Elements.forEach((h3) => {
+          if (h3.textContent.includes("Regional Insight")) {
+            h3.parentNode.insertBefore(regionRef.current, h3.nextSibling);
+          }
+        });
+      } catch (error) {
+        console.error("error", error);
+      }
+    }
   }, [rdContent, growthRef, chartData]);
 
   return (
-    <div>
+    <div className="mb-5">
       <section className="max-w-full prose">
         <div
           ref={rdContent}
           id="rd_content"
           dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
         ></div>
+        {chartData?.regional_market_share && (
+          <RegionData regions={chartData?.regional_market_share || {}} />
+        )}
         {/* {chartData?.regional_market_share && (
           <RegionData regions={rd?.chart?.regional_market_share || {}} />
         )} */}
@@ -109,7 +126,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">www.amr.com</div>
+          <div className="text-center">www.marketresearchforecast.com</div>
         </div>
       )}
       {Chart && chartData && chartData.market_size && (
@@ -144,7 +161,47 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">www.amr.com</div>
+          <div className="text-center">www.marketresearchforecast.com</div>
+        </div>
+      )}
+
+      {Chart && chartData && chartData.market_size && (
+        <div
+          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
+          ref={regionRef}
+          id="chart_content"
+        >
+          <div className="font-semibold text-center text-gray-500">
+            Regional Market Share
+          </div>
+          <div className="flex justify-center">
+            <Chart
+              options={{
+                chart: {
+                  width: 380,
+                  type: "pie",
+                },
+                labels: Object.keys(chartData.regional_market_share),
+                responsive: [
+                  {
+                    breakpoint: 480,
+                    options: {
+                      chart: {
+                        width: 200,
+                      },
+                      legend: {
+                        position: "bottom",
+                      },
+                    },
+                  },
+                ],
+              }}
+              series={Object.values(chartData.regional_market_share)}
+              type="pie"
+              width={600}
+            />
+          </div>
+          <div className="text-center">www.marketresearchforecast.com</div>
         </div>
       )}
       <section>

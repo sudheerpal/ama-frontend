@@ -1,7 +1,12 @@
 "use client";
 import InputText from "@/components/ui/forms/InputText";
 import React, { useEffect, useRef, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import {
+  useParams,
+  usePathname,
+  useRouter,
+  useSearchParams,
+} from "next/navigation";
 import { countryList } from "@/db/countryList";
 import InputRadio from "../ui/forms/InputRadio";
 import Image from "next/image";
@@ -47,6 +52,8 @@ const QueryForm = ({
   }
 
   const router = useRouter();
+  const pathname = usePathname();
+  console.log("path", pathname);
 
   const [submitted, setSubmitted] = useState(false);
   const [captcha, setCaptcha] = useState("");
@@ -127,7 +134,7 @@ const QueryForm = ({
           }
         );
         const resData = await res.json();
-        router.push("/thank-you");
+        router.push(`${pathname}/thank-you`);
       } catch (error) {
         console.log("error", error);
       }
@@ -164,6 +171,8 @@ const QueryForm = ({
   useEffect(() => {
     generateCaptcha();
     getSponsorsHome();
+    const url = `${pathname}?${searchParams}`;
+    console.log(url);
     return;
   }, []);
   return (

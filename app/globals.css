@@ -53,3 +53,28 @@ body {
 .remove_arrow .swiper-button-prev {
   visibility: hidden;
 }
+
+.north_america {
+  top: 10%;
+  left: 12%;
+}
+
+.south_africa {
+  left: 22%;
+  bottom: 20%;
+}
+
+.europe {
+  right: 35%;
+  top: 8%;
+}
+
+.asia_pacific {
+  top: 20%;
+  right: 20%;
+}
+
+.middle_east {
+  bottom: 32%;
+  right: 39%;
+}

@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 import React from "react";
 import allCategoryThumbnail from "@/assets/report/reportCategoryThumbnail/allCategory.jpeg";
 import { getCategoryThumbnail } from "@/utils/helper";
-
+import Link from "next/link";
 const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
   const { thumbnail } = getCategoryThumbnail(currentCategory?.link);
   return isAllReports ? (
@@ -31,7 +31,12 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
             Explore Our Comprehensive Research Methodologies Across Various
             Industries
           </h3>
-          <Button type="secondary">Speak to an Expert</Button>
+          <Link
+            href={"/request-industry-insights"}
+            className="flex bg-secondary text-primary items-center justify-center gap-1 px-4 py-2 rounded font-semibold  hover:shadow duration-100"
+          >
+            Speak to an Expert
+          </Link>
         </div>
       </section>
     </>

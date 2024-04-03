@@ -24,7 +24,7 @@ export default async function page() {
             <QueryForm
               type={"SWA"}
               btnText="Submit Request"
-              slug={"/"}
+              slug={""}
               reportTitle={"This Lead is for Speak with Analysts"}
             />
           </div>
