@@ -48,6 +48,7 @@ const CheckoutForm = ({
           status={status}
           direct={direct}
           price={reportData?.report?.price}
+          reportTitle={reportData?.report?.title}
         />
       </div>
       <div className="lg:w-1/3  mt-8 lg:ml-8">

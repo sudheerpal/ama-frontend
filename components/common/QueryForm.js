@@ -24,6 +24,7 @@ const QueryForm = ({
   status = "NOPN",
   direct = false,
   price = {},
+  reportTitle = "Report Link",
 }) => {
   let reportPrice = 0;
   const searchParams = useSearchParams();
@@ -46,6 +47,7 @@ const QueryForm = ({
   }
 
   const router = useRouter();
+
   const [submitted, setSubmitted] = useState(false);
   const [captcha, setCaptcha] = useState("");
   const [userInput, setUserInput] = useState("");
@@ -68,7 +70,8 @@ const QueryForm = ({
     status: status,
     direct: direct,
     // paymentMethod: "visa", // Default payment method
-    report_page_link: `https://ama-admin.com/report/${slug}`,
+    report_page_link: `https://marketresearchforecast.com/reports/${slug}`,
+    report_name: reportTitle,
   });
 
   const handleInputChange = (e) => {
@@ -227,13 +230,15 @@ const QueryForm = ({
             onChange={handleInputChange}
             required={true}
           />
-          <InputText
+          <textarea
             name="comment"
-            placeholder="Enter your message *"
+            placeholder="Enter your message"
             value={formData.message}
             onChange={handleInputChange}
-            classNames={"md:col-span-2"}
-          />
+            className={
+              "md:col-span-2 textarea rounded-sm textarea-sm bg-gray-200"
+            }
+          ></textarea>
         </div>
         {/* Payment method radio inputs */}
         {direct && (
@@ -349,7 +354,7 @@ const QueryForm = ({
           {submitted ? "Submitting.." : btnText}
         </button>
       </form>
-      <p className="text-sm mt-5">
+      <p className="text-sm my-5">
         We do not share your information with anyone. However, we may send you
         emails based on your report interest from time to time. You may contact
         us at any time to opt-out.{" "}
