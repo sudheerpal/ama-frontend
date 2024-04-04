@@ -43,7 +43,7 @@ const MethodologyTabContent = () => {
   ];
 
   return (
-    <div className="space-y-5 lg:space-y-10">
+    <div className="mb-5 space-y-5 lg:space-y-10 lg:mb-10">
       {/* step 1 */}
       <section>
         <header className="my-5">

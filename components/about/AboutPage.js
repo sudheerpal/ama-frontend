@@ -11,7 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Sponsors from "../home/Sponsors";
 
-const AboutPage = () => {
+const AboutPage = ({ sponsors }) => {
   const progressData = [
     {
       year: 1985,
@@ -40,10 +40,10 @@ const AboutPage = () => {
   ];
   const links = [
     { text: "Company overview", href: "#company-overview" },
-    { text: "Careers", href: "/careers" },
+    { text: "Career", href: "/career" },
     { text: "Company History", href: "#company-history" },
     { text: "Our misson", href: "#our-misson" },
-    { text: "Our methodology", href: "#our-misson" },
+    // { text: "Our methodology", href: "/reports/123" },
     // { text: "Partners", href: "/partners" },
     // { text: "Our team list", href: "/our-team-list" },
     // { text: "Our team grid", href: "/our-team-grid" },
@@ -89,7 +89,7 @@ const AboutPage = () => {
               </div>
             </div>
             {/* years of progress */}
-            <section className="my-5">
+            <section id="company-history" className="my-5">
               {progressData?.map((data, index) => (
                 <div key={index} className="flex gap-2 mb-5 md:gap-5 ">
                   <div>
@@ -111,7 +111,7 @@ const AboutPage = () => {
               ))}
             </section>
             {/* company overview section  */}
-            <section>
+            <section id="company-overview">
               <div className="mb-5">
                 <h1 className="mt-4 text-2xl font-bold text-primary lg:text-3xl">
                   Company Overview
@@ -160,7 +160,7 @@ const AboutPage = () => {
                 services, and consumer products.
               </div>
             </section>
-            <section className="md:flex md:gap-5">
+            <section id="our-misson" className="md:flex md:gap-5">
               <div className="flex-1">
                 <h1 className="mt-4 mb-5 text-2xl font-bold capitalize text-primary lg:text-3xl">
                   Our Misson
@@ -193,12 +193,12 @@ const AboutPage = () => {
           {/* sidebar section  */}
           <aside className="space-y-5">
             <section className="mx-4">
-              {links.map((link, idx) => (
+              {links?.map((link, idx) => (
                 <Link
-                  href={"#"}
+                  href={link.href}
                   key={idx}
                   className={`block px-4 py-2 duration-100 bg-gray-200 mb-1 hover:bg-primary hover:text-white text-primary capitalize ${
-                    idx === 0 && "border-l-4 border-primary"
+                    idx === null && "border-l-4 border-primary"
                   }`}
                 >
                   {link.text}
@@ -260,6 +260,7 @@ const AboutPage = () => {
           </aside>
         </section>
       </CustomContainer>
+      <Sponsors sponsors={sponsors} />
       <section>
         <div className="bg-secondary">
           <CustomContainer
