@@ -125,9 +125,12 @@ const ReportPage = ({
                       </li>
                       <li>Fuga deleniti vitae corporis quis porro.</li>
                     </ul>
-                    <button className="block mx-auto mt-5 mb-3 text-white rounded-full btn btn-primary btn-sm">
+                    <Link
+                      href={`/report/${basic?.slug}/enquiry-before-buy`}
+                      className="block mx-auto mt-5 pt-2 text-white rounded-full btn btn-primary btn-sm"
+                    >
                       Ask for customization
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

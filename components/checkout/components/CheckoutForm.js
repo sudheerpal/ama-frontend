@@ -14,7 +14,13 @@ import moment from "moment";
 import UserCard from "@/components/contacts/components/UserCard";
 import QueryForm from "@/components/common/QueryForm";
 
-const CheckoutForm = ({ reportData, type = "", title = "" }) => {
+const CheckoutForm = ({
+  reportData,
+  type = "",
+  title = "",
+  status,
+  direct = false,
+}) => {
   return (
     <div className="flex">
       <div className="lg:w-2/3 lg:mr-4 mt-8 rd">
@@ -39,11 +45,15 @@ const CheckoutForm = ({ reportData, type = "", title = "" }) => {
           type={type}
           btnText="Submit Request"
           slug={reportData?.report?.slug}
+          status={status}
+          direct={direct}
+          price={reportData?.report?.price}
+          reportTitle={reportData?.report?.title}
         />
       </div>
       <div className="lg:w-1/3  mt-8 lg:ml-8">
         <div>
-          {type !== "DIR" && (
+          {!direct && (
             <PricingCard
               price={reportData?.report?.price}
               slug={reportData?.report?.slug}

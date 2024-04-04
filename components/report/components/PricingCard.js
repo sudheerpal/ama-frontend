@@ -7,7 +7,7 @@ import { Info, ShoppingCart } from "react-feather";
 
 const PricingCard = ({ price = {}, slug = "" }) => {
   // State to track selected plan
-  const [selectedPlan, setSelectedPlan] = useState("Single");
+  const [selectedPlan, setSelectedPlan] = useState("single");
 
   // Function to handle selection of plan
   const handlePlanSelect = (plan) => {
@@ -34,9 +34,9 @@ const PricingCard = ({ price = {}, slug = "" }) => {
               type="radio"
               id="single"
               name="plan"
-              value="Single"
-              checked={selectedPlan === "Single"}
-              onChange={() => handlePlanSelect("Single")}
+              value="single"
+              checked={selectedPlan === "single"}
+              onChange={() => handlePlanSelect("single")}
             />
             <label className="cursor-pointer" htmlFor="single">
               Single User License{" "}
@@ -44,17 +44,18 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.singlePrice}
             </span>
-            <Tooltip
-              text={`Scope: Accessible to all employees, regardless of location. Printing permitted.
-Excel Compatibility: Includes Excel version for BI software (SAAS or SAP) integration.
-Insights: Comprehensive quantitative and financial market insights.
-Customizations: Up to 15% within project scope at no extra charge.
-Support: Post-purchase analyst support provided.
-Presentation: Graphs and charts available for presentations.
-Data Sharing: Public sharing allowed with AMA citation.`}
-            >
-              <Info className="z-10" />
-            </Tooltip>
+            <div className="relative group">
+              <Info className="z-10 cursor-pointer" />
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Single User License: </div>
+                <ul className="list-disc ml-3 mt-1">
+                  <li>Only one user can access this report at time</li>
+                  <li>
+                    users are not allowed to take a print out of the report PDF
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="flex items-center gap-2 my-1">
             <input
@@ -62,22 +63,29 @@ Data Sharing: Public sharing allowed with AMA citation.`}
               type="radio"
               id="multy"
               name="plan"
-              value="Multy"
-              checked={selectedPlan === "Multy"}
-              onChange={() => handlePlanSelect("Multy")}
+              value="multi"
+              checked={selectedPlan === "multi"}
+              onChange={() => handlePlanSelect("multi")}
             />
             <label className="cursor-pointer" htmlFor="multy">
-              Multy User License{" "}
+              Multy User License
             </label>
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.multiPrice}
             </span>
-            <Tooltip
-              text={`Delivery: Report emailed in PDF format.
-Accessibility: Allows 1-10 employees within the organization to access.`}
-            >
-              <Info className="z-10" />
-            </Tooltip>
+            <div className="relative group">
+              <Info className="z-10 cursor-pointer" />
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Multi User License: </div>
+                <ul className="list-disc ml-3 mt-1">
+                  <li>The report will be emailed to you in PDF format. </li>
+                  <li>
+                    This is a multi-user license, allowing 1-10 employees within
+                    your organisation to access the report.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="flex items-center gap-2 my-1">
             <input
@@ -85,9 +93,9 @@ Accessibility: Allows 1-10 employees within the organization to access.`}
               type="radio"
               id="corporate"
               name="plan"
-              value="Corporate"
-              checked={selectedPlan === "Corporate"}
-              onChange={() => handlePlanSelect("Corporate")}
+              value="corporate"
+              checked={selectedPlan === "corporate"}
+              onChange={() => handlePlanSelect("corporate")}
             />
             <label className="cursor-pointer" htmlFor="corporate">
               Corporate License{" "}
@@ -95,15 +103,28 @@ Accessibility: Allows 1-10 employees within the organization to access.`}
             <span className="p-1 ml-auto text-sm font-semibold border border-white text-primary">
               ${price.enterprisePrice}
             </span>
-            <Tooltip
-              text={`Accessibility: Only one user access at a time. No printing allowed`}
-            >
-              <Info className="z-10" />
-            </Tooltip>
+            <div className="relative group">
+              <Info className="z-10 cursor-pointer" />
+              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+                <div className="font-semibold"> Corporate User License: </div>
+                <ul className="list-disc ml-3 mt-1">
+                  <li>The report will be emailed to you in PDF format. </li>
+                  <li>
+                    Excel Raw data with access to full quantitative & financial
+                    market insights
+                  </li>
+                  <li>
+                    Customization at no additional cost within the scope of the
+                    report
+                  </li>
+                  <li>Graphs and Charts can be used during presentation</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
         <Link
-          href={`/report/${slug}/checkout`}
+          href={`/report/${slug}/checkout?type=${selectedPlan}`}
           type="submit"
           className="inline-flex items-center justify-center w-full gap-1 py-2 mt-4 font-semibold text-white duration-100 bg-primary hover:bg-opacity-90 hover:shadow"
         >

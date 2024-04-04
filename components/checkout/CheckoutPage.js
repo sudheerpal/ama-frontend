@@ -10,12 +10,6 @@ const CheckoutPage = ({ title }) => {
   const [type, setType] = useState("");
   const handleFormData = async (data) => {
     const myHeaders = new Headers();
-    myHeaders.append(
-      "Authorization",
-      "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJhc2lyLmJzbXJzdHVAZ21haWwuY29tIiwicm9sZSI6eyJuYW1lIjoiYWRtaW4iLCJpZCI6IjY0Mjg2ZjU5Y2E5ODU4MDJiMDQ2MDg4NSJ9LCJpYXQiOjE2OTM1NzUxMjMsImV4cCI6MTY5Mzc3NTEyM30.HT00apprh6glUevBzUYRQtTYjeQ2H-AGs5zDk2kb1SY"
-    );
-    myHeaders.append("Content-Type", "application/json");
-    console.log("data", data);
     // Check if any required field is empty
     const requiredFields = [
       "full_name",

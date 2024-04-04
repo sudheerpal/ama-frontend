@@ -50,7 +50,7 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
             <tr>
               <td className="pl-3">Segmentation</td>
               <td>
-                <ul>
+                <ul className="list-disc">
                   {marketAnalysis.segments.map((segment, index) => {
                     const segments = segment.split(":");
                     if (segments.length > 1) {
@@ -61,7 +61,7 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
                         <React.Fragment key={compositeKey}>
                           <li className="font-semibold mt-3">By {parent}</li>
                           <li className="ml-2 mt-1">
-                            <ul>
+                            <ul className="list-disc">
                               {child.map((item, itemIndex) => {
                                 return (
                                   <li key={compositeKey + "_" + itemIndex}>
@@ -76,6 +76,39 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
                     }
                     return <li key={index}>By {segment}</li>;
                   })}
+                </ul>
+                <ul className="list-disc">
+                  {marketAnalysis?.regionData?.length > 0 && (
+                    <>
+                      {marketAnalysis.regionData.map((segment, index) => {
+                        const regions = segment.split(":");
+                        if (regions.length > 1) {
+                          const parent = regions[0];
+                          const child = regions[1].split(",");
+                          const compositeKey = parent + "_" + child.join("_"); // Creating a composite key
+                          return (
+                            <React.Fragment key={compositeKey}>
+                              <li className="font-semibold mt-3">
+                                By {parent}
+                              </li>
+                              <li className="ml-2 mt-1">
+                                <ul className="list-disc">
+                                  {child.map((item, itemIndex) => {
+                                    return (
+                                      <li key={compositeKey + "_" + itemIndex}>
+                                        {item}
+                                      </li>
+                                    );
+                                  })}
+                                </ul>
+                              </li>
+                            </React.Fragment>
+                          );
+                        }
+                        return <li key={index}>By {segment}</li>;
+                      })}
+                    </>
+                  )}
                 </ul>
               </td>
             </tr>

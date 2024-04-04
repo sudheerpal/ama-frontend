@@ -25,7 +25,7 @@ export default function Testimonials({ testimonials = [] }) {
         modules={[Autoplay]}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide className="p-6" key={index}>
+          <SwiperSlide className="p-6 flex flex-col" key={index}>
             <div
               style={{
                 clipPath:
@@ -33,7 +33,7 @@ export default function Testimonials({ testimonials = [] }) {
               }}
               className="p-4 pb-10 bg-gray-200"
             >
-              <p>{testimonial.testimonial}</p>
+              <p>{testimonial.testimonial} </p>
               <div className="w-16 ml-auto">
                 <div className="w-16 ml-auto">
                   <Image src={quotation} alt="quotation" />

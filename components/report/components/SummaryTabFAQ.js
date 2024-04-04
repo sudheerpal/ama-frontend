@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import SummaryTabFAQAccordion from "./SummaryTabFAQAccordion";
 
 const SummaryTabFAQ = ({ report, marketAnalysis, marketReport }) => {
+  const [shuffledFAQS, setShuffledFAQs] = useState([]);
   const FAQS = [
     {
       question: `What is the projected Compound Annual Growth Rate (CAGR) of the ${report.marketKeyword} ?`,
@@ -78,6 +80,14 @@ const SummaryTabFAQ = ({ report, marketAnalysis, marketReport }) => {
       answer: `To stay informed about further developments, trends, and reports in the ${report.marketKeyword}, consider subscribing to industry newsletters, following relevant companies and organizations, or regularly checking reputable industry news sources and publications.`,
     },
   ];
+  useEffect(() => {
+    const shuffleAndSliceFAQs = FAQS.sort(() => 0.5 - Math.random()).slice(
+      0,
+      8
+    );
+    setShuffledFAQs(shuffleAndSliceFAQs);
+  }, []);
+
   return (
     <section className="mb-8">
       <header className="my-4">
@@ -86,7 +96,7 @@ const SummaryTabFAQ = ({ report, marketAnalysis, marketReport }) => {
         </h3>
       </header>
       <main>
-        {FAQS.map((el, index) => (
+        {shuffledFAQS.map((el, index) => (
           <SummaryTabFAQAccordion key={index} item={el} />
         ))}
       </main>

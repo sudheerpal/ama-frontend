@@ -13,7 +13,9 @@ export default async function page({ params }) {
       <CheckoutForm
         reportData={reportData}
         title={"Submit Buy Request"}
-        type="DIR"
+        type="OBD"
+        status="DIRT"
+        direct={true}
       />
     </CustomContainer>
   );
