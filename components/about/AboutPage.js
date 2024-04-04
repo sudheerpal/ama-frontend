@@ -263,10 +263,10 @@ const AboutPage = () => {
           <CustomContainer
             classNames={`items-center justify-between py-4 lg:flex `}
           >
-            <div className="text-2xl font-bold capitalize">
+            <div className="text-lg font-bold capitalize lg:text-2xl">
               looking for Trending Report by Industries?
             </div>
-            <div className="flex justify-center">
+            <div className="mt-2 lg:mt-0">
               <Link href={`/industries`}>
                 <Button>
                   Explore <ArrowRight size={16} color="#FDE428" />

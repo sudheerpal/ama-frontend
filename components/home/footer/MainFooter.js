@@ -80,8 +80,8 @@ const MainFooter = () => {
         <hr />
         <footer className="py-6 space-y-3 text-sm text-white md:flex md:justify-between md:space-y-0">
           <p>© {`${currentYear} ${copyrightMsg}`}</p>
-          <div className="flex items-center gap-2 lg:gap-4">
-            <div className="flex gap-2 mr-10">
+          <div className="items-center gap-2 md:flex lg:gap-4">
+            <div className="flex gap-2 md:mr-10">
               <Link className="hover:text-blue-500" href="/privacy-policy">
                 Privacy Policy
               </Link>
@@ -94,27 +94,29 @@ const MainFooter = () => {
                 FAQ
               </Link>
             </div>
-            <Link
-              href="https://www.facebook.com/advancemarketanalytics"
-              target="_blank"
-              className="hover:text-blue-500"
-            >
-              <Facebook size={18} />
-            </Link>
-            <Link
-              href="https://twitter.com/amareport"
-              target="_blank"
-              className="hover:text-blue-500"
-            >
-              <Twitter size={18} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/company/advance-market-analytics"
-              target="_blank"
-              className="hover:text-blue-500"
-            >
-              <Linkedin size={18} />
-            </Link>
+            <div className="flex items-center justify-center gap-2 mt-3 lg:gap-4 md:mt-0">
+              <Link
+                href="https://www.facebook.com/advancemarketanalytics"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
+                <Facebook size={18} />
+              </Link>
+              <Link
+                href="https://twitter.com/amareport"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
+                <Twitter size={18} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/advance-market-analytics"
+                target="_blank"
+                className="hover:text-blue-500"
+              >
+                <Linkedin size={18} />
+              </Link>
+            </div>
           </div>
         </footer>
       </CustomContainer>
