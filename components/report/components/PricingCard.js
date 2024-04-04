@@ -7,7 +7,7 @@ import { Info, ShoppingCart } from "react-feather";
 
 const PricingCard = ({ price = {}, slug = "" }) => {
   // State to track selected plan
-  const [selectedPlan, setSelectedPlan] = useState("single");
+  const [selectedPlan, setSelectedPlan] = useState("corporate");
 
   // Function to handle selection of plan
   const handlePlanSelect = (plan) => {
@@ -108,7 +108,10 @@ const PricingCard = ({ price = {}, slug = "" }) => {
               <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
                 <div className="font-semibold"> Corporate User License: </div>
                 <ul className="list-disc ml-3 mt-1">
-                  <li>The report will be emailed to you in PDF format. </li>
+                  <li>
+                    Sharable and Printable among all employees of your
+                    organization
+                  </li>
                   <li>
                     Excel Raw data with access to full quantitative & financial
                     market insights

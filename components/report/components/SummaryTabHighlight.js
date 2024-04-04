@@ -77,7 +77,10 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
                     return <li key={index}>By {segment}</li>;
                   })}
                 </ul>
-                <ul className="list-disc">
+                <ul className="list-disc font-semibold mt-3 mb-2">
+                  <li>By Geography</li>
+                </ul>
+                <ul className=" ml-3 list-disc">
                   {marketAnalysis?.regionData?.length > 0 && (
                     <>
                       {marketAnalysis.regionData.map((segment, index) => {
@@ -88,10 +91,8 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
                           const compositeKey = parent + "_" + child.join("_"); // Creating a composite key
                           return (
                             <React.Fragment key={compositeKey}>
-                              <li className="font-semibold mt-3">
-                                By {parent}
-                              </li>
-                              <li className="ml-2 mt-1">
+                              <li className="">{parent}</li>
+                              <li className="ml-3 mb-1">
                                 <ul className="list-disc">
                                   {child.map((item, itemIndex) => {
                                     return (
