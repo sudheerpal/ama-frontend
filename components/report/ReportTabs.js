@@ -4,6 +4,7 @@ import SingleReportTab from "./components/SingleReportTab";
 import SummaryTabContent from "./components/SummaryTabContent";
 import TOC from "./components/TOC";
 import SummaryTabHighlight from "./components/SummaryTabHighlight";
+import MethodologyTabContent from "./components/MethodologyTabContent";
 
 const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
   // State to track the active tab
@@ -46,7 +47,7 @@ const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
         <SummaryTabHighlight basic={basic} marketAnalysis={marketAnalysis} />
       ),
     },
-    { id: 4, label: "Methodology", content: "Tab content 4" },
+    { id: 4, label: "Methodology", content: <MethodologyTabContent /> },
   ];
 
   return (

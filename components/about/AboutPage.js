@@ -9,6 +9,7 @@ import avatar from "@/assets/report/avatar.png";
 import quotation from "@/assets/report/quotation.png";
 import Image from "next/image";
 import Link from "next/link";
+import Sponsors from "../home/Sponsors";
 
 const AboutPage = () => {
   const progressData = [
@@ -38,13 +39,14 @@ const AboutPage = () => {
     },
   ];
   const links = [
-    { text: "Company overview", href: "/company-overview" },
+    { text: "Company overview", href: "#company-overview" },
     { text: "Careers", href: "/careers" },
-    { text: "Company History", href: "/company-history" },
-    { text: "Our approach", href: "/our-approach" },
-    { text: "Partners", href: "/partners" },
-    { text: "Our team list", href: "/our-team-list" },
-    { text: "Our team grid", href: "/our-team-grid" },
+    { text: "Company History", href: "#company-history" },
+    { text: "Our misson", href: "#our-misson" },
+    { text: "Our methodology", href: "#our-misson" },
+    // { text: "Partners", href: "/partners" },
+    // { text: "Our team list", href: "/our-team-list" },
+    // { text: "Our team grid", href: "/our-team-grid" },
   ];
 
   return (
@@ -195,7 +197,7 @@ const AboutPage = () => {
                 <Link
                   href={"#"}
                   key={idx}
-                  className={`block px-4 py-2 duration-100 bg-gray-200 mb-1 hover:bg-primary hover:text-white text-primary ${
+                  className={`block px-4 py-2 duration-100 bg-gray-200 mb-1 hover:bg-primary hover:text-white text-primary capitalize ${
                     idx === 0 && "border-l-4 border-primary"
                   }`}
                 >
