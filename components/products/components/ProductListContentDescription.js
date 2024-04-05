@@ -2,10 +2,10 @@
 import Button from "@/components/ui/Button";
 import React from "react";
 import allCategoryThumbnail from "@/assets/report/reportCategoryThumbnail/allCategory.jpeg";
-import { getCategoryThumbnail } from "@/utils/helper";
 import Link from "next/link";
 const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
-  const { thumbnail } = getCategoryThumbnail(currentCategory?.link);
+  const thumbnail = currentCategory?.parent?.banner || currentCategory?.banner;
+  console.log(thumbnail);
   return isAllReports ? (
     <>
       <div>
@@ -20,7 +20,7 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
       </div>
       <section
         style={{
-          backgroundImage: `url(${allCategoryThumbnail.src})`,
+          backgroundImage: `url(${allCategoryThumbnail?.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
@@ -33,7 +33,7 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
           </h3>
           <Link
             href={"/request-industry-insights"}
-            className="flex bg-secondary text-primary items-center justify-center gap-1 px-4 py-2 rounded font-semibold  hover:shadow duration-100"
+            className="flex items-center justify-center gap-1 px-4 py-2 font-semibold duration-100 rounded bg-secondary text-primary hover:shadow"
           >
             Speak to an Expert
           </Link>
@@ -50,7 +50,7 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
       </div>
       <section
         style={{
-          backgroundImage: `url(${thumbnail.src})`, // Use the retrieved thumbnail
+          backgroundImage: `url(${thumbnail})`, // Use the retrieved thumbnail
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
@@ -61,7 +61,12 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
             Explore Our Comprehensive Research Methodologies Across Various
             Industries
           </h3>
-          <Button type="secondary">Speak to an Expert</Button>
+          <Link
+            href={"/request-industry-insights"}
+            className="flex items-center justify-center gap-1 px-4 py-2 font-semibold duration-100 rounded bg-secondary text-primary hover:shadow"
+          >
+            Speak to an Expert
+          </Link>
         </div>
       </section>
     </>

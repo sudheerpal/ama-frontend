@@ -25,7 +25,11 @@ const ReportListing = async ({ params, searchParams }) => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <LucidIcon
-                name={currentCategory?.icon}
+                name={
+                  currentCategory?.parent?.icon ||
+                  currentCategory?.icon ||
+                  "FileText"
+                }
                 classNames="mx-auto text-white"
                 size={30}
               />

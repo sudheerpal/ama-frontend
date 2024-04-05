@@ -118,18 +118,27 @@ const ReportPage = ({
                   </h3>
                   <div className="p-4 pl-8">
                     <ul className="mb-4 list-disc">
-                      <li>Lorem ipsum dolor sit amet consectetur.</li>
-                      <li>Deserunt corporis quasi modi? Eius, sed.</li>
-                      <li>Eveniet omnis rerum reiciendis. Ut, ipsum.</li>
-                      <li>Fuga deserunt eum culpa consequatur facilis!</li>
                       <li>
-                        Voluptas dolore eveniet voluptatibus quisquam tenetur!
+                        In-depth Analysis Tailored to Specified Regions or
+                        Segments
                       </li>
-                      <li>Fuga deleniti vitae corporis quis porro.</li>
+                      <li>Company Profiles Customized to User Preferences</li>
+                      <li>
+                        Comprehensive Insights Focused on Specific Segments or
+                        Regions
+                      </li>
+                      <li>
+                        Customized Evaluation of Competitive Landscape to Meet
+                        Your Needs
+                      </li>
+                      <li>
+                        Tailored Customization to Address Other Specific
+                        Requirements
+                      </li>
                     </ul>
                     <Link
                       href={`/report/${basic?.slug}/enquiry-before-buy`}
-                      className="block mx-auto mt-5 pt-2 text-white rounded-full btn btn-primary btn-sm"
+                      className="block pt-2 mx-auto mt-5 text-white rounded-full btn btn-primary btn-sm"
                     >
                       Ask for customization
                     </Link>
@@ -139,7 +148,7 @@ const ReportPage = ({
               {/* segment 3 */}
               <div className="mx-4 my-5">
                 <div className="p-5 rounded bg-secondary">
-                  <h2 className="mb-4 font-semibold text-sm text-center text-primary">
+                  <h2 className="mb-4 text-sm font-semibold text-center text-primary">
                     {reportData.basic.category?.label} Clients
                   </h2>
                   <div className="text-center bg-white rounded">
