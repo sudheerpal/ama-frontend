@@ -78,3 +78,13 @@ body {
   bottom: 32%;
   right: 39%;
 }
+
+/* Hide scrollbar for WebKit browsers */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
