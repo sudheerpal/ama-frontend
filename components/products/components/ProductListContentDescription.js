@@ -5,6 +5,7 @@ import allCategoryThumbnail from "@/assets/report/reportCategoryThumbnail/allCat
 import Link from "next/link";
 const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
   const thumbnail = currentCategory?.parent?.banner || currentCategory?.banner;
+  console.log(thumbnail);
   return isAllReports ? (
     <>
       <div>
@@ -49,7 +50,7 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
       </div>
       <section
         style={{
-          backgroundImage: `url(${thumbnail?.src})`, // Use the retrieved thumbnail
+          backgroundImage: `url(${thumbnail})`, // Use the retrieved thumbnail
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
