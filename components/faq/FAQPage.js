@@ -60,12 +60,12 @@ const FAQPage = () => {
     {
       question: "What is Market Research Forecast refund & return policy?",
       answer:
-        "We offer a refund or return policy for products that do not meet your expectations or are damaged upon receipt. Please refer to our website or contact customer support for more information on our policy.",
+        "Due to the nature of the products we sell (being information-based, they are essentially consumed upon purchase and cannot easily be returned), we do not provide refunds for orders or accept returns. Please read all available information about a product before purchasing. If you have any questions, feel free to contact us at +1 551 333 1547 (US) / +44 2070 979277 (EU) or email us at sales@advancemarketanalytics.com. Our Customer Service team will be happy to assist you.",
     },
     {
       question: "What is Market Research Forecast cancellation policy?",
       answer:
-        "You can cancel your order within a specified timeframe before the scheduled delivery date. Please refer to our cancellation policy for more details.",
+        "You can cancel your order within a specified timeframe before we initiate the order. Please refer to our cancellation policy for more details.",
     },
     {
       question: "How do I use marketresearchforecast.com?",
@@ -82,11 +82,11 @@ const FAQPage = () => {
       answer:
         "We offer a diverse range of research and reports covering various industries, markets, and regions. Our products include market analysis reports, industry forecasts, company profiles, and custom research services.",
     },
-    {
-      question: "What do I do if I forgot my password?",
-      answer:
-        "If you forgot your password, you can simply click on the 'Forgot Password' link on the login page. A password reset link will be sent to the email address associated with your account. You can also contact our support team for further assistance.",
-    },
+    // {
+    //   question: "What do I do if I forgot my password?",
+    //   answer:
+    //     "If you forgot your password, you can simply click on the 'Forgot Password' link on the login page. A password reset link will be sent to the email address associated with your account. You can also contact our support team for further assistance.",
+    // },
   ];
 
   return (
