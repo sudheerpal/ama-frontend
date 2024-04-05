@@ -22,7 +22,7 @@ const PricingCard = ({ price = {}, slug = "" }) => {
   };
 
   return (
-    <div className="max-w-sm pt-4 text-sm rounded bg-secondary">
+    <div className="pt-4 text-sm rounded  bg-secondary">
       <h3 className="mb-4 text-xl font-bold text-center text-primary">
         Pricing
       </h3>
@@ -46,9 +46,9 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Single User License: </div>
-                <ul className="list-disc ml-3 mt-1">
+                <ul className="mt-1 ml-3 list-disc">
                   <li>Only one user can access this report at time</li>
                   <li>
                     users are not allowed to take a print out of the report PDF
@@ -75,9 +75,9 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Multi User License: </div>
-                <ul className="list-disc ml-3 mt-1">
+                <ul className="mt-1 ml-3 list-disc">
                   <li>The report will be emailed to you in PDF format. </li>
                   <li>
                     This is a multi-user license, allowing 1-10 employees within
@@ -105,9 +105,9 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute bottom-8 hidden right-0  p-6 z-40 group-hover:block bg-white text-gray-700 border border-gray-300  rounded-lg w-56 mt-2">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Corporate User License: </div>
-                <ul className="list-disc ml-3 mt-1">
+                <ul className="mt-1 ml-3 list-disc">
                   <li>
                     Sharable and Printable among all employees of your
                     organization

@@ -41,7 +41,7 @@ const ReportListing = async ({ searchParams }) => {
           <div className="lg:col-span-3">
             <ProductsList reports={reports} isAllReports={true} />
           </div>
-          <div className="sticky top-0 mb-5 h-min lg:block">
+          <div className="sticky top-0 h-screen mb-5 overflow-y-auto lg:block">
             <ProductSidebar categories={sidebarCategories} />
           </div>
         </section>
