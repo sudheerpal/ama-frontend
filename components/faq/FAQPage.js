@@ -122,16 +122,16 @@ const FAQPage = () => {
       <CustomContainer classNames="py-5 md:py-10">
         <main className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
           <section>
-            {FAQs.map((el, index) => (
-              <FAQAccordion key={index} item={el} />
-            ))}
-          </section>
-          <section>
             <Image
               className="w-full max-w-sm mx-auto"
               src={faqImage}
               alt="Question and Answer Image"
             />
+          </section>
+          <section>
+            {FAQs.map((el, index) => (
+              <FAQAccordion key={index} item={el} />
+            ))}
           </section>
         </main>
       </CustomContainer>
