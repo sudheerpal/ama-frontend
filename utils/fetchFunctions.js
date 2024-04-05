@@ -105,7 +105,7 @@ export const fetchReports = async (payload) => {
 
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&link=${category}&page=${currentPage}`,
+      `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
       { cache: "no-cache" }
     );
     const data = await res.json();
