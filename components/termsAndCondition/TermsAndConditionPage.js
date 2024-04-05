@@ -39,19 +39,19 @@ const TermsAndConditionPage = () => {
         <p className="mb-5">
           Market Research Forecast and its affiliates provide their services to
           you subject to the following conditions. If you visit or shop at
-          www.advancemarketanalytics.com, you accept these conditions. Please
-          read them carefully. We reserve the right from time to time to make
-          changes to these Terms and Conditions at our absolute discretion. The
-          Terms and Conditions applying to each transaction with us are those
-          which are available on the website at the time when you place your
-          order, and it is your responsibility to check the Terms and Conditions
-          before placing an order.
+          https://marketresearchforecast.com, you accept these conditions.
+          Please read them carefully. We reserve the right from time to time to
+          make changes to these Terms and Conditions at our absolute discretion.
+          The Terms and Conditions applying to each transaction with us are
+          those which are available on the website at the time when you place
+          your order, and it is your responsibility to check the Terms and
+          Conditions before placing an order.
         </p>
         <h2 className="mb-4 text-xl font-semibold">Privacy Notice</h2>
         <p className="mb-5">
           Our Privacy Notice is at the base of these Terms and Conditions and
-          governs your visit to www.advancemarketanalytics.com. Please read it
-          carefully so that you understand our practices.
+          governs your visit to https://marketresearchforecast.com. Please read
+          it carefully so that you understand our practices.
         </p>
 
         <h2 className="mb-4 text-xl font-semibold">Copyright</h2>
@@ -89,9 +89,9 @@ const TermsAndConditionPage = () => {
         <h2 className="mb-4 text-xl font-semibold">License and Site Access</h2>
         <p className="mb-5">
           Market Research Forecast grants you a limited revocable license to
-          create a link to the home page of www.advancemarketanalytics.com
+          create a link to the home page of https://marketresearchforecast.com
           provided that the link does not portray
-          www.advancemarketanalytics.com, its associated companies, or its
+          https://marketresearchforecast.com, its associated companies, or its
           products in a negative, defamatory, derogatory, or misleading way.
         </p>
         <p className="mb-5">
