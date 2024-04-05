@@ -31,25 +31,27 @@ const QueryForm = ({
   price = {},
   reportTitle = "Report Link",
 }) => {
-  let reportPrice = 0;
+  const [reportPrice, setReportPrice] = useState(0);
   const searchParams = useSearchParams();
   const priceType = searchParams.get("type");
-  if (priceType) {
-    switch (priceType) {
-      case "single":
-        reportPrice = price.singlePrice;
-        break;
-      case "multi":
-        reportPrice = price.multiPrice;
-        break;
-      case "corporate":
-        reportPrice = price.enterprisePrice;
-        break;
+  useEffect(() => {
+    if (priceType) {
+      switch (priceType) {
+        case "single":
+          setReportPrice(price.singlePrice);
+          break;
+        case "multi":
+          setReportPrice(price.multiPrice);
+          break;
+        case "corporate":
+          setReportPrice(price.enterprisePrice);
+          break;
 
-      default:
-        break;
+        default:
+          break;
+      }
     }
-  }
+  }, []);
 
   const router = useRouter();
   const pathname = usePathname();
@@ -180,8 +182,25 @@ const QueryForm = ({
       {direct && (
         <>
           <hr className="mt-5" />
-          <div className="text-2xl font-semibold my-5 ">
-            Total Amount: ${reportPrice}
+          <div className="flex justify-between items-center">
+            <div className="text-2xl font-semibold my-5 ">
+              Total Amount: ${reportPrice}
+            </div>
+            <select
+              value={reportPrice}
+              onChange={(e) => setReportPrice(e.target.value)}
+              className="select select-bordered"
+            >
+              <option className="py-2" value={price.singlePrice}>
+                Single User License - ${price.singlePrice}{" "}
+              </option>
+              <option value={price.multiPrice}>
+                Multy User License - ${price.multiPrice}
+              </option>
+              <option value={price.enterprisePrice}>
+                Corporate License - ${price.enterprisePrice}
+              </option>
+            </select>
           </div>
         </>
       )}

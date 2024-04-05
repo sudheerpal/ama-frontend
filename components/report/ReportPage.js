@@ -37,9 +37,11 @@ const ReportPage = ({
   return (
     <div>
       <section
-        className="py-12 text-white"
+        className="py-6 text-white"
         style={{
-          backgroundImage: `url(${reportHeaderBg.src})`,
+          backgroundImage: `url(${
+            basic?.category?.parent?.banner || reportHeaderBg.src
+          })`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           width: "100%",
@@ -57,9 +59,9 @@ const ReportPage = ({
       </section>
       <section>
         <CustomContainer>
-          <main className="relative grid gap-5 mt-5 lg:grid-cols-4 lg:mt-10">
+          <main className="relative grid gap-5 mt-5 lg:grid-cols-3 lg:mt-10">
             {/* ---- report tab section ---- */}
-            <section className="lg:col-span-3">
+            <section className="lg:col-span-2">
               {/* report introduction section  */}
               <section className="gap-5 py-5 space-y-3 md:flex md:space-y-0">
                 <div className="relative border-2 shadow border-primary w-fit min-w-28 xl:min-w-36">
@@ -101,7 +103,7 @@ const ReportPage = ({
               </section>
             </section>
             {/* ---- report sidebar ---- */}
-            <section className="sticky top-0 hidden py-5 h-min lg:block lg:space-y-10">
+            <section className="sticky top-0 hidden overflow-y-auto py-5 h-screen lg:block lg:space-y-10">
               {/* segment 1 */}
               <Forms slug={basic.slug} />
               {/* segment 1.5 */}
