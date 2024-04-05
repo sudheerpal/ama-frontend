@@ -15,6 +15,7 @@ import Link from "next/link";
 import { links } from "@/constants/constants";
 import CustomContainer from "@/components/ui/CustomContainer";
 import LucidIcon from "@/components/ui/icons/LucidIcons";
+import LinkTagsDesktop from "./LinkTagsDesktop";
 
 const MainNavbar = ({ parentCategories = [] }) => {
   const heads = headers();
@@ -65,43 +66,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
             </Link>
           </div>
           <div className="hidden navbar-center lg:flex lg:flex-grow">
-            <ul className="px-4 font-medium lg:w-full lg:max-w-3xl xl:text-base menu menu-horizontal lg:justify-between">
-              {links?.map((link, index) => (
-                <li
-                  key={index}
-                  className={`px-4 text-primary cursor-pointer ${
-                    link.submenus ? "group relative dropdown" : ""
-                  }`}
-                >
-                  <Link
-                    className={`p-0 hover:text-blue-500 ${
-                      pathname == link.url ? "text-blue-500" : ""
-                    }`}
-                    href={link.url}
-                  >
-                    {link.text} {link.submenus && <ChevronDown size={16} />}
-                  </Link>
-                  {/* Render submenus if they exist */}
-                  {link.submenus && (
-                    <div className="absolute hidden h-auto group-hover:block dropdown-menu">
-                      <ul className="top-0 z-10 grid grid-cols-2 gap-2 p-4 bg-white rounded shadow w-[576px]">
-                        {parentCategories?.map((submenu) => (
-                          <li key={submenu.id} className="py-1">
-                            <Link
-                              href={`/industries/${submenu.link}`}
-                              className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-blue-500"
-                            >
-                              <LucidIcon name={submenu.icon} size={20} />
-                              <span> {submenu.label}</span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-                </li>
-              ))}
-            </ul>
+            <LinkTagsDesktop parentCategories={parentCategories} />
           </div>
           <div className="lg:w-1/6 navbar-end">
             <div className="flex items-center gap-2 lg:gap-4">

@@ -56,7 +56,7 @@ export default function Forms({ slug = "" }) {
       <Link
         href={`/report/${slug}/sample-report`}
         className={
-          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+          "text-sm flex items-center justify-start gap-3 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
         }
       >
         <Download className="text-secondary" />
@@ -66,7 +66,7 @@ export default function Forms({ slug = "" }) {
       <Link
         href={`/report/${slug}/enquiry-before-buy`}
         className={
-          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+          "text-sm flex items-center justify-start gap-3 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
         }
       >
         <HelpCircle className="text-secondary" />{" "}
@@ -75,7 +75,7 @@ export default function Forms({ slug = "" }) {
       <Link
         href={`/report/${slug}/request-discount`}
         className={
-          "text-sm flex items-center justify-between gap-1 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
+          "text-sm flex items-center justify-start gap-3 px-4 py-2 rounded font-semibold hover:text-gray-400 hover:shadow duration-100 bg-primary text-white"
         }
       >
         <Tag className="text-secondary" />{" "}
@@ -84,10 +84,10 @@ export default function Forms({ slug = "" }) {
       <dialog id="request_form" className="modal">
         <div className="modal-box">
           <div className="flex justify-between">
-            <h3 className="font-bold lg:ml-14 text-lg"> {type} </h3>
+            <h3 className="text-lg font-bold lg:ml-14"> {type} </h3>
             <button
               onClick={() => document.getElementById("request_form").close()}
-              className="border rounded-full p-1 hover:border-primary btn btn-circle btn-sm"
+              className="p-1 border rounded-full hover:border-primary btn btn-circle btn-sm"
             >
               <X />
             </button>
