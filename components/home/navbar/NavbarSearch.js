@@ -1,6 +1,7 @@
 "use client";
+import { useDebounce } from "@/utils/hooks";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Search } from "react-feather";
 
 const NavbarSearch = () => {
@@ -10,17 +11,6 @@ const NavbarSearch = () => {
   // State to track whether the user is typing
   const [isTyping, setIsTyping] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
-
-  // Debounce function
-  const debounce = (func, delay) => {
-    let timerId;
-    return (...args) => {
-      clearTimeout(timerId);
-      timerId = setTimeout(() => {
-        func(...args);
-      }, delay);
-    };
-  };
 
   // Function to handle input field changes
   const handleInputChange = (e) => {
@@ -50,32 +40,27 @@ const NavbarSearch = () => {
     }
   };
 
-  // Effect to debounce input value changes and execute after a delay
+  // Debounce the search value
+  const debouncedSearchValue = useDebounce(searchValue, 700);
+
+  // Effect to handle debounced search value changes
   useEffect(() => {
-    const debouncedSearch = debounce((value) => {
-      // Check if input value meets criteria (minimum 3 letters excluding space)
-      if (value.trim().replace(/\s/g, "").length >= 3) {
-        console.log("Search value:", value);
-        // Perform further processing here
+    // Check if input value meets criteria (minimum 3 letters excluding space)
+    if (debouncedSearchValue.trim().replace(/\s/g, "").length >= 3) {
+      console.log("Search value:", debouncedSearchValue);
+      // Perform further processing here
 
-        sugesstionFetch({
-          catID: null,
-          query: value,
-        });
+      sugesstionFetch({
+        catID: null,
+        query: debouncedSearchValue,
+      });
 
-        setIsTyping(true);
-      }
-    }, 700);
-
-    if (searchValue.trim().replace(/\s/g, "").length <= 3) {
+      setIsTyping(true);
+    } else {
       setIsTyping(false);
+      setSuggestions([]); // Clear suggestions if search value is less than 3 characters
     }
-    debouncedSearch(searchValue);
-
-    return () => {
-      clearTimeout(debouncedSearch);
-    };
-  }, [searchValue]);
+  }, [debouncedSearchValue]);
 
   return (
     <div className="relative z-20 py-2 bg-secondary">
