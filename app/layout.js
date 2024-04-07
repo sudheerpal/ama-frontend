@@ -4,6 +4,7 @@ import TopNavbar from "@/components/home/navbar/TopNavbar";
 import MainNavbar from "@/components/home/navbar/MainNavbar";
 import { parentCategories } from "@/db/fakedata";
 import { fetchParentCategories } from "@/utils/fetchFunctions";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 export const radioCanada = Radio_Canada({ subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default async function RootLayout({ children }) {
         <MainNavbar parentCategories={parentCategories} />
         <main>{children}</main>
       </body>
+      <GoogleAnalytics gaId="G-TGX5SM4WHF" />
       {/* <body className={radioCanada.className}>{children}</body> */}
     </html>
   );
