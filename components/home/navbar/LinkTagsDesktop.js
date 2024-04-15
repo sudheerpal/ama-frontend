@@ -13,16 +13,11 @@ const LinkTagsDesktop = ({ parentCategories }) => {
       {links?.map((link, index) => (
         <li
           key={index}
-          className={`px-4 text-primary cursor-pointer ${
+          className={`px-4 cursor-pointer ${
             link.submenus ? "group relative dropdown" : ""
-          }`}
+          } ${pathname == link.url ? "text-blue-500" : ""}`}
         >
-          <Link
-            className={`p-0 hover:text-blue-500 ${
-              pathname == link.url ? "text-blue-500" : ""
-            }`}
-            href={link.url}
-          >
+          <Link className={`p-0 hover:text-blue-500`} href={link.url}>
             {link.text} {link.submenus && <ChevronDown size={16} />}
           </Link>
           {/* Render submenus if they exist */}
