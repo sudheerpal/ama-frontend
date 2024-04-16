@@ -18,7 +18,10 @@ export const generateMetadata = async ({ params }) => {
   const { title, summery = "", marketKeyword = "" } = reportData?.basic;
   return {
     title: reportData?.basic?.seo?.metaTitle || title,
-    description: reportData?.basic?.seo?.metaDescription || summery,
+    // description: reportData?.basic?.seo?.metaDescription || summery,
+    description:
+      reportData?.basic?.seo?.metaDescription ||
+      "The React Framework for the Web",
     keywords: reportData?.basic?.seo?.keywords || marketKeyword,
   };
 };
