@@ -37,7 +37,7 @@ const ReportPage = ({
   return (
     <div>
       <section
-        className="py-6 text-white"
+        className=""
         style={{
           backgroundImage: `url(${
             basic?.category?.parent?.banner || reportHeaderBg.src
@@ -47,15 +47,17 @@ const ReportPage = ({
           width: "100%",
         }}
       >
-        <CustomContainer>
-          <div>{basic.marketKeyword}</div>
-          <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-            <Link href={`/industries/${basic.category.link}`}>
-              {basic.category.label}
-            </Link>
-          </h1>
-          <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
-        </CustomContainer>
+        <div className="py-6 text-white bg-opacity-50 bg-primary">
+          <CustomContainer>
+            <div>{basic.marketKeyword}</div>
+            <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
+              <Link href={`/industries/${basic.category.link}`}>
+                {basic.category.label}
+              </Link>
+            </h1>
+            <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
+          </CustomContainer>
+        </div>
       </section>
       <section>
         <CustomContainer>
