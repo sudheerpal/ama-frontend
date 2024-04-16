@@ -50,7 +50,7 @@ const RegionData = ({ regions }) => {
         <MapPin className="h-14 text-secondary" />
       </div>
       <svg
-        enable-background="new 0 0 783.086 400.649"
+        enableBackground="new 0 0 783.086 400.649"
         viewBox="0 0 783.086 400.649"
         xmlns="http://www.w3.org/2000/svg"
       >
