@@ -8,6 +8,9 @@ const NavbarSearch = () => {
   // State to hold the input field value
   const [searchValue, setSearchValue] = useState("");
 
+  // State to track whether the input is focused
+  const [isInputFocused, setIsInputFocused] = useState(false);
+
   // State to track whether the user is typing
   const [isTyping, setIsTyping] = useState(false);
   const [suggestions, setSuggestions] = useState([]);
@@ -23,13 +26,20 @@ const NavbarSearch = () => {
     setSearchValue("");
   };
 
+  // Function to handle input focus
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
+
+  // Function to handle input blur
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
+
   const sugesstionFetch = async (payload) => {
     try {
       const res = await fetch(`https://ama-admin.com/api/search`, {
         method: "POST",
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
         body: JSON.stringify(payload),
       });
       const { data } = await res.json();
@@ -71,6 +81,8 @@ const NavbarSearch = () => {
           placeholder="Search Reports..."
           value={searchValue}
           onChange={handleInputChange}
+          onFocus={handleInputFocus}
+          onBlur={handleInputBlur}
         />
         <button
           type="submit"
@@ -79,7 +91,7 @@ const NavbarSearch = () => {
           <Search />
         </button>
       </form>
-      {isTyping && (
+      {isInputFocused && isTyping && (
         <div className="absolute left-0 p-4 text-sm text-black bg-white rounded shadow-md w-96 top-full">
           {suggestions?.map((sg, index) => (
             <Link
