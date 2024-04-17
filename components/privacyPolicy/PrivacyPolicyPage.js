@@ -20,11 +20,11 @@ const PrivacyPolicyPage = () => {
         <div className="py-12 bg-opacity-50 bg-primary">
           <CustomContainer>
             <p className="flex flex-wrap items-center gap-[2px] text-xs">
-              <Link href="/" className="hover:text-blue-500">
+              <Link href="/" className="hover:text-info">
                 Home
               </Link>
               <ChevronRight size={10} />
-              <Link href="/privacy-policy" className="hover:text-blue-500">
+              <Link href="/privacy-policy" className="hover:text-info">
                 Privacy Policy
               </Link>
             </p>

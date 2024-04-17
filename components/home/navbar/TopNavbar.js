@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { Phone, User, Users } from "react-feather";
 import NavbarSearch from "./NavbarSearch";
+import { themeColors } from "@/constants/constants";
 
 const TopNavbar = () => {
   return (
@@ -11,22 +12,22 @@ const TopNavbar = () => {
         <section className="items-center hidden gap-4 text-sm text-white lg:grid lg:grid-cols-3 xl:text-base">
           <div className="flex gap-4 xl-gap-6">
             <p className="flex items-center gap-1">
-              <Phone color="#FDE428" size={18} />
+              <Phone color={themeColors.secondary} size={18} />
               <span>+1 551 333 1547</span>
             </p>
             <p className="flex items-center gap-1">
-              <Phone color="#FDE428" size={18} />
+              <Phone color={themeColors.secondary} size={18} />
               <span>+44 2070 979277</span>
             </p>
             <p></p>
           </div>
           <div className="flex justify-end gap-4">
             <Link href="/career" className="flex items-center gap-1 mr-4">
-              <Users color="#FDE428" size={18} />
+              <Users color={themeColors.secondary} size={18} />
               Join Our Team
             </Link>
             {/* <p className="flex items-center gap-1">
-              <User color="#FDE428" size={18} />
+              <User color={themeColors.secondary} size={18} />
               Login
             </p>
             <span>|</span>

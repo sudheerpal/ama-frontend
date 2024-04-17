@@ -114,7 +114,7 @@ const ReportPage = ({
               </div>
               {/* segment 2 */}
               <div className="my-5">
-                <div className="mx-4 bg-gray-200 rounded">
+                <div className="mx-4 bg-accent rounded">
                   <h3 className="w-full py-2 text-center text-white capitalize rounded-t bg-primary">
                     Tailored for you
                   </h3>

@@ -224,7 +224,7 @@ const QueryForm = ({
           <select
             name="country"
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-200 focus:outline-none text-sm"
+            className="w-full px-4 py-3 bg-accent focus:outline-none text-sm"
           >
             <option value={""}>Select Country</option>
             {countryList.map((country) => (
@@ -261,7 +261,7 @@ const QueryForm = ({
             value={formData.message}
             onChange={handleInputChange}
             className={
-              "md:col-span-2 textarea rounded-sm textarea-sm bg-gray-200"
+              "md:col-span-2 textarea rounded-sm textarea-sm bg-accent"
             }
           ></textarea>
         </div>

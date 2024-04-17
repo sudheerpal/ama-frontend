@@ -34,7 +34,7 @@ const ReportCard = ({ report }) => {
             <h4 className="font-bold text-primary md:text-xl">
               <Link href={`/reports/${slug}`}>{title}</Link>{" "}
             </h4>
-            <p className="text-gray-600">{summery}</p>
+            <p className="text-neutral">{summery}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>{new Date(createdAt).toDateString("month", "year")}</span>

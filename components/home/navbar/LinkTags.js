@@ -29,7 +29,7 @@ const LinkTags = ({ parentCategories }) => {
                 <Link
                   href={link.url}
                   className={`px-2 py-1  rounded-sm hover:text-white hover:bg-primary ${
-                    pathname == link.url ? "text-blue-500" : ""
+                    pathname == link.url ? "text-info" : ""
                   }`}
                 >
                   {link.text}
@@ -55,7 +55,7 @@ const LinkTags = ({ parentCategories }) => {
             <Link
               href={link.url}
               className={`px-2 py-1  rounded-sm hover:text-white hover:bg-primary ${
-                pathname == link.url ? "text-blue-500" : ""
+                pathname == link.url ? "text-info" : ""
               }`}
             >
               {link.text}
