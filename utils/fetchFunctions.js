@@ -87,7 +87,7 @@ export const fetchAllReports = async ({ query }) => {
 
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?page=${currentPage}`,
+      `https://ama-admin.com/api/reports?active=true&page=${currentPage}`,
       {
         cache: "no-cache",
       }

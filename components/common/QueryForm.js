@@ -55,7 +55,6 @@ const QueryForm = ({
 
   const router = useRouter();
   const pathname = usePathname();
-  console.log("path", pathname);
 
   const [submitted, setSubmitted] = useState(false);
   const [captcha, setCaptcha] = useState("");
@@ -143,7 +142,6 @@ const QueryForm = ({
     }
   };
   const handlePaymentMethodChange = (e) => {
-    console.log(e.target.value);
     setPaymentMethod(e.target.value);
   };
 
@@ -174,7 +172,6 @@ const QueryForm = ({
     generateCaptcha();
     getSponsorsHome();
     const url = `${pathname}?${searchParams}`;
-    console.log(url);
     return;
   }, []);
   return (
