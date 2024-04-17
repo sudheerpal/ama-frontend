@@ -8,9 +8,10 @@ import Picture6 from "@/assets/icons/Picture6.png";
 
 export const themeColors = {
   primary: "#002E5B",
-
   secondary: "#FDE428",
   accent: "#F2F2F2",
+  neutral: "#6b6b6b",
+  info: "#0693E3",
 };
 
 export const links = [
