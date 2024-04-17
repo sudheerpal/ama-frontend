@@ -6,6 +6,13 @@ import Picture4 from "@/assets/icons/Picture4.png";
 import Picture5 from "@/assets/icons/Picture5.png";
 import Picture6 from "@/assets/icons/Picture6.png";
 
+export const themeColors = {
+  primary: "#002E5B",
+
+  secondary: "#FDE428",
+  accent: "#F2F2F2",
+};
+
 export const links = [
   { text: "Home", url: "/" },
   { text: "About Us", url: "/about" },
