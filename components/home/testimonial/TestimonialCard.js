@@ -20,7 +20,7 @@ const TestimonialCard = ({ testimonial }) => {
         <h2 className="mb-2 text-xl font-bold leading-none text-primary">
           {name}
         </h2>
-        <h4 className="text-sm font-bold text-gray-500">{occupation}</h4>
+        <h4 className="text-sm font-bold text-neutral">{occupation}</h4>
         <p className="mt-3 text-sm text-black">{testimonialText}</p>
       </div>
     </div>

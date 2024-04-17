@@ -73,21 +73,21 @@ const MainNavbar = ({ parentCategories = [] }) => {
               <Link
                 href="https://www.facebook.com/advancemarketanalytics"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Facebook size={18} />
               </Link>
               <Link
                 href="https://twitter.com/amareport"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Twitter size={18} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/advance-market-analytics"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Linkedin size={18} />
               </Link>

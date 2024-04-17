@@ -27,10 +27,7 @@ const NavElement = ({ parentCategory, subCategoriesOfParent }) => {
         <div className="collapse-content">
           <ul className="mt-2 space-y-2">
             {subCategoriesOfParent?.map((ct) => (
-              <li
-                key={ct.id}
-                className="text-sm text-gray-400 hover:text-white"
-              >
+              <li key={ct.id} className="text-sm text-neutral hover:text-white">
                 <Link href={`/industries/${ct.link}`}>{ct.label}</Link>
               </li>
             ))}

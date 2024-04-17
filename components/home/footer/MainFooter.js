@@ -35,7 +35,7 @@ const MainFooter = () => {
             <h3 className="text-2xl font-bold">Contact Information</h3>
             <div className="flex flex-col">
               <p>Craig Francis</p>
-              <p className="text-sm text-gray-400">Business Development Head</p>
+              <p className="text-sm text-accent">Business Development Head</p>
             </div>
             <p className="flex items-center gap-2">
               <PhoneCall className="text-secondary" size={18} />{" "}
@@ -43,14 +43,14 @@ const MainFooter = () => {
             </p>
             <p className="flex items-center gap-2">
               <Mail className="text-secondary" size={18} />
-              <span className="text-blue-500">
+              <span className="text-info">
                 sales@advancemarketanalytics.com
               </span>
             </p>
           </div>
           <div className="w-full py-4 space-y-3">
             <h2 className="pb-2 text-2xl font-bold border-b">Extra Links</h2>
-            <div className="grid grid-cols-2 text-blue-500">
+            <div className="grid grid-cols-2 text-info">
               <div className="flex flex-col gap-2">
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contacts</Link>
@@ -82,15 +82,15 @@ const MainFooter = () => {
           <p>© {`${currentYear} ${copyrightMsg}`}</p>
           <div className="items-center gap-2 md:flex lg:gap-4">
             <div className="flex gap-2 md:mr-10">
-              <Link className="hover:text-blue-500" href="/privacy-policy">
+              <Link className="hover:text-info" href="/privacy-policy">
                 Privacy Policy
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link className="hover:text-blue-500" href="/terms-and-condition">
+              <Link className="hover:text-info" href="/terms-and-condition">
                 Terms and Conditions
               </Link>
               <hr className="w-0 h-auto border" />
-              <Link className="hover:text-blue-500" href="/faq">
+              <Link className="hover:text-info" href="/faq">
                 FAQ
               </Link>
             </div>
@@ -98,21 +98,21 @@ const MainFooter = () => {
               <Link
                 href="https://www.facebook.com/advancemarketanalytics"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Facebook size={18} />
               </Link>
               <Link
                 href="https://twitter.com/amareport"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Twitter size={18} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/advance-market-analytics"
                 target="_blank"
-                className="hover:text-blue-500"
+                className="hover:text-info"
               >
                 <Linkedin size={18} />
               </Link>

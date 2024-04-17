@@ -76,7 +76,7 @@ const NavbarSearch = () => {
     <div className="relative z-20 py-2 bg-secondary">
       <form onSubmit={handleSubmit}>
         <input
-          className="w-full px-4 py-2 pr-12 text-gray-800 placeholder-gray-500 bg-inherit focus:outline-none"
+          className="w-full px-4 py-2 pr-12 text-neutral placeholder-gray-500 bg-inherit focus:outline-none"
           type="search"
           placeholder="Search Reports..."
           value={searchValue}
@@ -97,7 +97,7 @@ const NavbarSearch = () => {
             <Link
               key={index}
               href={`/reports/${sg?.slug}`}
-              className="block mb-1 hover:text-blue-500"
+              className="block mb-1 hover:text-info"
               onClick={() => {
                 setSearchValue("");
                 setIsTyping(false);

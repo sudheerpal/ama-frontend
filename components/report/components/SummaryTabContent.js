@@ -100,7 +100,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           ref={growthRef}
           id="chart_content"
         >
-          <div className="font-semibold text-center text-gray-500">
+          <div className="font-semibold text-center text-neutral">
             Market Growth
           </div>
           <div className="flex justify-center">
@@ -135,7 +135,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           ref={sizeRef}
           id="chart_content"
         >
-          <div className="font-semibold text-center text-gray-500">
+          <div className="font-semibold text-center text-neutral">
             Market Size
           </div>
           <div className="flex justify-center">
@@ -171,7 +171,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           ref={regionRef}
           id="chart_content"
         >
-          <div className="font-semibold text-center text-gray-500">
+          <div className="font-semibold text-center text-neutral">
             Regional Market Share
           </div>
           <div className="flex justify-center">

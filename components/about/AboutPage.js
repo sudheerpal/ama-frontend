@@ -155,7 +155,7 @@ const AboutPage = ({ sponsors }) => {
                   growth-minded executives.
                 </span>
               </p>
-              <div className="p-4 mt-5 font-semibold bg-gray-200 border-l-8 border-secondary lg:px-10 xl:px-20">
+              <div className="p-4 mt-5 font-semibold bg-accent border-l-8 border-secondary lg:px-10 xl:px-20">
                 MR Forecast's growth is consistently fueled by the trust
                 bestowed upon us by our valued clients. Our expertise spans
                 across diverse industries including finance, energy, business
@@ -199,7 +199,7 @@ const AboutPage = ({ sponsors }) => {
                 <Link
                   href={link.href}
                   key={idx}
-                  className={`block px-4 py-2 duration-100 bg-gray-200 mb-1 hover:bg-primary hover:text-white text-primary capitalize ${
+                  className={`block px-4 py-2 duration-100 bg-accent mb-1 hover:bg-primary hover:text-white text-primary capitalize ${
                     idx === null && "border-l-4 border-primary"
                   }`}
                 >
@@ -233,7 +233,7 @@ const AboutPage = ({ sponsors }) => {
                   clipPath:
                     "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
                 }}
-                className="p-4 pb-10 bg-gray-200"
+                className="p-4 pb-10 bg-accent"
               >
                 <p>
                   “Thank you very much. I really appreciate the work your team
@@ -255,7 +255,7 @@ const AboutPage = ({ sponsors }) => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Dr. John Doe</h3>
-                  <p className="text-gray-600">Sales & Marketing, Alien Ltd.</p>
+                  <p className="text-neutral">Sales & Marketing, Alien Ltd.</p>
                 </div>
               </div>
             </section>

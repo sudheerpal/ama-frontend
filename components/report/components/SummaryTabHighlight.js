@@ -13,7 +13,7 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
               <th className="">Details</th>
             </tr>
           </thead>
-          <tbody className="bg-gray-200">
+          <tbody className="bg-accent">
             <tr>
               <td className="pl-3">Study Period </td>
               <td>

@@ -32,7 +32,7 @@ const MethodologyTabContent = () => {
       color: "blue-500",
       content:
         "Then we put all data in single framework & apply various statistical tools to find out the dynamic on the market.",
-      icon: <FileBarChart2 className="text-blue-500" />,
+      icon: <FileBarChart2 className="text-info" />,
     },
     {
       color: "secondary",
@@ -47,7 +47,7 @@ const MethodologyTabContent = () => {
       {/* step 1 */}
       <section>
         <header className="my-5">
-          <h2 className="p-2 font-bold bg-gray-200 w-fit">
+          <h2 className="p-2 font-bold bg-accent w-fit">
             STEP 1 - Identification of Relevant Samples Size from Population
             Database
           </h2>
@@ -71,7 +71,7 @@ const MethodologyTabContent = () => {
       {/* step 2 */}
       <section>
         <header className="my-5">
-          <h2 className="p-2 font-bold bg-gray-200 w-fit">
+          <h2 className="p-2 font-bold bg-accent w-fit">
             STEP 2 - Approaches for Defining Global Market Size (Value, Volume*
             & Price*)
           </h2>
@@ -93,7 +93,7 @@ const MethodologyTabContent = () => {
       {/* step 3 */}
       <section>
         <header className="my-5">
-          <h2 className="p-2 font-bold bg-gray-200 w-fit">
+          <h2 className="p-2 font-bold bg-accent w-fit">
             STEP 3 - Data Sources
           </h2>
         </header>
@@ -113,7 +113,7 @@ const MethodologyTabContent = () => {
               <li>Opinion Leaders</li>
             </ul>
           </div>
-          <div className="text-blue-500">
+          <div className="text-info">
             <div className="flex items-center gap-2 font-bold">
               <div className="grid w-10 h-10 text-white bg-blue-500 rounded-full place-items-center">
                 <Settings className="font-extrabold text-white" />
@@ -143,7 +143,7 @@ const MethodologyTabContent = () => {
       {/* step 4 */}
       <section>
         <header className="my-5">
-          <h2 className="p-2 font-bold bg-gray-200 w-fit">
+          <h2 className="p-2 font-bold bg-accent w-fit">
             STEP 4 - Data Triangulation
           </h2>
         </header>
@@ -155,7 +155,7 @@ const MethodologyTabContent = () => {
               >
                 {section.icon} {/* Render the icon */}
               </div>
-              <p className="text-gray-400">{section.content}</p>
+              <p className="text-neutral">{section.content}</p>
             </div>
           ))}
         </main>

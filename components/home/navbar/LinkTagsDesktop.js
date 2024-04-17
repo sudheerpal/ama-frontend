@@ -15,9 +15,9 @@ const LinkTagsDesktop = ({ parentCategories }) => {
           key={index}
           className={`px-4 cursor-pointer ${
             link.submenus ? "group relative dropdown" : ""
-          } ${pathname == link.url ? "text-blue-500" : ""}`}
+          } ${pathname == link.url ? "text-info" : ""}`}
         >
-          <Link className={`p-0 hover:text-blue-500`} href={link.url}>
+          <Link className={`p-0 hover:text-info`} href={link.url}>
             {link.text} {link.submenus && <ChevronDown size={16} />}
           </Link>
           {/* Render submenus if they exist */}
@@ -28,7 +28,7 @@ const LinkTagsDesktop = ({ parentCategories }) => {
                   <li key={submenu.id} className="py-1">
                     <Link
                       href={`/industries/${submenu.link}`}
-                      className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-blue-500"
+                      className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-info"
                     >
                       <LucidIcon name={submenu.icon} size={20} />
                       <span> {submenu.label}</span>

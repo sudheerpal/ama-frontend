@@ -78,7 +78,7 @@ const JobApplictionForm = () => {
       </div>
       <button
         type="submit"
-        className="px-4 py-2 font-bold rounded text-primary bg-secondary hover:text-gray-400"
+        className="px-4 py-2 font-bold rounded text-primary bg-secondary hover:text-neutral"
       >
         Submit Application
       </button>

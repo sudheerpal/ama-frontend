@@ -39,7 +39,7 @@ const CheckoutForm = ({
         >
           {reportData?.report?.title}{" "}
         </Link>
-        <p className="text-gray-600 mt-1"> {reportData?.report?.summery} </p>
+        <p className="text-neutral mt-1"> {reportData?.report?.summery} </p>
 
         <QueryForm
           type={type}

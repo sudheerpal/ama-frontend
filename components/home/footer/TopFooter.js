@@ -46,7 +46,7 @@ const TopFooter = () => {
               <h3 className="text-2xl font-bold">Contact Information</h3>
               <div className="flex flex-col">
                 <p>Craig Francis</p>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-neutral">
                   Business Development Head
                 </p>
               </div>
@@ -56,7 +56,7 @@ const TopFooter = () => {
               </p>
               <p className="flex items-center gap-2">
                 <Mail className="text-secondary" size={18} />
-                <span className="text-blue-500">
+                <span className="text-info">
                   sales@advancemarketanalytics.com
                 </span>
               </p>
