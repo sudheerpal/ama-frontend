@@ -1,6 +1,6 @@
 import Button from "@/components/ui/Button";
 import CustomContainer from "@/components/ui/CustomContainer";
-import { themeColors } from "@/constants/constants";
+
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "react-feather";
@@ -17,7 +17,7 @@ const BannerFooter = () => {
         <div className="mt-2 lg:mt-0">
           <Link href={`/industries`}>
             <Button>
-              Explore <ArrowRight size={16} color={themeColors.secondary} />
+              Explore <ArrowRight size={16} className="text-secondary" />
             </Button>
           </Link>
         </div>

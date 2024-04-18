@@ -10,7 +10,6 @@ import quotation from "@/assets/report/quotation.png";
 import Image from "next/image";
 import Link from "next/link";
 import Sponsors from "../home/Sponsors";
-import { themeColors } from "@/constants/constants";
 
 const AboutPage = ({ sponsors }) => {
   const progressData = [
@@ -72,7 +71,7 @@ const AboutPage = ({ sponsors }) => {
                   <Link href="/industries">
                     <Button>
                       Explore{" "}
-                      <ArrowRight size={16} color={themeColors.secondary} />
+                      <ArrowRight size={16} className="text-secondary" />
                     </Button>
                   </Link>
                 </div>
@@ -155,7 +154,7 @@ const AboutPage = ({ sponsors }) => {
                   growth-minded executives.
                 </span>
               </p>
-              <div className="p-4 mt-5 font-semibold bg-accent border-l-8 border-secondary lg:px-10 xl:px-20">
+              <div className="p-4 mt-5 font-semibold border-l-8 bg-accent border-secondary lg:px-10 xl:px-20">
                 MR Forecast's growth is consistently fueled by the trust
                 bestowed upon us by our valued clients. Our expertise spans
                 across diverse industries including finance, energy, business
@@ -274,7 +273,7 @@ const AboutPage = ({ sponsors }) => {
             <div className="mt-2 lg:mt-0">
               <Link href={`/industries`}>
                 <Button>
-                  Explore <ArrowRight size={16} color={themeColors.secondary} />
+                  Explore <ArrowRight size={16} className="text-secondary" />
                 </Button>
               </Link>
             </div>
