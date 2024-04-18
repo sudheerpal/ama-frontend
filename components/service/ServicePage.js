@@ -56,11 +56,11 @@ const ServicePage = () => {
       >
         <CustomContainer>
           <p className="flex flex-wrap items-center gap-[2px] text-xs">
-            <Link href="/" className="hover:text-blue-500">
+            <Link href="/" className="hover:text-info">
               Home
             </Link>
             <ChevronRight size={10} />
-            <Link href="/service" className="hover:text-blue-500">
+            <Link href="/service" className="hover:text-info">
               Services
             </Link>
           </p>
@@ -108,7 +108,7 @@ const ServicePage = () => {
                   clipPath:
                     "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
                 }}
-                className="p-4 pb-10 bg-gray-200"
+                className="p-4 pb-10 bg-accent"
               >
                 <p>
                   “Thank you very much. I really appreciate the work your team
@@ -130,7 +130,7 @@ const ServicePage = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold">Dr. John Doe</h3>
-                  <p className="text-gray-600">Sales & Marketing, Alien Ltd.</p>
+                  <p className="text-neutral">Sales & Marketing, Alien Ltd.</p>
                 </div>
               </div>
             </section>

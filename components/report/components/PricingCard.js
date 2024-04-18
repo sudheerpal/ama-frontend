@@ -46,7 +46,7 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-neutral bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Single User License: </div>
                 <ul className="mt-1 ml-3 list-disc">
                   <li>Only one user can access this report at time</li>
@@ -75,7 +75,7 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-neutral bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Multi User License: </div>
                 <ul className="mt-1 ml-3 list-disc">
                   <li>The report will be emailed to you in PDF format. </li>
@@ -105,7 +105,7 @@ const PricingCard = ({ price = {}, slug = "" }) => {
             </span>
             <div className="relative group">
               <Info className="z-10 cursor-pointer" />
-              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-gray-700 bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
+              <div className="absolute right-0 z-40 hidden w-56 p-6 mt-2 text-neutral bg-white border border-gray-300 rounded-lg bottom-8 group-hover:block">
                 <div className="font-semibold"> Corporate User License: </div>
                 <ul className="mt-1 ml-3 list-disc">
                   <li>

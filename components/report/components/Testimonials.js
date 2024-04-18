@@ -31,7 +31,7 @@ export default function Testimonials({ testimonials = [] }) {
                 clipPath:
                   "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
               }}
-              className="p-4 pb-10 bg-gray-200"
+              className="p-4 pb-10 bg-accent"
             >
               <p>{testimonial.testimonial} </p>
               <div className="w-16 ml-auto">
@@ -53,7 +53,7 @@ export default function Testimonials({ testimonials = [] }) {
               </div>
               <div>
                 <h3 className="text-lg font-bold"> {testimonial.name} </h3>
-                <p className="text-gray-600"> {testimonial.occupation} </p>
+                <p className="text-neutral"> {testimonial.occupation} </p>
               </div>
             </div>
             {/* <Image

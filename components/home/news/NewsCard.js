@@ -25,7 +25,7 @@ const NewsCard = ({ report }) => {
       </h3>
       {/* <div className="flex gap-2 mt-4">
         <Clock className="mt-[2px] text-secondary" size={18} />
-        <p className="text-gray-400">
+        <p className="text-neutral">
           {moment(report?.createdAt).format("MMMM DD, YYYY")}{" "}
         </p>
       </div> */}

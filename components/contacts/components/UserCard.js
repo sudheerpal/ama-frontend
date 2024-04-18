@@ -10,7 +10,7 @@ const UserCard = () => {
       <div className="space-y-1 text-sm">
         <div>
           <h4 className="text-base font-bold">Craig Francis</h4>
-          <p className="font-bold text-gray-600">Head Of Sales</p>
+          <p className="font-bold text-neutral">Head Of Sales</p>
         </div>
         <p>Email: sales@advancemarketanalytics.com</p>
         <a href="tel:+1 2015653262">+1 2015653262</a>

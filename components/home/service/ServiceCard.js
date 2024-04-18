@@ -12,7 +12,7 @@ const ServiceCard = ({ service }) => {
     <div
       onMouseEnter={(e) => setIsHoverd(true)}
       onMouseLeave={(e) => setIsHoverd(false)}
-      className="relative overflow-hidden transition duration-300 bg-gray-100 shadow-lg hover:shadow-xl"
+      className="relative overflow-hidden transition duration-300 shadow-lg hover:shadow-xl"
     >
       {/* Background image */}
       <div
@@ -29,7 +29,7 @@ const ServiceCard = ({ service }) => {
             <Image className="w-10 h-10" src={icon} alt="icon" />
             {title}
           </h3>
-          <div className="px-4 text-sm text-gray-300">{description}</div>
+          <div className="px-4 text-sm text-accent">{description}</div>
           <Link href="/service" className="mx-4 text-sm text-secondary">
             Explore more
           </Link>
