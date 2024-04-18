@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import InputText from "@/components/ui/forms/InputText";
 import React, { useEffect, useRef, useState } from "react";
