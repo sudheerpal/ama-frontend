@@ -8,22 +8,17 @@ import { redirect } from "next/navigation";
 import React from "react";
 
 export const generateMetadata = async ({ params }) => {
-  let reportData = null;
   const arrays = params.slug.split("-");
   const reportId = arrays[arrays.length - 1];
-  const res = await fetch(`${process.env.API_URL}/api/reports/${reportId}`, {
+  const res = await fetch(`${process.env.API_URL}/api/seo/${reportId}`, {
     cache: "no-cache",
   });
   const dataReport = await res.json();
-  reportData = dataReport.data;
-  const { title, summery = "", marketKeyword = "" } = reportData?.basic;
+  const { title, description = "", keywords = "" } = dataReport;
   return {
-    title: reportData?.basic?.seo?.metaTitle || title,
-    // description: reportData?.basic?.seo?.metaDescription || summery,
-    description:
-      reportData?.basic?.seo?.metaDescription ||
-      "The React Framework for the Web",
-    keywords: reportData?.basic?.seo?.keywords || marketKeyword,
+    title,
+    description,
+    keywords,
   };
 };
 
