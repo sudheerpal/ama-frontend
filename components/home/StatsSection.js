@@ -14,13 +14,13 @@ const StatsSection = () => {
         width: "100%",
       }}
     >
-      <div className="py-12 bg-opacity-50  bg-primary min-h-48 md:py-24 lg:py-36">
+      <div className="py-12 bg-opacity-50 bg-primary min-h-48 md:py-24 lg:py-36">
         <CustomContainer>
           <div className="flex gap-2 lg:gap-6">
             <div>
               <CheckCircle className="text-secondary" size={70} />
             </div>
-            <h1 className="text-2xl font-bold text-white md:text-4xl lg:text-6xl">
+            <h1 className="text-white mrf-heading">
               <span className="text-secondary">Doing the right thing,</span>{" "}
               <br />
               at the right time.

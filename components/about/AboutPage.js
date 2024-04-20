@@ -57,7 +57,7 @@ const AboutPage = ({ sponsors }) => {
             {/* banner section  */}
             <div className="grid grid-cols-1 bg-secondary md:grid-cols-2 md:p-10 xl:p-16">
               <div className="p-4">
-                <h1 className="text-xl font-bold md:text-3xl lg:text-4xl">
+                <h1 className="mrf-secondary-heading">
                   <span className="text-primary">Explore</span>
                   <br />
                   <span>Our Reports</span>
