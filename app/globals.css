@@ -34,16 +34,16 @@ body {
 
 @layer components {
   /* Responsive Typography Classes with MRF Prefix */
-  .mrf-h1 {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  .mrf-heading {
+    @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }
 
-  .mrf-h2 {
-    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
+  .mrf-sub-heading {
+    @apply text-xl font-bold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl;
   }
 
-  .mrf-h3 {
-    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
+  .mrf-secondary-heading {
+    @apply text-lg font-bold sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl;
   }
 
   .mrf-h4 {

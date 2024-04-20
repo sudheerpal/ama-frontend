@@ -6,7 +6,7 @@ import { Home } from "react-feather";
 const NotFound = () => {
   return (
     <div className="flex flex-col items-center justify-center mt-20">
-      <h1 className="mb-4 text-2xl font-bold text-center lg:text-5xl text-primary">
+      <h1 className="mb-4 text-center mrf-sub-heading text-primary">
         Oops! 404 - Page not found
       </h1>
       <p className="mb-8 text-center text-neutral lg:text-xl">

@@ -65,16 +65,14 @@ const BannerSlide = () => {
                 }
               >
                 <div className="text-center md:text-left">
-                  <h1 className="mb-3 text-4xl font-bold xl:text-6xl text-primary lg:mb-7 min-h">
+                  <h1 className="mb-3 mrf-heading text-primary lg:mb-7 min-h">
                     {slide.title}
                   </h1>
-                  <h3 className="mb-2 text-2xl md:text-3xl xl:text-4xl">
+                  <h3 className="mb-2 font-normal mrf-secondary-heading">
                     {slide.subTitle}
                     <br />
                   </h3>
-                  <h3 className="text-2xl font-bold md:text-3xl xl:text-4xl">
-                    {slide.subTitle2}
-                  </h3>
+                  <h3 className="mrf-secondary-heading">{slide.subTitle2}</h3>
                 </div>
               </CustomContainer>
             </div>
