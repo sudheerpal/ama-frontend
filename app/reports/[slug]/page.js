@@ -1,3 +1,4 @@
+import DatasetJsonLd from "@/components/common/DatasetJsonLd";
 import SEO from "@/components/common/SEO";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
@@ -57,6 +58,12 @@ const ReportDetails = async ({ params }) => {
 
   return (
     <div>
+      <DatasetJsonLd
+        id={reportId}
+        name={reportData?.basic?.title}
+        description={reportData?.basic?.summery}
+        url={`https://www.advancemarketanalytics.com/reports/${reportData.id}-${reportData.name}`}
+      />
       {reportData.basic ? (
         <ReportPage
           testimonials={testimonials}
