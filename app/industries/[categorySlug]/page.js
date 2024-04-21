@@ -13,6 +13,13 @@ import { useParams } from "next/navigation";
 import React from "react";
 import { Home } from "react-feather";
 
+export const generateMetadata = async ({ params }) => {
+  const category = params.categorySlug.replaceAll("-", " ");
+  return {
+    title: `Market in-Depth Research Report for ${category} : MR Forecast`,
+  };
+};
+
 const ReportListing = async ({ params, searchParams }) => {
   const categorySlug = decodeURIComponent(params.categorySlug);
   const reports = await fetchReports({ categorySlug, searchParams });

@@ -9,6 +9,10 @@ import { FileTextIcon } from "lucide-react";
 import { useParams } from "next/navigation";
 import React from "react";
 
+export const metadata = {
+  title: "Market in-Depth Research Report: MR Forecast",
+};
+
 const ReportListing = async ({ searchParams }) => {
   const reports = await fetchAllReports({ query: searchParams });
 
