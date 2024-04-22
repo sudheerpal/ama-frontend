@@ -41,7 +41,7 @@ const ReportDetails = async ({ params }) => {
     });
     const dataReport = await res.json();
     reportData = dataReport.data;
-    if (reportSlug !== reportData?.basic?.slug) {
+    if (params?.slug !== reportData?.basic?.slug) {
       console.log("line 23 ", reportData?.basic?.slug);
       redirect(`/reports/${reportData?.basic?.slug}`);
       // redirect(`/about`);
