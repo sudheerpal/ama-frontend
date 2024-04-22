@@ -14,8 +14,9 @@ import icon3 from "@/assets/serviceCard/servicesIcon/Picture3.png";
 import image1 from "@/assets/serviceCard/image-1.png";
 import image2 from "@/assets/serviceCard/image-2.png";
 import image3 from "@/assets/serviceCard/image-3.png";
+import Testimonials from "./components/Testimonials";
 
-const ServicePage = () => {
+const ServicePage = ({ testimonials }) => {
   const services = [
     {
       id: 1,
@@ -103,36 +104,7 @@ const ServicePage = () => {
               </Link>
             </section>
             <section className="mx-4">
-              <div
-                style={{
-                  clipPath:
-                    "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
-                }}
-                className="p-4 pb-10 bg-accent"
-              >
-                <p>
-                  “Thank you very much. I really appreciate the work your team
-                  has done. I feel very comfortable recommending your services
-                  to some of the other startups that I’m working with, and will
-                  likely establish a good long partnership with you.”
-                </p>
-                <div className="w-16 ml-auto">
-                  <Image src={quotation} alt="quotation" />
-                </div>
-              </div>
-              <div className="flex items-center gap-4 my-5">
-                <div>
-                  <Image
-                    className="w-12 rounded-full"
-                    src={avatar}
-                    alt="avatar"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold">Dr. John Doe</h3>
-                  <p className="text-neutral">Sales & Marketing, Alien Ltd.</p>
-                </div>
-              </div>
+              <Testimonials testimonials={testimonials} />
             </section>
           </aside>
         </section>

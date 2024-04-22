@@ -180,8 +180,8 @@ const QueryForm = ({
       {direct && (
         <>
           <hr className="mt-5" />
-          <div className="flex justify-between items-center">
-            <div className="text-2xl font-semibold my-5 ">
+          <div className="flex items-center justify-between">
+            <div className="my-5 text-2xl font-semibold ">
               Total Amount: ${reportPrice}
             </div>
             <select
@@ -225,7 +225,7 @@ const QueryForm = ({
           <select
             name="country"
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-accent focus:outline-none text-sm"
+            className="w-full px-4 py-3 text-sm bg-accent focus:outline-none"
           >
             <option value={""}>Select Country</option>
             {countryList.map((country) => (
@@ -334,9 +334,9 @@ const QueryForm = ({
             </div>
           </div>
         )}
-        <div className="flex mt-5 items-center">
+        <div className="flex items-center mt-5">
           <input
-            className="input h-9 input-bordered rounded-sm w-40"
+            className="w-40 rounded-sm input h-9 input-bordered"
             type="text"
             value={userInput}
             onChange={handleChange}
@@ -357,7 +357,7 @@ const QueryForm = ({
               type="checkbox"
               defaultChecked={checked}
               onChange={(e) => setChecked(e.target.checked)}
-              className="mr-1 h-5 w-5"
+              className="w-5 h-5 mr-1"
             />
             <span>
               I read and Accept the{" "}
@@ -371,7 +371,7 @@ const QueryForm = ({
             </span>
           </div>
         )}
-        {error && <div className="text-error font-semibold"> {error} </div>}
+        {error && <div className="font-semibold text-error"> {error} </div>}
         <button
           //   disabled={submitted}
           type="submit"
@@ -380,7 +380,7 @@ const QueryForm = ({
           {submitted ? "Submitting.." : btnText}
         </button>
       </form>
-      <p className="text-sm my-5">
+      <p className="my-5 text-sm">
         We do not share your information with anyone. However, we may send you
         emails based on your report interest from time to time. You may contact
         us at any time to opt-out.{" "}
