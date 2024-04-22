@@ -37,7 +37,7 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
             <tr>
               <td className="pl-3">Historical Period</td>
               <td>
-                {new Date().getFullYear() - 6}-{new Date().getFullYear() - 1}
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() - 2}
               </td>
             </tr>
             <tr>
