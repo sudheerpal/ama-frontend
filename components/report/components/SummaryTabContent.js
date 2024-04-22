@@ -101,7 +101,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           id="chart_content"
         >
           <div className="font-semibold text-center text-neutral">
-            Market Growth
+            Market Growth (%)
           </div>
           <div className="flex justify-center">
             <Chart
@@ -118,7 +118,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               }}
               series={[
                 {
-                  name: "CAGR",
+                  name: "Market Growth",
                   data: Object.values(chartData.market_growth),
                 },
               ]}
@@ -136,7 +136,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           id="chart_content"
         >
           <div className="font-semibold text-center text-neutral">
-            Market Size
+            Market Size ({basic?.marketData?.valueUnit || "USD Million"})
           </div>
           <div className="flex justify-center">
             <Chart
@@ -153,7 +153,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               }}
               series={[
                 {
-                  name: "CAGR",
+                  name: "Market Size",
                   data: Object.values(chartData.market_size),
                 },
               ]}
