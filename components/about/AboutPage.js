@@ -10,8 +10,9 @@ import quotation from "@/assets/report/quotation.png";
 import Image from "next/image";
 import Link from "next/link";
 import Sponsors from "../home/Sponsors";
+import Testimonials from "./components/Testimonials";
 
-const AboutPage = ({ sponsors }) => {
+const AboutPage = ({ sponsors, testimonials }) => {
   const progressData = [
     {
       year: 1985,
@@ -227,7 +228,7 @@ const AboutPage = ({ sponsors }) => {
               </Link>
             </section>
             <section className="mx-4">
-              <div
+              {/* <div
                 style={{
                   clipPath:
                     "polygon(0% 0%, 100% 0%, 100% 90%, 45% 90%, 32% 100%, 32% 90%, 0 90%)",
@@ -256,7 +257,8 @@ const AboutPage = ({ sponsors }) => {
                   <h3 className="text-lg font-bold">Dr. John Doe</h3>
                   <p className="text-neutral">Sales & Marketing, Alien Ltd.</p>
                 </div>
-              </div>
+              </div> */}
+              <Testimonials testimonials={testimonials} />
             </section>
           </aside>
         </section>
