@@ -27,7 +27,7 @@ const MainFooter = () => {
               <MapPin className="w-[46px] text-secondary mt-1" size={18} />
               <span>
                 Office no. A 5010, fifth floor, Solitaire Business Hub, Near
-                Phoenix mall, Pune, Maharashtra 41101
+                Phoenix mall, Pune, Maharashtra 411014
               </span>
             </p>
           </div>{" "}
