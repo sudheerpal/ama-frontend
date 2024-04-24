@@ -39,7 +39,12 @@ const ProductListSearch = ({ currentCategory }) => {
 
   // Function to handle input blur
   const handleInputBlur = () => {
-    setIsInputFocused(false);
+    // Handled with setTimeout otherwise it triggers before navigating
+    const timeout = setTimeout(() => {
+      setIsInputFocused(false);
+    }, 500);
+
+    return () => clearTimeout(timeout);
   };
 
   const sugesstionFetch = async (payload) => {

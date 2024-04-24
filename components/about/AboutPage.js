@@ -68,10 +68,10 @@ const AboutPage = ({ sponsors, testimonials }) => {
                   research services for you from initial sketches to the final
                   construction.
                 </p>
-                <div className="mt-5">
+                <div className="mt-5 w-fit">
                   <Link href="/industries">
                     <Button>
-                      Explore{" "}
+                      Explore
                       <ArrowRight size={16} className="text-secondary" />
                     </Button>
                   </Link>
@@ -272,7 +272,7 @@ const AboutPage = ({ sponsors, testimonials }) => {
             <div className="text-lg font-bold capitalize lg:text-2xl">
               looking for Trending Report by Industries?
             </div>
-            <div className="mt-2 lg:mt-0">
+            <div className="mt-2 lg:mt-0 w-fit">
               <Link href={`/industries`}>
                 <Button>
                   Explore <ArrowRight size={16} className="text-secondary" />

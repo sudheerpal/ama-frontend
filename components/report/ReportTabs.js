@@ -13,6 +13,7 @@ const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
 
   // State to track the active tab
   const [activeTab, setActiveTab] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Function to handle tab change
   const handleTabChange = (tabNumber) => {
@@ -35,7 +36,7 @@ const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
     },
     {
       id: 2,
-      label: "Table of Content",
+      label: isMobile ? "TOC" : "Table of Content",
       content: (
         <TOC
           marketAnalysis={marketAnalysis}
@@ -55,11 +56,16 @@ const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
   ];
 
   useEffect(() => {
+    // Check if the device width is below a certain threshold to determine mobile
+    const isMobileDevice = window.innerWidth < 768;
+    setIsMobile(isMobileDevice);
+
     if (params.slug !== basic.slug) {
       router.replace(`/reports/${basic.slug}`);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
   return (
     <div className="relative">
       <hr className="absolute w-full border-b-2 border-primary top-[18px] md:top-[34px] z-10" />

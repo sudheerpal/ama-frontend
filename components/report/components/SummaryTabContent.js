@@ -96,7 +96,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       </section>
       {Chart && chartData && chartData.market_growth && (
         <div
-          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
+          className="relative py-4 mx-auto my-3 border shadow-lg md:px-12 w-fit"
           ref={growthRef}
           id="chart_content"
         >
@@ -112,6 +112,19 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     show: false,
                   },
                 },
+                responsive: [
+                  {
+                    breakpoint: 480,
+                    options: {
+                      chart: {
+                        width: 350,
+                      },
+                      legend: {
+                        position: "bottom",
+                      },
+                    },
+                  },
+                ],
                 xaxis: {
                   categories: Object.keys(chartData.market_growth),
                 },
@@ -131,7 +144,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       )}
       {Chart && chartData && chartData.market_size && (
         <div
-          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
+          className="relative py-4 mx-auto my-3 border shadow-lg md:px-12 w-fit"
           ref={sizeRef}
           id="chart_content"
         >
@@ -147,6 +160,19 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     show: false,
                   },
                 },
+                responsive: [
+                  {
+                    breakpoint: 480,
+                    options: {
+                      chart: {
+                        width: 350,
+                      },
+                      legend: {
+                        position: "bottom",
+                      },
+                    },
+                  },
+                ],
                 xaxis: {
                   categories: Object.keys(chartData.market_size),
                 },
@@ -167,7 +193,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
 
       {Chart && chartData && chartData.market_size && (
         <div
-          className="relative px-12 py-4 mx-auto my-3 border shadow-lg w-fit"
+          className="relative py-4 mx-auto my-3 border shadow-lg md:px-12 w-fit"
           ref={regionRef}
           id="chart_content"
         >
@@ -187,7 +213,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 480,
                     options: {
                       chart: {
-                        width: 200,
+                        width: 350,
                       },
                       legend: {
                         position: "bottom",
