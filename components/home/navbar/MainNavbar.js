@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo4.jpeg";
 import Image from "next/image";
 import { Facebook, Linkedin, Menu, Twitter, X } from "react-feather";
@@ -9,13 +9,19 @@ import { links } from "@/constants/constants";
 import CustomContainer from "@/components/ui/CustomContainer";
 import LucidIcon from "@/components/ui/icons/LucidIcons";
 import LinkTagsDesktop from "./LinkTagsDesktop";
+import { usePathname } from "next/navigation";
 
 const MainNavbar = ({ parentCategories = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <div>
