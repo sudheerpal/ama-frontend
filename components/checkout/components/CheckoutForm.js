@@ -22,12 +22,12 @@ const CheckoutForm = ({
   direct = false,
 }) => {
   return (
-    <div className="flex">
-      <div className="lg:w-2/3 lg:mr-4 mt-8 rd">
-        <div className="flex justify-between">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:mt-5">
+      <div className="lg:col-span-2 rd">
+        <div className="justify-between md:flex">
           <h3> {title} </h3>
           <Link
-            className=" border border-primary transition-all rounded-2xl px-8 font-semibold hover:bg-primary hover:text-white py-1"
+            className="block px-8 py-1 mx-auto mt-5 font-semibold transition-all border border-primary rounded-2xl hover:bg-primary hover:text-white md:mt-0 w-fit md:mx-0"
             href={`/reports/${reportData?.report?.slug}`}
           >
             View Synopsis & Table of content
@@ -35,11 +35,11 @@ const CheckoutForm = ({
         </div>
         <Link
           href={`/reports/${reportData?.report?.slug}`}
-          className="font-semibold text-3xl block mt-5"
+          className="block mt-5 text-xl font-semibold md:text-2xl lg:text-3xl"
         >
           {reportData?.report?.title}{" "}
         </Link>
-        <p className="text-neutral mt-1"> {reportData?.report?.summery} </p>
+        <p className="mt-1 text-neutral"> {reportData?.report?.summery} </p>
 
         <QueryForm
           type={type}
@@ -51,7 +51,7 @@ const CheckoutForm = ({
           reportTitle={reportData?.report?.title}
         />
       </div>
-      <div className="lg:w-1/3  mt-8 lg:ml-8">
+      <div className="">
         <div>
           {!direct && (
             <PricingCard
@@ -60,9 +60,9 @@ const CheckoutForm = ({
             />
           )}
 
-          <div className="rd my-5">
+          <div className="my-5 rd">
             <h3>Key Highlights of Report</h3>
-            <div className="flex mt-5 w-full">
+            <div className="flex w-full mt-5">
               <div className="grid flex-grow card bg-base-300 rounded-box place-items-start">
                 <div className="flex items-center">
                   <Calendar size={20} className="mr-2" />{" "}
