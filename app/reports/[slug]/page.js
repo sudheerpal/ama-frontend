@@ -1,4 +1,5 @@
 import DatasetJsonLd from "@/components/common/DatasetJsonLd";
+import ErrorPage from "@/components/common/ErrorPage";
 import SEO from "@/components/common/SEO";
 import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
@@ -39,6 +40,7 @@ const ReportDetails = async ({ params }) => {
     const res = await fetch(`${process.env.API_URL}/api/reports/${reportId}`, {
       cache: "no-cache",
     });
+
     const dataReport = await res.json();
     reportData = dataReport.data;
     if (params?.slug !== reportData?.basic?.slug) {
@@ -188,15 +190,15 @@ const ReportDetails = async ({ params }) => {
           };
         })}
       />
-      {reportData.basic ? (
+      {reportData?.rd ? (
         <ReportPage
           testimonials={testimonials}
           clientLogos={clientLogos}
           reportData={reportData}
         />
       ) : (
-        <div className="py-4 text-lg font-bold text-center text-red-600 rd">
-          Report Not Found
+        <div>
+          <ErrorPage />
         </div>
       )}
       <Footer />
