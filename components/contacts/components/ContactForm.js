@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import InputText from "@/components/ui/forms/InputText";
 import { countryList } from "@/db/countryList";
 import { RefreshCcw } from "react-feather";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const ContactForm = ({
   btnText = "Submit",
@@ -36,6 +36,7 @@ const ContactForm = ({
     report_name: reportTitle,
   });
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
