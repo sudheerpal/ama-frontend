@@ -4,7 +4,9 @@ const ProductSidebar = ({ categories }) => {
   const { parentCategories, subCategories } = categories;
   return (
     <div className="mt-5">
-      <h3 className="mb-5 text-xl font-bold text-primary">Indutry Experties</h3>
+      <h3 className="mb-5 text-xl font-bold text-primary">
+        Industry Experties
+      </h3>
       <div>
         {parentCategories?.map((parentCategory) => {
           const subCategoriesOfParent = subCategories?.filter(
