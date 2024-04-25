@@ -117,25 +117,42 @@ const QueryForm = ({
     } else {
       try {
         setSubmitted(true);
-        const res = await fetch(
-          `https://www.advancemarketreport.com/api/v1/lead`,
-          {
-            method: "POST",
-            headers: myHeaders,
-            body: JSON.stringify(
-              !direct
-                ? formData
-                : {
-                    ...formData,
-                    order: {
-                      paymentMode: paymentMethod,
-                      amount: reportPrice,
-                    },
-                  }
-            ),
-          }
-        );
-        const resData = await res.json();
+        await fetch("/api/email", {
+          method: "POST",
+          body: JSON.stringify({
+            ...formData,
+            subject:
+              type === "SWA"
+                ? "Speak To Analyst Request"
+                : type === "RSR"
+                ? "Request Sample for Report"
+                : type === "OBD"
+                ? "Payment Request for Report"
+                : type === "RDR"
+                ? "Payment Discount for Report"
+                : type === "EBB"
+                ? "Enquiry Before Buy for Report"
+                : "",
+            paymentMode: paymentMethod,
+            amount: reportPrice,
+          }),
+        });
+
+        await fetch(`https://www.advancemarketreport.com/api/v1/lead`, {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify(
+            !direct
+              ? formData
+              : {
+                  ...formData,
+                  order: {
+                    paymentMode: paymentMethod,
+                    amount: reportPrice,
+                  },
+                }
+          ),
+        });
         router.push(`${pathname}/thank-you`);
       } catch (error) {
         console.log("error", error);
