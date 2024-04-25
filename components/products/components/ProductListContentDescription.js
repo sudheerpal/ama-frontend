@@ -5,7 +5,6 @@ import allCategoryThumbnail from "@/assets/report/reportCategoryThumbnail/allCat
 import Link from "next/link";
 const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
   const thumbnail = currentCategory?.parent?.banner || currentCategory?.banner;
-  console.log(thumbnail);
   return isAllReports ? (
     <>
       <div>

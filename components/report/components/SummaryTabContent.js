@@ -114,10 +114,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                 },
                 responsive: [
                   {
-                    breakpoint: 480,
+                    breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",
@@ -162,10 +162,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                 },
                 responsive: [
                   {
-                    breakpoint: 480,
+                    breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",
@@ -210,10 +210,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                 labels: Object.keys(chartData.regional_market_share),
                 responsive: [
                   {
-                    breakpoint: 480,
+                    breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",

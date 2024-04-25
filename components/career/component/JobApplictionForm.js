@@ -32,7 +32,6 @@ const JobApplictionForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Implement form submission logic here
-    console.log(formData);
     // Reset form data after submission
     setFormData({
       name: "",

@@ -10,6 +10,7 @@ const ReportCard = ({ report }) => {
     title,
     summery,
     createdAt,
+    publishedAt,
     baseyear,
     noOfPages,
     category,
@@ -17,7 +18,6 @@ const ReportCard = ({ report }) => {
     price,
     slug,
   } = report;
-
   return (
     <div>
       <section className="gap-5 p-2 my-5 space-y-3 duration-300 rounded md:flex md:space-y-0 hover:shadow-lg lg:p-4">
@@ -37,7 +37,9 @@ const ReportCard = ({ report }) => {
             <p className="text-neutral">{summery}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
-            <span>{new Date(createdAt).toDateString("month", "year")}</span>
+            <span>
+              {new Date(publishedAt || createdAt).toDateString("month", "year")}
+            </span>
             <span>Base Year: {baseyear}</span>
             <span>No Of Pages: {noOfPages}</span>
           </div>

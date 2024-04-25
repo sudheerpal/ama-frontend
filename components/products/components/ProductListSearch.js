@@ -68,7 +68,6 @@ const ProductListSearch = ({ currentCategory }) => {
   useEffect(() => {
     // Check if input value meets criteria (minimum 3 letters excluding space)
     if (debouncedSearchValue.trim().replace(/\s/g, "").length >= 3) {
-      console.log("Search value:", debouncedSearchValue);
       // Perform further processing here
 
       sugesstionFetch({
