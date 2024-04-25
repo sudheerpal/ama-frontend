@@ -18,7 +18,6 @@ const PricingCard = ({ price = {}, slug = "" }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     // Add your form submission logic here
-    console.log("Form submitted with plan:", selectedPlan);
   };
 
   return (
