@@ -3,7 +3,7 @@ import React from "react";
 
 const SponsordCard = ({ image }) => {
   return (
-    <div>
+    <div className="w-full">
       <Image
         className="duration-300 hover:scale-105"
         src={image}

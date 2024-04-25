@@ -11,8 +11,8 @@ export default async function page() {
   return (
     <>
       <CustomContainer>
-        <div className="flex">
-          <div className="lg:w-2/3 lg:mr-4 mt-8 rd">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:mt-5">
+          <div className="lg:col-span-2 rd">
             <h3 className="text-2xl font-semibold">
               Acquire essential perspectives on your interested industry.
             </h3>
@@ -28,8 +28,8 @@ export default async function page() {
               reportTitle={"This Lead is for Speak with Analysts"}
             />
           </div>
-          <div className="lg:w-1/3  mt-8 lg:ml-8">
-            <div className="rd my-5">
+          <div className="">
+            <div className="my-5 rd">
               <div>
                 <div className="my-5">
                   <h2 className="text-lg font-bold capitalize md:text-2xl">

@@ -55,6 +55,9 @@ const SponsorSlider = ({ sponsors }) => {
   if (screenWidth >= 768) {
     slidesPerView = 6;
   }
+  if (screenWidth >= 1440) {
+    slidesPerView = 8;
+  }
 
   return (
     <div className="flex items-center justify-center h-full">
