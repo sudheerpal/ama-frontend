@@ -101,7 +101,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           id="chart_content"
         >
           <div className="font-semibold text-center text-neutral">
-            Market Growth (%)
+            {basic.marketKeyword} Market Growth (%)
           </div>
           <div className="flex justify-center">
             <Chart
@@ -149,7 +149,8 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           id="chart_content"
         >
           <div className="font-semibold text-center text-neutral">
-            Market Size ({basic?.marketData?.valueUnit || "USD Million"})
+            {basic.marketKeyword} Market Size (
+            {basic?.marketData?.valueUnit || "USD Million"})
           </div>
           <div className="flex justify-center">
             <Chart
@@ -198,7 +199,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           id="chart_content"
         >
           <div className="font-semibold text-center text-neutral">
-            Regional Market Share
+            {basic.marketKeyword} Regional Market Share
           </div>
           <div className="flex justify-center">
             <Chart
@@ -233,7 +234,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       <section>
         <header className="my-4">
           <h3 className="text-xl font-bold uppercase border-b-4 text-primary border-secondary w-fit">
-            DIGITAL HEALTH MARKET REPORT HIGHLIGHTS
+            {basic.marketKeyword} REPORT HIGHLIGHTS
           </h3>
         </header>
         <SummaryTabHighlight basic={basic} marketAnalysis={marketAnalysis} />

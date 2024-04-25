@@ -17,7 +17,7 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
             <tr>
               <td className="pl-3">Study Period </td>
               <td>
-                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 7}
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 8}
               </td>
             </tr>
             <tr>
@@ -31,20 +31,20 @@ const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
             <tr>
               <td className="pl-3">Forecast Period</td>
               <td>
-                {new Date().getFullYear()}-{new Date().getFullYear() + 7}
+                {new Date().getFullYear()}-{new Date().getFullYear() + 8}
               </td>
             </tr>
             <tr>
               <td className="pl-3">Historical Period</td>
               <td>
-                {new Date().getFullYear() - 6}-{new Date().getFullYear() - 2}
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() - 1}
               </td>
             </tr>
             <tr>
               <td className="pl-3">Growth Rate</td>
               <td>
                 CAGR of {basic.marketData.cagr}% from{" "}
-                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 7}
+                {new Date().getFullYear() - 6}-{new Date().getFullYear() + 8}
               </td>
             </tr>
             <tr>
