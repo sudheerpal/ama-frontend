@@ -117,7 +117,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 400,
+                        width: 350,
                       },
                       legend: {
                         position: "bottom",
@@ -166,7 +166,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 400,
+                        width: 350,
                       },
                       legend: {
                         position: "bottom",
@@ -214,7 +214,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 400,
+                        width: 350,
                       },
                       legend: {
                         position: "bottom",
