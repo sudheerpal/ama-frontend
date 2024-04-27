@@ -16,7 +16,7 @@ import QueryForm from "@/components/common/QueryForm";
 
 const CheckoutForm = ({
   reportData,
-  type = "",
+  type = "OBD",
   title = "",
   status,
   direct = false,

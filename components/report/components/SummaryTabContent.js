@@ -90,9 +90,6 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
         {chartData?.regional_market_share && (
           <RegionData regions={chartData?.regional_market_share || {}} />
         )}
-        {/* {chartData?.regional_market_share && (
-          <RegionData regions={rd?.chart?.regional_market_share || {}} />
-        )} */}
       </section>
       {Chart && chartData && chartData.market_growth && (
         <div
@@ -117,7 +114,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",
@@ -166,7 +163,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",
@@ -192,7 +189,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
         </div>
       )}
 
-      {Chart && chartData && chartData.market_size && (
+      {Chart && chartData && chartData.regional_market_share && (
         <div
           className="relative py-4 mx-auto my-3 border shadow-lg md:px-12 w-fit"
           ref={regionRef}
@@ -214,7 +211,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
                     breakpoint: 600,
                     options: {
                       chart: {
-                        width: 350,
+                        width: 400,
                       },
                       legend: {
                         position: "bottom",

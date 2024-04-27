@@ -78,14 +78,18 @@ export default function ErrorPage() {
     } else {
       try {
         setSubmitted(true);
-        const res = await fetch(
-          `https://www.advancemarketreport.com/api/v1/lead`,
-          {
-            method: "POST",
-            headers: myHeaders,
-            body: JSON.stringify(formData),
-          }
-        );
+        await fetch(`https://www.advancemarketreport.com/api/v1/lead`, {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify(formData),
+        });
+        await fetch("/api/email", {
+          method: "POST",
+          body: JSON.stringify({
+            ...formData,
+            subject: "Report Request",
+          }),
+        });
         router.push(`/thank-you`);
       } catch (error) {
         console.log("error", error);

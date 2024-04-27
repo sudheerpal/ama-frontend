@@ -66,22 +66,25 @@ const ContactForm = ({
     } else {
       try {
         setSubmitted(true);
-        const res = await fetch(
-          `https://www.advancemarketreport.com/api/v1/lead`,
-          {
-            method: "POST",
-            headers: myHeaders,
-            body: JSON.stringify(
-              !direct
-                ? formData
-                : {
-                    ...formData,
-                    order: { paymentMode: paymentMethod, amount: price },
-                  }
-            ),
-          }
-        );
-        const resData = await res.json();
+        await fetch("/api/email", {
+          method: "POST",
+          body: JSON.stringify({
+            ...formData,
+            subject: "Contact Request",
+          }),
+        });
+        await fetch(`https://www.advancemarketreport.com/api/v1/lead`, {
+          method: "POST",
+          headers: myHeaders,
+          body: JSON.stringify(
+            !direct
+              ? formData
+              : {
+                  ...formData,
+                  order: { paymentMode: paymentMethod, amount: price },
+                }
+          ),
+        });
         router.push(`${pathname}/thank-you`);
       } catch (error) {
         console.log("error", error);
