@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import MRFImage from "@/components/ui/Image";
 
 const ServiceCard = ({ service }) => {
   const [isHovered, setIsHoverd] = useState(false);
@@ -17,8 +18,10 @@ const ServiceCard = ({ service }) => {
       {/* Background image */}
       <div
         className="h-64 bg-center bg-cover"
-        style={{ backgroundImage: `url(${image.src})` }}
-      ></div>
+        // style={{ backgroundImage: `url(${image.src})` }}
+      >
+        <MRFImage classNames="w-full" src={image} alt={title + " - Thumb"} />
+      </div>
       <div
         className={`absolute left-0 right-0 h-full px-4 py-2 text-white transition duration-300 opacity-100 bg-opacity-80 bg-primary top-[200px] backdrop-filter ${
           isHovered && "-translate-y-[200px]"
