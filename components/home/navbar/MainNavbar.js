@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "@/assets/logo4.jpeg";
 import Image from "next/image";
 import { Facebook, Linkedin, Menu, Twitter, X } from "react-feather";
@@ -13,6 +13,7 @@ import { usePathname } from "next/navigation";
 
 const MainNavbar = ({ parentCategories = [] }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
   const pathname = usePathname();
 
   const toggleNavbar = () => {
@@ -22,6 +23,15 @@ const MainNavbar = ({ parentCategories = [] }) => {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!menuRef.current?.contains(e.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+  });
 
   return (
     <div>
@@ -36,6 +46,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
                 {!isOpen ? <Menu size={24} /> : <X size={24} />}
               </button>
               <ul
+                ref={menuRef}
                 className={`menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow absolute bg-white rounded w-72 ${
                   isOpen ? "block" : "hidden"
                 }`}
