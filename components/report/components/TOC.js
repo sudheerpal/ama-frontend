@@ -46,11 +46,13 @@ export default function TOC({ marketAnalysis, marketReport, report }) {
       data: [
         ...marketAnalysis.segments.map((data) => {
           const array = data.split(":");
+          console.log("segments", array);
           return `Market Analysis, Insights and Forecast - By ${array[0]} : ${array[1]}`;
         }),
         `Market Analysis, Insights and Forecast - By Region : ${marketAnalysis.regionData
           .map((data) => {
             const array = data.split(":");
+            console.log("region", array);
             return array[0].trim();
           })
           .toString()}`,
@@ -58,6 +60,7 @@ export default function TOC({ marketAnalysis, marketReport, report }) {
     },
     ...marketAnalysis.regionData.map((data) => {
       const array = data.split(":");
+
       return {
         title: `${array[0].trim()} ${
           report.marketKeyword
@@ -363,8 +366,12 @@ export default function TOC({ marketAnalysis, marketReport, report }) {
                                     ))
                                 ) : (
                                   <li>
-                                    {index + 1}.{nestedIndex + 1}.1.{" "}
-                                    {nestedData.split(":")[1]}
+                                    {nestedData.split(":")[1].length > 1 && (
+                                      <>
+                                        {index + 1}.{nestedIndex + 1}.1.{" "}
+                                        {nestedData.split(":")[1]}
+                                      </>
+                                    )}
                                   </li>
                                 )}
                               </ul>

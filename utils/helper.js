@@ -12,5 +12,7 @@ export const getSubHeading = (variables) => {
   } ${subTitle}, ${regions} Forecast ${new Date().getFullYear()}-${
     new Date().getFullYear() + 8
   }`;
-  return result.replace(/,\s*/g, ", ");
+
+  // This will replace any spaces before a comma and ensure exactly one space after the comma.
+  return result.replace(/\s*,\s*/g, ", ");
 };
