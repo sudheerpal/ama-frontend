@@ -8,11 +8,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "./BannerSlide.css";
-import image1 from "@/assets/bannerSlider/image-1.png";
-import image2 from "@/assets/bannerSlider/image-2.png";
-import image3 from "@/assets/bannerSlider/image-3.png";
+// import image1 from "@/assets/bannerSlider/image-1.png";
+// import image2 from "@/assets/bannerSlider/image-2.png";
+// import image3 from "@/assets/bannerSlider/image-3.png";
 import { Autoplay, Navigation } from "swiper/modules";
 import CustomContainer from "@/components/ui/CustomContainer";
+import MRFImage from "@/components/ui/Image";
 
 const BannerSlide = () => {
   const slidesData = [
@@ -21,21 +22,21 @@ const BannerSlide = () => {
       title: "Twice The Glory",
       subTitle: "We are yet again",
       subTitle2: "A great place to work",
-      image: image2,
+      image: "/images/bannerSlider/image-2.png",
     },
     {
       id: 3,
       title: "Discover New Opportunities",
       subTitle: "Explore endless possibilities",
       subTitle2: "with our innovative solutions",
-      image: image3,
+      image: "/images/bannerSlider/image-3.png",
     },
     {
       id: 1,
       title: "Transform Your Business",
       subTitle: "Unlock your potential",
       subTitle2: "with our cutting-edge technology",
-      image: image1,
+      image: "/images/bannerSlider/image-1.png",
     },
   ];
 
@@ -51,13 +52,11 @@ const BannerSlide = () => {
       >
         {slidesData.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div
-              style={{
-                backgroundImage: `url(${slide.image.src})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                width: "100%",
-              }}
+            <MRFImage
+              src={slide.image}
+              alt="Banner Image"
+              classNames="w-full"
+              bgImage
             >
               <CustomContainer
                 classNames={
@@ -75,7 +74,7 @@ const BannerSlide = () => {
                   <h3 className="mrf-secondary-heading">{slide.subTitle2}</h3>
                 </div>
               </CustomContainer>
-            </div>
+            </MRFImage>
           </SwiperSlide>
         ))}
       </Swiper>

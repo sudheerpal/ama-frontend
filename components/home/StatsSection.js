@@ -3,17 +3,11 @@ import bgImage from "@/assets/stats/bg-image.png";
 import Stats from "./stat/Stats";
 import { CheckCircle } from "react-feather";
 import CustomContainer from "../ui/CustomContainer";
+import MRFImage from "../ui/Image";
 
 const StatsSection = () => {
   return (
-    <div
-      style={{
-        backgroundImage: `url(${bgImage.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        width: "100%",
-      }}
-    >
+    <MRFImage src={bgImage} alt="Stats section BG image" bgImage>
       <div className="py-12 bg-opacity-50 bg-primary min-h-48 md:py-24 lg:py-36">
         <CustomContainer>
           <div className="flex gap-2 lg:gap-6">
@@ -31,7 +25,7 @@ const StatsSection = () => {
           </div>
         </CustomContainer>
       </div>
-    </div>
+    </MRFImage>
   );
 };
 
