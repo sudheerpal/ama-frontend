@@ -5,6 +5,7 @@ const MRFImage = ({
   children,
   src,
   alt,
+  quality = 100,
   classNames = "",
   bgImage = false,
   ...rest
@@ -18,7 +19,7 @@ const MRFImage = ({
             src={src}
             placeholder="blur"
             blurDataURL="/images/blur-bg.jpg"
-            quality={100}
+            quality={quality}
             fill
             style={{
               objectFit: "cover",
@@ -36,7 +37,7 @@ const MRFImage = ({
         src={src}
         placeholder="blur"
         blurDataURL="/images/blur-bg.jpg"
-        quality={100}
+        quality={quality}
         style={{
           width: "100%",
         }}
