@@ -66,11 +66,20 @@ const MainFooter = () => {
           <div className="w-full py-4 space-y-3">
             <h2 className="pb-2 text-2xl font-bold">Subscribe</h2>
             <div className="flex items-center h-8">
+              <label className="hidden" htmlFor="subscriptionEmail">
+                Subscribe
+              </label>
               <input
+                id="subscriptionEmail"
+                name="subscriptionEmail"
                 className="w-full h-full text-black border-2 border-secondary focus:outline-none"
                 type="email"
+                aria-labelledby="Email input"
               />
-              <button className="block h-full px-2 bg-secondary">
+              <button
+                className="block h-full px-2 bg-secondary"
+                aria-label="Subscribe"
+              >
                 <Mail size={22} color="black" />
               </button>
             </div>
