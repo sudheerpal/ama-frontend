@@ -14,6 +14,30 @@ export const themeColors = {
   info: "#0693E3",
 };
 
+export const slidesData = [
+  {
+    id: 2,
+    title: "Twice The Glory",
+    subTitle: "We are yet again",
+    subTitle2: "A great place to work",
+    image: "/images/bannerSlider/image-2.png",
+  },
+  {
+    id: 3,
+    title: "Discover New Opportunities",
+    subTitle: "Explore endless possibilities",
+    subTitle2: "with our innovative solutions",
+    image: "/images/bannerSlider/image-3.png",
+  },
+  {
+    id: 1,
+    title: "Transform Your Business",
+    subTitle: "Unlock your potential",
+    subTitle2: "with our cutting-edge technology",
+    image: "/images/bannerSlider/image-1.png",
+  },
+];
+
 export const links = [
   { text: "Home", url: "/" },
   { text: "About Us", url: "/about" },

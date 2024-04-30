@@ -14,32 +14,9 @@ import "./BannerSlide.css";
 import { Autoplay, Navigation } from "swiper/modules";
 import CustomContainer from "@/components/ui/CustomContainer";
 import MRFImage from "@/components/ui/Image";
+import { slidesData } from "@/constants/constants";
 
 const BannerSlide = () => {
-  const slidesData = [
-    {
-      id: 2,
-      title: "Twice The Glory",
-      subTitle: "We are yet again",
-      subTitle2: "A great place to work",
-      image: "/images/bannerSlider/image-2.png",
-    },
-    {
-      id: 3,
-      title: "Discover New Opportunities",
-      subTitle: "Explore endless possibilities",
-      subTitle2: "with our innovative solutions",
-      image: "/images/bannerSlider/image-3.png",
-    },
-    {
-      id: 1,
-      title: "Transform Your Business",
-      subTitle: "Unlock your potential",
-      subTitle2: "with our cutting-edge technology",
-      image: "/images/bannerSlider/image-1.png",
-    },
-  ];
-
   return (
     <div>
       <Swiper
@@ -57,6 +34,8 @@ const BannerSlide = () => {
               alt="Banner Image"
               classNames="w-full"
               bgImage
+              loading={index === 0 ? "eager" : "lazy"} // Eager load the first image
+              priority={index === 0} // Priority set to true for the first slide
             >
               <CustomContainer
                 classNames={
