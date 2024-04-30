@@ -34,6 +34,8 @@ const BannerSlide = () => {
               alt="Banner Image"
               classNames="w-full"
               bgImage
+              loading={index === 0 ? "eager" : "lazy"} // Eager load the first image
+              priority={index === 0} // Priority set to true for the first slide
             >
               <CustomContainer
                 classNames={

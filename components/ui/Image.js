@@ -8,6 +8,8 @@ const MRFImage = ({
   quality = 100,
   classNames = "",
   bgImage = false,
+  loading = "lazy",
+  priority = false,
   ...rest
 }) => {
   if (bgImage) {
@@ -18,6 +20,8 @@ const MRFImage = ({
             alt={alt}
             src={src}
             placeholder="blur"
+            loading={loading}
+            priority={priority}
             blurDataURL="/images/blur-bg.jpg"
             quality={quality}
             fill
@@ -36,6 +40,8 @@ const MRFImage = ({
         alt={alt}
         src={src}
         placeholder="blur"
+        loading={loading}
+        priority={priority}
         blurDataURL="/images/blur-bg.jpg"
         quality={quality}
         style={{
