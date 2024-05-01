@@ -51,13 +51,23 @@ const MainFooter = () => {
             <h2 className="pb-2 text-2xl font-bold border-b">Extra Links</h2>
             <div className="grid grid-cols-2">
               <div className="flex flex-col gap-2">
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contacts</Link>
-                <Link href="/#testimonial">Testimonials</Link>
+                <Link className="hover:text-info" href="/about">
+                  About
+                </Link>
+                <Link className="hover:text-info" href="/contact">
+                  Contacts
+                </Link>
+                <Link className="hover:text-info" href="/#testimonial">
+                  Testimonials
+                </Link>
               </div>
               <div className="flex flex-col gap-2">
-                <Link href="/service">Services</Link>
-                <Link href="/career">Our team</Link>
+                <Link className="hover:text-info" href="/service">
+                  Services
+                </Link>
+                <Link className="hover:text-info" href="/career">
+                  Our team
+                </Link>
                 {/* <Link href="/about">Our approach</Link> */}
               </div>
             </div>
