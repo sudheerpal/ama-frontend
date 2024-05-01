@@ -44,14 +44,12 @@ const MainFooter = () => {
             </p>
             <p className="flex items-center gap-2">
               <Mail className="text-secondary" size={18} />
-              <span className="text-info">
-                sales@advancemarketanalytics.com
-              </span>
+              <span className="">sales@advancemarketanalytics.com</span>
             </p>
           </div>
           <div className="w-full py-4 space-y-3">
             <h2 className="pb-2 text-2xl font-bold border-b">Extra Links</h2>
-            <div className="grid grid-cols-2 text-info">
+            <div className="grid grid-cols-2">
               <div className="flex flex-col gap-2">
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contacts</Link>
