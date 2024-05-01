@@ -22,7 +22,7 @@ const MainFooter = () => {
       <CustomContainer>
         <section className="grid grid-cols-1 gap-8 py-8 text-white md:grid-cols-2 lg:grid-cols-4 lg:py-12">
           <div className="w-full py-4 space-y-3">
-            <h3 className="text-2xl font-bold">Business Address</h3>
+            <h2 className="text-2xl font-bold">Business Address</h2>
             <h3 className="text-2xl font-bold">Head Office</h3>
             <p className="flex gap-2">
               <MapPin className="w-[46px] text-secondary mt-1" size={18} />
