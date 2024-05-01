@@ -53,7 +53,7 @@ const Stats = () => {
             )}
             {idx == 3 ? <span>%</span> : <span>+</span>}
           </h1>
-          <h3 className="sm:text-lg md:text-xl md:mt-2">{stat.label}</h3>
+          <h2 className="sm:text-lg md:text-xl md:mt-2">{stat.label}</h2>
         </div>
       ))}
     </div>

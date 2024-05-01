@@ -97,6 +97,7 @@ const ProductListSearch = ({ currentCategory }) => {
         <button
           type="submit"
           className="absolute top-0 right-0 h-full px-1 text-primary"
+          aria-label="Search"
         >
           <Search />
         </button>

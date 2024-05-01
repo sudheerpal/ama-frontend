@@ -17,12 +17,24 @@ const LinkTagsDesktop = ({ parentCategories }) => {
             link.submenus ? "group relative dropdown" : ""
           } ${pathname == link.url ? "text-info" : ""}`}
         >
-          <Link className={`p-0 hover:text-info`} href={link.url}>
+          <Link
+            className={`p-0 hover:text-info`}
+            href={link.url}
+            style={{
+              backgroundColor: "transparent",
+              color: "inherit",
+            }}
+          >
             {link.text} {link.submenus && <ChevronDown size={16} />}
           </Link>
           {/* Render submenus if they exist */}
           {link.submenus && (
-            <div className="absolute hidden h-auto group-hover:block dropdown-menu">
+            <div
+              className="absolute hidden h-auto group-hover:block dropdown-menu"
+              style={{
+                backgroundColor: "transparent",
+              }}
+            >
               <ul className="top-0 z-10 grid grid-cols-2 gap-2 p-4 bg-white rounded shadow w-[576px]">
                 {parentCategories?.map((submenu) => (
                   <li key={submenu.id} className="py-1">

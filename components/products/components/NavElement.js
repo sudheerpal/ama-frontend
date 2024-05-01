@@ -14,6 +14,7 @@ const NavElement = ({ parentCategory, subCategoriesOfParent }) => {
     <div className="p-0 border rounded collapse hover:bg-primary hover:text-white">
       <input
         className="p-0"
+        aria-label={label}
         onClick={() => setIsOpen(!isOpen)}
         type="checkbox"
       />

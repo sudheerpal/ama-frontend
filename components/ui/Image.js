@@ -5,8 +5,11 @@ const MRFImage = ({
   children,
   src,
   alt,
+  quality = 100,
   classNames = "",
   bgImage = false,
+  loading = "lazy",
+  priority = false,
   ...rest
 }) => {
   if (bgImage) {
@@ -17,8 +20,10 @@ const MRFImage = ({
             alt={alt}
             src={src}
             placeholder="blur"
+            loading={loading}
+            priority={priority}
             blurDataURL="/images/blur-bg.jpg"
-            quality={100}
+            quality={quality}
             fill
             style={{
               objectFit: "cover",
@@ -35,8 +40,10 @@ const MRFImage = ({
         alt={alt}
         src={src}
         placeholder="blur"
+        loading={loading}
+        priority={priority}
         blurDataURL="/images/blur-bg.jpg"
-        quality={100}
+        quality={quality}
         style={{
           width: "100%",
         }}
