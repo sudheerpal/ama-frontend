@@ -93,6 +93,7 @@ const MainFooter = () => {
               <Link
                 href="https://www.facebook.com/advancemarketanalytics"
                 target="_blank"
+                aria-label="Facebook link"
                 className="hover:text-info"
               >
                 <Facebook size={18} />
@@ -100,6 +101,7 @@ const MainFooter = () => {
               <Link
                 href="https://twitter.com/amareport"
                 target="_blank"
+                aria-label="Twitter link"
                 className="hover:text-info"
               >
                 <Twitter size={18} />
@@ -107,6 +109,7 @@ const MainFooter = () => {
               <Link
                 href="https://www.linkedin.com/company/advance-market-analytics"
                 target="_blank"
+                aria-label="LinkedIn link"
                 className="hover:text-info"
               >
                 <Linkedin size={18} />

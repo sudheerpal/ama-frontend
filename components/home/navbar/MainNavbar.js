@@ -71,6 +71,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
                 href="https://www.facebook.com/advancemarketanalytics"
                 target="_blank"
                 className="hover:text-info"
+                aria-label="Facebook link"
               >
                 <Facebook size={18} />
               </Link>
@@ -78,12 +79,14 @@ const MainNavbar = ({ parentCategories = [] }) => {
                 href="https://twitter.com/amareport"
                 target="_blank"
                 className="hover:text-info"
+                aria-label="Twitter link"
               >
                 <Twitter size={18} />
               </Link>
               <Link
                 href="https://www.linkedin.com/company/advance-market-analytics"
                 target="_blank"
+                aria-label="LinkedIn link"
                 className="hover:text-info"
               >
                 <Linkedin size={18} />
