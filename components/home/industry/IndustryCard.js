@@ -28,7 +28,7 @@ const IndustryCard = ({ industry }) => {
         ></div>
       </div>
       <div className="flex flex-col gap-2 px-4">
-        <h3 className="text-xl font-bold text-primary">{label}</h3>
+        <h1 className="text-xl font-bold text-primary">{label}</h1>
         <p className="text-sm text-neutral">
           {summary ||
             "Dummy text: Showing because summary is empty now. It will replace when summary comes from backend"}

@@ -12,6 +12,7 @@ const SummaryTabFAQAccordion = ({ item }) => {
         className="p-0"
         onClick={() => setIsOpen(!isOpen)}
         type="checkbox"
+        aria-label={item?.question}
       />
       <div className="flex items-center justify-between px-4 py-1 font-medium collapse-title ">
         <p> {item.question} </p>

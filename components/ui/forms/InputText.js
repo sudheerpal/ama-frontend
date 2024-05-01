@@ -5,6 +5,7 @@ const InputText = ({
   classNames,
   placeholder,
   name,
+  type = "text",
   value,
   onChange,
   required,
@@ -12,7 +13,7 @@ const InputText = ({
   return (
     <input
       className={`w-full px-4 py-3 bg-accent focus:outline-none placeholder-neutral text-sm ${classNames}`}
-      type="text"
+      type={type}
       name={name}
       placeholder={placeholder}
       value={value}
