@@ -25,7 +25,7 @@ export default function Testimonials({ testimonials = [] }) {
         modules={[Autoplay]}
       >
         {testimonials.map((testimonial, index) => (
-          <SwiperSlide className="p-6 flex flex-col" key={index}>
+          <SwiperSlide className="flex flex-col p-6" key={index}>
             <div
               style={{
                 clipPath:
@@ -43,12 +43,12 @@ export default function Testimonials({ testimonials = [] }) {
             <div className="flex items-center gap-4 my-5">
               <div>
                 <Image
-                  className="rounded-full border border-primary"
+                  className="border rounded-full border-primary"
                   src={testimonial.image}
                   alt="avatar"
                   height={50}
                   width={50}
-                  style={{ height: "50px", width: "50px" }}
+                  style={{ height: "50px", width: "50px", minWidth: "50px" }}
                 />
               </div>
               <div>
@@ -56,16 +56,6 @@ export default function Testimonials({ testimonials = [] }) {
                 <p className="text-neutral"> {testimonial.occupation} </p>
               </div>
             </div>
-            {/* <Image
-              src={logo}
-              height={100}
-              width={200}
-              alt="client logo"
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            /> */}
           </SwiperSlide>
         ))}
       </Swiper>
