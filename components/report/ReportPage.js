@@ -22,6 +22,7 @@ import ClientLogos from "./components/ClientLogos";
 import Testimonials from "./components/Testimonials";
 import ReportList from "../common/ReportList";
 import Link from "next/link";
+import MRFImage from "../ui/Image";
 
 const ReportPage = ({
   testimonials = [],
@@ -36,29 +37,27 @@ const ReportPage = ({
   });
   return (
     <div>
-      <section
-        className=""
-        style={{
-          backgroundImage: `url(${
-            basic?.category?.parent?.banner || reportHeaderBg.src
-          })`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-        }}
+      <MRFImage
+        classNames="w-full"
+        src={basic?.category?.parent?.banner || reportHeaderBg}
+        alt="Report banner"
+        bgImage
       >
         <div className="py-6 text-white bg-opacity-50 bg-primary">
           <CustomContainer>
             <div>{basic.marketKeyword}</div>
             <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-              <Link href={`/industries/${basic.category.link}`}>
+              <Link
+                href={`/industries/${basic.category.link}`}
+                aria-label="Category Link"
+              >
                 {basic.category.label}
               </Link>
             </h1>
             <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
           </CustomContainer>
         </div>
-      </section>
+      </MRFImage>
       <section>
         <CustomContainer>
           <main className="relative grid gap-5 mt-5 lg:grid-cols-3 lg:mt-10">
@@ -114,7 +113,7 @@ const ReportPage = ({
               </div>
               {/* segment 2 */}
               <div className="my-5">
-                <div className="mx-4 bg-accent rounded">
+                <div className="mx-4 rounded bg-accent">
                   <h3 className="w-full py-2 text-center text-white capitalize rounded-t bg-primary">
                     Tailored for you
                   </h3>
