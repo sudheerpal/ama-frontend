@@ -20,7 +20,7 @@ const SingleReportTab = ({ tab, activeTab, handleTabChange }) => {
         }}
       />
       {activeTab === tab.id && (
-        <div role="tabpanel" className="py-4 tab-content">
+        <div role={`tabpanel ${tab.id}`} className="py-4 tab-content">
           {tab.content}
         </div>
       )}

@@ -70,7 +70,7 @@ const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
     <div className="relative">
       <hr className="absolute w-full border-b-2 border-primary top-[18px] md:top-[34px] z-10" />
       <div
-        role="tablist"
+        role={`tablist ${basic?.id}`}
         className="overflow-x-auto tabs-xs tabs md:tabs-md md:tabs-boxed"
         style={{
           borderRadius: "2px",

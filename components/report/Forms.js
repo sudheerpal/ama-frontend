@@ -81,25 +81,6 @@ export default function Forms({ slug = "" }) {
         <Tag className="text-secondary" />{" "}
         <span className="uppercase">Request discount</span>
       </Link>
-      <dialog id="request_form" className="modal">
-        <div className="modal-box">
-          <div className="flex justify-between">
-            <h3 className="text-lg font-bold lg:ml-14"> {type} </h3>
-            <button
-              onClick={() => document.getElementById("request_form").close()}
-              className="p-1 border rounded-full hover:border-primary btn btn-circle btn-sm"
-            >
-              <X />
-            </button>
-          </div>
-          <div className="modal-action">
-            <CheckoutForm
-              btnText={submitted ? "Submitting" : "Send Request"}
-              handleFormData={handleFormData}
-            />
-          </div>
-        </div>
-      </dialog>
     </div>
   );
 }

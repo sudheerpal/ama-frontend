@@ -22,14 +22,15 @@ export default function ReportList({ limit = 2 }) {
           reports.map((report, i) => (
             <div key={i} className="my-4">
               <Link
-                href={`/reports/${report.slug}`}
+                href={`/reports/${report?.slug}`}
                 className="font-semibold text-primary"
+                aria-label="Report Link"
               >
-                {report.title}
+                {report?.title}
               </Link>
-              <div className="flex  items-center gap-2 mt-2 text-sm">
+              <div className="flex items-center gap-2 mt-2 text-sm">
                 <Clock className="text-secondary" size={16} />
-                <p> {moment(report.createdAt).format("MMM DD, YYYY")} </p>
+                <p> {moment(report?.createdAt).format("MMM DD, YYYY")} </p>
               </div>
             </div>
           ))}
