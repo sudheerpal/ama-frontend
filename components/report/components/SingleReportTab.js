@@ -6,7 +6,7 @@ const SingleReportTab = ({ tab, activeTab, handleTabChange }) => {
       <input
         type="radio"
         name="rd-tabs"
-        role="tab"
+        role={`tab ${tab.id}`}
         className={`mr-1 md:mx-4 tab border border-primary text-nowrap ${
           activeTab === tab.id ? "bg-primary text-white" : "text-primary"
         }`}

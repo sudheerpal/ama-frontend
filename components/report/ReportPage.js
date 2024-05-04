@@ -41,6 +41,8 @@ const ReportPage = ({
         classNames="w-full"
         src={basic?.category?.parent?.banner || reportHeaderBg}
         alt="Report banner"
+        loading="eager"
+        priority
         bgImage
       >
         <div className="py-6 text-white bg-opacity-50 bg-primary">
