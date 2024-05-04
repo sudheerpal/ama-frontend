@@ -42,6 +42,7 @@ const MainNavbar = ({ parentCategories = [] }) => {
               <button
                 className="p-0 mr-4 btn btn-ghost lg:hidden"
                 onClick={toggleNavbar}
+                aria-label="Menu button"
               >
                 {!isOpen ? <Menu size={24} /> : <X size={24} />}
               </button>
