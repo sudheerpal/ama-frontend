@@ -39,7 +39,11 @@ const ReportPage = ({
     <div>
       <MRFImage
         classNames="w-full"
-        src={basic?.category?.parent?.banner || reportHeaderBg}
+        src={
+          basic?.category?.parent?.banner ||
+          basic?.category?.banner ||
+          reportHeaderBg
+        }
         alt="Report banner"
         loading="eager"
         priority

@@ -37,22 +37,24 @@ const BannerSlide = () => {
               loading={index === 0 ? "eager" : "lazy"} // Eager load the first image
               priority={index === 0} // Priority set to true for the first slide
             >
-              <CustomContainer
-                classNames={
-                  "flex items-center justify-center lg:justify-start lg:px-40 min-h-96 xl:min-h-[476px]"
-                }
-              >
-                <div className="text-center md:text-left">
-                  <h1 className="mb-3 mrf-heading text-primary lg:mb-7 min-h">
-                    {slide.title}
-                  </h1>
-                  <h2 className="mb-2 font-normal mrf-secondary-heading">
-                    {slide.subTitle}
-                    <br />
-                  </h2>
-                  <h3 className="mrf-secondary-heading">{slide.subTitle2}</h3>
-                </div>
-              </CustomContainer>
+              <div className="bg-white bg-opacity-50">
+                <CustomContainer
+                  classNames={
+                    "flex items-center justify-center lg:justify-start lg:px-40 min-h-96 xl:min-h-[476px]"
+                  }
+                >
+                  <div className="text-center md:text-left">
+                    <h1 className="mb-3 mrf-heading text-primary lg:mb-7 min-h">
+                      {slide.title}
+                    </h1>
+                    <h2 className="mb-2 font-normal mrf-secondary-heading">
+                      {slide.subTitle}
+                      <br />
+                    </h2>
+                    <h3 className="mrf-secondary-heading">{slide.subTitle2}</h3>
+                  </div>
+                </CustomContainer>
+              </div>
             </MRFImage>
           </SwiperSlide>
         ))}
