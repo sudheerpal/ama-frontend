@@ -4,9 +4,9 @@ import CustomContainer from "../ui/CustomContainer";
 import icon1 from "@/assets/serviceCard/servicesIcon/Picture1.png";
 import icon2 from "@/assets/serviceCard/servicesIcon/Picture2.png";
 import icon3 from "@/assets/serviceCard/servicesIcon/Picture3.png";
-import image1 from "@/assets/serviceCard/image-1.png";
-import image2 from "@/assets/serviceCard/image-2.png";
-import image3 from "@/assets/serviceCard/image-3.png";
+import image1 from "@/assets/serviceCard/image-1.jpg";
+import image2 from "@/assets/serviceCard/image-2.jpeg";
+import image3 from "@/assets/serviceCard/image-3.jpeg";
 
 const Service = () => {
   const services = [
