@@ -1,6 +1,6 @@
 export const fetchIndustriesHome = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/categories?home=true", {
+    const res = await fetch(`${process.env.API_URL}/api/categories?home=true`, {
       cache: "no-cache",
     });
     const { data } = await res.json();
@@ -13,7 +13,7 @@ export const fetchIndustriesHome = async () => {
 
 export const fetchTestimonials = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/testimonial", {
+    const res = await fetch(`${process.env.API_URL}/api/testimonial`, {
       cache: "no-cache",
     });
     const { data } = await res.json();
@@ -26,7 +26,7 @@ export const fetchTestimonials = async () => {
 
 export const fetchSponsorLogos = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/client-logo", {
+    const res = await fetch(`${process.env.API_URL}/api/client-logo`, {
       cache: "no-cache",
     });
     const { data } = await res.json();
@@ -40,7 +40,7 @@ export const fetchSponsorLogos = async () => {
 export const fetchRecentReports = async (limit = 6) => {
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports/recent?limit=${limit}`,
+      `${process.env.API_URL}/api/reports/recent?limit=${limit}`,
       {
         cache: "no-cache",
       }
@@ -56,7 +56,7 @@ export const fetchRecentReports = async (limit = 6) => {
 export const fetchParentCategories = async () => {
   try {
     const res = await fetch(
-      "https://ama-admin.com/api/categories?parent=true",
+      `${process.env.API_URL}/api/categories?parent=true`,
       { cache: "no-cache" }
     );
     const { data } = await res.json();
@@ -69,7 +69,7 @@ export const fetchParentCategories = async () => {
 
 export const fetchCategories = async () => {
   try {
-    const res = await fetch("https://ama-admin.com/api/categories", {
+    const res = await fetch(`${process.env.API_URL}/api/categories`, {
       cache: "no-cache",
     });
     const { data } = await res.json();
@@ -87,7 +87,7 @@ export const fetchAllReports = async ({ query }) => {
 
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&page=${currentPage}`,
+      `${process.env.API_URL}/api/reports?active=true&page=${currentPage}`,
       {
         cache: "no-cache",
       }
@@ -105,7 +105,7 @@ export const fetchReports = async (payload) => {
 
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports?active=true&slug=${category}&page=${currentPage}`,
+      `${process.env.API_URL}/api/reports?active=true&slug=${category}&page=${currentPage}`,
       { cache: "no-cache" }
     );
     const data = await res.json();
@@ -118,7 +118,7 @@ export const fetchReports = async (payload) => {
 
 export const sugesstionFetch = async (payload) => {
   try {
-    const res = await fetch(`https://ama-admin.com/api/search`, {
+    const res = await fetch(`${process.env.API_URL}/api/search`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -136,7 +136,7 @@ export const sugesstionFetch = async (payload) => {
 export const fetchCategory = async (query) => {
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/categories?slug=${query}`,
+      `${process.env.API_URL}/api/categories?slug=${query}`,
       {
         cache: "no-cache",
       }
@@ -152,7 +152,7 @@ export const fetchCategory = async (query) => {
 export const fetchReportBasicData = async (id) => {
   try {
     const res = await fetch(
-      `https://ama-admin.com/api/reports/${id}?basic=true`,
+      `${process.env.API_URL}/api/reports/${id}?basic=true`,
       { cache: "no-cache" }
     );
     const { data } = await res.json();
