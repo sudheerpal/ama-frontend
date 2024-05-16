@@ -82,22 +82,23 @@ const ReportPage = ({
                     {basic.title}
                   </h1>
                   <p className="text-base font-semibold">{subHeading}</p>
-                  {/* <div className="flex flex-wrap gap-3 text-sm">
-                    <div className="flex gap-1">
-                      <Book className="font-bold text-primary" size={20} />{" "}
-                      Report
-                    </div>{" "}
+                  <div className="flex flex-wrap gap-3 text-sm">
+                    <div>
+                      <span>
+                        {new Date(
+                          basic?.publishedAt || basic?.createdAt
+                        ).toDateString("month", "year")}
+                      </span>
+                    </div>
                     <hr className="w-0 h-6 border-2 border-secondary" />
-                    <div>182 Pages</div>
+                    <div>
+                      <span>Base Year: {basic?.baseyear}</span>
+                    </div>
                     <hr className="w-0 h-6 border-2 border-secondary" />
-                    <div>April 2023</div>
-                    <hr className="w-0 h-6 border-2 border-secondary" />
-                    <div>Region : Global</div>
-                    <hr className="w-0 h-6 border-2 border-secondary" />
-                    <div>TechNavio</div>
-                    <hr className="w-0 h-6 border-2 border-secondary" />
-                    <div>ID: 2468574</div>
-                  </div> */}
+                    <div>
+                      <span>{basic?.noOfPages || "N/A"} Pages</span>
+                    </div>
+                  </div>
                 </div>
               </section>
               <section>
