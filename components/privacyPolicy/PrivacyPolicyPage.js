@@ -4,6 +4,7 @@ import CustomContainer from "../ui/CustomContainer";
 import carrerBg from "@/assets/career/careerBg4.jpeg";
 import Link from "next/link";
 import { ChevronRight } from "react-feather";
+import { websiteTitle } from "@/constants/constants";
 
 const PrivacyPolicyPage = () => {
   return (
@@ -37,16 +38,16 @@ const PrivacyPolicyPage = () => {
       </section>
       <CustomContainer classNames="py-5 md:py-10">
         <p className="mb-5">
-          Market Research Forecast understands that you are concerned how
-          information about you is used and shared, and we appreciate your trust
-          our privacy policy aims to provide security and confidentiality to our
-          client's data. Hence, our generated information and reports cannot be
-          used by third persons or organizations for personal use and cannot be
+          {websiteTitle} understands that you are concerned how information
+          about you is used and shared, and we appreciate your trust our privacy
+          policy aims to provide security and confidentiality to our client's
+          data. Hence, our generated information and reports cannot be used by
+          third persons or organizations for personal use and cannot be
           published or circulated anywhere without prior permission. They are
           only circulated for our client's needs. Any kind of duplication
           without prior authorization will result in a penalty. This notice
-          describes our privacy policy. By visiting Market Research Forecast,
-          you are accepting the practices described in this Privacy Notice.
+          describes our privacy policy. By visiting {websiteTitle}, you are
+          accepting the practices described in this Privacy Notice.
         </p>
         <h2 className="mb-4 text-xl font-semibold">
           Types of Information We Gather:
@@ -63,7 +64,7 @@ const PrivacyPolicyPage = () => {
         <p className="mb-5">
           <strong>E-mail Communications:</strong> To help us make e-mails more
           useful and interesting, we often receive a confirmation when you open
-          an e-mail from Market Research Forecast if your computer supports such
+          an e-mail from {websiteTitle} if your computer supports such
           capabilities. We also compare our customer list to lists received from
           other companies, in an effort to avoid sending unnecessary messages to
           our customers. If you do not want to receive e-mail or other mail from
@@ -73,7 +74,7 @@ const PrivacyPolicyPage = () => {
           <strong>Automatic Information:</strong> We receive and store certain
           types of information whenever you interact with us. For example, like
           many websites, we use "cookies", and we obtain certain types of
-          information when your web browser accesses Market Research Forecast.
+          information when your web browser accesses {websiteTitle}.
         </p>
         <p className="mb-5">
           <strong>Information from Other Sources:</strong> We might receive
@@ -93,8 +94,8 @@ const PrivacyPolicyPage = () => {
           prevent your browser from accepting new cookies, how to have the
           browser notify you when you receive a new cookie, or how to disable
           cookies altogether. However, cookies allow you to take full advantage
-          of some of Market Research Forecast's coolest features, and we
-          recommend that you leave them turned on.
+          of some of {websiteTitle}'s coolest features, and we recommend that
+          you leave them turned on.
         </p>
         <h2 className="mb-4 text-xl font-semibold">
           Changes in this Privacy Statement

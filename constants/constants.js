@@ -6,6 +6,9 @@ import Picture4 from "@/assets/icons/Picture4.png";
 import Picture5 from "@/assets/icons/Picture5.png";
 import Picture6 from "@/assets/icons/Picture6.png";
 
+export const websiteTitle = "Market Research Forecast";
+export const websiteURL = "https://marketresearchforecast.com";
+
 export const themeColors = {
   primary: "#002E5B",
   secondary: "#FDE428",
@@ -17,23 +20,23 @@ export const themeColors = {
 export const slidesData = [
   {
     id: 2,
-    title: "Twice The Glory",
-    subTitle: "We are yet again",
-    subTitle2: "A great place to work",
+    title: "Empower Your Decisions",
+    subTitle: "with comprehensive",
+    subTitle2: "market research",
     image: "/images/bannerSlider/image-1.png",
   },
   {
     id: 3,
-    title: "Discover New Opportunities",
-    subTitle: "Explore endless possibilities",
-    subTitle2: "with our innovative solutions",
+    title: "Transform Data",
+    subTitle: "into strategies for",
+    subTitle2: "sustainable growth",
     image: "/images/bannerSlider/image-2.png",
   },
   {
     id: 1,
-    title: "Transform Your Business",
-    subTitle: "Unlock your potential",
-    subTitle2: "with our cutting-edge technology",
+    title: "Ignite Your Success",
+    subTitle: "chart a path to profitability",
+    subTitle2: "with market research",
     image: "/images/bannerSlider/image-3.png",
   },
 ];

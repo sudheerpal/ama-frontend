@@ -6,14 +6,13 @@ import faqImage from "@/assets/faq/FAQ.png";
 import Link from "next/link";
 import { ChevronRight } from "react-feather";
 import Image from "next/image";
+import { websiteTitle, websiteURL } from "@/constants/constants";
 
 const FAQPage = () => {
   const FAQs = [
     {
-      question:
-        "What does Market Research Forecast do and what types of products are offered?",
-      answer:
-        "Market Research Forecast provides market research and analysis services. We offer a wide range of products including industry reports, market forecasts, company profiles, and custom research services tailored to specific client needs.",
+      question: `What does ${websiteTitle} do and what types of products are offered?`,
+      answer: `${websiteTitle} provides market research and analysis services. We offer a wide range of products including industry reports, market forecasts, company profiles, and custom research services tailored to specific client needs.`,
     },
     {
       question: "Which delivery format should I select?",
@@ -52,25 +51,23 @@ const FAQPage = () => {
         "If you have not received your electronic product within the specified timeframe, please contact our customer support team for assistance.",
     },
     {
-      question:
-        "Does Market Research Forecast require payment before order dispatch?",
+      question: `Does ${websiteTitle} require payment before order dispatch?`,
       answer:
         "Yes, we require payment before dispatching orders to ensure a smooth and efficient transaction process.",
     },
     {
-      question: "What is Market Research Forecast refund & return policy?",
+      question: `What is ${websiteTitle} refund & return policy?`,
       answer:
         "Due to the nature of the products we sell (being information-based, they are essentially consumed upon purchase and cannot easily be returned), we do not provide refunds for orders or accept returns. Please read all available information about a product before purchasing. If you have any questions, feel free to contact us at +1 551 333 1547 (US) / +44 2070 979277 (EU) or email us at sales@advancemarketanalytics.com. Our Customer Service team will be happy to assist you.",
     },
     {
-      question: "What is Market Research Forecast cancellation policy?",
+      question: `What is ${websiteTitle} cancellation policy?`,
       answer:
         "You can cancel your order within a specified timeframe before we initiate the order. Please refer to our cancellation policy for more details.",
     },
     {
       question: "How do I use marketresearchforecast.com?",
-      answer:
-        "Simply visit our website and browse through our products and services. You can use the search function to find specific items or navigate through categories. If you have any questions or need assistance, feel free to contact our customer support team.",
+      answer: `Simply visit ${websiteURL} and browse through our products and services. You can use the search function to find specific items or navigate through categories. If you have any questions or need assistance, feel free to contact our customer support team.`,
     },
     {
       question: "How does search work?",
@@ -79,14 +76,8 @@ const FAQPage = () => {
     },
     {
       question: "What types of research and reports do you have?",
-      answer:
-        "We offer a diverse range of research and reports covering various industries, markets, and regions. Our products include market analysis reports, industry forecasts, company profiles, and custom research services.",
+      answer: `${websiteTitle} offers a diverse range of research and reports covering various industries, markets, and regions. Our products include market analysis reports, industry forecasts, company profiles, and custom research services.`,
     },
-    // {
-    //   question: "What do I do if I forgot my password?",
-    //   answer:
-    //     "If you forgot your password, you can simply click on the 'Forgot Password' link on the login page. A password reset link will be sent to the email address associated with your account. You can also contact our support team for further assistance.",
-    // },
   ];
 
   return (
