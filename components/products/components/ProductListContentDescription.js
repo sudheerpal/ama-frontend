@@ -18,7 +18,9 @@ const ProductListContentDescription = ({ isAllReports, currentCategory }) => {
         src={
           isAllReports
             ? allCategoryThumbnail
-            : currentCategory?.parent?.banner || currentCategory?.banner
+            : currentCategory?.parent?.banner ||
+              currentCategory?.banner ||
+              allCategoryThumbnail
         }
         alt="All  Category Thumbnail"
         classNames="w-full"
