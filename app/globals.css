@@ -72,9 +72,9 @@ body {
   /* Equivalent to Tailwind's uppercase class */
   border-bottom-width: 4px;
   /* Equivalent to Tailwind's border-b-4 class */
-  color: #002e5b;
+  color: #182628;
   /* Replace 'yourPrimaryColor' with your primary color hex value */
-  border-color: #fde428;
+  border-color: #65ccb8;
   /* Replace 'yourSecondaryColor' with your secondary color hex value */
   width: fit-content;
   /* Equivalent to Tailwind's w-fit class */

@@ -10,8 +10,8 @@ export const websiteTitle = "Market Research Forecast";
 export const websiteURL = "https://marketresearchforecast.com";
 
 export const themeColors = {
-  primary: "#002E5B",
-  secondary: "#FDE428",
+  primary: "#182628",
+  secondary: "#65CCB8",
   accent: "#F2F2F2",
   neutral: "#6b6b6b",
   info: "#0693E3",

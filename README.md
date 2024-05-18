@@ -29,8 +29,8 @@ root
 
 ## Colors Used
 
-- **Primary:** #002E5B
-- **Secondary:** #FDE428
+- **Primary:** #182628
+- **Secondary:** #65CCB8
 - **Accent:** #F2F2F2
 - **Neutral:** #6b6b6b
 - **Info:** #0693E3
