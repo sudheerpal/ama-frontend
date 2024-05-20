@@ -16,7 +16,7 @@ import { Home } from "react-feather";
 export const generateMetadata = async ({ params }) => {
   const category = params.categorySlug.replaceAll("-", " ");
   return {
-    title: `Market in-Depth Research Report for ${category} : MR Forecast`,
+    title: `Market in-Depth Research Report for ${category} : Archive Market Reports`,
   };
 };
 

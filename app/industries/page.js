@@ -10,7 +10,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 
 export const metadata = {
-  title: "Market in-Depth Research Report: MR Forecast",
+  title: "Market in-Depth Research Report: Archive Market Reports",
 };
 
 const ReportListing = async ({ searchParams }) => {
