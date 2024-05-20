@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Sponsors from "../home/Sponsors";
 import Testimonials from "./components/Testimonials";
+import { websiteTitle } from "@/constants/constants";
 
 const AboutPage = ({ sponsors, testimonials }) => {
   const progressData = [
@@ -121,7 +122,7 @@ const AboutPage = ({ sponsors, testimonials }) => {
                 <hr className="w-12 mt-2 border-t-4 border-b-4 rounded border-secondary" />
               </div>
               <p>
-                MR Forecast stands as a premier Market Research Company,
+                {websiteTitle} stands as a premier Market Research Company,
                 offering quantified B2B research that uncovers high-growth
                 emerging opportunities impacting over 80% of global corporate
                 revenues. Our team of Analysts diligently tracks high-growth
@@ -156,7 +157,7 @@ const AboutPage = ({ sponsors, testimonials }) => {
                 </span>
               </p>
               <div className="p-4 mt-5 font-semibold border-l-8 bg-accent border-secondary lg:px-10 xl:px-20">
-                MR Forecast's growth is consistently fueled by the trust
+                {websiteTitle}'s growth is consistently fueled by the trust
                 bestowed upon us by our valued clients. Our expertise spans
                 across diverse industries including finance, energy, business
                 services, and consumer products.
