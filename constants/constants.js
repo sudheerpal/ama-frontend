@@ -6,8 +6,8 @@ import Picture4 from "@/assets/icons/Picture4.png";
 import Picture5 from "@/assets/icons/Picture5.png";
 import Picture6 from "@/assets/icons/Picture6.png";
 
-export const websiteTitle = "Market Research Forecast";
-export const websiteURL = "https://marketresearchforecast.com";
+export const websiteTitle = "Archive Market Research";
+export const websiteURL = "https://archivemarketresearch.com";
 
 export const themeColors = {
   primary: "#182628",
