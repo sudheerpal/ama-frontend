@@ -179,7 +179,7 @@ const ContactForm = ({
             value={formData.message}
             onChange={handleInputChange}
             className={
-              "md:col-span-2 textarea rounded-sm textarea-sm bg-accent"
+              "md:col-span-2 textarea rounded-sm textarea-sm placeholder-neutral bg-accent"
             }
           ></textarea>
         </div>
