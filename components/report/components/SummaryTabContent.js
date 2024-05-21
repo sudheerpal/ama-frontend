@@ -1,14 +1,14 @@
 "use client";
 /* eslint-disable react/no-unescaped-entities */
 import React, { useRef, useState, useEffect } from "react";
-import barChart from "@/assets/report/barChart.png";
-import roundChart from "@/assets/report/roundChart.png";
+import amrLogo from "@/assets/logo4.jpeg";
 import Image from "next/image";
 import SummaryTabFAQ from "./SummaryTabFAQ";
 import SummaryTabHighlight from "./SummaryTabHighlight";
 import RegionData from "./RegionData";
 import { websiteURL } from "@/constants/constants";
 import { getDisplayURL } from "@/utils/helper";
+import MRFImage from "@/components/ui/Image";
 
 const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
   const [Chart, setChart] = useState(null);
@@ -105,6 +105,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           <div className="flex justify-center">
             <Chart
               options={{
+                colors: ["#65CCB8"],
                 chart: {
                   id: "basic-bar",
                   toolbar: {
@@ -138,7 +139,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">{getDisplayURL(websiteURL)}</div>
+          <div className="flex items-center gap-2 mx-auto w-fit">
+            <MRFImage src={amrLogo} alt="amr logo" classNames="max-w-12 h-6" />
+            <span className="mb-1">{getDisplayURL(websiteURL)}</span>
+          </div>
         </div>
       )}
       {Chart && chartData && chartData.market_size && (
@@ -154,6 +158,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           <div className="flex justify-center">
             <Chart
               options={{
+                colors: ["#65CCB8"],
                 chart: {
                   id: "basic-bar",
                   toolbar: {
@@ -187,7 +192,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">{getDisplayURL(websiteURL)}</div>
+          <div className="flex items-center gap-2 mx-auto w-fit">
+            <MRFImage src={amrLogo} alt="amr logo" classNames="max-w-12 h-6" />
+            <span className="mb-1">{getDisplayURL(websiteURL)}</span>
+          </div>
         </div>
       )}
 
@@ -227,7 +235,10 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">{getDisplayURL(websiteURL)}</div>
+          <div className="flex items-center gap-2 mx-auto w-fit">
+            <MRFImage src={amrLogo} alt="amr logo" classNames="max-w-12 h-6" />
+            <span className="mb-1">{getDisplayURL(websiteURL)}</span>
+          </div>
         </div>
       )}
       <section>

@@ -1,8 +1,8 @@
-# Market Research Forecast
+# Archive Market Research
 
 ## Overview
 
-Market Research Forecast is a Next.js and Tailwind CSS powered website for selling reports worldwide. This platform offers users access to a wide array of reports covering diverse topics, sourced from across the globe. Leveraging server-side components, data is efficiently fetched to ensure a seamless browsing experience.
+Archive Market Research is a Next.js and Tailwind CSS powered website for selling reports worldwide. This platform offers users access to a wide array of reports covering diverse topics, sourced from across the globe. Leveraging server-side components, data is efficiently fetched to ensure a seamless browsing experience.
 
 ## Folder Structure
 
