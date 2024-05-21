@@ -15,6 +15,7 @@ import image1 from "@/assets/serviceCard/image-1.jpg";
 import image2 from "@/assets/serviceCard/image-2.jpeg";
 import image3 from "@/assets/serviceCard/image-3.jpeg";
 import Testimonials from "./components/Testimonials";
+import MRFImage from "../ui/Image";
 
 const ServicePage = ({ testimonials }) => {
   const services = [
@@ -46,31 +47,31 @@ const ServicePage = ({ testimonials }) => {
 
   return (
     <div>
-      <section
-        className="py-12 mb-5 text-white lg:mb-10"
-        style={{
-          backgroundImage: `url(${serviceHeaderBg.src})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          width: "100%",
-        }}
+      <MRFImage
+        src={serviceHeaderBg}
+        alt="Report banner"
+        loading="eager"
+        priority
+        bgImage
       >
-        <CustomContainer>
-          <p className="flex flex-wrap items-center gap-[2px] text-xs">
-            <Link href="/" className="hover:text-info">
-              Home
-            </Link>
-            <ChevronRight size={10} />
-            <Link href="/service" className="hover:text-info">
-              Services
-            </Link>
-          </p>
-          <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
-            Sevices
-          </h1>
-          <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
-        </CustomContainer>
-      </section>
+        <div className="py-12 mb-5 text-white bg-opacity-50 lg:mb-10 bg-primary">
+          <CustomContainer>
+            <p className="flex flex-wrap items-center gap-[2px] text-xs">
+              <Link href="/" className="hover:text-info">
+                Home
+              </Link>
+              <ChevronRight size={10} />
+              <Link href="/service" className="hover:text-info">
+                Services
+              </Link>
+            </p>
+            <h1 className="mt-4 text-2xl font-bold text-white lg:text-3xl">
+              Sevices
+            </h1>
+            <hr className="w-12 mt-2 border-t-4 border-b-4 border-white rounded" />
+          </CustomContainer>
+        </div>
+      </MRFImage>
       <CustomContainer classNames="mb-5 md:mb-10">
         <section className="grid grid-cols-1 gap-5 lg:grid-cols-4">
           <div className="space-y-3 lg:col-span-3">
