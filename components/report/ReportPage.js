@@ -92,7 +92,7 @@ const ReportPage = ({
                     </div>
                     <hr className="w-0 h-6 border-2 border-secondary" />
                     <div>
-                      <span>Base Year: {basic?.baseyear}</span>
+                      <span>Base Year: {new Date().getFullYear() - 1}</span>
                     </div>
                     <hr className="w-0 h-6 border-2 border-secondary" />
                     <div>

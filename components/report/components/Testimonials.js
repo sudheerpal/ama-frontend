@@ -53,7 +53,7 @@ export default function Testimonials({ testimonials = [] }) {
               </div>
               <div>
                 <h3 className="text-lg font-bold"> {testimonial.name} </h3>
-                <p className="text-neutral"> {testimonial.occupation} </p>
+                <p className="text-sm text-neutral">{testimonial.occupation}</p>
               </div>
             </div>
           </SwiperSlide>
