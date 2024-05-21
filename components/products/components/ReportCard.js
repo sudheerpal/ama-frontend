@@ -32,7 +32,9 @@ const ReportCard = ({ report }) => {
         <div className="md:flex-1">
           <div className="space-y-0 md:space-y-2">
             <h4 className="font-bold text-primary md:text-xl">
-              <Link href={`/reports/${slug}`}>{title}</Link>{" "}
+              <Link className="hover:text-info" href={`/reports/${slug}`}>
+                {title}
+              </Link>{" "}
             </h4>
             <p className="text-neutral">{summery}</p>
           </div>
@@ -65,7 +67,7 @@ const ReportCard = ({ report }) => {
             <div className="space-y-2">
               <Link
                 href={`/report/${slug}/sample-report`}
-                className="w-full text-white rounded btn btn-primary hover:bg-blue-800 btn-sm"
+                className="w-full text-white rounded btn btn-primary hover:bg-info btn-sm"
               >
                 Download Sample
               </Link>

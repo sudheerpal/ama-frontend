@@ -21,7 +21,10 @@ const NewsCard = ({ report }) => {
       </div>
       <hr className="w-20 my-5 border-4 rounded-lg border-secondary" />
       <h1 className="text-xs font-semibold text-primary">
-        <Link href={`/reports/${report?.slug}`}> {report?.title}</Link>
+        <Link className="hover:text-info" href={`/reports/${report?.slug}`}>
+          {" "}
+          {report?.title}
+        </Link>
       </h1>
       {/* <div className="flex gap-2 mt-4">
         <Clock className="mt-[2px] text-secondary" size={18} />

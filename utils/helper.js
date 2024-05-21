@@ -16,3 +16,7 @@ export const getSubHeading = (variables) => {
   // This will replace any spaces before a comma and ensure exactly one space after the comma.
   return result.replace(/\s*,\s*/g, ", ");
 };
+
+export const getDisplayURL = (url) => {
+  return url.replace(/^https?:\/\//, "www.");
+};

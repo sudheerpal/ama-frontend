@@ -7,6 +7,8 @@ import Image from "next/image";
 import SummaryTabFAQ from "./SummaryTabFAQ";
 import SummaryTabHighlight from "./SummaryTabHighlight";
 import RegionData from "./RegionData";
+import { websiteURL } from "@/constants/constants";
+import { getDisplayURL } from "@/utils/helper";
 
 const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
   const [Chart, setChart] = useState(null);
@@ -136,7 +138,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">www.marketresearchforecast.com</div>
+          <div className="text-center">{getDisplayURL(websiteURL)}</div>
         </div>
       )}
       {Chart && chartData && chartData.market_size && (
@@ -185,7 +187,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">www.marketresearchforecast.com</div>
+          <div className="text-center">{getDisplayURL(websiteURL)}</div>
         </div>
       )}
 
@@ -225,7 +227,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
               width={600}
             />
           </div>
-          <div className="text-center">www.marketresearchforecast.com</div>
+          <div className="text-center">{getDisplayURL(websiteURL)}</div>
         </div>
       )}
       <section>
