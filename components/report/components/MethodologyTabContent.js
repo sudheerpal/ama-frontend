@@ -17,28 +17,28 @@ import {
 const MethodologyTabContent = () => {
   const sections = [
     {
-      color: "primary",
+      color: "#182628",
       content:
         "Involves using different sources of information in order to increase the validity of a study",
-      icon: <Factory className="text-primary" />,
+      icon: <Factory className="text-[#182628]" />,
     },
     {
-      color: "red-500",
+      color: "#65CCB8",
       content:
         "These sources are likely to be stakeholders in a program - participants, other researchers, program staff, other community members, and so on.",
-      icon: <Users className="text-red-500" />,
+      icon: <Users className="text-[#65CCB8]" />,
     },
     {
-      color: "blue-500",
+      color: "#3B945B",
       content:
         "Then we put all data in single framework & apply various statistical tools to find out the dynamic on the market.",
-      icon: <FileBarChart2 className="text-info" />,
+      icon: <FileBarChart2 className="text-[#3B945B]" />,
     },
     {
-      color: "secondary",
+      color: "#57BA98",
       content:
         "During the analysis stage, feedback from the stakeholder groups would be compared to determine areas of agreement as well as areas of divergence",
-      icon: <ShieldCheck className="text-secondary" />,
+      icon: <ShieldCheck className="text-[#57BA98]" />,
     },
   ];
 
@@ -98,9 +98,9 @@ const MethodologyTabContent = () => {
           </h2>
         </header>
         <section className="grid gap-5 my-5 md:grid-cols-2">
-          <div className="text-red-500">
+          <div className="text-primary">
             <div className="flex items-center gap-2 font-bold">
-              <div className="grid w-10 h-10 text-white bg-red-500 rounded-full place-items-center">
+              <div className="grid w-10 h-10 text-white rounded-full bg-primary place-items-center">
                 <Lightbulb className="font-extrabold text-white" />
               </div>
               <p>Primary Research</p>
@@ -113,9 +113,9 @@ const MethodologyTabContent = () => {
               <li>Opinion Leaders</li>
             </ul>
           </div>
-          <div className="text-info">
+          <div className="text-neutral">
             <div className="flex items-center gap-2 font-bold">
-              <div className="grid w-10 h-10 text-white bg-blue-500 rounded-full place-items-center">
+              <div className="grid w-10 h-10 text-white rounded-full bg-neutral place-items-center">
                 <Settings className="font-extrabold text-white" />
               </div>
               <p>Secondary Research</p>
@@ -152,6 +152,9 @@ const MethodologyTabContent = () => {
             <div key={index} className="flex items-center gap-2">
               <div
                 className={`grid border-8 rounded-full w-14 min-w-14 h-14 place-items-center border-${section.color}`}
+                style={{
+                  borderColor: section.color,
+                }}
               >
                 {section.icon} {/* Render the icon */}
               </div>
