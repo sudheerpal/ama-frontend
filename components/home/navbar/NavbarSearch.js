@@ -80,7 +80,7 @@ const NavbarSearch = () => {
     <div className="relative z-20 py-2 bg-secondary">
       <form onSubmit={handleSubmit}>
         <input
-          className="w-full px-4 py-2 pr-12 text-neutral placeholder-neutral bg-inherit focus:outline-none"
+          className="w-full px-4 py-2 pr-12 text-primary placeholder-primary bg-inherit focus:outline-none"
           type="search"
           placeholder="Search Reports..."
           value={searchValue}
