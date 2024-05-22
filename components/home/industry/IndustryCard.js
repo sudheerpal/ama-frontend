@@ -5,6 +5,13 @@ import React from "react";
 const IndustryCard = ({ industry }) => {
   const { label, summary, icon, link } = industry;
 
+  const truncateText = (text, maxLength) => {
+    if (text.length <= maxLength) {
+      return text;
+    }
+    return text.slice(0, maxLength) + "...";
+  };
+
   return (
     <Link
       href={`/industries/${link}`}
@@ -30,8 +37,11 @@ const IndustryCard = ({ industry }) => {
       <div className="flex flex-col gap-2 px-4">
         <h1 className="text-xl font-bold text-primary">{label}</h1>
         <p className="text-sm text-neutral">
-          {summary ||
-            "Dummy text: Showing because summary is empty now. It will replace when summary comes from backend"}
+          {truncateText(
+            summary ||
+              "Dummy text: Showing because summary is empty now. It will replace when summary comes from backend",
+            130
+          )}
         </p>
       </div>
     </Link>
