@@ -153,7 +153,7 @@ const ReportDetails = async ({ params }) => {
     <div>
       <DatasetJsonLd
         id={reportId}
-        name={`${report?.marketKeyword} + Report`}
+        name={`${report?.marketKeyword} Report`}
         description={dataSeo?.description}
         url={`${process.env.BASE_URL}/reports/${report?.slug}`}
         price={`${report?.price?.enterprisePrice}`}
