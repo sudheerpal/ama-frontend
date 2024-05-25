@@ -1,8 +1,4 @@
 User-agent: *
-Disallow: /report/*/sample-report
-Disallow: /report/*/enquiry-before-buy
-Disallow: /report/*/request-discount
-Disallow: /report/*/checkout
 Disallow: /service
 Disallow: /career
 Disallow: /faq
