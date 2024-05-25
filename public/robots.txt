@@ -1,12 +1,8 @@
 User-agent: *
-Disallow: /report/*/sample-report
-Disallow: /report/*/enquiry-before-buy
-Disallow: /report/*/request-discount
-Disallow: /report/*/checkout
 Disallow: /service
 Disallow: /career
 Disallow: /faq
 Disallow: /terms-and-condition
 Disallow: /privacy-policy
 
-Sitemap: https://www.marketresearchforecast.com/sitemap.xml
+Sitemap: https://www.archivemarketresearch.com/sitemap.xml

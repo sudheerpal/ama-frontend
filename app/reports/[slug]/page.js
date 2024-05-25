@@ -21,6 +21,13 @@ export const generateMetadata = async ({ params }) => {
     title,
     description,
     keywords,
+    alternates: {
+      canonical: `${process.env.BASE_URL}/reports/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 };
 
