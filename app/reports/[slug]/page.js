@@ -21,6 +21,13 @@ export const generateMetadata = async ({ params }) => {
     title,
     description,
     keywords,
+    alternates: {
+      canonical: `${process.env.BASE_URL}/reports/${params.slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
   };
 };
 
@@ -148,7 +155,7 @@ const ReportDetails = async ({ params }) => {
         id={reportId}
         name={report?.title}
         description={dataSeo?.description}
-        url={`https://www.advancemarketanalytics.com/reports/${report?.slug}`}
+        url={`${process.env.BASE_URL}/${report?.slug}`}
         breadcrumb={[
           {
             "@type": "ListItem",
