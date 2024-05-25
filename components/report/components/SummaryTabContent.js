@@ -9,14 +9,25 @@ import RegionData from "./RegionData";
 import { websiteURL } from "@/constants/constants";
 import { getDisplayURL } from "@/utils/helper";
 import MRFImage from "@/components/ui/Image";
+import { usePathname, useSearchParams } from "next/navigation";
 
 const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [Chart, setChart] = useState(null);
   useEffect(() => {
     import("react-apexcharts").then((mod) => {
       setChart(() => mod.default);
     });
   }, []);
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const id = hash.substring(1);
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [pathname, searchParams]);
 
   const growthChart = useRef(null);
   const sizeChart = useRef(null);
@@ -241,7 +252,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
           </div>
         </div>
       )}
-      <section>
+      <section id="rd_table">
         <header className="my-4">
           <h3 className="text-xl font-bold uppercase border-b-4 text-primary border-secondary w-fit">
             {basic.marketKeyword} REPORT HIGHLIGHTS
