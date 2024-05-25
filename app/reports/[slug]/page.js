@@ -153,9 +153,11 @@ const ReportDetails = async ({ params }) => {
     <div>
       <DatasetJsonLd
         id={reportId}
-        name={report?.title}
+        name={`${report?.marketKeyword} + Report`}
         description={dataSeo?.description}
-        url={`${process.env.BASE_URL}/${report?.slug}`}
+        url={`${process.env.BASE_URL}/reports/${report?.slug}`}
+        price={`${report?.price?.enterprisePrice}`}
+        region={`${report?.region || "global"}`}
         breadcrumb={[
           {
             "@type": "ListItem",
@@ -185,16 +187,18 @@ const ReportDetails = async ({ params }) => {
             },
           },
         ]}
-        FAQS={FAQS.map((faq) => {
-          return {
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer,
-            },
-          };
-        })}
+        FAQS={FAQS.sort(() => Math.random() - 0.5)
+          .slice(0, 4)
+          .map((faq) => {
+            return {
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            };
+          })}
       />
       {reportData?.rd ? (
         <ReportPage
