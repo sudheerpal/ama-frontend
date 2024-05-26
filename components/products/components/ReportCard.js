@@ -61,7 +61,7 @@ const ReportCard = ({ report }) => {
               </p>
               <p className="flex items-center gap-1">
                 <CheckCircle size={10} color="green" />{" "}
-                <span className="text-blue-600">Online Licence</span>
+                <span>Online Licence</span>
               </p>
             </div>
             <div className="space-y-2">
