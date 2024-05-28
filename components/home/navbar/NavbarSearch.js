@@ -43,7 +43,7 @@ const NavbarSearch = () => {
 
   const sugesstionFetch = async (payload) => {
     try {
-      const res = await fetch(`https://ama-admin.com/api/search`, {
+      const res = await fetch("/api/search", {
         method: "POST",
         body: JSON.stringify(payload),
       });
