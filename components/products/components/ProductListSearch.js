@@ -83,7 +83,7 @@ const ProductListSearch = ({ currentCategory }) => {
   }, [debouncedSearchValue, categoryId]);
 
   return (
-    <div className="relative z-20 py-2 bg-secondary">
+    <div className="relative py-2 bg-secondary">
       <form onSubmit={handleSubmit}>
         <input
           className="w-full px-4 py-2 pr-12 text-neutral placeholder-neutral bg-inherit focus:outline-none"
@@ -103,7 +103,7 @@ const ProductListSearch = ({ currentCategory }) => {
         </button>
       </form>
       {isInputFocused && isTyping && (
-        <div className="absolute left-0 p-4 text-sm text-black bg-white rounded shadow-md w-96 top-full">
+        <div className="absolute left-0 z-10 p-4 space-y-2 text-sm text-black bg-white rounded shadow-md w-96 top-full">
           {suggestions?.map((sg, index) => (
             <Link
               key={index}
