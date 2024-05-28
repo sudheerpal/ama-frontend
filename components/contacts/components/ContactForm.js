@@ -32,7 +32,7 @@ const ContactForm = ({
     service_type: "MRF",
     status: status,
     direct: direct,
-    report_page_link: `https://marketresearchforecast.com/reports/${slug}`,
+    report_page_link: `${process.env.BASE_URL}/reports/${slug}`,
     report_name: reportTitle,
   });
   const router = useRouter();

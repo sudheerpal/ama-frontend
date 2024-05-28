@@ -79,7 +79,7 @@ const QueryForm = ({
     status: status,
     direct: direct,
     // paymentMethod: "visa", // Default payment method
-    report_page_link: `https://marketresearchforecast.com/reports/${slug}`,
+    report_page_link: `${process.env.BASE_URL}/reports/${slug}`,
     report_name: reportTitle,
   });
 

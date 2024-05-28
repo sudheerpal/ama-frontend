@@ -103,7 +103,6 @@ const emailNotification = async (data) => {
 
 export async function POST(request) {
   const body = await request.json();
-  console.log("body", body);
   const msgBody = getMessageBody(body);
   const message = await emailNotification({
     message: msgBody,

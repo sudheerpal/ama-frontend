@@ -64,7 +64,7 @@ const DatasetJsonLd = ({
             new Date().getFullYear() + 8
           }`,
           spatialCoverage: region,
-          license: "https://marketresearchforecast.com/privacy-policy",
+          license: `${process.env.BASE_URL}/privacy-policy`,
           dataset: {
             "@type": "Table",
             name: `${name} REPORT HIGHLIGHTS`,

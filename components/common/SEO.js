@@ -13,9 +13,9 @@ export default function SEO({ title = "", description = "", keywords = "" }) {
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:site_name" content={"marketresearchforecast"} />
+      <meta property="og:site_name" content={"archivemarketresearch"} />
       <meta property="og:type" content="article" />
-      <meta property="og:url" content={"https://marketresearchforecast.com"} />
+      <meta property="og:url" content={process.env.BASE_URL} />
 
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />

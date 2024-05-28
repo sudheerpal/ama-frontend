@@ -66,7 +66,7 @@ const FAQPage = () => {
         "You can cancel your order within a specified timeframe before we initiate the order. Please refer to our cancellation policy for more details.",
     },
     {
-      question: "How do I use marketresearchforecast.com?",
+      question: "How do I use archivemarketresearch.com?",
       answer: `Simply visit ${websiteURL} and browse through our products and services. You can use the search function to find specific items or navigate through categories. If you have any questions or need assistance, feel free to contact our customer support team.`,
     },
     {
