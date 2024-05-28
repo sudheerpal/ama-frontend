@@ -39,13 +39,16 @@ export const fetchSponsorLogos = async () => {
 
 export const fetchRecentReports = async (limit = 6) => {
   try {
-    const res = await fetch(`/api/recent?limit=${limit}`, {
-      cache: "no-cache",
-    });
+    const res = await fetch(
+      `${process.env.BASE_URL}/api/recent?limit=${limit}`,
+      {
+        cache: "no-cache",
+      }
+    );
     const { data } = await res.json();
     return data;
   } catch (error) {
-    console.error("Error fetching sponsor logos:", error);
+    // console.error("Error fetching sponsor logos:", error);
     return [];
   }
 };
