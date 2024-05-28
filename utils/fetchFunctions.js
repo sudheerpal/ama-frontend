@@ -39,12 +39,9 @@ export const fetchSponsorLogos = async () => {
 
 export const fetchRecentReports = async (limit = 6) => {
   try {
-    const res = await fetch(
-      `${process.env.API_URL}/api/reports/recent?limit=${limit}`,
-      {
-        cache: "no-cache",
-      }
-    );
+    const res = await fetch(`/api/recent?limit=${limit}`, {
+      cache: "no-cache",
+    });
     const { data } = await res.json();
     return data;
   } catch (error) {

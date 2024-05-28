@@ -5,7 +5,6 @@ import Footer from "@/components/home/Footer";
 import Header from "@/components/home/Header";
 import ReportPage from "@/components/report/ReportPage";
 import CustomContainer from "@/components/ui/CustomContainer";
-import Head from "next/head";
 import { redirect } from "next/navigation";
 import React from "react";
 
