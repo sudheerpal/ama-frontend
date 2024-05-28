@@ -32,9 +32,7 @@ const ReportCard = ({ report }) => {
         <div className="md:flex-1">
           <div className="space-y-0 md:space-y-2">
             <h4 className="font-bold text-primary md:text-xl">
-              <Link className="hover:text-info" href={`/reports/${slug}`}>
-                {title}
-              </Link>{" "}
+              <Link href={`/reports/${slug}`}>{title}</Link>{" "}
             </h4>
             <p className="text-success">{summery}</p>
           </div>
