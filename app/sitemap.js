@@ -1,8 +1,8 @@
 import { fetchAllReports, fetchCategories } from "@/utils/fetchFunctions";
 export const revalidate = 60;
 export default async function sitemap() {
-  const BASE_URL = "https://marketresearchforecast.com";
-  const catRes = await fetch("https://ama-admin.com/api/categories", {
+  const BASE_URL = process.env.BASE_URL;
+  const catRes = await fetch(`${process.env.API_URL}/api/categories`, {
     cache: "no-cache",
   });
   const catData = await catRes.json();

@@ -41,7 +41,7 @@ export default function ErrorPage() {
     service_type: "SWA",
     direct: "false",
     // paymentMethod: "visa", // Default payment method
-    report_page_link: `https://marketresearchforecast.com`,
+    report_page_link: process.env.BASE_URL,
     report_name: "Request",
   });
 

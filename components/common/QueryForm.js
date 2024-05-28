@@ -79,7 +79,7 @@ const QueryForm = ({
     status: status,
     direct: direct,
     // paymentMethod: "visa", // Default payment method
-    report_page_link: `https://marketresearchforecast.com/reports/${slug}`,
+    report_page_link: `${process.env.BASE_URL}/reports/${slug}`,
     report_name: reportTitle,
   });
 
@@ -381,7 +381,7 @@ const QueryForm = ({
               <Link
                 className="text-primary"
                 target="_blank"
-                href={`/terms-and-conditions`}
+                href={`/terms-and-condition`}
               >
                 Terms and Conditions
               </Link>
