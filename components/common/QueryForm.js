@@ -25,7 +25,7 @@ import { fetchSponsorLogos } from "@/utils/fetchFunctions";
 import SponsorSlider from "../home/sponsor/SponsorSlider";
 const QueryForm = ({
   btnText = "Submit",
-  type = "MRF",
+  type = "AMR",
   slug = "",
   status = "NOPN",
   direct = false,
@@ -74,7 +74,7 @@ const QueryForm = ({
     company_name: "",
     designation: "",
     comment: "",
-    industry: "MRF",
+    industry: "AMR",
     service_type: type,
     status: status,
     direct: direct,

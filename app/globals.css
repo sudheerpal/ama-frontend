@@ -33,7 +33,7 @@ body {
 } */
 
 @layer components {
-  /* Responsive Typography Classes with MRF Prefix */
+  /* Responsive Typography Classes with AMR Prefix */
   .mrf-heading {
     @apply text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
   }

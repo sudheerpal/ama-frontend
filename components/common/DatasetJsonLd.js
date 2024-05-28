@@ -86,7 +86,7 @@ const DatasetJsonLd = ({
           "@type": "Product",
           name: name,
           description: description,
-          sku: `MRF-${id}`,
+          sku: `AMR-${id}`,
           offers: {
             "@type": "Offer",
             url: url,

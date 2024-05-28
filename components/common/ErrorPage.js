@@ -37,7 +37,7 @@ export default function ErrorPage() {
     company_name: "",
     designation: "",
     comment: "",
-    industry: "MRF",
+    industry: "AMR",
     service_type: "SWA",
     direct: "false",
     // paymentMethod: "visa", // Default payment method
