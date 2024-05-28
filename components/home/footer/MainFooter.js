@@ -66,7 +66,7 @@ const MainFooter = () => {
                   Services
                 </Link>
                 <Link className="hover:text-info" href="/career">
-                  Our team
+                  Career
                 </Link>
                 {/* <Link href="/about">Our approach</Link> */}
               </div>
