@@ -97,7 +97,7 @@ const NavbarSearch = () => {
         </button>
       </form>
       {isInputFocused && isTyping && (
-        <div className="absolute left-0 p-4 text-sm text-black bg-white rounded shadow-md w-96 top-full">
+        <div className="absolute left-0 p-4 space-y-2 text-sm text-black bg-white rounded shadow-md w-96 top-full">
           {suggestions?.map((sg, index) => (
             <Link
               key={index}
