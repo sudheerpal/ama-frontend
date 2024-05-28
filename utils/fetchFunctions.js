@@ -26,7 +26,7 @@ export const fetchTestimonials = async () => {
 
 export const fetchSponsorLogos = async () => {
   try {
-    const res = await fetch(`${process.env.API_URL}/api/client-logo`, {
+    const res = await fetch(`${process.env.BASE_URL}/api/logo`, {
       cache: "no-cache",
     });
     const { data } = await res.json();
