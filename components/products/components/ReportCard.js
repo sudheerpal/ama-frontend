@@ -36,7 +36,7 @@ const ReportCard = ({ report }) => {
                 {title}
               </Link>{" "}
             </h4>
-            <p>{summery}</p>
+            <p className="text-success">{summery}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>
