@@ -49,11 +49,8 @@ const ProductListSearch = ({ currentCategory }) => {
 
   const sugesstionFetch = async (payload) => {
     try {
-      const res = await fetch(`https://ama-admin.com/api/search`, {
+      const res = await fetch("/api/search", {
         method: "POST",
-        // headers: {
-        //   "Content-Type": "application/json",
-        // },
         body: JSON.stringify(payload),
       });
       const { data } = await res.json();

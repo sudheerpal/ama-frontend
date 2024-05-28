@@ -27,7 +27,7 @@ export default async function RootLayout({ children }) {
         <MainNavbar parentCategories={parentCategories} />
         <main>{children}</main>
       </body>
-      <GoogleAnalytics gaId="G-TGX5SM4WHF" />
+      <GoogleAnalytics gaId="G-P6KVG34JV0" />
       {/* <body className={radioCanada.className}>{children}</body> */}
     </html>
   );
