@@ -10,16 +10,17 @@ import { websiteURL } from "@/constants/constants";
 import { getDisplayURL } from "@/utils/helper";
 import MRFImage from "@/components/ui/Image";
 import { usePathname, useSearchParams } from "next/navigation";
+import styles from "./rd.module.css";
 
 const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [Chart, setChart] = useState(null);
-  useEffect(() => {
-    import("react-apexcharts").then((mod) => {
-      setChart(() => mod.default);
-    });
-  }, []);
+  // useEffect(() => {
+  //   import("react-apexcharts").then((mod) => {
+  //     setChart(() => mod.default);
+  //   });
+  // }, []);
 
   useEffect(() => {
     const hash = window.location.hash;
@@ -97,6 +98,7 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
       <section className="max-w-full prose">
         <div
           ref={rdContent}
+          className={styles.rd}
           id="rd_content"
           dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
         ></div>
