@@ -13,11 +13,11 @@ const SummaryTabContent = ({ basic, marketAnalysis, rd, marketReport }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [Chart, setChart] = useState(null);
-  useEffect(() => {
-    import("react-apexcharts").then((mod) => {
-      setChart(() => mod.default);
-    });
-  }, []);
+  // useEffect(() => {
+  //   import("react-apexcharts").then((mod) => {
+  //     setChart(() => mod.default);
+  //   });
+  // }, []);
 
   useEffect(() => {
     const hash = window.location.hash;
