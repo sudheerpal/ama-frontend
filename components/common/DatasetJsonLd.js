@@ -10,6 +10,7 @@ const DatasetJsonLd = ({
   FAQS,
   price,
   region,
+  images = [],
   keywords = "Global Market Research , Latest industry analysis , in-Depth Market Study , customized market research study, Syndicate Market Research , market research analyst , market survey report , Company profile industry report , Market outlook report",
 }) => (
   <>
@@ -54,6 +55,7 @@ const DatasetJsonLd = ({
           name: name,
           description: description,
           url: url,
+          image: images.find((img) => img.type === "banner")?.url,
           keywords: keywords,
           creator: {
             "@type": "Organization",
@@ -85,6 +87,7 @@ const DatasetJsonLd = ({
           "@type": "Product",
           name: name,
           description: description,
+          image: images.find((img) => img.type === "banner")?.url,
           sku: `MRF-${id}`,
           offers: {
             "@type": "Offer",

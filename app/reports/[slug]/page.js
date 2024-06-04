@@ -15,13 +15,16 @@ export const generateMetadata = async ({ params }) => {
     cache: "no-cache",
   });
   const dataReport = await res.json();
-  const { title, description = "", keywords = "" } = dataReport;
+  const { title, description = "", keywords = "", images = [] } = dataReport;
   return {
     title,
     description,
     keywords,
     alternates: {
       canonical: `${process.env.BASE_URL}/reports/${params.slug}`,
+    },
+    openGraph: {
+      images: images.map((img) => img.url),
     },
     robots: {
       index: true,
@@ -151,6 +154,7 @@ const ReportDetails = async ({ params }) => {
   return (
     <div>
       <DatasetJsonLd
+        images={report?.images || []}
         id={reportId}
         name={`${report?.marketKeyword} Report`}
         description={dataSeo?.description}
