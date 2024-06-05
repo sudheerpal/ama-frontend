@@ -41,6 +41,9 @@ const LinkTagsDesktop = ({ parentCategories }) => {
                     <Link
                       href={`/industries/${submenu.link}`}
                       className="inline-flex items-center p-0 cursor-pointer text-primary hover:text-info"
+                      style={{
+                        backgroundColor: "transparent",
+                      }}
                     >
                       <LucidIcon name={submenu.icon} size={20} />
                       <span> {submenu.label}</span>
