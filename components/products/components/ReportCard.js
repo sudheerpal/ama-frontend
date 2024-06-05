@@ -32,17 +32,17 @@ const ReportCard = ({ report }) => {
         <div className="md:flex-1">
           <div className="space-y-0 md:space-y-2">
             <h4 className="font-bold text-primary md:text-xl">
-              <Link className="hover:text-info" href={`/reports/${slug}`}>
-                {title}
-              </Link>{" "}
+              <Link href={`/reports/${slug}`}>{title}</Link>{" "}
             </h4>
-            <p className="text-neutral">{summery}</p>
+            <p className="text-success">{summery}</p>
           </div>
           <div className="flex items-center mt-1 text-sm gap-x-3">
             <span>
               {new Date(publishedAt || createdAt).toDateString("month", "year")}
             </span>
+            <hr className="w-0 h-6 border-2 border-secondary" />
             <span>Base Year: {new Date().getFullYear() - 1}</span>
+            <hr className="w-0 h-6 border-2 border-secondary" />
             <span>No Of Pages: {noOfPages}</span>
           </div>
         </div>
@@ -61,7 +61,7 @@ const ReportCard = ({ report }) => {
               </p>
               <p className="flex items-center gap-1">
                 <CheckCircle size={10} color="green" />{" "}
-                <span className="text-blue-600">Online Licence</span>
+                <span>Online Licence</span>
               </p>
             </div>
             <div className="space-y-2">

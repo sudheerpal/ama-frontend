@@ -111,7 +111,7 @@ const ReportPage = ({
               </section>
             </section>
             {/* ---- report sidebar ---- */}
-            <section className="sticky top-0 h-screen py-5 overflow-y-auto lg:block lg:space-y-10">
+            <section className="sticky h-screen py-5 overflow-y-auto top-16 lg:block lg:space-y-10">
               {/* segment 1 */}
               <Forms slug={basic.slug} />
               {/* segment 1.5 */}
