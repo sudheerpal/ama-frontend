@@ -6,11 +6,14 @@ import CheckoutForm from "../checkout/components/CheckoutForm";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import CustomLink from "../ui/Link";
+import ClickAnimation from "./ClickAnimation";
+import "./ClickAnimation.css";
 
 export default function Forms({ slug = "" }) {
   const [submitted, setSubmitted] = useState(false);
   const router = useRouter();
   const [type, setType] = useState("");
+
   const handleFormData = async (data) => {
     const myHeaders = new Headers();
     myHeaders.append(
@@ -52,15 +55,17 @@ export default function Forms({ slug = "" }) {
     }
   };
   return (
-    <div className="flex flex-col gap-3 p-4 mx-4 mb-5 text-sm xl:text-base">
+    <div className="flex flex-col gap-6 p-4 mx-4 mb-5 text-sm xl:text-base">
       <Link
         href={`/report/${slug}/sample-report`}
         className={
-          "text-sm flex items-center justify-start gap-3 px-4 py-2 rounded font-semibold hover:text-neutral hover:shadow duration-100 bg-primary text-white"
+          "text-sm flex items-center justify-start gap-3 px-4 py-2 rounded font-semibold hover:text-neutral hover:shadow hover:scale-110 duration-100 bg-primary text-white relative animate-shakeme-button"
         }
       >
         <Download className="text-secondary" />
-        <span className="uppercase">Request sample</span>
+        <span className="uppercase">Get Free Sample</span>
+
+        <ClickAnimation />
       </Link>
 
       <Link
