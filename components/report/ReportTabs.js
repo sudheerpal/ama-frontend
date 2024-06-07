@@ -6,6 +6,12 @@ import TOC from "./components/TOC";
 import SummaryTabHighlight from "./components/SummaryTabHighlight";
 import MethodologyTabContent from "./components/MethodologyTabContent";
 import { useParams, useRouter } from "next/navigation";
+import { useInView } from "react-intersection-observer";
+import TabNavigationButton from "./components/TabNavigationButton";
+import CustomContainer from "../ui/CustomContainer";
+import MRFImage from "../ui/Image";
+import mainLogo from "@/assets/logo4.jpeg";
+import axios from "axios";
 
 const ReportTabs = ({ basic, marketAnalysis, marketReport, rd }) => {
   const router = useRouter();
