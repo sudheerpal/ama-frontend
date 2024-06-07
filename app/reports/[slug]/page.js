@@ -1,11 +1,7 @@
 import DatasetJsonLd from "@/components/common/DatasetJsonLd";
 import ErrorPage from "@/components/common/ErrorPage";
-import SEO from "@/components/common/SEO";
 import Footer from "@/components/home/Footer";
-import Header from "@/components/home/Header";
 import ReportPage from "@/components/report/ReportPage";
-import CustomContainer from "@/components/ui/CustomContainer";
-import Head from "next/head";
 import { redirect } from "next/navigation";
 import React from "react";
 
@@ -36,8 +32,6 @@ export const generateMetadata = async ({ params }) => {
 
 const ReportDetails = async ({ params }) => {
   const arrays = params.slug.split("-");
-  const slugParts = arrays.slice(0, -1);
-  const reportSlug = slugParts.join("-");
   const reportId = arrays[arrays.length - 1];
   let reportData = null;
   let clientLogos = [];
@@ -53,10 +47,6 @@ const ReportDetails = async ({ params }) => {
 
     const dataReport = await res.json();
     reportData = dataReport.data;
-    if (params?.slug !== reportData?.basic?.slug) {
-      redirect(`/reports/${reportData?.basic?.slug}`);
-      // redirect(`/about`);
-    }
     const resLogo = await fetch(
       `${process.env.API_URL}/api/client-logo?catId=${reportData?.basic?.category?.parentCategory}`
     );
@@ -69,6 +59,11 @@ const ReportDetails = async ({ params }) => {
     testimonials = dataTestimonial.data;
   } catch (error) {
     console.log("error fetching report", error);
+  }
+
+  if (params?.slug !== reportData?.basic?.slug) {
+    redirect(`/reports/${reportData?.basic?.slug}`);
+    // redirect(`/about`);
   }
 
   const report = reportData?.basic;
@@ -154,12 +149,11 @@ const ReportDetails = async ({ params }) => {
 
   return (
     <div>
-      <DatasetJsonLd
+      {/* <DatasetJsonLd
         id={reportId}
         images={report?.images || []}
         name={`${report?.marketKeyword} Report`}
         description={dataSeo?.description}
-        // keywords={dataSeo?.keywords}
         url={`${process.env.BASE_URL}/reports/${report?.slug}`}
         price={`${report?.price?.enterprisePrice}`}
         region={`${report?.region || "global"}`}
@@ -204,7 +198,7 @@ const ReportDetails = async ({ params }) => {
               },
             };
           })}
-      />
+      /> */}
       {reportData?.rd ? (
         <ReportPage
           testimonials={testimonials}

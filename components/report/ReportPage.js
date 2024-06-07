@@ -1,20 +1,9 @@
 import React from "react";
 import reportHeaderBg from "@/assets/report/reportHeaderBg.png";
 import reportThumbnail from "@/assets/report/newReportThumbnail.jpeg";
-import quotation from "@/assets/report/quotation.png";
-import avatar from "@/assets/report/avatar.png";
 import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
-import Button from "../ui/Button";
-import {
-  ArrowRight,
-  Book,
-  Clock,
-  Download,
-  HelpCircle,
-  Tag,
-} from "react-feather";
 import ReportTabs from "./ReportTabs";
 import { getSubHeading } from "@/utils/helper";
 import Forms from "./Forms";
@@ -23,6 +12,12 @@ import Testimonials from "./components/Testimonials";
 import ReportList from "../common/ReportList";
 import Link from "next/link";
 import MRFImage from "../ui/Image";
+import { cookies } from "next/headers";
+import Tabs from "./Tabs";
+import TOC from "./components/TOC";
+import SummaryTabHighlight from "./components/SummaryTabHighlight";
+import MethodologyTabContent from "./components/MethodologyTabContent";
+import SummaryTabContent from "./components/SummaryTabContent";
 
 const ReportPage = ({
   testimonials = [],
@@ -35,6 +30,9 @@ const ReportPage = ({
     ...marketAnalysis,
     ...marketReport,
   });
+  const cookieStore = cookies();
+  const activeTab = cookieStore.get("tab")?.value || "summary";
+
   return (
     <div>
       <MRFImage
@@ -101,13 +99,52 @@ const ReportPage = ({
                   </div>
                 </div>
               </section>
-              <section>
+              {/* <section>
                 <ReportTabs
                   basic={basic}
                   marketAnalysis={marketAnalysis}
                   marketReport={marketReport}
                   rd={rd}
                 />
+              </section> */}
+              <Tabs activeTab={activeTab} />
+              <section
+                className={`${activeTab === "summary" ? "prose" : "hidden"}`}
+              >
+                <div
+                  id="rd_content"
+                  dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
+                ></div>
+                <SummaryTabContent
+                  basic={basic}
+                  marketAnalysis={marketAnalysis}
+                  marketReport={marketReport}
+                  rd={rd}
+                />
+              </section>
+              <section
+                className={`${activeTab === "toc" ? "block" : "hidden"}`}
+              >
+                <TOC
+                  marketAnalysis={marketAnalysis}
+                  marketReport={marketReport}
+                  report={basic}
+                />
+              </section>
+              <section
+                className={`${activeTab === "segments" ? "block" : "hidden"}`}
+              >
+                <SummaryTabHighlight
+                  basic={basic}
+                  marketAnalysis={marketAnalysis}
+                />
+              </section>
+              <section
+                className={`${
+                  activeTab === "methodology" ? "block" : "hidden"
+                }`}
+              >
+                <MethodologyTabContent />
               </section>
             </section>
             {/* ---- report sidebar ---- */}
