@@ -100,14 +100,6 @@ const ReportPage = ({
                   </div>
                 </div>
               </section>
-              {/* <section>
-                <ReportTabs
-                  basic={basic}
-                  marketAnalysis={marketAnalysis}
-                  marketReport={marketReport}
-                  rd={rd}
-                />
-              </section> */}
               <Tabs activeTab={activeTab} basic={basic} />
               <section
                 className={`${

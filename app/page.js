@@ -15,10 +15,13 @@ import {
 } from "@/utils/fetchFunctions";
 
 export default async function Home() {
-  const industryCardDataHome = await fetchIndustriesHome();
-  const testimonialsHome = await fetchTestimonials();
-  const sponsorsHome = await fetchSponsorLogos();
-  const recentReports = await fetchRecentReports();
+  const [industryCardDataHome, testimonialsHome, sponsorsHome, recentReports] =
+    await Promise.all([
+      fetchIndustriesHome(),
+      fetchTestimonials(),
+      fetchSponsorLogos(),
+      fetchRecentReports(),
+    ]);
 
   return (
     <div>
