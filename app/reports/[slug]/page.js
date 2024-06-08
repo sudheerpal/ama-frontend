@@ -41,22 +41,27 @@ const ReportDetails = async ({ params }) => {
   });
   const dataSeo = await resSeo?.json();
   try {
-    const res = await fetch(`${process.env.API_URL}/api/reports/${reportId}`, {
-      cache: "no-cache",
-    });
+    const [reportResponse, logoResponse, testimonialResponse] =
+      await Promise.all([
+        fetch(`${process.env.API_URL}/api/reports/${reportId}`, {
+          cache: "no-cache",
+        }),
+        fetch(
+          `${process.env.API_URL}/api/client-logo?catId=${dataSeo?.basic?.category?.parentCategory}`
+        ),
+        fetch(
+          `${process.env.API_URL}/api/testimonial?catId=${dataSeo?.basic?.category?.parentCategory}`
+        ),
+      ]);
 
-    const dataReport = await res.json();
+    const dataReport = await reportResponse.json();
     reportData = dataReport.data;
-    const resLogo = await fetch(
-      `${process.env.API_URL}/api/client-logo?catId=${reportData?.basic?.category?.parentCategory}`
-    );
-    const { data } = await resLogo.json();
-    clientLogos = data.map((item) => item.image);
-    const resTestimonials = await fetch(
-      `${process.env.API_URL}/api/testimonial?catId=${reportData?.basic?.category?.parentCategory}`
-    );
-    const dataTestimonial = await resTestimonials.json();
-    testimonials = dataTestimonial.data;
+
+    const logoData = await logoResponse.json();
+    clientLogos = logoData.data.map((item) => item.image);
+
+    const testimonialData = await testimonialResponse.json();
+    testimonials = testimonialData.data;
   } catch (error) {
     console.log("error fetching report", error);
   }
@@ -149,7 +154,7 @@ const ReportDetails = async ({ params }) => {
 
   return (
     <div>
-      {/* <DatasetJsonLd
+      <DatasetJsonLd
         id={reportId}
         images={report?.images || []}
         name={`${report?.marketKeyword} Report`}
@@ -198,7 +203,7 @@ const ReportDetails = async ({ params }) => {
               },
             };
           })}
-      /> */}
+      />
       {reportData?.rd ? (
         <ReportPage
           testimonials={testimonials}
