@@ -18,6 +18,7 @@ import TOC from "./components/TOC";
 import SummaryTabHighlight from "./components/SummaryTabHighlight";
 import MethodologyTabContent from "./components/MethodologyTabContent";
 import SummaryTabContent from "./components/SummaryTabContent";
+import styles from "./components/rd.module.css";
 
 const ReportPage = ({
   testimonials = [],
@@ -107,11 +108,16 @@ const ReportPage = ({
                   rd={rd}
                 />
               </section> */}
-              <Tabs activeTab={activeTab} />
+              <Tabs activeTab={activeTab} basic={basic} />
               <section
-                className={`${activeTab === "summary" ? "prose" : "hidden"}`}
+                className={`${
+                  activeTab === "summary"
+                    ? "prose block space-y-5 lg:space-y-10 lg:mb-10 min-w-full"
+                    : "hidden"
+                }`}
               >
                 <div
+                  className={styles.rd}
                   id="rd_content"
                   dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
                 ></div>
@@ -122,6 +128,7 @@ const ReportPage = ({
                   rd={rd}
                 />
               </section>
+
               <section
                 className={`${activeTab === "toc" ? "block" : "hidden"}`}
               >
