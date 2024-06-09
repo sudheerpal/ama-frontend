@@ -4,7 +4,6 @@ import reportThumbnail from "@/assets/report/newReportThumbnail.jpeg";
 import CustomContainer from "../ui/CustomContainer";
 import Image from "next/image";
 import PricingCard from "./components/PricingCard";
-import ReportTabs from "./ReportTabs";
 import { getSubHeading } from "@/utils/helper";
 import Forms from "./Forms";
 import ClientLogos from "./components/ClientLogos";
