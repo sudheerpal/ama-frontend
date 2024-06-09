@@ -6,12 +6,23 @@ import { useInView } from "react-intersection-observer";
 import CustomContainer from "../ui/CustomContainer";
 import MRFImage from "../ui/Image";
 import mainLogo from "@/assets/logo4.jpeg";
+import Link from "next/link";
 
 export default function Tabs({ activeTab, basic }) {
   const router = useRouter();
   const params = useParams();
 
-  const { ref: summaryTabRef, inView } = useInView();
+  const {
+    ref: summaryTabRef,
+    inView,
+    entry,
+  } = useInView({
+    threshold: 0,
+    root: null,
+    rootMargin: "0px",
+  });
+  const [isStickyNavShow, setIsStickyNavShow] = useState(false);
+
   const [isMobile, setIsMobile] = useState(false);
 
   const tabs = [
@@ -44,9 +55,21 @@ export default function Tabs({ activeTab, basic }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  useEffect(() => {
+    if (entry) {
+      const boundingClientRect = entry.boundingClientRect;
+      const isOutOfViewFromTop = boundingClientRect.top < 0;
+      if (isOutOfViewFromTop && !inView) {
+        setIsStickyNavShow(true);
+      } else {
+        setIsStickyNavShow(false);
+      }
+    }
+  }, [inView, entry]);
+
   return (
     <div className="relative">
-      {!inView && (
+      {!inView && isStickyNavShow && (
         <div
           className={`fixed top-0 duration-100 left-0 lg:-left-2 bg-white shadow-lg w-[100vw] py-3 z-20 ${
             !inView ? "block" : "hidden"
@@ -54,14 +77,11 @@ export default function Tabs({ activeTab, basic }) {
         >
           <CustomContainer classNames="lg:flex gap-5 items-center">
             <div className="flex gap-5">
-              <MRFImage
-                classNames="max-w-28 lg:max-w-36 xl:max-w-40 md:pr-4 max-h-12"
-                src={mainLogo}
-                alt="Market Research Future Logo"
-              />
-              <h2 className="font-bold uppercase xl:text-lg text-primary">
-                {basic?.title}
-              </h2>
+              <Link href={"/"}>
+                <h2 className="font-bold uppercase xl:text-lg text-primary">
+                  {basic?.title}
+                </h2>
+              </Link>
             </div>
             <div className="mt-2 tabs-xs tabs md:tabs-md md:tabs-boxed">
               {tabs.map((tab, index) => (

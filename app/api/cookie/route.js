@@ -3,8 +3,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   const { name, value } = await request.json();
-  console.log(name, value);
-
   try {
     cookies().set(name, value);
     return NextResponse.json({}, { status: 200 });
