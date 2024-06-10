@@ -23,16 +23,16 @@ const MethodologyTabContent = () => {
       icon: <Factory className="text-primary" />,
     },
     {
-      color: "red-500",
+      color: "#ef4444",
       content:
         "These sources are likely to be stakeholders in a program - participants, other researchers, program staff, other community members, and so on.",
-      icon: <Users className="text-red-500" />,
+      icon: <Users className="text-[#ef4444]" />,
     },
     {
-      color: "blue-500",
+      color: "#0a54ff",
       content:
         "Then we put all data in single framework & apply various statistical tools to find out the dynamic on the market.",
-      icon: <FileBarChart2 className="text-info" />,
+      icon: <FileBarChart2 className="text-[#0a54ff]" />,
     },
     {
       color: "secondary",
@@ -115,7 +115,7 @@ const MethodologyTabContent = () => {
           </div>
           <div className="text-info">
             <div className="flex items-center gap-2 font-bold">
-              <div className="grid w-10 h-10 text-white bg-blue-500 rounded-full place-items-center">
+              <div className="grid w-10 h-10 text-white rounded-full bg-info place-items-center">
                 <Settings className="font-extrabold text-white" />
               </div>
               <p>Secondary Research</p>
@@ -152,6 +152,9 @@ const MethodologyTabContent = () => {
             <div key={index} className="flex items-center gap-2">
               <div
                 className={`grid border-8 rounded-full w-14 min-w-14 h-14 place-items-center border-${section.color}`}
+                style={{
+                  borderColor: section.color.includes("#") && section.color,
+                }}
               >
                 {section.icon} {/* Render the icon */}
               </div>

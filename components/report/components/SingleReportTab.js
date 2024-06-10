@@ -1,23 +1,19 @@
 import React from "react";
+import TabNavigationButton from "./TabNavigationButton";
 
-const SingleReportTab = ({ tab, activeTab, handleTabChange }) => {
+const SingleReportTab = ({
+  tab,
+  activeTab,
+  handleTabChange,
+  summaryTabRef,
+  inView,
+}) => {
   return (
     <>
-      <input
-        type="radio"
-        name="rd-tabs"
-        role={`tab ${tab.id}`}
-        className={`mr-1 md:mx-4 tab border border-primary text-nowrap ${
-          activeTab === tab.id ? "bg-primary text-white" : "text-primary"
-        }`}
-        id={tab.id}
-        aria-label={tab.label}
-        checked={activeTab === tab.id}
-        onChange={() => handleTabChange(tab.id)}
-        style={{
-          color: activeTab === tab.id && "white",
-          borderRadius: "4px 4px 0 0",
-        }}
+      <TabNavigationButton
+        tab={tab}
+        activeTab={activeTab}
+        handleTabChange={handleTabChange}
       />
       {activeTab === tab.id && (
         <div role={`tabpanel ${tab.id}`} className="py-4 tab-content">
