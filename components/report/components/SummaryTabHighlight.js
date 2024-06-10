@@ -1,9 +1,8 @@
 import React from "react";
-import { Search } from "react-feather";
 
 const SummaryTabHighlight = ({ basic, marketAnalysis }) => {
   return (
-    <main>
+    <main className="mt-3">
       <div className="overflow-x-auto">
         <table className="table  table-zebra">
           {/* head */}

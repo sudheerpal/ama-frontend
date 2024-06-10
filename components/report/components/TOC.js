@@ -46,13 +46,11 @@ export default function TOC({ marketAnalysis, marketReport, report }) {
       data: [
         ...marketAnalysis.segments.map((data) => {
           const array = data.split(":");
-          console.log("segments", array);
           return `Market Analysis, Insights and Forecast - By ${array[0]} : ${array[1]}`;
         }),
         `Market Analysis, Insights and Forecast - By Region : ${marketAnalysis.regionData
           .map((data) => {
             const array = data.split(":");
-            console.log("region", array);
             return array[0].trim();
           })
           .toString()}`,
