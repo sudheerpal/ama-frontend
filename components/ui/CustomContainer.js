@@ -1,5 +1,5 @@
+"use client";
 import React from "react";
-
 const CustomContainer = ({ children, classNames = "" }) => {
   return (
     <div
