@@ -17,28 +17,28 @@ import {
 const MethodologyTabContent = () => {
   const sections = [
     {
-      color: "#182628",
+      color: "var(--color-primary)",
       content:
         "Involves using different sources of information in order to increase the validity of a study",
-      icon: <Factory className="text-[#182628]" />,
+      icon: <Factory className="text-[var(--color-primary)]" />,
     },
     {
-      color: "#65CCB8",
+      color: "var(--color-secondary)",
       content:
         "These sources are likely to be stakeholders in a program - participants, other researchers, program staff, other community members, and so on.",
-      icon: <Users className="text-[#65CCB8]" />,
+      icon: <Users className="text-[var(--color-secondary)]" />,
     },
     {
-      color: "#3B945B",
+      color: "var(--color-neutral)",
       content:
         "Then we put all data in single framework & apply various statistical tools to find out the dynamic on the market.",
-      icon: <FileBarChart2 className="text-[#3B945B]" />,
+      icon: <FileBarChart2 className="text-[var(--color-neutral)]" />,
     },
     {
-      color: "#57BA98",
+      color: "var(--color-tertiary)",
       content:
         "During the analysis stage, feedback from the stakeholder groups would be compared to determine areas of agreement as well as areas of divergence",
-      icon: <ShieldCheck className="text-[#57BA98]" />,
+      icon: <ShieldCheck className="text-[var(--color-tertiary)]" />,
     },
   ];
 

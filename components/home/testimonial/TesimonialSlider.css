@@ -25,7 +25,7 @@
 .swiper-button-next {
   width: 40px;
   height: 40px;
-  border: 3px solid #65ccb8; /* Gray border color */
+  border: 3px solid var(--color-secondary); /* Gray border color */
   background-color: transparent; /* Transparent background */
   position: absolute;
   top: 50%;
@@ -38,7 +38,7 @@
 .swiper-button-next::before {
   content: "<"; /* Gray < (angle bracket) */
   font-size: 24px;
-  color: #65ccb8; /* Gray color */
+  color: var(--color-secondary); /* Gray color */
   position: absolute;
   top: 50%;
   left: 50%;
