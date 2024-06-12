@@ -31,7 +31,7 @@ export default function Tabs({ activeTab, basic }) {
       value: "summary",
     },
     {
-      label: "Table of Content",
+      label: isMobile ? "TOC" : "Table of Content",
       value: "toc",
     },
     {
@@ -77,11 +77,14 @@ export default function Tabs({ activeTab, basic }) {
         >
           <CustomContainer classNames="lg:flex gap-5 items-center">
             <div className="flex gap-5">
-              <Link href={"/"}>
-                <h2 className="font-bold uppercase xl:text-lg text-primary">
-                  {basic?.title}
-                </h2>
-              </Link>
+              <MRFImage
+                classNames="max-w-28 lg:max-w-36 xl:max-w-40 md:pr-4 max-h-12"
+                src={mainLogo}
+                alt="Market Research Future Logo"
+              />
+              <h2 className="font-bold uppercase xl:text-lg text-primary">
+                {basic?.title}
+              </h2>
             </div>
             <div className="mt-2 tabs-xs tabs md:tabs-md md:tabs-boxed">
               {tabs.map((tab, index) => (
@@ -99,6 +102,9 @@ export default function Tabs({ activeTab, basic }) {
                       ? "bg-primary text-white"
                       : "text-primary"
                   }`}
+                  style={{
+                    borderRadius: "4px",
+                  }}
                 >
                   {tab.label}
                 </button>
@@ -112,7 +118,7 @@ export default function Tabs({ activeTab, basic }) {
         ref={summaryTabRef}
         className="absolute w-full border-b-2 border-primary top-[18px] md:top-[30px] z-10"
       />
-      <div>
+      <div className="max-w-lg tabs-xs tabs md:tabs-md">
         {tabs.map((tab, index) => (
           <button
             key={index}
@@ -126,6 +132,9 @@ export default function Tabs({ activeTab, basic }) {
             className={`mr-1 md:mx-4 tab border border-primary text-nowrap font-semibold ${
               activeTab === tab.value ? "bg-primary text-white" : "text-primary"
             }`}
+            style={{
+              borderRadius: "4px 4px 0 0",
+            }}
           >
             {tab.label}
           </button>
