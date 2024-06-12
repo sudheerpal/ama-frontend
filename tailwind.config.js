@@ -35,6 +35,14 @@ module.exports = {
       "9xl": "8rem",
     },
     extend: {
+      colors: {
+        primary: "#002E5B",
+        secondary: "#FDE428",
+        accent: "#F2F2F2",
+        neutral: "#474747",
+        info: "#0A54FF",
+        tertiary: "#57ba98",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
