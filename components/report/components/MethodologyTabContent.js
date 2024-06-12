@@ -17,28 +17,28 @@ import {
 const MethodologyTabContent = () => {
   const sections = [
     {
-      color: "primary",
+      color: "var(--color-primary)",
       content:
         "Involves using different sources of information in order to increase the validity of a study",
-      icon: <Factory className="text-primary" />,
+      icon: <Factory className="text-[var(--color-primary)]" />,
     },
     {
-      color: "#ef4444",
+      color: "var(--color-tertiary)",
       content:
         "These sources are likely to be stakeholders in a program - participants, other researchers, program staff, other community members, and so on.",
-      icon: <Users className="text-[#ef4444]" />,
+      icon: <Users className="text-[var(--color-tertiary)]" />,
     },
     {
-      color: "#0a54ff",
+      color: "var(--color-info)",
       content:
         "Then we put all data in single framework & apply various statistical tools to find out the dynamic on the market.",
-      icon: <FileBarChart2 className="text-[#0a54ff]" />,
+      icon: <FileBarChart2 className="text-[var(--color-info)]" />,
     },
     {
-      color: "secondary",
+      color: "var(--color-secondary)",
       content:
         "During the analysis stage, feedback from the stakeholder groups would be compared to determine areas of agreement as well as areas of divergence",
-      icon: <ShieldCheck className="text-secondary" />,
+      icon: <ShieldCheck className="text-[var(--color-secondary)]" />,
     },
   ];
 
@@ -153,7 +153,7 @@ const MethodologyTabContent = () => {
               <div
                 className={`grid border-8 rounded-full w-14 min-w-14 h-14 place-items-center border-${section.color}`}
                 style={{
-                  borderColor: section.color.includes("#") && section.color,
+                  borderColor: section.color,
                 }}
               >
                 {section.icon} {/* Render the icon */}
