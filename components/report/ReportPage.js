@@ -18,12 +18,14 @@ import SummaryTabHighlight from "./components/SummaryTabHighlight";
 import MethodologyTabContent from "./components/MethodologyTabContent";
 import SummaryTabContent from "./components/SummaryTabContent";
 import styles from "./components/rd.module.css";
+import RegionData from "./components/RegionData";
 
 const ReportPage = ({
   testimonials = [],
   reportData = {},
   clientLogos = [],
 }) => {
+  let chartData = {};
   const { basic, marketAnalysis, marketReport, rd } = reportData;
   const subHeading = getSubHeading({
     ...basic,
@@ -32,6 +34,9 @@ const ReportPage = ({
   });
   const cookieStore = cookies();
   const activeTab = cookieStore.get("tab")?.value || "summary";
+  try {
+    chartData = JSON.parse(rd.chart);
+  } catch (error) {}
 
   return (
     <div>
@@ -112,6 +117,11 @@ const ReportPage = ({
                   id="rd_content"
                   dangerouslySetInnerHTML={{ __html: rd?.rd || "" }}
                 ></div>
+                {chartData?.regional_market_share && (
+                  <RegionData
+                    regions={chartData?.regional_market_share || {}}
+                  />
+                )}
                 <SummaryTabContent
                   basic={basic}
                   marketAnalysis={marketAnalysis}
