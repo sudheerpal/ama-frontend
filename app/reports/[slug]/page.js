@@ -1,6 +1,7 @@
 import DatasetJsonLd from "@/components/common/DatasetJsonLd";
 import ErrorPage from "@/components/common/ErrorPage";
 import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import ReportPage from "@/components/report/ReportPage";
 import { redirect } from "next/navigation";
 import React from "react";
@@ -153,7 +154,8 @@ const ReportDetails = async ({ params }) => {
   ];
 
   return (
-    <div>
+    <>
+      <Header />
       <DatasetJsonLd
         id={reportId}
         images={report?.images || []}
@@ -216,7 +218,7 @@ const ReportDetails = async ({ params }) => {
         </div>
       )}
       <Footer />
-    </div>
+    </>
   );
 };
 

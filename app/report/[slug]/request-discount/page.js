@@ -1,5 +1,6 @@
 import CheckoutForm from "@/components/checkout/components/CheckoutForm";
 import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import CustomContainer from "@/components/ui/CustomContainer";
 import { fetchReportBasicData } from "@/utils/fetchFunctions";
 import React from "react";
@@ -28,6 +29,7 @@ export default async function page({ params }) {
 
   return (
     <>
+      <Header />
       <CustomContainer>
         <CheckoutForm
           reportData={reportData}

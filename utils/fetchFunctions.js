@@ -56,8 +56,7 @@ export const fetchRecentReports = async (limit = 6) => {
 export const fetchParentCategories = async () => {
   try {
     const res = await fetch(
-      `${process.env.API_URL}/api/categories?parent=true`,
-      { cache: "no-cache" }
+      `${process.env.API_URL}/api/categories?parent=true`
     );
     const { data } = await res.json();
     return data;

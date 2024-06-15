@@ -1,12 +1,14 @@
 import React from "react";
 import TopNavbar from "./navbar/TopNavbar";
 import MainNavbar from "./navbar/MainNavbar";
+import { fetchParentCategories } from "@/utils/fetchFunctions";
 
-const Header = () => {
+const Header = async () => {
+  const parentCategories = await fetchParentCategories();
   return (
     <div>
       <TopNavbar />
-      <MainNavbar />
+      <MainNavbar parentCategories={parentCategories} />
     </div>
   );
 };

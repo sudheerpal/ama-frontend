@@ -1,11 +1,13 @@
 import CheckoutPage from "@/components/checkout/CheckoutPage";
+import Header from "@/components/home/Header";
 import React from "react";
 
 const Checkout = () => {
   return (
-    <div className="">
+    <>
+      <Header />
       <CheckoutPage />
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,5 @@
 import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import SponsorSlider from "@/components/home/sponsor/SponsorSlider";
 import CustomContainer from "@/components/ui/CustomContainer";
 import { fetchSponsorLogos } from "@/utils/fetchFunctions";
@@ -8,6 +9,7 @@ export default async function page() {
   const logos = await fetchSponsorLogos();
   return (
     <>
+      <Header />
       <CustomContainer>
         <div className="flex text-center flex-col h-52 items-center justify-center">
           <h3 className="font-bold text-3xl text-primary">

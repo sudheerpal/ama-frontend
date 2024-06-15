@@ -1,6 +1,7 @@
 import Banner from "@/components/home/Banner";
 import EntrepreneurBanner from "@/components/home/EntrepreneurBanner";
 import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import Industries from "@/components/home/Industries";
 import Newses from "@/components/home/Newses";
 import Service from "@/components/home/Service";
@@ -25,6 +26,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Header />
       <Banner />
       <Service />
       <Industries industries={industryCardDataHome} />
