@@ -154,7 +154,7 @@ const ReportDetails = async ({ params }) => {
 
   return (
     <div>
-      <DatasetJsonLd
+      {/* <DatasetJsonLd
         id={reportId}
         images={report?.images || []}
         name={`${report?.marketKeyword} Report`}
@@ -214,7 +214,7 @@ const ReportDetails = async ({ params }) => {
         <div>
           <ErrorPage />
         </div>
-      )}
+      )} */}
       <Footer />
     </div>
   );
