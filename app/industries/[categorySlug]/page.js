@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Footer from "@/components/home/Footer";
+import Header from "@/components/home/Header";
 import ProductSidebar from "@/components/products/ProductSidebar";
 import ProductsList from "@/components/products/ProductsList";
 import CustomContainer from "@/components/ui/CustomContainer";
@@ -27,6 +28,7 @@ const ReportListing = async ({ params, searchParams }) => {
   const sidebarCategories = await fetchCategories();
   return (
     <>
+      <Header />
       <section className="py-2 text-white lg:py-4 bg-primary">
         <CustomContainer>
           <div className="flex items-center justify-between">

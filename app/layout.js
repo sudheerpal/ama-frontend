@@ -19,12 +19,12 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const parentCategories = await fetchParentCategories();
+  // const parentCategories = await fetchParentCategories();
   return (
     <html data-theme="customTheme" lang="en">
       <body className={radioCanada.className}>
-        <TopNavbar />
-        <MainNavbar parentCategories={parentCategories} />
+        {/* <TopNavbar />
+        <MainNavbar parentCategories={parentCategories} /> */}
         <main>{children}</main>
       </body>
       <GoogleAnalytics gaId="G-TGX5SM4WHF" />

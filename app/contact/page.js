@@ -7,10 +7,11 @@ export const metadata = {
 };
 const ContactUs = () => {
   return (
-    <div>
+    <>
+      <Header />
       <ContactUsPage />
       <Footer />
-    </div>
+    </>
   );
 };
 

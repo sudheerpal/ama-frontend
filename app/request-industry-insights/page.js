@@ -7,9 +7,11 @@ import React from "react";
 import { Calendar, Grid, Layout } from "react-feather";
 import Link from "next/link";
 import QueryForm from "@/components/common/QueryForm";
+import Header from "@/components/home/Header";
 export default async function page() {
   return (
     <>
+      <Header />
       <CustomContainer>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:mt-5">
           <div className="lg:col-span-2 rd">
