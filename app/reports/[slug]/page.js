@@ -162,7 +162,7 @@ const ReportDetails = async ({ params }) => {
         name={`${report?.marketKeyword} Report`}
         description={dataSeo?.description}
         url={`${process.env.BASE_URL}/reports/${report?.slug}`}
-        price={`${report?.price?.enterprisePrice}`}
+        price={`${report?.price?.enterprisePrice.replace(",", "")}`}
         region={`${report?.region || "global"}`}
         breadcrumb={[
           {
