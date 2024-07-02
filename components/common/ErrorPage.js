@@ -144,6 +144,7 @@ export default function ErrorPage() {
             />
             <InputText
               name="email"
+              type="email"
               placeholder="Enter your email *"
               value={formData.email}
               onChange={handleInputChange}
@@ -164,6 +165,7 @@ export default function ErrorPage() {
             </select>
             <InputText
               name="phone"
+              type="tel"
               placeholder="Enter your contact *"
               value={formData.contact}
               onChange={handleInputChange}

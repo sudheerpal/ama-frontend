@@ -234,6 +234,7 @@ const QueryForm = ({
           />
           <InputText
             name="email"
+            type="email"
             placeholder="Enter your email *"
             value={formData.email}
             onChange={handleInputChange}
